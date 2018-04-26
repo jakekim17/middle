@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="wowcafeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Db49_wowcafe" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="usp_RegistCafememberGold">
+      <Parameter Name="proID" Mode="In" Type="String" />
+      <Parameter Name="userID" Mode="In" Type="String" />
+      <Parameter Name="strResultCafe" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="CafeMemberInfo" EntityType="wowcafeModel.CafeMemberInfo" />
+    <FunctionImport Name="usp_select_stock_cafe_list" ReturnType="Collection(wowcafeModel.usp_select_stock_cafe_list_Result)">
+      <Parameter Name="ArjCode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_Select_TopNewBoard" ReturnType="Collection(wowcafeModel.usp_Select_TopNewBoard_Result)">
+      <Parameter Name="CafeCode" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+      <Parameter Name="MyGradeLevel" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_Select_TopNewBoard_sakal" ReturnType="Collection(wowcafeModel.usp_Select_TopNewBoard_sakal_Result)">
+      <Parameter Name="CafeCode" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+      <Parameter Name="MyGradeLevel" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_web_select_stock_cafe_list" ReturnType="Collection(wowcafeModel.usp_web_select_stock_cafe_list_Result)">
+      <Parameter Name="ArjCode" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="CafeInfo" EntityType="wowcafeModel.CafeInfo" />
+    <AssociationSet Name="FK_CafeMemberInfo_CafeInfo" Association="wowcafeModel.FK_CafeMemberInfo_CafeInfo">
+      <End Role="CafeInfo" EntitySet="CafeInfo" />
+      <End Role="CafeMemberInfo" EntitySet="CafeMemberInfo" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CafeMemberInfo">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="CafeCode" />
+    </Key>
+    <Property Name="UserID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CafeCode" Type="Int32" Nullable="false" />
+    <Property Name="GradeLevel" Type="Int32" Nullable="false" />
+    <Property Name="NickName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Jumin1" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="Jumin2" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EmailOpenFlag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Hphone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="SMSOpenFlag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Introduction" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="RegDate" Type="DateTime" Precision="3" />
+    <Property Name="VisitCount" Type="Int32" />
+    <Property Name="LastVisitDate" Type="DateTime" Precision="3" />
+    <Property Name="DelFlag" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ReJoin" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="NameOpenLev" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="SexOpenLev" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="AgeOpenLev" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="IntroOpenLev" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="Answer1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Answer1OpenLev" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="Answer2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Answer2OpenLev" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="Answer3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Answer3OpenLev" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="Answer4" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Answer4OpenLev" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="Answer5" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Answer5OpenLev" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="DownStep" Type="Int32" />
+    <Property Name="starclubid" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="goldEmail" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="goldSMS" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AddrOpenLev" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="test" Type="Int32" />
+    <NavigationProperty Name="CafeInfo" Relationship="wowcafeModel.FK_CafeMemberInfo_CafeInfo" FromRole="CafeMemberInfo" ToRole="CafeInfo" />
+  </EntityType>
+  <ComplexType Name="usp_select_stock_cafe_list_Result">
+    <Property Type="Int32" Name="num" Nullable="false" />
+    <Property Type="String" Name="title" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="regdate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="cafecode" Nullable="false" />
+    <Property Type="String" Name="boardcode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="nickname" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="boardType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="cafedomain" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="usp_Select_TopNewBoard_Result">
+    <Property Type="Int32" Name="Num" Nullable="false" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="ReadCount" Nullable="false" />
+    <Property Type="DateTime" Name="RegDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="NickName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="BoardType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="boardcode" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="listflag" Nullable="true" />
+    <Property Type="Int32" Name="sinceH" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="usp_Select_TopNewBoard_sakal_Result">
+    <Property Type="Int32" Name="Num" Nullable="false" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="ReadCount" Nullable="false" />
+    <Property Type="DateTime" Name="RegDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="NickName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="BoardType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BoardCode" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="ListFlag" Nullable="true" />
+    <Property Type="Int32" Name="sinceH" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="usp_web_select_stock_cafe_list_Result">
+    <Property Type="Int32" Name="num" Nullable="false" />
+    <Property Type="String" Name="title" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="regdate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="cafecode" Nullable="false" />
+    <Property Type="String" Name="boardcode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="nickname" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="boardType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="cafedomain" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="CafeInfo">
+    <Key>
+      <PropertyRef Name="CafeCode" />
+    </Key>
+    <Property Name="CafeCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CafeName" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="CafeExplanation" Type="String" Nullable="false" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="KeyWord1" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="KeyWord2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="KeyWord3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MainCode" Type="Int32" Nullable="false" />
+    <Property Name="SubCode" Type="Int32" Nullable="false" />
+    <Property Name="OpenFlag" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="RegFlag" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="RegMemFlag" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CafeDomain" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CafeRegulation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="RegulationFlag" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="MainRegistFlag" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="RegDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Question1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Question2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Question3" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Question4" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Question5" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="DelFlag" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="UseFlag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="CafeMemberInfo" Relationship="wowcafeModel.FK_CafeMemberInfo_CafeInfo" FromRole="CafeInfo" ToRole="CafeMemberInfo" />
+  </EntityType>
+  <Association Name="FK_CafeMemberInfo_CafeInfo">
+    <End Type="wowcafeModel.CafeInfo" Role="CafeInfo" Multiplicity="1" />
+    <End Type="wowcafeModel.CafeMemberInfo" Role="CafeMemberInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CafeInfo">
+        <PropertyRef Name="CafeCode" />
+      </Principal>
+      <Dependent Role="CafeMemberInfo">
+        <PropertyRef Name="CafeCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

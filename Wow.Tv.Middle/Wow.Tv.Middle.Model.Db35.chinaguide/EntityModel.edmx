@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Wow.Tb.Middle.Model.Db35.chinaguide.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--생성 중 오류 발생:
+경고 6002: 테이블/뷰 'chinaguide.dbo.N_MAIN_MNG'에 기본 키가 정의되지 않았습니다. 키가 유추되었고 읽기 전용 테이블/뷰로 정의되었습니다.-->
+        <EntityType Name="N_MAIN_MNG">
+          <Key>
+            <PropertyRef Name="IDX" />
+            <PropertyRef Name="UPDATE_U_ID" />
+            <PropertyRef Name="UPDATE_DATE" />
+          </Key>
+          <Property Name="IDX" Type="int" Nullable="false" />
+          <Property Name="VIDEO_TITLE" Type="varchar" MaxLength="255" />
+          <Property Name="VIDEO_CONTENT" Type="varchar" MaxLength="255" />
+          <Property Name="HOT_TICKER1" Type="varchar" MaxLength="6" />
+          <Property Name="HOT_TICKER2" Type="varchar" MaxLength="6" />
+          <Property Name="TOP_NEWS" Type="varchar" MaxLength="255" />
+          <Property Name="UPDATE_U_ID" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="UPDATE_DATE" Type="smalldatetime" Nullable="false" />
+        </EntityType>
+        <Function Name="usp_getArticleList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Type" Type="int" Mode="In" />
+          <Parameter Name="Market" Type="char" Mode="In" />
+          <Parameter Name="Searchkey" Type="varchar" Mode="In" />
+          <Parameter Name="StockCode" Type="varchar" Mode="In" />
+          <Parameter Name="StartDT" Type="char" Mode="In" />
+          <Parameter Name="EndDT" Type="char" Mode="In" />
+          <Parameter Name="Page" Type="int" Mode="In" />
+          <Parameter Name="PageSize" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="WowTbMiddleModelDb35chinaguideStoreContainer">
+          <EntitySet Name="N_MAIN_MNG" EntityType="Self.N_MAIN_MNG" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [N_MAIN_MNG].[IDX] AS [IDX], 
+    [N_MAIN_MNG].[VIDEO_TITLE] AS [VIDEO_TITLE], 
+    [N_MAIN_MNG].[VIDEO_CONTENT] AS [VIDEO_CONTENT], 
+    [N_MAIN_MNG].[HOT_TICKER1] AS [HOT_TICKER1], 
+    [N_MAIN_MNG].[HOT_TICKER2] AS [HOT_TICKER2], 
+    [N_MAIN_MNG].[TOP_NEWS] AS [TOP_NEWS], 
+    [N_MAIN_MNG].[UPDATE_U_ID] AS [UPDATE_U_ID], 
+    [N_MAIN_MNG].[UPDATE_DATE] AS [UPDATE_DATE]
+    FROM [dbo].[N_MAIN_MNG] AS [N_MAIN_MNG]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Wow.Tb.Middle.Model.Db35.chinaguide" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="N_MAIN_MNG">
+          <Key>
+            <PropertyRef Name="IDX" />
+            <PropertyRef Name="UPDATE_U_ID" />
+            <PropertyRef Name="UPDATE_DATE" />
+          </Key>
+          <Property Name="IDX" Type="Int32" Nullable="false" />
+          <Property Name="VIDEO_TITLE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="VIDEO_CONTENT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="HOT_TICKER1" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="HOT_TICKER2" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="TOP_NEWS" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="UPDATE_U_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UPDATE_DATE" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityContainer Name="Db35_chinaguide" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="N_MAIN_MNG" EntityType="Self.N_MAIN_MNG" />
+          <FunctionImport Name="usp_getArticleList">
+            <Parameter Name="Type" Mode="In" Type="Int32" />
+            <Parameter Name="Market" Mode="In" Type="String" />
+            <Parameter Name="Searchkey" Mode="In" Type="String" />
+            <Parameter Name="StockCode" Mode="In" Type="String" />
+            <Parameter Name="StartDT" Mode="In" Type="String" />
+            <Parameter Name="EndDT" Mode="In" Type="String" />
+            <Parameter Name="Page" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WowTbMiddleModelDb35chinaguideStoreContainer" CdmEntityContainer="Db35_chinaguide">
+          <EntitySetMapping Name="N_MAIN_MNG">
+            <EntityTypeMapping TypeName="Wow.Tb.Middle.Model.Db35.chinaguide.N_MAIN_MNG">
+              <MappingFragment StoreEntitySet="N_MAIN_MNG">
+                <ScalarProperty Name="IDX" ColumnName="IDX" />
+                <ScalarProperty Name="VIDEO_TITLE" ColumnName="VIDEO_TITLE" />
+                <ScalarProperty Name="VIDEO_CONTENT" ColumnName="VIDEO_CONTENT" />
+                <ScalarProperty Name="HOT_TICKER1" ColumnName="HOT_TICKER1" />
+                <ScalarProperty Name="HOT_TICKER2" ColumnName="HOT_TICKER2" />
+                <ScalarProperty Name="TOP_NEWS" ColumnName="TOP_NEWS" />
+                <ScalarProperty Name="UPDATE_U_ID" ColumnName="UPDATE_U_ID" />
+                <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="usp_getArticleList" FunctionName="Wow.Tb.Middle.Model.Db35.chinaguide.Store.usp_getArticleList" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="없음" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

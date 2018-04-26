@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Wow.Tv.Middle.Model.Db51.ARSsms" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="SC_TRAN">
+    <Key>
+      <PropertyRef Name="TR_NUM" />
+    </Key>
+    <Property Name="TR_NUM" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TR_SENDDATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TR_ID" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="TR_SENDSTAT" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TR_RSLTSTAT" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="TR_MSGTYPE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="TR_PHONE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TR_CALLBACK" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TR_RSLTDATE" Type="DateTime" Precision="3" />
+    <Property Name="TR_MODIFIED" Type="DateTime" Precision="3" />
+    <Property Name="TR_MSG" Type="String" MaxLength="160" FixedLength="false" Unicode="false" />
+    <Property Name="TR_ETC1" Type="String" MaxLength="160" FixedLength="false" Unicode="false" />
+    <Property Name="TR_ETC2" Type="String" MaxLength="160" FixedLength="false" Unicode="false" />
+    <Property Name="TR_ETC3" Type="String" MaxLength="160" FixedLength="false" Unicode="false" />
+    <Property Name="TR_ETC4" Type="String" MaxLength="160" FixedLength="false" Unicode="false" />
+    <Property Name="TR_ETC5" Type="String" MaxLength="160" FixedLength="false" Unicode="false" />
+    <Property Name="TR_ETC6" Type="String" MaxLength="160" FixedLength="false" Unicode="false" />
+    <Property Name="TR_NET" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="TR_ROUTEID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TR_REALSENDDATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="Db51_ARSsms" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SC_TRAN" EntityType="Self.SC_TRAN" />
+    <FunctionImport Name="USP_SC_TRAN_INSERT">
+      <Parameter Name="mobile" Mode="In" Type="String" />
+      <Parameter Name="callbackNum" Mode="In" Type="String" />
+      <Parameter Name="sendMsg" Mode="In" Type="String" />
+      <Parameter Name="trid" Mode="In" Type="String" />
+      <Parameter Name="trEtc1" Mode="In" Type="String" />
+      <Parameter Name="trEtc2" Mode="In" Type="String" />
+      <Parameter Name="trEtc3" Mode="In" Type="String" />
+      <Parameter Name="trEtc4" Mode="In" Type="String" />
+      <Parameter Name="trEtc5" Mode="In" Type="String" />
+      <Parameter Name="trEtc6" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WowTvMiddleModelDb90DNRSStoreContainer" CdmEntityContainer="Db90_DNRS">
+    <EntitySetMapping Name="TAB_PROGRAM_LIST">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db90.DNRS.TAB_PROGRAM_LIST">
+        <MappingFragment StoreEntitySet="TAB_PROGRAM_LIST">
+          <ScalarProperty Name="PGM_LEVEL" ColumnName="PGM_LEVEL" />
+          <ScalarProperty Name="SPC_YN" ColumnName="SPC_YN" />
+          <ScalarProperty Name="ING_YN" ColumnName="ING_YN" />
+          <ScalarProperty Name="DEL_FLAG" ColumnName="DEL_FLAG" />
+          <ScalarProperty Name="PGM_NAME" ColumnName="PGM_NAME" />
+          <ScalarProperty Name="PGM_ID" ColumnName="PGM_ID" />
+          <ScalarProperty Name="CATE_CODE" ColumnName="CATE_CODE" />
+          <ScalarProperty Name="NUM" ColumnName="NUM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IMG_SCHEDULE">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db90.DNRS.IMG_SCHEDULE">
+        <MappingFragment StoreEntitySet="IMG_SCHEDULE">
+          <ScalarProperty Name="proginfo" ColumnName="proginfo" />
+          <ScalarProperty Name="SendFlag" ColumnName="SendFlag" />
+          <ScalarProperty Name="SendType" ColumnName="SendType" />
+          <ScalarProperty Name="AutoEnc" ColumnName="AutoEnc" />
+          <ScalarProperty Name="dayName" ColumnName="dayName" />
+          <ScalarProperty Name="bitrate" ColumnName="bitrate" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="edate" ColumnName="edate" />
+          <ScalarProperty Name="sdate" ColumnName="sdate" />
+          <ScalarProperty Name="parentid" ColumnName="parentid" />
+          <ScalarProperty Name="pageformat" ColumnName="pageformat" />
+          <ScalarProperty Name="formation" ColumnName="formation" />
+          <ScalarProperty Name="runtime" ColumnName="runtime" />
+          <ScalarProperty Name="point" ColumnName="point" />
+          <ScalarProperty Name="web_state" ColumnName="web_state" />
+          <ScalarProperty Name="now_broadcast" ColumnName="now_broadcast" />
+          <ScalarProperty Name="hold_time" ColumnName="hold_time" />
+          <ScalarProperty Name="bu" ColumnName="bu" />
+          <ScalarProperty Name="file_front_name" ColumnName="file_front_name" />
+          <ScalarProperty Name="corner" ColumnName="corner" />
+          <ScalarProperty Name="rebroadcast" ColumnName="rebroadcast" />
+          <ScalarProperty Name="folder_name" ColumnName="folder_name" />
+          <ScalarProperty Name="img_name2" ColumnName="img_name2" />
+          <ScalarProperty Name="img_name" ColumnName="img_name" />
+          <ScalarProperty Name="img_path" ColumnName="img_path" />
+          <ScalarProperty Name="link_url" ColumnName="link_url" />
+          <ScalarProperty Name="prog_content" ColumnName="prog_content" />
+          <ScalarProperty Name="prog_name" ColumnName="prog_name" />
+          <ScalarProperty Name="prog_id" ColumnName="prog_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_NEWS_PRG">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db90.DNRS.T_NEWS_PRG">
+        <MappingFragment StoreEntitySet="T_NEWS_PRG">
+          <ScalarProperty Name="DELFLAG" ColumnName="DELFLAG" />
+          <ScalarProperty Name="PGMDAY" ColumnName="PGMDAY" />
+          <ScalarProperty Name="PGMDATE" ColumnName="PGMDATE" />
+          <ScalarProperty Name="TD2_NM" ColumnName="TD2_NM" />
+          <ScalarProperty Name="TD2_ID" ColumnName="TD2_ID" />
+          <ScalarProperty Name="PD2_NM" ColumnName="PD2_NM" />
+          <ScalarProperty Name="PD2_ID" ColumnName="PD2_ID" />
+          <ScalarProperty Name="DIR" ColumnName="DIR" />
+          <ScalarProperty Name="BRO_END" ColumnName="BRO_END" />
+          <ScalarProperty Name="BRO_START" ColumnName="BRO_START" />
+          <ScalarProperty Name="TD_NM" ColumnName="TD_NM" />
+          <ScalarProperty Name="TD_ID" ColumnName="TD_ID" />
+          <ScalarProperty Name="PD_NM" ColumnName="PD_NM" />
+          <ScalarProperty Name="ANC2_NM" ColumnName="ANC2_NM" />
+          <ScalarProperty Name="PD_ID" ColumnName="PD_ID" />
+          <ScalarProperty Name="ANC2_ID" ColumnName="ANC2_ID" />
+          <ScalarProperty Name="ANC1_NM" ColumnName="ANC1_NM" />
+          <ScalarProperty Name="ANC1_ID" ColumnName="ANC1_ID" />
+          <ScalarProperty Name="AREA_NM" ColumnName="AREA_NM" />
+          <ScalarProperty Name="PRG_NM" ColumnName="PRG_NM" />
+          <ScalarProperty Name="AREA_CD" ColumnName="AREA_CD" />
+          <ScalarProperty Name="PRG_CD" ColumnName="PRG_CD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tv_program">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db90.DNRS.tv_program">
+        <MappingFragment StoreEntitySet="tv_program">
+          <ScalarProperty Name="ProgInfo" ColumnName="ProgInfo" />
+          <ScalarProperty Name="SendDaum" ColumnName="SendDaum" />
+          <ScalarProperty Name="Flag_Copy2" ColumnName="Flag_Copy2" />
+          <ScalarProperty Name="Flag_Copy1" ColumnName="Flag_Copy1" />
+          <ScalarProperty Name="StockCode" ColumnName="StockCode" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ClickNum" ColumnName="ClickNum" />
+          <ScalarProperty Name="RecomNum" ColumnName="RecomNum" />
+          <ScalarProperty Name="UploadTime" ColumnName="UploadTime" />
+          <ScalarProperty Name="Re_Level" ColumnName="Re_Level" />
+          <ScalarProperty Name="Ref" ColumnName="Ref" />
+          <ScalarProperty Name="tStep" ColumnName="tStep" />
+          <ScalarProperty Name="Dep" ColumnName="Dep" />
+          <ScalarProperty Name="Program_Name" ColumnName="Program_Name" />
+          <ScalarProperty Name="MailAddr" ColumnName="MailAddr" />
+          <ScalarProperty Name="WriterID" ColumnName="WriterID" />
+          <ScalarProperty Name="FileorText" ColumnName="FileorText" />
+          <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+          <ScalarProperty Name="Ext" ColumnName="Ext" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Contents" ColumnName="Contents" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="broad_date" ColumnName="broad_date" />
+          <ScalarProperty Name="Num" ColumnName="Num" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_HDVOD_setEncodingList" FunctionName="Wow.Tv.Middle.Model.Db90.DNRS.Store.usp_HDVOD_setEncodingList" />
+    <FunctionImportMapping FunctionImportName="usp_HDVOD_getTodayList" FunctionName="Wow.Tv.Middle.Model.Db90.DNRS.Store.usp_HDVOD_getTodayList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db90.DNRS.usp_HDVOD_getTodayList_Result">
+          <ScalarProperty Name="prg_cd" ColumnName="prg_cd" />
+          <ScalarProperty Name="prg_nm" ColumnName="prg_nm" />
+          <ScalarProperty Name="run_start" ColumnName="run_start" />
+          <ScalarProperty Name="prog_content" ColumnName="prog_content" />
+          <ScalarProperty Name="folder_name" ColumnName="folder_name" />
+          <ScalarProperty Name="file_front_name" ColumnName="file_front_name" />
+          <ScalarProperty Name="bu" ColumnName="bu" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="T_USER">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db90.DNRS.T_USER">
+        <MappingFragment StoreEntitySet="T_USER">
+          <ScalarProperty Name="BylineName" ColumnName="BylineName" />
+          <ScalarProperty Name="Filed2" ColumnName="Filed2" />
+          <ScalarProperty Name="Filed1" ColumnName="Filed1" />
+          <ScalarProperty Name="UPDATE_DATETIME" ColumnName="UPDATE_DATETIME" />
+          <ScalarProperty Name="UPDATE_NM" ColumnName="UPDATE_NM" />
+          <ScalarProperty Name="UPDATE_ID" ColumnName="UPDATE_ID" />
+          <ScalarProperty Name="DEL_NM" ColumnName="DEL_NM" />
+          <ScalarProperty Name="DEL_ID" ColumnName="DEL_ID" />
+          <ScalarProperty Name="DEL_FLAG" ColumnName="DEL_FLAG" />
+          <ScalarProperty Name="PRIV_ID" ColumnName="PRIV_ID" />
+          <ScalarProperty Name="CB14" ColumnName="CB14" />
+          <ScalarProperty Name="CB54" ColumnName="CB54" />
+          <ScalarProperty Name="CB53" ColumnName="CB53" />
+          <ScalarProperty Name="CB52" ColumnName="CB52" />
+          <ScalarProperty Name="CB51" ColumnName="CB51" />
+          <ScalarProperty Name="CB42" ColumnName="CB42" />
+          <ScalarProperty Name="CB41" ColumnName="CB41" />
+          <ScalarProperty Name="CB34" ColumnName="CB34" />
+          <ScalarProperty Name="CB33" ColumnName="CB33" />
+          <ScalarProperty Name="CB32" ColumnName="CB32" />
+          <ScalarProperty Name="CB31" ColumnName="CB31" />
+          <ScalarProperty Name="CB25" ColumnName="CB25" />
+          <ScalarProperty Name="CB24" ColumnName="CB24" />
+          <ScalarProperty Name="CB23" ColumnName="CB23" />
+          <ScalarProperty Name="CB22" ColumnName="CB22" />
+          <ScalarProperty Name="CB21" ColumnName="CB21" />
+          <ScalarProperty Name="CB15" ColumnName="CB15" />
+          <ScalarProperty Name="CB13" ColumnName="CB13" />
+          <ScalarProperty Name="CB12" ColumnName="CB12" />
+          <ScalarProperty Name="CB11" ColumnName="CB11" />
+          <ScalarProperty Name="AREA_NM" ColumnName="AREA_NM" />
+          <ScalarProperty Name="AREA_CD" ColumnName="AREA_CD" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="PHONE2" ColumnName="PHONE2" />
+          <ScalarProperty Name="PHONE1" ColumnName="PHONE1" />
+          <ScalarProperty Name="USE_FLAG" ColumnName="USE_FLAG" />
+          <ScalarProperty Name="DEPT_NM" ColumnName="DEPT_NM" />
+          <ScalarProperty Name="AUTHORITY_NM" ColumnName="AUTHORITY_NM" />
+          <ScalarProperty Name="DEPT_CD" ColumnName="DEPT_CD" />
+          <ScalarProperty Name="USER_PW" ColumnName="USER_PW" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+          <ScalarProperty Name="USER_NM" ColumnName="USER_NM" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NTB_NEWS_PROGRAM">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db90.DNRS.NTB_NEWS_PROGRAM">
+        <MappingFragment StoreEntitySet="NTB_NEWS_PROGRAM">
+          <ScalarProperty Name="BROAD_SECTION_CODE" ColumnName="BROAD_SECTION_CODE" />
+          <ScalarProperty Name="ALL_PROGRAM_VIEW_YN" ColumnName="ALL_PROGRAM_VIEW_YN" />
+          <ScalarProperty Name="MAIN_BOTTOM_VIEW_YN" ColumnName="MAIN_BOTTOM_VIEW_YN" />
+          <ScalarProperty Name="MAIN_VIEW_TYPE" ColumnName="MAIN_VIEW_TYPE" />
+          <ScalarProperty Name="FIRST_FREE_YN" ColumnName="FIRST_FREE_YN" />
+          <ScalarProperty Name="FAME_YN" ColumnName="FAME_YN" />
+          <ScalarProperty Name="BROAD_TYPE_CODE" ColumnName="BROAD_TYPE_CODE" />
+          <ScalarProperty Name="PLAN_BROAD" ColumnName="PLAN_BROAD" />
+          <ScalarProperty Name="PRG_CD" ColumnName="PRG_CD" />
+          <ScalarProperty Name="CP_NM" ColumnName="CP_NM" />
+          <ScalarProperty Name="ENCODING" ColumnName="ENCODING" />
+          <ScalarProperty Name="PUBLISH_YN" ColumnName="PUBLISH_YN" />
+          <ScalarProperty Name="SERVICE_NAME" ColumnName="SERVICE_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_RUNDOWN">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db90.DNRS.T_RUNDOWN">
+        <MappingFragment StoreEntitySet="T_RUNDOWN">
+          <ScalarProperty Name="PGMID" ColumnName="PGMID" />
+          <ScalarProperty Name="TD2_NM" ColumnName="TD2_NM" />
+          <ScalarProperty Name="TD2_ID" ColumnName="TD2_ID" />
+          <ScalarProperty Name="PD2_NM" ColumnName="PD2_NM" />
+          <ScalarProperty Name="PD2_ID" ColumnName="PD2_ID" />
+          <ScalarProperty Name="UPDATE_DATETIME" ColumnName="UPDATE_DATETIME" />
+          <ScalarProperty Name="UPDATE_NM" ColumnName="UPDATE_NM" />
+          <ScalarProperty Name="UPDATE_ID" ColumnName="UPDATE_ID" />
+          <ScalarProperty Name="END_RUN_SEQ" ColumnName="END_RUN_SEQ" />
+          <ScalarProperty Name="INNING" ColumnName="INNING" />
+          <ScalarProperty Name="STANDBY_RUN_SEQ" ColumnName="STANDBY_RUN_SEQ" />
+          <ScalarProperty Name="PLAY_RUN_SEQ" ColumnName="PLAY_RUN_SEQ" />
+          <ScalarProperty Name="EDITOR_NM" ColumnName="EDITOR_NM" />
+          <ScalarProperty Name="EDITOR_ID" ColumnName="EDITOR_ID" />
+          <ScalarProperty Name="ASSIGNTIME" ColumnName="ASSIGNTIME" />
+          <ScalarProperty Name="DIR" ColumnName="DIR" />
+          <ScalarProperty Name="B_STATE" ColumnName="B_STATE" />
+          <ScalarProperty Name="DELETE_FLAG" ColumnName="DELETE_FLAG" />
+          <ScalarProperty Name="DELETE_DATETIME" ColumnName="DELETE_DATETIME" />
+          <ScalarProperty Name="DELETE_NM" ColumnName="DELETE_NM" />
+          <ScalarProperty Name="DELETE_ID" ColumnName="DELETE_ID" />
+          <ScalarProperty Name="MAKE_DATETIME" ColumnName="MAKE_DATETIME" />
+          <ScalarProperty Name="MAKE_NM" ColumnName="MAKE_NM" />
+          <ScalarProperty Name="MAKE_ID" ColumnName="MAKE_ID" />
+          <ScalarProperty Name="ANC2_NM" ColumnName="ANC2_NM" />
+          <ScalarProperty Name="ANC2_ID" ColumnName="ANC2_ID" />
+          <ScalarProperty Name="ANC1_NM" ColumnName="ANC1_NM" />
+          <ScalarProperty Name="ANC1_ID" ColumnName="ANC1_ID" />
+          <ScalarProperty Name="TD_NM" ColumnName="TD_NM" />
+          <ScalarProperty Name="TD_ID" ColumnName="TD_ID" />
+          <ScalarProperty Name="PD_NM" ColumnName="PD_NM" />
+          <ScalarProperty Name="PD_ID" ColumnName="PD_ID" />
+          <ScalarProperty Name="DAY_FLAG" ColumnName="DAY_FLAG" />
+          <ScalarProperty Name="RBO_TIME" ColumnName="RBO_TIME" />
+          <ScalarProperty Name="RUN_END" ColumnName="RUN_END" />
+          <ScalarProperty Name="RUN_START" ColumnName="RUN_START" />
+          <ScalarProperty Name="REMARKS" ColumnName="REMARKS" />
+          <ScalarProperty Name="PRG_NM" ColumnName="PRG_NM" />
+          <ScalarProperty Name="PRG_CD" ColumnName="PRG_CD" />
+          <ScalarProperty Name="AREA_NM" ColumnName="AREA_NM" />
+          <ScalarProperty Name="RUN_DATE" ColumnName="RUN_DATE" />
+          <ScalarProperty Name="AREA_CD" ColumnName="AREA_CD" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NTB_BROAD_WATCH">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db90.DNRS.NTB_BROAD_WATCH">
+        <MappingFragment StoreEntitySet="NTB_BROAD_WATCH">
+          <ScalarProperty Name="MOD_DATE" ColumnName="MOD_DATE" />
+          <ScalarProperty Name="MOD_ID" ColumnName="MOD_ID" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="REG_ID" ColumnName="REG_ID" />
+          <ScalarProperty Name="PUBLISH_YN" ColumnName="PUBLISH_YN" />
+          <ScalarProperty Name="Num" ColumnName="Num" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="NUP_GetAllProgramEtcList" FunctionName="Wow.Tv.Middle.Model.Db90.DNRS.Store.NUP_GetAllProgramEtcList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db90.DNRS.NUP_GetAllProgramEtcList_Result">
+          <ScalarProperty Name="PRG_CD" ColumnName="PRG_CD" />
+          <ScalarProperty Name="PRG_NM" ColumnName="PRG_NM" />
+          <ScalarProperty Name="rownum" ColumnName="rownum" />
+          <ScalarProperty Name="total" ColumnName="total" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="NUP_GetAllProgramList" FunctionName="Wow.Tv.Middle.Model.Db90.DNRS.Store.NUP_GetAllProgramList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db90.DNRS.NUP_GetAllProgramList_Result">
+          <ScalarProperty Name="PRG_CD" ColumnName="PRG_CD" />
+          <ScalarProperty Name="PRG_NM" ColumnName="PRG_NM" />
+          <ScalarProperty Name="rownum" ColumnName="rownum" />
+          <ScalarProperty Name="total" ColumnName="total" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="NUP_GetRandomProgramList" FunctionName="Wow.Tv.Middle.Model.Db90.DNRS.Store.NUP_GetRandomProgramList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db90.DNRS.NUP_GetRandomProgramList_Result">
+          <ScalarProperty Name="PRG_CD" ColumnName="PRG_CD" />
+          <ScalarProperty Name="PRG_NM" ColumnName="PRG_NM" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="NUP_GetBroadWatchList" FunctionName="Wow.Tv.Middle.Model.Db90.DNRS.Store.NUP_GetBroadWatchList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db90.DNRS.NUP_GetBroadWatchList_Result2">
+          <ScalarProperty Name="Program_Name" ColumnName="Program_Name" />
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="Dep" ColumnName="Dep" />
+          <ScalarProperty Name="broad_date" ColumnName="broad_date" />
+          <ScalarProperty Name="rownum" ColumnName="rownum" />
+          <ScalarProperty Name="total" ColumnName="total" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="NUP_GetVodTodayList" FunctionName="Wow.Tv.Middle.Model.Db90.DNRS.Store.NUP_GetVodTodayList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db90.DNRS.NUP_GetVodTodayList_Result">
+          <ScalarProperty Name="prg_cd" ColumnName="prg_cd" />
+          <ScalarProperty Name="prg_nm" ColumnName="prg_nm" />
+          <ScalarProperty Name="run_start" ColumnName="run_start" />
+          <ScalarProperty Name="prog_content" ColumnName="prog_content" />
+          <ScalarProperty Name="folder_name" ColumnName="folder_name" />
+          <ScalarProperty Name="file_front_name" ColumnName="file_front_name" />
+          <ScalarProperty Name="bu" ColumnName="bu" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

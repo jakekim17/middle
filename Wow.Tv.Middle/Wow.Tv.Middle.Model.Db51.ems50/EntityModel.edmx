@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ems50Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="EMS_MAILQUEUE">
+          <Key>
+            <PropertyRef Name="SEQ" />
+          </Key>
+          <Property Name="SEQ" Type="decimal" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MAIL_CODE" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="TO_EMAIL" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="TO_NAME" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="FROM_EMAIL" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="FROM_NAME" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="SUBJECT" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="TARGET_FLAG" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="TARGET_DATE" Type="datetime" />
+          <Property Name="REG_DATE" Type="datetime" />
+          <Property Name="MAP1" Type="nvarchar" MaxLength="50" />
+          <Property Name="MAP2" Type="nvarchar" MaxLength="50" />
+          <Property Name="MAP3" Type="nvarchar" MaxLength="50" />
+          <Property Name="MAP4" Type="nvarchar" MaxLength="50" />
+          <Property Name="MAP5" Type="nvarchar" MaxLength="50" />
+          <Property Name="MAP_CONTENT" Type="ntext" Nullable="false" />
+        </EntityType>
+        <Function Name="usp_ExportSendEmail_GFC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="email" Type="nvarchar" Mode="In" />
+          <Parameter Name="year" Type="nvarchar" Mode="In" />
+          <Parameter Name="language" Type="nvarchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="ems50ModelStoreContainer">
+          <EntitySet Name="EMS_MAILQUEUE" EntityType="Self.EMS_MAILQUEUE" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ems50Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Db51_ems50" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="NUP_MAILQUEUE_INSERT">
+            <Parameter Name="MAIL_CODE" Mode="In" Type="String" />
+            <Parameter Name="TO_EMAIL" Mode="In" Type="String" />
+            <Parameter Name="TO_NAME" Mode="In" Type="String" />
+            <Parameter Name="FROM_EMAIL" Mode="In" Type="String" />
+            <Parameter Name="FROM_NAME" Mode="In" Type="String" />
+            <Parameter Name="SUBJECT" Mode="In" Type="String" />
+            <Parameter Name="TARGET_FLAG" Mode="In" Type="String" />
+            <Parameter Name="TARGET_DATE" Mode="In" Type="DateTime" />
+            <Parameter Name="REG_DATE" Mode="In" Type="DateTime" />
+            <Parameter Name="MAP1" Mode="In" Type="String" />
+            <Parameter Name="MAP2" Mode="In" Type="String" />
+            <Parameter Name="MAP3" Mode="In" Type="String" />
+            <Parameter Name="MAP4" Mode="In" Type="String" />
+            <Parameter Name="MAP5" Mode="In" Type="String" />
+            <Parameter Name="MAP_CONTENT" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="EMS_MAILQUEUE" EntityType="ems50Model.EMS_MAILQUEUE" />
+          <FunctionImport Name="usp_ExportSendEmail_GFC">
+            <Parameter Name="email" Mode="In" Type="String" />
+            <Parameter Name="year" Mode="In" Type="String" />
+            <Parameter Name="language" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="EMS_MAILQUEUE">
+          <Key>
+            <PropertyRef Name="SEQ" />
+          </Key>
+          <Property Name="SEQ" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="MAIL_CODE" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="TO_EMAIL" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TO_NAME" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="FROM_EMAIL" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FROM_NAME" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="SUBJECT" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TARGET_FLAG" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="TARGET_DATE" Type="DateTime" Precision="3" />
+          <Property Name="REG_DATE" Type="DateTime" Precision="3" />
+          <Property Name="MAP1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MAP2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MAP3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MAP4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MAP5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MAP_CONTENT" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ems50ModelStoreContainer" CdmEntityContainer="Db51_ems50">
+          <EntitySetMapping Name="EMS_MAILQUEUE">
+            <EntityTypeMapping TypeName="ems50Model.EMS_MAILQUEUE">
+              <MappingFragment StoreEntitySet="EMS_MAILQUEUE">
+                <ScalarProperty Name="MAP_CONTENT" ColumnName="MAP_CONTENT" />
+                <ScalarProperty Name="MAP5" ColumnName="MAP5" />
+                <ScalarProperty Name="MAP4" ColumnName="MAP4" />
+                <ScalarProperty Name="MAP3" ColumnName="MAP3" />
+                <ScalarProperty Name="MAP2" ColumnName="MAP2" />
+                <ScalarProperty Name="MAP1" ColumnName="MAP1" />
+                <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+                <ScalarProperty Name="TARGET_DATE" ColumnName="TARGET_DATE" />
+                <ScalarProperty Name="TARGET_FLAG" ColumnName="TARGET_FLAG" />
+                <ScalarProperty Name="SUBJECT" ColumnName="SUBJECT" />
+                <ScalarProperty Name="FROM_NAME" ColumnName="FROM_NAME" />
+                <ScalarProperty Name="FROM_EMAIL" ColumnName="FROM_EMAIL" />
+                <ScalarProperty Name="TO_NAME" ColumnName="TO_NAME" />
+                <ScalarProperty Name="TO_EMAIL" ColumnName="TO_EMAIL" />
+                <ScalarProperty Name="MAIL_CODE" ColumnName="MAIL_CODE" />
+                <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="usp_ExportSendEmail_GFC" FunctionName="ems50Model.Store.usp_ExportSendEmail_GFC" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="없음" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

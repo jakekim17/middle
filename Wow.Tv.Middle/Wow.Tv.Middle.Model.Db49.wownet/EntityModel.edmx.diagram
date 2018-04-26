@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c11d5f6cddf1430dba89b84d40c8aed9" Name="Diagram1" ZoomLevel="74" ShowGrid="true" DisplayType="true">
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_BOARD_AA" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_STOCK_SITUATION" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_BOARD_CONFIG_49_NET" Width="2" PointX="4.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_BOARD_TOP_49_NET" Width="2.25" PointX="4.75" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_NOTICE_49_NET" Width="2.25" PointX="4.75" PointY="1.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_NOTICE_LOG_49_NET" Width="1.5" PointX="4.875" PointY="3.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_IR_CLUB_2010" Width="1.5" PointX="0.75" PointY="8.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_STOCK_RESULT" Width="1.5" PointX="7.375" PointY="6.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_STOCK_RESULT_CONNECT" Width="1.5" PointX="9.375" PointY="6.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_LECTURES" Width="1.5" PointX="11.25" PointY="0.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_LECTURES_SCHEDULE" Width="1.5" PointX="13.125" PointY="0.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wownet.NTB_LECTURES_LECTURER" Width="1.5" PointX="9.375" PointY="9.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wownet.tblEvent" Width="1.5" PointX="8.375" PointY="0.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_SCRAP_CATEGORY" Width="1.5" PointX="3.375" PointY="10.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_SCRAP" Width="1.5" PointX="5.375" PointY="11.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_SCRAP_CONTENT" Width="1.5" PointX="11.375" PointY="6.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_SCRAP_MENU" Width="1.5" PointX="11.375" PointY="10.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_CONSULTATION_APPLICATION" Width="1.5" PointX="7.375" PointY="12.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_ACADEMY_APPL" Width="1.5" PointX="0.75" PointY="13.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wownet.TBLCMSMNU_GIFT_USER" Width="1.5" PointX="13.375" PointY="6.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_STRATEGY_APPLICATION" Width="1.5" PointX="9.375" PointY="13.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_CODE_NET" Width="1.5" PointX="13.375" PointY="11.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

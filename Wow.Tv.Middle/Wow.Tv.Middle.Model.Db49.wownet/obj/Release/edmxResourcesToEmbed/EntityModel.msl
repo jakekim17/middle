@@ -1,0 +1,720 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WowTvMiddleModelDb49wownetStoreContainer" CdmEntityContainer="Db49_wownet">
+    <EntitySetMapping Name="TAB_BOARD">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.TAB_BOARD_AA">
+        <MappingFragment StoreEntitySet="TAB_BOARD">
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+          <ScalarProperty Name="BCODE" ColumnName="BCODE" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="CONTENT" ColumnName="CONTENT" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+          <ScalarProperty Name="REF" ColumnName="REF" />
+          <ScalarProperty Name="REF_STEP" ColumnName="REF_STEP" />
+          <ScalarProperty Name="REF_LEVEL" ColumnName="REF_LEVEL" />
+          <ScalarProperty Name="READ_CNT" ColumnName="READ_CNT" />
+          <ScalarProperty Name="MEMO_CNT" ColumnName="MEMO_CNT" />
+          <ScalarProperty Name="RECOMMEND_CNT" ColumnName="RECOMMEND_CNT" />
+          <ScalarProperty Name="REVERSE_CNT" ColumnName="REVERSE_CNT" />
+          <ScalarProperty Name="ASTROMANCY_CNT" ColumnName="ASTROMANCY_CNT" />
+          <ScalarProperty Name="ASTROMANCY_NUM" ColumnName="ASTROMANCY_NUM" />
+          <ScalarProperty Name="VIEW_FLAG" ColumnName="VIEW_FLAG" />
+          <ScalarProperty Name="EMOTICON" ColumnName="EMOTICON" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="GUBUN" ColumnName="GUBUN" />
+          <ScalarProperty Name="SOURCE" ColumnName="SOURCE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="PUBLICITY_CNT" ColumnName="PUBLICITY_CNT" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="CNAME" ColumnName="CNAME" />
+          <ScalarProperty Name="MY_WRITE" ColumnName="MY_WRITE" />
+          <ScalarProperty Name="TEMP_NUM" ColumnName="TEMP_NUM" />
+          <ScalarProperty Name="TEMP_GBN" ColumnName="TEMP_GBN" />
+          <ScalarProperty Name="USER_IP" ColumnName="USER_IP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAB_STOCK_SITUATION">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.TAB_STOCK_SITUATION">
+        <MappingFragment StoreEntitySet="TAB_STOCK_SITUATION">
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="DISP_ORDER" ColumnName="DISP_ORDER" />
+          <ScalarProperty Name="STOCK_CNT" ColumnName="STOCK_CNT" />
+          <ScalarProperty Name="STOCK_FLAG" ColumnName="STOCK_FLAG" />
+          <ScalarProperty Name="STOCK" ColumnName="STOCK" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAB_BOARD_CONFIG_49_NET">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.TAB_BOARD_CONFIG_49_NET">
+        <MappingFragment StoreEntitySet="TAB_BOARD_CONFIG">
+          <ScalarProperty Name="ITEMCODE" ColumnName="ITEMCODE" />
+          <ScalarProperty Name="HARDSHIP" ColumnName="HARDSHIP" />
+          <ScalarProperty Name="ASTROMANCY_MEMO" ColumnName="ASTROMANCY_MEMO" />
+          <ScalarProperty Name="ANNOUNCEMENT" ColumnName="ANNOUNCEMENT" />
+          <ScalarProperty Name="EMAIL_LEVEL" ColumnName="EMAIL_LEVEL" />
+          <ScalarProperty Name="PRINTS_LEVEL" ColumnName="PRINTS_LEVEL" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="LIST_CNT" ColumnName="LIST_CNT" />
+          <ScalarProperty Name="PRINTS" ColumnName="PRINTS" />
+          <ScalarProperty Name="PUBLICITY" ColumnName="PUBLICITY" />
+          <ScalarProperty Name="SOURCE" ColumnName="SOURCE" />
+          <ScalarProperty Name="SCRAP_LEVEL" ColumnName="SCRAP_LEVEL" />
+          <ScalarProperty Name="SCRAP" ColumnName="SCRAP" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="VIEW_FLAG" ColumnName="VIEW_FLAG" />
+          <ScalarProperty Name="REVERSE_LEVEL" ColumnName="REVERSE_LEVEL" />
+          <ScalarProperty Name="ASTROMANCY_LEVEL" ColumnName="ASTROMANCY_LEVEL" />
+          <ScalarProperty Name="RECOMMEND_LEVEL" ColumnName="RECOMMEND_LEVEL" />
+          <ScalarProperty Name="REPLY_LEVEL" ColumnName="REPLY_LEVEL" />
+          <ScalarProperty Name="MEMO_LEVEL" ColumnName="MEMO_LEVEL" />
+          <ScalarProperty Name="WRITE_LEVEL" ColumnName="WRITE_LEVEL" />
+          <ScalarProperty Name="REVERSE" ColumnName="REVERSE" />
+          <ScalarProperty Name="HTML" ColumnName="HTML" />
+          <ScalarProperty Name="ASTROMANCY" ColumnName="ASTROMANCY" />
+          <ScalarProperty Name="RECOMMEND" ColumnName="RECOMMEND" />
+          <ScalarProperty Name="REPLY" ColumnName="REPLY" />
+          <ScalarProperty Name="MEMO" ColumnName="MEMO" />
+          <ScalarProperty Name="WRITE" ColumnName="WRITE" />
+          <ScalarProperty Name="FILE_UPLOAD" ColumnName="FILE_UPLOAD" />
+          <ScalarProperty Name="FILE_CNT" ColumnName="FILE_CNT" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="GUBUN" ColumnName="GUBUN" />
+          <ScalarProperty Name="BCODE" ColumnName="BCODE" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAB_BOARD_TOP_49_NET">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.TAB_BOARD_TOP_49_NET">
+        <MappingFragment StoreEntitySet="TAB_BOARD_TOP">
+          <ScalarProperty Name="PUBLICITY_CNT" ColumnName="PUBLICITY_CNT" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="SOURCE" ColumnName="SOURCE" />
+          <ScalarProperty Name="GUBUN" ColumnName="GUBUN" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="EMOTICON" ColumnName="EMOTICON" />
+          <ScalarProperty Name="VIEW_FLAG" ColumnName="VIEW_FLAG" />
+          <ScalarProperty Name="ASTROMANCY_NUM" ColumnName="ASTROMANCY_NUM" />
+          <ScalarProperty Name="ASTROMANCY_CNT" ColumnName="ASTROMANCY_CNT" />
+          <ScalarProperty Name="REVERSE_CNT" ColumnName="REVERSE_CNT" />
+          <ScalarProperty Name="RECOMMEND_CNT" ColumnName="RECOMMEND_CNT" />
+          <ScalarProperty Name="MEMO_CNT" ColumnName="MEMO_CNT" />
+          <ScalarProperty Name="READ_CNT" ColumnName="READ_CNT" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="CONTENT" ColumnName="CONTENT" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="CODES" ColumnName="CODES" />
+          <ScalarProperty Name="BCODE" ColumnName="BCODE" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAB_NOTICE_49_NET">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.TAB_NOTICE_49_NET">
+        <MappingFragment StoreEntitySet="TAB_NOTICE">
+          <ScalarProperty Name="TOTAL_NUM" ColumnName="TOTAL_NUM" />
+          <ScalarProperty Name="PUBLICITY_CNT" ColumnName="PUBLICITY_CNT" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="SOURCE" ColumnName="SOURCE" />
+          <ScalarProperty Name="GUBUN" ColumnName="GUBUN" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="EMOTICON" ColumnName="EMOTICON" />
+          <ScalarProperty Name="VIEW_FLAG" ColumnName="VIEW_FLAG" />
+          <ScalarProperty Name="ASTROMANCY_NUM" ColumnName="ASTROMANCY_NUM" />
+          <ScalarProperty Name="ASTROMANCY_CNT" ColumnName="ASTROMANCY_CNT" />
+          <ScalarProperty Name="REVERSE_CNT" ColumnName="REVERSE_CNT" />
+          <ScalarProperty Name="RECOMMEND_CNT" ColumnName="RECOMMEND_CNT" />
+          <ScalarProperty Name="MEMO_CNT" ColumnName="MEMO_CNT" />
+          <ScalarProperty Name="READ_CNT" ColumnName="READ_CNT" />
+          <ScalarProperty Name="REF_LEVEL" ColumnName="REF_LEVEL" />
+          <ScalarProperty Name="REF_STEP" ColumnName="REF_STEP" />
+          <ScalarProperty Name="REF" ColumnName="REF" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="CONTENT" ColumnName="CONTENT" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="BCODE" ColumnName="BCODE" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAB_NOTICE_LOG_49_NET">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.TAB_NOTICE_LOG_49_NET">
+        <MappingFragment StoreEntitySet="TAB_NOTICE_LOG">
+          <ScalarProperty Name="TOTAL_NUM" ColumnName="TOTAL_NUM" />
+          <ScalarProperty Name="PUBLICITY_CNT" ColumnName="PUBLICITY_CNT" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="SOURCE" ColumnName="SOURCE" />
+          <ScalarProperty Name="GUBUN" ColumnName="GUBUN" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="EMOTICON" ColumnName="EMOTICON" />
+          <ScalarProperty Name="ASTROMANCY_NUM" ColumnName="ASTROMANCY_NUM" />
+          <ScalarProperty Name="ASTROMANCY_CNT" ColumnName="ASTROMANCY_CNT" />
+          <ScalarProperty Name="REVERSE_CNT" ColumnName="REVERSE_CNT" />
+          <ScalarProperty Name="RECOMMEND_CNT" ColumnName="RECOMMEND_CNT" />
+          <ScalarProperty Name="MEMO_CNT" ColumnName="MEMO_CNT" />
+          <ScalarProperty Name="READ_CNT" ColumnName="READ_CNT" />
+          <ScalarProperty Name="REF_LEVEL" ColumnName="REF_LEVEL" />
+          <ScalarProperty Name="REF_STEP" ColumnName="REF_STEP" />
+          <ScalarProperty Name="REF" ColumnName="REF" />
+          <ScalarProperty Name="ADMIN_NAME" ColumnName="ADMIN_NAME" />
+          <ScalarProperty Name="ADMIN_ID" ColumnName="ADMIN_ID" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="CONTENT" ColumnName="CONTENT" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="BCODE" ColumnName="BCODE" />
+          <ScalarProperty Name="BSEQ" ColumnName="BSEQ" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="NUP_TAB_NOTICE_PAGE" FunctionName="Wow.Tv.Middle.Model.Db49.wownet.Store.NUP_TAB_NOTICE_PAGE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.NUP_TAB_NOTICE_PAGE_Result">
+          <ScalarProperty Name="ROWNUM" ColumnName="ROWNUM" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+          <ScalarProperty Name="BCODE" ColumnName="BCODE" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="CONTENT" ColumnName="CONTENT" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+          <ScalarProperty Name="REF" ColumnName="REF" />
+          <ScalarProperty Name="REF_STEP" ColumnName="REF_STEP" />
+          <ScalarProperty Name="REF_LEVEL" ColumnName="REF_LEVEL" />
+          <ScalarProperty Name="READ_CNT" ColumnName="READ_CNT" />
+          <ScalarProperty Name="MEMO_CNT" ColumnName="MEMO_CNT" />
+          <ScalarProperty Name="RECOMMEND_CNT" ColumnName="RECOMMEND_CNT" />
+          <ScalarProperty Name="REVERSE_CNT" ColumnName="REVERSE_CNT" />
+          <ScalarProperty Name="ASTROMANCY_CNT" ColumnName="ASTROMANCY_CNT" />
+          <ScalarProperty Name="ASTROMANCY_NUM" ColumnName="ASTROMANCY_NUM" />
+          <ScalarProperty Name="VIEW_FLAG" ColumnName="VIEW_FLAG" />
+          <ScalarProperty Name="EMOTICON" ColumnName="EMOTICON" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="GUBUN" ColumnName="GUBUN" />
+          <ScalarProperty Name="SOURCE" ColumnName="SOURCE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="PUBLICITY_CNT" ColumnName="PUBLICITY_CNT" />
+          <ScalarProperty Name="TOTAL_NUM" ColumnName="TOTAL_NUM" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="TAB_IR_CLUB_2010">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.TAB_IR_CLUB_2010">
+        <MappingFragment StoreEntitySet="TAB_IR_CLUB_2010">
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="MOD_DATE" ColumnName="MOD_DATE" />
+          <ScalarProperty Name="VIEW_FLAG" ColumnName="VIEW_FLAG" />
+          <ScalarProperty Name="REG_TYPE" ColumnName="REG_TYPE" />
+          <ScalarProperty Name="END_DATE" ColumnName="END_DATE" />
+          <ScalarProperty Name="START_DATE" ColumnName="START_DATE" />
+          <ScalarProperty Name="COMPANY_PHONE" ColumnName="COMPANY_PHONE" />
+          <ScalarProperty Name="HOMEPAGE" ColumnName="HOMEPAGE" />
+          <ScalarProperty Name="COMPANY_LOGO" ColumnName="COMPANY_LOGO" />
+          <ScalarProperty Name="SCODE" ColumnName="SCODE" />
+          <ScalarProperty Name="INDUSTRY_NAME" ColumnName="INDUSTRY_NAME" />
+          <ScalarProperty Name="INDUSTRY_TYPE" ColumnName="INDUSTRY_TYPE" />
+          <ScalarProperty Name="APPROVAL_FLAG" ColumnName="APPROVAL_FLAG" />
+          <ScalarProperty Name="INDUSTRY_VOLUME" ColumnName="INDUSTRY_VOLUME" />
+          <ScalarProperty Name="COMPANY_NAME" ColumnName="COMPANY_NAME" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAB_STOCK_RESULT">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.TAB_STOCK_RESULT">
+        <MappingFragment StoreEntitySet="TAB_STOCK_RESULT">
+          <ScalarProperty Name="VIEW_FLAG" ColumnName="VIEW_FLAG" />
+          <ScalarProperty Name="MOD_ID" ColumnName="MOD_ID" />
+          <ScalarProperty Name="MOD_DATE" ColumnName="MOD_DATE" />
+          <ScalarProperty Name="REG_ID" ColumnName="REG_ID" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="PLACE" ColumnName="PLACE" />
+          <ScalarProperty Name="STIME2" ColumnName="STIME2" />
+          <ScalarProperty Name="STIME1" ColumnName="STIME1" />
+          <ScalarProperty Name="SWEEK" ColumnName="SWEEK" />
+          <ScalarProperty Name="SDAY" ColumnName="SDAY" />
+          <ScalarProperty Name="SMONTH" ColumnName="SMONTH" />
+          <ScalarProperty Name="SYEAR" ColumnName="SYEAR" />
+          <ScalarProperty Name="DIVERGE" ColumnName="DIVERGE" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAB_STOCK_RESULT_CONNECT">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.TAB_STOCK_RESULT_CONNECT">
+        <MappingFragment StoreEntitySet="TAB_STOCK_RESULT_CONNECT">
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="STOCK_FLAG" ColumnName="STOCK_FLAG" />
+          <ScalarProperty Name="STOCK" ColumnName="STOCK" />
+          <ScalarProperty Name="CONTENT" ColumnName="CONTENT" />
+          <ScalarProperty Name="MSEQ" ColumnName="MSEQ" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAB_LECTURES">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.TAB_LECTURES">
+        <MappingFragment StoreEntitySet="TAB_LECTURES">
+          <ScalarProperty Name="THUMNAIL_FILE" ColumnName="THUMNAIL_FILE" />
+          <ScalarProperty Name="MAIN_CTGR" ColumnName="MAIN_CTGR" />
+          <ScalarProperty Name="WG_IMAGE_FILE" ColumnName="WG_IMAGE_FILE" />
+          <ScalarProperty Name="GUBUN" ColumnName="GUBUN" />
+          <ScalarProperty Name="METHOD" ColumnName="METHOD" />
+          <ScalarProperty Name="L_SEQ" ColumnName="L_SEQ" />
+          <ScalarProperty Name="IMAGE_FILE" ColumnName="IMAGE_FILE" />
+          <ScalarProperty Name="IMAGE_FLAG" ColumnName="IMAGE_FLAG" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="ADMIN_ID" ColumnName="ADMIN_ID" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="MANAGER" ColumnName="MANAGER" />
+          <ScalarProperty Name="EXPENSE" ColumnName="EXPENSE" />
+          <ScalarProperty Name="CONTENTS" ColumnName="CONTENTS" />
+          <ScalarProperty Name="SUMMARY" ColumnName="SUMMARY" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="VIEW_FLAG" ColumnName="VIEW_FLAG" />
+          <ScalarProperty Name="VIEW_SITE" ColumnName="VIEW_SITE" />
+          <ScalarProperty Name="TYPE_FLAG" ColumnName="TYPE_FLAG" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAB_LECTURES_SCHEDULE">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.TAB_LECTURES_SCHEDULE">
+        <MappingFragment StoreEntitySet="TAB_LECTURES_SCHEDULE">
+          <ScalarProperty Name="ETC" ColumnName="ETC" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="rentalFee" ColumnName="rentalFee" />
+          <ScalarProperty Name="operatingFee" ColumnName="operatingFee" />
+          <ScalarProperty Name="pureSalesMoney" ColumnName="pureSalesMoney" />
+          <ScalarProperty Name="refundMoney" ColumnName="refundMoney" />
+          <ScalarProperty Name="salesMoney" ColumnName="salesMoney" />
+          <ScalarProperty Name="salesCount" ColumnName="salesCount" />
+          <ScalarProperty Name="attendCount" ColumnName="attendCount" />
+          <ScalarProperty Name="Banner" ColumnName="Banner" />
+          <ScalarProperty Name="ROUGH_SKETCH_PATH" ColumnName="ROUGH_SKETCH_PATH" />
+          <ScalarProperty Name="LECTURER" ColumnName="LECTURER" />
+          <ScalarProperty Name="LECTURES_TIME" ColumnName="LECTURES_TIME" />
+          <ScalarProperty Name="LECTURES_DATE" ColumnName="LECTURES_DATE" />
+          <ScalarProperty Name="PLACE" ColumnName="PLACE" />
+          <ScalarProperty Name="REGION" ColumnName="REGION" />
+          <ScalarProperty Name="MSEQ" ColumnName="MSEQ" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NTB_LECTURES_LECTURER">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.NTB_LECTURES_LECTURER">
+        <MappingFragment StoreEntitySet="NTB_LECTURES_LECTURER">
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="LECTURER" ColumnName="LECTURER" />
+          <ScalarProperty Name="PARTNER_NO" ColumnName="PARTNER_NO" />
+          <ScalarProperty Name="LECTURER_TYPE" ColumnName="LECTURER_TYPE" />
+          <ScalarProperty Name="MSEQ" ColumnName="MSEQ" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEvents">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.tblEvent">
+        <MappingFragment StoreEntitySet="tblEvent">
+          <ScalarProperty Name="DEL_YN" ColumnName="DEL_YN" />
+          <ScalarProperty Name="WIN_CONTENT" ColumnName="WIN_CONTENT" />
+          <ScalarProperty Name="WIN_VIEW_FLAG" ColumnName="WIN_VIEW_FLAG" />
+          <ScalarProperty Name="WINNER_DATE" ColumnName="WINNER_DATE" />
+          <ScalarProperty Name="VIEW_SITE" ColumnName="VIEW_SITE" />
+          <ScalarProperty Name="regdate" ColumnName="regdate" />
+          <ScalarProperty Name="readCount" ColumnName="readCount" />
+          <ScalarProperty Name="adminId" ColumnName="adminId" />
+          <ScalarProperty Name="viewFlag" ColumnName="viewFlag" />
+          <ScalarProperty Name="endDate" ColumnName="endDate" />
+          <ScalarProperty Name="startDate" ColumnName="startDate" />
+          <ScalarProperty Name="linkTarget" ColumnName="linkTarget" />
+          <ScalarProperty Name="linkUrl" ColumnName="linkUrl" />
+          <ScalarProperty Name="bannerImage" ColumnName="bannerImage" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="eventType" ColumnName="eventType" />
+          <ScalarProperty Name="proId" ColumnName="proId" />
+          <ScalarProperty Name="bcode" ColumnName="bcode" />
+          <ScalarProperty Name="seq" ColumnName="seq" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAB_SCRAP_CATEGORY">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.TAB_SCRAP_CATEGORY">
+        <MappingFragment StoreEntitySet="TAB_SCRAP_CATEGORY">
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="FOLDER" ColumnName="FOLDER" />
+          <ScalarProperty Name="GUBUN" ColumnName="GUBUN" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAB_SCRAP">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.TAB_SCRAP">
+        <MappingFragment StoreEntitySet="TAB_SCRAP">
+          <ScalarProperty Name="MENUURL" ColumnName="MENUURL" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="BCODE" ColumnName="BCODE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="MSEQ" ColumnName="MSEQ" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAB_SCRAP_CONTENT">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.TAB_SCRAP_CONTENT">
+        <MappingFragment StoreEntitySet="TAB_SCRAP_CONTENT">
+          <ScalarProperty Name="ArticleID" ColumnName="ArticleID" />
+          <ScalarProperty Name="SCRAPDATE" ColumnName="SCRAPDATE" />
+          <ScalarProperty Name="REGDATE" ColumnName="REGDATE" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="PRO_ID" ColumnName="PRO_ID" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="CNAME" ColumnName="CNAME" />
+          <ScalarProperty Name="BSEQ" ColumnName="BSEQ" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAB_SCRAP_MENU">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.TAB_SCRAP_MENU">
+        <MappingFragment StoreEntitySet="TAB_SCRAP_MENU">
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="DISP_ORDER" ColumnName="DISP_ORDER" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="FOLDER_NAME" ColumnName="FOLDER_NAME" />
+          <ScalarProperty Name="PSEQ" ColumnName="PSEQ" />
+          <ScalarProperty Name="MSEQ" ColumnName="MSEQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAB_CONSULTATION_APPLICATION">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.TAB_CONSULTATION_APPLICATION">
+        <MappingFragment StoreEntitySet="TAB_CONSULTATION_APPLICATION">
+          <ScalarProperty Name="USER_IP" ColumnName="USER_IP" />
+          <ScalarProperty Name="CAFE_REF" ColumnName="CAFE_REF" />
+          <ScalarProperty Name="BCOST" ColumnName="BCOST" />
+          <ScalarProperty Name="VODTYPE" ColumnName="VODTYPE" />
+          <ScalarProperty Name="VODID" ColumnName="VODID" />
+          <ScalarProperty Name="BROOM" ColumnName="BROOM" />
+          <ScalarProperty Name="MSN_YN" ColumnName="MSN_YN" />
+          <ScalarProperty Name="FUTUREWIZ_YN" ColumnName="FUTUREWIZ_YN" />
+          <ScalarProperty Name="MY_WRITE" ColumnName="MY_WRITE" />
+          <ScalarProperty Name="MEMO_CNT" ColumnName="MEMO_CNT" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="REF_STEP" ColumnName="REF_STEP" />
+          <ScalarProperty Name="REF" ColumnName="REF" />
+          <ScalarProperty Name="PUBLICITY_CNT" ColumnName="PUBLICITY_CNT" />
+          <ScalarProperty Name="BEST_NAME" ColumnName="BEST_NAME" />
+          <ScalarProperty Name="BEST_CODE" ColumnName="BEST_CODE" />
+          <ScalarProperty Name="RECOMMEND_CNT" ColumnName="RECOMMEND_CNT" />
+          <ScalarProperty Name="READ_CNT" ColumnName="READ_CNT" />
+          <ScalarProperty Name="INVESTMENT_OPTION" ColumnName="INVESTMENT_OPTION" />
+          <ScalarProperty Name="BUY_DATE" ColumnName="BUY_DATE" />
+          <ScalarProperty Name="CRITICISM" ColumnName="CRITICISM" />
+          <ScalarProperty Name="AVERAGE" ColumnName="AVERAGE" />
+          <ScalarProperty Name="ITEM_GRAVITY" ColumnName="ITEM_GRAVITY" />
+          <ScalarProperty Name="VIEW_FLAG" ColumnName="VIEW_FLAG" />
+          <ScalarProperty Name="CNAME" ColumnName="CNAME" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="AGE" ColumnName="AGE" />
+          <ScalarProperty Name="SEX" ColumnName="SEX" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="CONTENT" ColumnName="CONTENT" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="RELIANCE" ColumnName="RELIANCE" />
+          <ScalarProperty Name="MAKET" ColumnName="MAKET" />
+          <ScalarProperty Name="GRAVITY" ColumnName="GRAVITY" />
+          <ScalarProperty Name="CHARACTER" ColumnName="CHARACTER" />
+          <ScalarProperty Name="SCALE" ColumnName="SCALE" />
+          <ScalarProperty Name="CAREER" ColumnName="CAREER" />
+          <ScalarProperty Name="BCODE" ColumnName="BCODE" />
+          <ScalarProperty Name="BSEQ" ColumnName="BSEQ" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAB_ACADEMY_APPL">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.TAB_ACADEMY_APPL">
+        <MappingFragment StoreEntitySet="TAB_ACADEMY_APPL">
+          <ScalarProperty Name="AGREE_AD" ColumnName="AGREE_AD" />
+          <ScalarProperty Name="AGREE_PI" ColumnName="AGREE_PI" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="FLAG" ColumnName="FLAG" />
+          <ScalarProperty Name="REG_FLAG" ColumnName="REG_FLAG" />
+          <ScalarProperty Name="ATTEN_FLAG" ColumnName="ATTEN_FLAG" />
+          <ScalarProperty Name="REGDATE" ColumnName="REGDATE" />
+          <ScalarProperty Name="LIVEAREA" ColumnName="LIVEAREA" />
+          <ScalarProperty Name="BIRTHDAY" ColumnName="BIRTHDAY" />
+          <ScalarProperty Name="MAINSTOCK" ColumnName="MAINSTOCK" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="MOBILE" ColumnName="MOBILE" />
+          <ScalarProperty Name="TEL" ColumnName="TEL" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="SSNO" ColumnName="SSNO" />
+          <ScalarProperty Name="EDU_E" ColumnName="EDU_E" />
+          <ScalarProperty Name="EDU_S" ColumnName="EDU_S" />
+          <ScalarProperty Name="CENTER_NAME" ColumnName="CENTER_NAME" />
+          <ScalarProperty Name="LS_SEQ" ColumnName="LS_SEQ" />
+          <ScalarProperty Name="L_SEQ" ColumnName="L_SEQ" />
+          <ScalarProperty Name="AL_SEQ" ColumnName="AL_SEQ" />
+          <ScalarProperty Name="EA_TYPE" ColumnName="EA_TYPE" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="USP_GetTabStrategetApplication" FunctionName="Wow.Tv.Middle.Model.Db49.wownet.Store.USP_GetTabStrategetApplication">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.USP_GetTabStrategetApplication_Result">
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+          <ScalarProperty Name="BCODE" ColumnName="BCODE" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+          <ScalarProperty Name="REF" ColumnName="REF" />
+          <ScalarProperty Name="REF_STEP" ColumnName="REF_STEP" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="CNAME" ColumnName="CNAME" />
+          <ScalarProperty Name="READ_CNT" ColumnName="READ_CNT" />
+          <ScalarProperty Name="RECOMMEND_CNT" ColumnName="RECOMMEND_CNT" />
+          <ScalarProperty Name="PUBLICITY_CNT" ColumnName="PUBLICITY_CNT" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="MEMO_CNT" ColumnName="MEMO_CNT" />
+          <ScalarProperty Name="market" ColumnName="market" />
+          <ScalarProperty Name="FREAD_CNT" ColumnName="FREAD_CNT" />
+          <ScalarProperty Name="SUB_CODE" ColumnName="SUB_CODE" />
+          <ScalarProperty Name="REF_LEVEL" ColumnName="REF_LEVEL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_web_getStockDiscussionTop9List" FunctionName="Wow.Tv.Middle.Model.Db49.wownet.Store.usp_web_getStockDiscussionTop9List">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.usp_web_getStockDiscussionTop9List_Result">
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+          <ScalarProperty Name="BCODE" ColumnName="BCODE" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+          <ScalarProperty Name="REF" ColumnName="REF" />
+          <ScalarProperty Name="REF_STEP" ColumnName="REF_STEP" />
+          <ScalarProperty Name="REF_LEVEL" ColumnName="REF_LEVEL" />
+          <ScalarProperty Name="READ_CNT" ColumnName="READ_CNT" />
+          <ScalarProperty Name="MEMO_CNT" ColumnName="MEMO_CNT" />
+          <ScalarProperty Name="RECOMMEND_CNT" ColumnName="RECOMMEND_CNT" />
+          <ScalarProperty Name="REVERSE_CNT" ColumnName="REVERSE_CNT" />
+          <ScalarProperty Name="ASTROMANCY_CNT" ColumnName="ASTROMANCY_CNT" />
+          <ScalarProperty Name="VIEW_FLAG" ColumnName="VIEW_FLAG" />
+          <ScalarProperty Name="EMOTICON" ColumnName="EMOTICON" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="GUBUN" ColumnName="GUBUN" />
+          <ScalarProperty Name="SOURCE" ColumnName="SOURCE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="PUBLICITY_CNT" ColumnName="PUBLICITY_CNT" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="CNAME" ColumnName="CNAME" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_web_getStockConsultTop9List" FunctionName="Wow.Tv.Middle.Model.Db49.wownet.Store.usp_web_getStockConsultTop9List">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.usp_web_getStockConsultTop9List_Result">
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+          <ScalarProperty Name="BCODE" ColumnName="BCODE" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="CNAME" ColumnName="CNAME" />
+          <ScalarProperty Name="REF" ColumnName="REF" />
+          <ScalarProperty Name="REF_STEP" ColumnName="REF_STEP" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="FUTUREWIZ_YN" ColumnName="FUTUREWIZ_YN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="NSP_BANNER_RANDOM" FunctionName="Wow.Tv.Middle.Model.Db49.wownet.Store.NSP_BANNER_RANDOM">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.NSP_BANNER_RANDOM_Result">
+          <ScalarProperty Name="B_IDX" ColumnName="B_IDX" />
+          <ScalarProperty Name="B_IMAGE1" ColumnName="B_IMAGE1" />
+          <ScalarProperty Name="B_IMAGE2" ColumnName="B_IMAGE2" />
+          <ScalarProperty Name="B_URL" ColumnName="B_URL" />
+          <ScalarProperty Name="B_ETC1" ColumnName="B_ETC1" />
+          <ScalarProperty Name="B_ETC2" ColumnName="B_ETC2" />
+          <ScalarProperty Name="B_TITLE" ColumnName="B_TITLE" />
+          <ScalarProperty Name="B_VIEW_RATE" ColumnName="B_VIEW_RATE" />
+          <ScalarProperty Name="START_NUM" ColumnName="START_NUM" />
+          <ScalarProperty Name="END_NUM" ColumnName="END_NUM" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="TBLCMSMNU_GIFT_USER">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.TBLCMSMNU_GIFT_USER">
+        <MappingFragment StoreEntitySet="TBLCMSMNU_GIFT_USER">
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="INVOICE_NUM" ColumnName="INVOICE_NUM" />
+          <ScalarProperty Name="DELY_CO" ColumnName="DELY_CO" />
+          <ScalarProperty Name="SEND_DATE" ColumnName="SEND_DATE" />
+          <ScalarProperty Name="WIN_DATE" ColumnName="WIN_DATE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="TEL" ColumnName="TEL" />
+          <ScalarProperty Name="ADDR" ColumnName="ADDR" />
+          <ScalarProperty Name="POSTNUM" ColumnName="POSTNUM" />
+          <ScalarProperty Name="PNAME" ColumnName="PNAME" />
+          <ScalarProperty Name="GET_USER_NAME" ColumnName="GET_USER_NAME" />
+          <ScalarProperty Name="USER_NAME2" ColumnName="USER_NAME2" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="EVENTID" ColumnName="EVENTID" />
+          <ScalarProperty Name="PKID" ColumnName="PKID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="FN_JOIN_CAFE_LIST_New" FunctionName="Wow.Tv.Middle.Model.Db49.wownet.Store.FN_JOIN_CAFE_LIST_New">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.FN_JOIN_CAFE_LIST_New_Result">
+          <ScalarProperty Name="CAFECODE" ColumnName="CAFECODE" />
+          <ScalarProperty Name="JOINDATE" ColumnName="JOINDATE" />
+          <ScalarProperty Name="GRADENAME" ColumnName="GRADENAME" />
+          <ScalarProperty Name="CAFEDOMAIN" ColumnName="CAFEDOMAIN" />
+          <ScalarProperty Name="CAFENAME" ColumnName="CAFENAME" />
+          <ScalarProperty Name="CAFEEXPLANATION" ColumnName="CAFEEXPLANATION" />
+          <ScalarProperty Name="REGDATE" ColumnName="REGDATE" />
+          <ScalarProperty Name="RANK" ColumnName="RANK" />
+          <ScalarProperty Name="MEMBERCOUNT" ColumnName="MEMBERCOUNT" />
+          <ScalarProperty Name="CAFEMASTER" ColumnName="CAFEMASTER" />
+          <ScalarProperty Name="GRADELEVEL" ColumnName="GRADELEVEL" />
+          <ScalarProperty Name="OPEN_YN" ColumnName="OPEN_YN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_Select_MasterOpenCafeInfo" FunctionName="Wow.Tv.Middle.Model.Db49.wownet.Store.usp_Select_MasterOpenCafeInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.usp_Select_MasterOpenCafeInfo_Result">
+          <ScalarProperty Name="CafeCode" ColumnName="CafeCode" />
+          <ScalarProperty Name="CafeDomain" ColumnName="CafeDomain" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="NUP_MY_LECTURES_SELECT" FunctionName="Wow.Tv.Middle.Model.Db49.wownet.Store.NUP_MY_LECTURES_SELECT">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.NUP_MY_LECTURES_SELECT_Result">
+          <ScalarProperty Name="REGDATE" ColumnName="REGDATE" />
+          <ScalarProperty Name="LECTURES_DATE" ColumnName="LECTURES_DATE" />
+          <ScalarProperty Name="GUBUN" ColumnName="GUBUN" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="LECTURER" ColumnName="LECTURER" />
+          <ScalarProperty Name="PARTNER_NO" ColumnName="PARTNER_NO" />
+          <ScalarProperty Name="PLACE" ColumnName="PLACE" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+          <ScalarProperty Name="MSEQ" ColumnName="MSEQ" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="NUP_MAIN_COMMON_LECTURE_SELECT" FunctionName="Wow.Tv.Middle.Model.Db49.wownet.Store.NUP_MAIN_COMMON_LECTURE_SELECT">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.NUP_MAIN_COMMON_LECTURE_SELECT_Result">
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+          <ScalarProperty Name="MSEQ" ColumnName="MSEQ" />
+          <ScalarProperty Name="REGION" ColumnName="REGION" />
+          <ScalarProperty Name="PLACE" ColumnName="PLACE" />
+          <ScalarProperty Name="LECTURES_DATE" ColumnName="LECTURES_DATE" />
+          <ScalarProperty Name="LECTURES_TIME" ColumnName="LECTURES_TIME" />
+          <ScalarProperty Name="LECTURER" ColumnName="LECTURER" />
+          <ScalarProperty Name="ROUGH_SKETCH_PATH" ColumnName="ROUGH_SKETCH_PATH" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="EXPENSE" ColumnName="EXPENSE" />
+          <ScalarProperty Name="GUBUN" ColumnName="GUBUN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="TAB_STRATEGY_APPLICATION">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.TAB_STRATEGY_APPLICATION">
+        <MappingFragment StoreEntitySet="TAB_STRATEGY_APPLICATION">
+          <ScalarProperty Name="isSMS" ColumnName="isSMS" />
+          <ScalarProperty Name="itype" ColumnName="itype" />
+          <ScalarProperty Name="isMainBold" ColumnName="isMainBold" />
+          <ScalarProperty Name="isMainList" ColumnName="isMainList" />
+          <ScalarProperty Name="isMainHead" ColumnName="isMainHead" />
+          <ScalarProperty Name="FREAD_CNT" ColumnName="FREAD_CNT" />
+          <ScalarProperty Name="SUB_CODE" ColumnName="SUB_CODE" />
+          <ScalarProperty Name="CHECK_SUB" ColumnName="CHECK_SUB" />
+          <ScalarProperty Name="VIEW_FLAG" ColumnName="VIEW_FLAG" />
+          <ScalarProperty Name="MARKET" ColumnName="MARKET" />
+          <ScalarProperty Name="VOICE_LINK" ColumnName="VOICE_LINK" />
+          <ScalarProperty Name="REF_LEVEL" ColumnName="REF_LEVEL" />
+          <ScalarProperty Name="REF_STEP" ColumnName="REF_STEP" />
+          <ScalarProperty Name="REF" ColumnName="REF" />
+          <ScalarProperty Name="MEMO_CNT" ColumnName="MEMO_CNT" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="PUBLICITY_CNT" ColumnName="PUBLICITY_CNT" />
+          <ScalarProperty Name="RECOMMEND_CNT" ColumnName="RECOMMEND_CNT" />
+          <ScalarProperty Name="READ_CNT" ColumnName="READ_CNT" />
+          <ScalarProperty Name="CNAME" ColumnName="CNAME" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="CONTENT" ColumnName="CONTENT" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="BCODE" ColumnName="BCODE" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAB_CODE">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.TAB_CODE_NET">
+        <MappingFragment StoreEntitySet="TAB_CODE">
+          <ScalarProperty Name="MOD_DATE" ColumnName="MOD_DATE" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="DISP_ORDER" ColumnName="DISP_ORDER" />
+          <ScalarProperty Name="CODE_VAL" ColumnName="CODE_VAL" />
+          <ScalarProperty Name="CODE_NAME" ColumnName="CODE_NAME" />
+          <ScalarProperty Name="PSEQ" ColumnName="PSEQ" />
+          <ScalarProperty Name="MSEQ" ColumnName="MSEQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_tblEvent_select" FunctionName="Wow.Tv.Middle.Model.Db49.wownet.Store.usp_tblEvent_select">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db49.wownet.usp_tblEvent_select_Result">
+          <ScalarProperty Name="seq" ColumnName="seq" />
+          <ScalarProperty Name="bcode" ColumnName="bcode" />
+          <ScalarProperty Name="proId" ColumnName="proId" />
+          <ScalarProperty Name="eventType" ColumnName="eventType" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="bannerImage" ColumnName="bannerImage" />
+          <ScalarProperty Name="linkUrl" ColumnName="linkUrl" />
+          <ScalarProperty Name="linkTarget" ColumnName="linkTarget" />
+          <ScalarProperty Name="viewFlag" ColumnName="viewFlag" />
+          <ScalarProperty Name="adminId" ColumnName="adminId" />
+          <ScalarProperty Name="readCount" ColumnName="readCount" />
+          <ScalarProperty Name="regdate" ColumnName="regdate" />
+          <ScalarProperty Name="VIEW_SITE" ColumnName="VIEW_SITE" />
+          <ScalarProperty Name="WINNER_DATE" ColumnName="WINNER_DATE" />
+          <ScalarProperty Name="WIN_VIEW_FLAG" ColumnName="WIN_VIEW_FLAG" />
+          <ScalarProperty Name="WIN_CONTENT" ColumnName="WIN_CONTENT" />
+          <ScalarProperty Name="DEL_YN" ColumnName="DEL_YN" />
+          <ScalarProperty Name="Product_ID_1" ColumnName="Product_ID_1" />
+          <ScalarProperty Name="Wowtv_id" ColumnName="Wowtv_id" />
+          <ScalarProperty Name="NEWphoto_small2" ColumnName="NEWphoto_small2" />
+          <ScalarProperty Name="Nickname" ColumnName="Nickname" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,759 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Wow.Tv.Middle.Model.Db49.Article.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--생성 중 오류 발생:
+경고 6002: 테이블/뷰 'Article.dbo.ArtClickCount'에 기본 키가 정의되지 않았습니다. 키가 유추되었고 읽기 전용 테이블/뷰로 정의되었습니다.-->
+  <EntityType Name="ArtClickCount">
+    <Key>
+      <PropertyRef Name="CompCode" />
+      <PropertyRef Name="ArticleID" />
+      <PropertyRef Name="Media" />
+      <PropertyRef Name="ClickNum" />
+    </Key>
+    <Property Name="CompCode" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="ArticleID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Media" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="ClickNum" Type="int" Nullable="false" />
+    <Property Name="ArtDate" Type="char" MaxLength="8" />
+  </EntityType>
+  <!--생성 중 오류 발생:
+경고 6002: 테이블/뷰 'Article.dbo.ArtClickCountHtml'에 기본 키가 정의되지 않았습니다. 키가 유추되었고 읽기 전용 테이블/뷰로 정의되었습니다.-->
+  <EntityType Name="ArtClickCountHtml">
+    <Key>
+      <PropertyRef Name="CompCode" />
+      <PropertyRef Name="ArticleID" />
+      <PropertyRef Name="Media" />
+      <PropertyRef Name="ClickNum" />
+    </Key>
+    <Property Name="CompCode" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="ArticleID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Media" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="ClickNum" Type="int" Nullable="false" />
+    <Property Name="ArtDate" Type="char" MaxLength="8" />
+  </EntityType>
+  <!--생성 중 오류 발생:
+경고 6002: 테이블/뷰 'Article.dbo.ArticleClass'에 기본 키가 정의되지 않았습니다. 키가 유추되었고 읽기 전용 테이블/뷰로 정의되었습니다.-->
+  <EntityType Name="ArticleClass">
+    <Key>
+      <PropertyRef Name="IDX" />
+      <PropertyRef Name="WOWCode" />
+      <PropertyRef Name="ArticleDate" />
+      <PropertyRef Name="CompCode" />
+      <PropertyRef Name="ClassCode" />
+      <PropertyRef Name="ArticleID" />
+    </Key>
+    <Property Name="IDX" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WOWCode" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="ArticleDate" Type="datetime" Nullable="false" />
+    <Property Name="CompCode" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="ClassCode" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="ArticleID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="200" />
+    <Property Name="isHead" Type="int" />
+    <Property Name="isList" Type="int" />
+    <Property Name="isBold" Type="tinyint" />
+    <Property Name="isList_n" Type="int" />
+    <Property Name="isType" Type="int" />
+    <Property Name="isMarket" Type="int" />
+    <Property Name="isRelation" Type="int" />
+    <Property Name="ordernum" Type="int" />
+    <Property Name="ordernumstockbusiness" Type="int" />
+    <Property Name="ordernumindustry" Type="int" />
+    <Property Name="ordernumestate" Type="int" />
+    <Property Name="ordernument" Type="int" />
+    <Property Name="ordernumbb1" Type="int" />
+    <Property Name="ordernumbb2" Type="int" />
+  </EntityType>
+  <EntityType Name="ArticleClass_Hanatour">
+    <Key>
+      <PropertyRef Name="ArticleID" />
+    </Key>
+    <Property Name="ArticleID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ArticleDate" Type="datetime" />
+    <Property Name="Title" Type="varchar" MaxLength="150" />
+    <Property Name="Writer" Type="varchar" MaxLength="50" />
+    <Property Name="Link1" Type="varchar" MaxLength="500" />
+    <Property Name="Link2" Type="varchar" MaxLength="500" />
+    <Property Name="Contents" Type="text" />
+    <Property Name="Category" Type="varchar" MaxLength="50" />
+    <Property Name="Tags" Type="varchar" MaxLength="500" />
+    <Property Name="thumbnail" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="ArticleList_HK">
+    <Key>
+      <PropertyRef Name="CompCode" />
+      <PropertyRef Name="ArticleID" />
+    </Key>
+    <Property Name="CompCode" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="ArticleID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ArticleDate" Type="datetime" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Contents" Type="text" />
+    <Property Name="Contents_img" Type="text" />
+    <Property Name="HTML" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="ArticleList_WO">
+    <Key>
+      <PropertyRef Name="CompCode" />
+      <PropertyRef Name="ArticleID" />
+    </Key>
+    <Property Name="CompCode" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="ArticleID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ArticleDate" Type="datetime" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="200" />
+    <Property Name="Contents" Type="text" />
+    <Property Name="Writer" Type="varchar" MaxLength="100" />
+    <Property Name="EMail" Type="varchar" MaxLength="50" />
+    <Property Name="HTML" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="ArticleList_YH">
+    <Key>
+      <PropertyRef Name="CompCode" />
+      <PropertyRef Name="ArticleID" />
+    </Key>
+    <Property Name="CompCode" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="ArticleID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ArticleDate" Type="datetime" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Contents" Type="text" />
+    <Property Name="HTML" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="ArticleStock">
+    <Key>
+      <PropertyRef Name="StockCode" />
+      <PropertyRef Name="ArticleDate" />
+      <PropertyRef Name="CompCode" />
+      <PropertyRef Name="ArticleID" />
+    </Key>
+    <Property Name="StockCode" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="ArticleDate" Type="datetime" Nullable="false" />
+    <Property Name="CompCode" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="ArticleID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Prompt" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="NTB_ARTICLE_COMMENT">
+    <Key>
+      <PropertyRef Name="COMMENT_SEQ" />
+    </Key>
+    <Property Name="COMMENT_SEQ" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ARTICLE_ID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="COMMENT" Type="ntext" />
+    <Property Name="DEL_YN" Type="char" MaxLength="1" />
+    <Property Name="REG_DATE" Type="datetime" />
+    <Property Name="REG_ID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="OPEN_YN" Type="char" MaxLength="1" />
+    <Property Name="USER_NAME" Type="varchar" MaxLength="20" />
+    <Property Name="LOGIN_TYPE" Type="char" MaxLength="1" />
+    <Property Name="MOD_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="NTB_ARTICLE_CONFIG">
+    <Key>
+      <PropertyRef Name="ARTICLE_ID" />
+    </Key>
+    <Property Name="ARTICLE_ID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="LIST_YN" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="BOLD_YN" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="GUBUN_CODE" Type="varchar" MaxLength="10" />
+    <Property Name="REG_ID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="REG_DATE" Type="datetime" Nullable="false" />
+    <Property Name="MOD_ID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="MOD_DATE" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NTB_ARTICLE_LIKEIT">
+    <Key>
+      <PropertyRef Name="ARTICLE_ID" />
+    </Key>
+    <Property Name="ARTICLE_ID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="GOOD_COUNT" Type="int" Nullable="false" />
+    <Property Name="HATE_COUNT" Type="int" Nullable="false" />
+    <Property Name="WANT_COUNT" Type="int" Nullable="false" />
+    <Property Name="REG_DATE" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NTB_ARTICLE_LIKEIT_HANATOUR">
+    <Key>
+      <PropertyRef Name="ARTICLE_ID" />
+    </Key>
+    <Property Name="ARTICLE_ID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="GOOD_COUNT" Type="int" Nullable="false" />
+    <Property Name="HATE_COUNT" Type="int" Nullable="false" />
+    <Property Name="WANT_COUNT" Type="int" Nullable="false" />
+    <Property Name="REG_DATE" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NTB_ARTICLE_RELATION_CONFIG">
+    <Key>
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="SEQ" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SHOW_NUM" Type="int" Nullable="false" />
+    <Property Name="AUTO_MANUAL" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ARTICLE_ID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ARTICLE_TITLE" Type="varchar" MaxLength="150" />
+    <Property Name="SHOW_CONDITION" Type="varchar" MaxLength="100" />
+    <Property Name="DEPT_CODE" Type="varchar" MaxLength="10" />
+    <Property Name="REG_ID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="REG_DATE" Type="datetime" Nullable="false" />
+    <Property Name="MOD_ID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="MOD_DATE" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NTB_ARTICLE_SHOW_CONFIG">
+    <Key>
+      <PropertyRef Name="SHOW_CODE" />
+    </Key>
+    <Property Name="SHOW_CODE" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="AUTO_MANUAL" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DEPT_CODE" Type="varchar" MaxLength="10" />
+    <Property Name="SHOW_CONDITION" Type="varchar" MaxLength="100" />
+    <Property Name="ACTIVE_YN" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="DEL_YN" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="REG_ID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="REG_DATE" Type="datetime" Nullable="false" />
+    <Property Name="MOD_ID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="MOD_DATE" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NTB_ARTICLE_SHOW_NUM">
+    <Key>
+      <PropertyRef Name="SHOW_CODE" />
+      <PropertyRef Name="ARTICLE_ID" />
+    </Key>
+    <Property Name="SHOW_CODE" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="SHOW_NUM" Type="int" Nullable="false" />
+    <Property Name="ARTICLE_ID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="REG_ID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="REG_DATE" Type="datetime" Nullable="false" />
+    <Property Name="MOD_ID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="MOD_DATE" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NTB_ARTICLE_SUBSCRIPTION">
+    <Key>
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="SEQ" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="REPORTER_ID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="USER_ID" Type="varchar" MaxLength="30" />
+    <Property Name="SUBSCRIPTION_YN" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="REG_ID" Type="varchar" MaxLength="30" />
+    <Property Name="REG_DATE" Type="datetime" Nullable="false" />
+    <Property Name="MOD_ID" Type="varchar" MaxLength="30" />
+    <Property Name="MOD_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="NTB_ARTICLE_VIEWPAGE_MANAGE">
+    <Key>
+      <PropertyRef Name="MENU_SEQ" />
+    </Key>
+    <Property Name="MENU_SEQ" Type="int" Nullable="false" />
+    <Property Name="LIKE_YN" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="RECOM_YN" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="SEE_YN" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="SNS_PR_YN" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="REG_ID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="REG_DATE" Type="datetime" Nullable="false" />
+    <Property Name="MOD_ID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="MOD_DATE" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NTB_HARD_CODING_AD">
+    <Key>
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="SEQ" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AD_GUBUN" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AD_TITLE" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="AD_CONTENT" Type="text" Nullable="false" />
+    <Property Name="REG_ID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="REG_DATE" Type="datetime" Nullable="false" />
+    <Property Name="MOD_ID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="MOD_DATE" Type="datetime" Nullable="false" />
+    <Property Name="DEL_YN" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NTB_HUB_BUSINESS">
+    <Key>
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="SEQ" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODE" Type="varchar" MaxLength="10" />
+    <Property Name="HUB_TITLE" Type="varchar" MaxLength="200" />
+    <Property Name="HUB_IMAGE" Type="varchar" MaxLength="200" />
+    <Property Name="HUB_URL" Type="varchar" MaxLength="300" />
+    <Property Name="REG_DATE" Type="datetime" />
+    <Property Name="MOD_DATE" Type="datetime" />
+    <Property Name="REG_ID" Type="varchar" MaxLength="50" />
+    <Property Name="DEL_YN" Type="char" MaxLength="1" />
+    <Property Name="OPEN_YN" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="NTB_POST">
+    <Key>
+      <PropertyRef Name="seq" />
+    </Key>
+    <Property Name="seq" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sido" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="gugun" Type="nchar" MaxLength="10" />
+    <Property Name="dong" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="NTB_PREV_ARTICLE_COUNT">
+    <Key>
+      <PropertyRef Name="ARTICLE_ID" />
+      <PropertyRef Name="PREV_ARTICLE_ID" />
+    </Key>
+    <Property Name="ARTICLE_ID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="PREV_ARTICLE_ID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="READ_COUNT" Type="int" Nullable="false" />
+    <Property Name="REG_DATE" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NTB_REPORTER_AWORD">
+    <Key>
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="SEQ" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MSEQ" Type="int" />
+    <Property Name="REPORTER_ID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="CONTENT" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="USER_ID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="LOGIN_TYPE" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="REG_DATE" Type="datetime" Nullable="false" />
+    <Property Name="MOD_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="NTB_REPORTER_MANAGE">
+    <Key>
+      <PropertyRef Name="REPORTER_ID" />
+    </Key>
+    <Property Name="SEQ" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="REPORTER_ID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="USER_ID" Type="varchar" MaxLength="30" />
+    <Property Name="WORD_YN" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="PAGE_YN" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="REPORTER_GUBUN" Type="varchar" MaxLength="100" />
+    <Property Name="BYLINE_DEPT" Type="varchar" MaxLength="100" />
+    <Property Name="BYLINE_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="BYLINE_POSITION" Type="varchar" MaxLength="100" />
+    <Property Name="BYLINE_GROUP_ID" Type="varchar" MaxLength="30" />
+    <Property Name="REG_ID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="REG_DATE" Type="datetime" Nullable="false" />
+    <Property Name="MOD_ID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="MOD_DATE" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NTB_REPORTER_PROFILE">
+    <Key>
+      <PropertyRef Name="REPORTER_ID" />
+    </Key>
+    <Property Name="REPORTER_ID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="USER_ID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="IMAGE_URL" Type="varchar" MaxLength="200" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FACEBOOK_URL" Type="varchar" MaxLength="100" />
+    <Property Name="FACEBOOK_VIEW_YN" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="TWITTER_URL" Type="varchar" MaxLength="100" />
+    <Property Name="TWITTER_VIEW_YN" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="BLOG_URL" Type="varchar" MaxLength="100" />
+    <Property Name="BLOG_VIEW_YN" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="INTRODUCTION" Type="nvarchar" MaxLength="500" />
+    <Property Name="REG_ID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="REG_DATE" Type="datetime" Nullable="false" />
+    <Property Name="MOD_ID" Type="varchar" MaxLength="30" />
+    <Property Name="MOD_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="NTB_REPORTER_RECOMMEND">
+    <Key>
+      <PropertyRef Name="REPORTER_ID" />
+      <PropertyRef Name="RECOMMEND_DATE" />
+    </Key>
+    <Property Name="REPORTER_ID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="RECOMMEND_DATE" Type="date" Nullable="false" />
+    <Property Name="RECOMMEND_COUNT" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NTB_TEXT_LINK">
+    <Key>
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="SEQ" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODE" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="KEYWORD" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LINK" Type="nvarchar" MaxLength="200" />
+    <Property Name="ARTICLE_ID" Type="varchar" MaxLength="20" />
+    <Property Name="REG_ID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="REG_DATE" Type="datetime" Nullable="false" />
+    <Property Name="MOD_ID" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="MOD_DATE" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblArticleCreation">
+    <Key>
+      <PropertyRef Name="ArtID" />
+    </Key>
+    <Property Name="ArtID" Type="char" MaxLength="13" Nullable="false" />
+    <Property Name="InsertDT" Type="datetime" />
+    <Property Name="UserID" Type="varchar" MaxLength="15" />
+    <Property Name="UserNM" Type="varchar" MaxLength="50" />
+    <Property Name="DeskID" Type="varchar" MaxLength="15" />
+    <Property Name="DeskNM" Type="varchar" MaxLength="50" />
+    <Property Name="DeptCD" Type="varchar" MaxLength="5" />
+    <Property Name="DeptNM" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tblArticleList">
+    <Key>
+      <PropertyRef Name="CompCode" />
+      <PropertyRef Name="ArtID" />
+    </Key>
+    <Property Name="IDX" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompCode" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="ArtID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ArtState" Type="char" MaxLength="1" />
+    <Property Name="inputDate" Type="datetime" />
+    <Property Name="ArtDate" Type="datetime" />
+    <Property Name="Title" Type="varchar" MaxLength="200" />
+    <Property Name="Contents" Type="text" />
+    <Property Name="Contents_img" Type="text" />
+    <Property Name="Writer" Type="varchar" MaxLength="100" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="IMGDir" Type="char" MaxLength="8" />
+    <Property Name="IMGFile" Type="varchar" MaxLength="50" />
+    <Property Name="_Table" Type="bit" />
+    <Property Name="SubTitle" Type="varchar" MaxLength="200" />
+    <Property Name="Tag" Type="varchar" MaxLength="200" />
+    <Property Name="Thumbnail_type1" Type="varchar" MaxLength="100" />
+    <Property Name="Thumbnail_type2" Type="varchar" MaxLength="100" />
+    <Property Name="CardNews" Type="char" MaxLength="1" />
+    <Property Name="IMGLink" Type="varchar" MaxLength="400" />
+    <Property Name="Keywords" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="tblArticleListFTS">
+    <Key>
+      <PropertyRef Name="IDX" />
+    </Key>
+    <Property Name="IDX" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompCode" Type="char" MaxLength="2" />
+    <Property Name="ArticleDate" Type="datetime" />
+    <Property Name="ArticleID" Type="varchar" MaxLength="20" />
+    <Property Name="Title" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="tblNewsStand">
+    <Key>
+      <PropertyRef Name="seq" />
+    </Key>
+    <Property Name="seq" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rank" Type="int" />
+    <Property Name="artid" Type="varchar" MaxLength="20" />
+    <Property Name="tmpTitle" Type="varchar" MaxLength="150" />
+    <Property Name="udtAdminId" Type="varchar" MaxLength="30" />
+    <Property Name="udtAdminName" Type="varchar" MaxLength="30" />
+    <Property Name="udtDt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblNewsStandArticleManage">
+    <Key>
+      <PropertyRef Name="artid" />
+    </Key>
+    <Property Name="artid" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ordernum" Type="int" />
+    <Property Name="uptdate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblPlanArticle">
+    <Key>
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="SEQ" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TITLE" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="IMG_MAIN" Type="varchar" MaxLength="50" />
+    <Property Name="IMG_NEWS" Type="varchar" MaxLength="500" />
+    <Property Name="VIEW_FLAG" Type="char" MaxLength="1" />
+    <Property Name="REG_DATE" Type="datetime" />
+    <Property Name="ORDERN" Type="smallint" />
+    <Property Name="ORDERN_HOT" Type="smallint" />
+    <Property Name="UP_DATE" Type="datetime" />
+    <Property Name="IMG_LIST" Type="varchar" MaxLength="50" />
+    <Property Name="IMG_BANN" Type="varchar" MaxLength="500" />
+    <Property Name="IMG_HOTISSUE" Type="varchar" MaxLength="50" />
+    <Property Name="REMRK" Type="varchar" MaxLength="350" />
+    <Property Name="VW_FROM" Type="varchar" MaxLength="10" />
+    <Property Name="VW_TO" Type="varchar" MaxLength="50" />
+    <Property Name="CLASS" Type="char" MaxLength="1" />
+    <Property Name="ORDERN_HOT_ARTICLE" Type="smallint" />
+    <Property Name="ORDERN_THEME" Type="smallint" />
+    <Property Name="ORDERN_SERIES" Type="smallint" />
+    <Property Name="REVISE_TITLE" Type="varchar" MaxLength="50" />
+    <Property Name="ORDERN_STORYBANK" Type="smallint" />
+    <Property Name="EXTRACTION_TEXT" Type="nvarchar" MaxLength="100" />
+    <Property Name="COLUMNLIST_NAME" Type="nvarchar" MaxLength="30" />
+    <Property Name="REG_ID" Type="varchar" MaxLength="30" />
+    <Property Name="MOD_ID" Type="varchar" MaxLength="30" />
+    <Property Name="DEL_YN" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="tblRelationImage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sParentID" Type="varchar" MaxLength="20" />
+    <Property Name="sImage" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <Function Name="NUP_ARTICLE_LIKEIT_HANATOUR_INSERT_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="S_ARTICLEID" Type="varchar" Mode="In" />
+    <Parameter Name="S_LIKEITGUBUN" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="NUP_ARTICLE_LIKEIT_INSERT_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="S_ARTICLEID" Type="varchar" Mode="In" />
+    <Parameter Name="S_LIKEITGUBUN" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="NUP_ARTICLE_PROVIDE_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="STARTDATE" Type="datetime" Mode="In" />
+    <Parameter Name="ENDDATE" Type="datetime" Mode="In" />
+    <Parameter Name="COMPCODE" Type="char" Mode="In" />
+  </Function>
+  <Function Name="NUP_ARTICLE_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="STARTDATE" Type="datetime" Mode="In" />
+    <Parameter Name="ENDDATE" Type="datetime" Mode="In" />
+    <Parameter Name="COMPCODE" Type="char" Mode="In" />
+    <Parameter Name="DEPTCD" Type="varchar" Mode="In" />
+    <Parameter Name="WRITER" Type="varchar" Mode="In" />
+    <Parameter Name="TITLE" Type="varchar" Mode="In" />
+    <Parameter Name="ARTID" Type="varchar" Mode="In" />
+    <Parameter Name="USERID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="NUP_BROAD_MAIN_ARTICLE_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SEQ" Type="int" Mode="In" />
+  </Function>
+  <Function Name="NUP_FREELANCER_ARTICLE_RANK_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="STARTDATE" Type="datetime" Mode="In" />
+    <Parameter Name="ENDDATE" Type="datetime" Mode="In" />
+    <Parameter Name="COMPCODE" Type="char" Mode="In" />
+    <Parameter Name="DNRS_USER_ID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="NUP_FREELANCER_TRAFFIC_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="STARTDATE" Type="datetime" Mode="In" />
+    <Parameter Name="ENDDATE" Type="datetime" Mode="In" />
+    <Parameter Name="COMPCODE" Type="char" Mode="In" />
+  </Function>
+  <Function Name="NUP_MYPIN_REPORTER_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="USER_NM" Type="varchar" Mode="In" />
+    <Parameter Name="USER_ID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="NUP_NEWS_CARD_VOD_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="S_SEARCHGUBUN" Type="nvarchar" Mode="In" />
+    <Parameter Name="S_SEARCHTEXT" Type="nvarchar" Mode="In" />
+    <Parameter Name="S_STARTDATE" Type="nvarchar" Mode="In" />
+    <Parameter Name="S_ENDDATE" Type="nvarchar" Mode="In" />
+    <Parameter Name="I_PAGE" Type="int" Mode="In" />
+    <Parameter Name="I_PAGESIZE" Type="int" Mode="In" />
+  </Function>
+  <Function Name="NUP_NEWS_LAND_ENTSPO_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="S_SEARCHGUBUN" Type="nvarchar" Mode="In" />
+    <Parameter Name="S_SEARCHSECTION" Type="nvarchar" Mode="In" />
+    <Parameter Name="S_SEARCHTEXT" Type="nvarchar" Mode="In" />
+    <Parameter Name="S_STARTDATE" Type="nvarchar" Mode="In" />
+    <Parameter Name="S_ENDDATE" Type="nvarchar" Mode="In" />
+    <Parameter Name="I_PAGE" Type="int" Mode="In" />
+    <Parameter Name="I_PAGESIZE" Type="int" Mode="In" />
+  </Function>
+  <Function Name="NUP_NEWS_MAIN_CARD_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="S_SEARCHGUBUN" Type="varchar" Mode="In" />
+    <Parameter Name="I_TOPN" Type="int" Mode="In" />
+    <Parameter Name="S_NOT_ARTICLE_ID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="NUP_NEWS_MAIN_ENT_SPO_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="S_SEARCHGUBUN" Type="varchar" Mode="In" />
+    <Parameter Name="S_NOT_ARTICLE_ID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="NUP_NEWS_MAIN_LAND_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="NUP_NEWS_MAIN_LIST_Y_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="S_NOT_ARTICLE_ID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="NUP_NEWS_MAIN_MAGE_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="S_SEARCHCOMP" Type="nvarchar" Mode="In" />
+    <Parameter Name="S_SEARCHGUBUN" Type="nvarchar" Mode="In" />
+    <Parameter Name="S_SEARCHDEPT" Type="nvarchar" Mode="In" />
+    <Parameter Name="S_SEARCHTEXT" Type="nvarchar" Mode="In" />
+    <Parameter Name="S_STARTDATE" Type="nvarchar" Mode="In" />
+    <Parameter Name="S_ENDDATE" Type="nvarchar" Mode="In" />
+    <Parameter Name="I_PAGE" Type="int" Mode="In" />
+    <Parameter Name="I_PAGESIZE" Type="int" Mode="In" />
+  </Function>
+  <Function Name="NUP_NEWS_MAIN_MARKET_ISSUE_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="NUP_NEWS_MAIN_MARKET_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="S_SEARCHGUBUN" Type="varchar" Mode="In" />
+    <Parameter Name="I_TOPN" Type="int" Mode="In" />
+    <Parameter Name="S_NOT_ARTICLE_ID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="NUP_NEWS_MAIN_NEWSSTAND_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="NUP_NEWS_MAIN_OPINION_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="NUP_NEWS_MAIN_SECTION_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="S_SEARCHGUBUN" Type="varchar" Mode="In" />
+    <Parameter Name="I_TOPN" Type="int" Mode="In" />
+    <Parameter Name="S_NOT_ARTICLE_ID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="NUP_NEWS_MAIN_VOD_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="S_SEARCHGUBUN" Type="varchar" Mode="In" />
+    <Parameter Name="I_TOPN" Type="int" Mode="In" />
+    <Parameter Name="S_NOT_ARTICLE_ID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="NUP_NEWS_PREV_NEXT_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="S_ARTICLEID" Type="varchar" Mode="In" />
+    <Parameter Name="S_SECTIONGUBUN" Type="varchar" Mode="In" />
+    <Parameter Name="S_WOWCODE" Type="varchar" Mode="In" />
+    <Parameter Name="S_CLASS" Type="varchar" Mode="In" />
+    <Parameter Name="S_SEARCHTEXT" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="NUP_NEWS_READ_RELATION_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="S_ARTICLE_ID" Type="varchar" Mode="In" />
+    <Parameter Name="S_NOT_ARTICLE_ID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="NUP_NEWS_READ_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="S_ARTICLEID" Type="varchar" Mode="In" />
+    <Parameter Name="S_PREVARTICLEID" Type="varchar" Mode="In" />
+    <Parameter Name="S_MEDIAGUBUN" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="NUP_NEWS_SECTION_MANY_SEE_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="S_SECTIONGUBUN" Type="varchar" Mode="In" />
+    <Parameter Name="S_WOWCODE" Type="varchar" Mode="In" />
+    <Parameter Name="I_TOPN" Type="int" Mode="In" />
+    <Parameter Name="S_STARTDATE" Type="varchar" Mode="In" />
+    <Parameter Name="S_ENDDATE" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="NUP_NEWS_SECTION_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="S_SECTIONGUBUN" Type="varchar" Mode="In" />
+    <Parameter Name="S_SEARCHTEXT" Type="varchar" Mode="In" />
+    <Parameter Name="S_WOWCODE" Type="varchar" Mode="In" />
+    <Parameter Name="S_COMPCODE" Type="varchar" Mode="In" />
+    <Parameter Name="S_STARTDATE" Type="varchar" Mode="In" />
+    <Parameter Name="S_ENDDATE" Type="varchar" Mode="In" />
+    <Parameter Name="I_PAGE" Type="int" Mode="In" />
+    <Parameter Name="I_PAGESIZE" Type="int" Mode="In" />
+  </Function>
+  <Function Name="NUP_NEWS_THIS_MANY_SEE_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="S_ARTICLEID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="NUP_NEWSSTAND_KEWORD_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="NUP_NEWSSTAND_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="NUP_QUICKMENU_MYPIN_NEWS_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="S_USER_ID" Type="varchar" Mode="In" />
+    <Parameter Name="I_TOPN" Type="int" Mode="In" />
+  </Function>
+  <Function Name="NUP_QUICKMENU_MYPIN_REPORTER_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="S_USER_ID" Type="varchar" Mode="In" />
+    <Parameter Name="I_TOPN" Type="int" Mode="In" />
+  </Function>
+  <Function Name="NUP_REPORTER_MANAGE_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="S_SEARCHGUBUN" Type="nvarchar" Mode="In" />
+    <Parameter Name="S_SEARCHTEXT" Type="nvarchar" Mode="In" />
+    <Parameter Name="S_STARTDATE" Type="nvarchar" Mode="In" />
+    <Parameter Name="S_ENDDATE" Type="nvarchar" Mode="In" />
+    <Parameter Name="I_PAGE" Type="int" Mode="In" />
+    <Parameter Name="I_PAGESIZE" Type="int" Mode="In" />
+  </Function>
+  <Function Name="NUP_REPORTER_RECENTLY_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="S_SEARCHTEXT" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="NUP_REPORTER_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="S_SEARCHID" Type="varchar" Mode="In" />
+    <Parameter Name="S_SEARCHNAME" Type="varchar" Mode="In" />
+    <Parameter Name="S_SEARCHINITIAL" Type="varchar" Mode="In" />
+    <Parameter Name="I_PAGE" Type="int" Mode="In" />
+    <Parameter Name="I_PAGESIZE" Type="int" Mode="In" />
+    <Parameter Name="S_RANDOM" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="NUP_TBLARTICLELIST_COUNT_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="S_STARTDATE" Type="nvarchar" Mode="In" />
+    <Parameter Name="S_ENDDATE" Type="nvarchar" Mode="In" />
+    <Parameter Name="S_TITLE" Type="nvarchar" Mode="In" />
+    <Parameter Name="S_ARTICLEID" Type="nvarchar" Mode="In" />
+    <Parameter Name="S_USERNM" Type="nvarchar" Mode="In" />
+    <Parameter Name="O_TOTALCOUNT" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="NUP_TICKER_SELECT1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="NUP_TICKER_SELECT2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="NUP_TICKER_SELECT3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_articleClassOrderNumChangeExceptNewStand" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ordernum" Type="int" Mode="In" />
+    <Parameter Name="articleid" Type="varchar" Mode="In" />
+    <Parameter Name="adminid" Type="varchar" Mode="In" />
+    <Parameter Name="adminname" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_getArticleContents_NEW" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ArticleID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_getArticleTotalList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ClassCode" Type="char" Mode="In" />
+    <Parameter Name="DateTime" Type="char" Mode="In" />
+    <Parameter Name="sKey" Type="varchar" Mode="In" />
+    <Parameter Name="WOWFlag" Type="char" Mode="In" />
+    <Parameter Name="PAGE" Type="int" Mode="In" />
+    <Parameter Name="PAGESIZE" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_newsStandMetaXMLTopImg" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_tblArticleListStandKeyword_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_WOWTVNewsCenterView" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="artid" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="WowTvMiddleModelDb49ArticleStoreContainer">
+    <EntitySet Name="ArticleClass_Hanatour" EntityType="Self.ArticleClass_Hanatour" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ArticleList_HK" EntityType="Self.ArticleList_HK" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ArticleList_WO" EntityType="Self.ArticleList_WO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ArticleList_YH" EntityType="Self.ArticleList_YH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ArticleStock" EntityType="Self.ArticleStock" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NTB_ARTICLE_COMMENT" EntityType="Self.NTB_ARTICLE_COMMENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NTB_ARTICLE_CONFIG" EntityType="Self.NTB_ARTICLE_CONFIG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NTB_ARTICLE_LIKEIT" EntityType="Self.NTB_ARTICLE_LIKEIT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NTB_ARTICLE_LIKEIT_HANATOUR" EntityType="Self.NTB_ARTICLE_LIKEIT_HANATOUR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NTB_ARTICLE_RELATION_CONFIG" EntityType="Self.NTB_ARTICLE_RELATION_CONFIG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NTB_ARTICLE_SHOW_CONFIG" EntityType="Self.NTB_ARTICLE_SHOW_CONFIG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NTB_ARTICLE_SHOW_NUM" EntityType="Self.NTB_ARTICLE_SHOW_NUM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NTB_ARTICLE_SUBSCRIPTION" EntityType="Self.NTB_ARTICLE_SUBSCRIPTION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NTB_ARTICLE_VIEWPAGE_MANAGE" EntityType="Self.NTB_ARTICLE_VIEWPAGE_MANAGE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NTB_HARD_CODING_AD" EntityType="Self.NTB_HARD_CODING_AD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NTB_HUB_BUSINESS" EntityType="Self.NTB_HUB_BUSINESS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NTB_POST" EntityType="Self.NTB_POST" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NTB_PREV_ARTICLE_COUNT" EntityType="Self.NTB_PREV_ARTICLE_COUNT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NTB_REPORTER_AWORD" EntityType="Self.NTB_REPORTER_AWORD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NTB_REPORTER_MANAGE" EntityType="Self.NTB_REPORTER_MANAGE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NTB_REPORTER_PROFILE" EntityType="Self.NTB_REPORTER_PROFILE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NTB_REPORTER_RECOMMEND" EntityType="Self.NTB_REPORTER_RECOMMEND" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NTB_TEXT_LINK" EntityType="Self.NTB_TEXT_LINK" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblArticleCreation" EntityType="Self.tblArticleCreation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblArticleList" EntityType="Self.tblArticleList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblArticleListFTS" EntityType="Self.tblArticleListFTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblNewsStand" EntityType="Self.tblNewsStand" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblNewsStandArticleManage" EntityType="Self.tblNewsStandArticleManage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPlanArticle" EntityType="Self.tblPlanArticle" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblRelationImage" EntityType="Self.tblRelationImage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ArtClickCount" EntityType="Self.ArtClickCount" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ArtClickCount].[CompCode] AS [CompCode], 
+    [ArtClickCount].[ArticleID] AS [ArticleID], 
+    [ArtClickCount].[Media] AS [Media], 
+    [ArtClickCount].[ClickNum] AS [ClickNum], 
+    [ArtClickCount].[ArtDate] AS [ArtDate]
+    FROM [dbo].[ArtClickCount] AS [ArtClickCount]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ArtClickCountHtml" EntityType="Self.ArtClickCountHtml" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ArtClickCountHtml].[CompCode] AS [CompCode], 
+    [ArtClickCountHtml].[ArticleID] AS [ArticleID], 
+    [ArtClickCountHtml].[Media] AS [Media], 
+    [ArtClickCountHtml].[ClickNum] AS [ClickNum], 
+    [ArtClickCountHtml].[ArtDate] AS [ArtDate]
+    FROM [dbo].[ArtClickCountHtml] AS [ArtClickCountHtml]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ArticleClass" EntityType="Self.ArticleClass" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ArticleClass].[IDX] AS [IDX], 
+    [ArticleClass].[WOWCode] AS [WOWCode], 
+    [ArticleClass].[ArticleDate] AS [ArticleDate], 
+    [ArticleClass].[CompCode] AS [CompCode], 
+    [ArticleClass].[ClassCode] AS [ClassCode], 
+    [ArticleClass].[ArticleID] AS [ArticleID], 
+    [ArticleClass].[Title] AS [Title], 
+    [ArticleClass].[isHead] AS [isHead], 
+    [ArticleClass].[isList] AS [isList], 
+    [ArticleClass].[isBold] AS [isBold], 
+    [ArticleClass].[isList_n] AS [isList_n], 
+    [ArticleClass].[isType] AS [isType], 
+    [ArticleClass].[isMarket] AS [isMarket], 
+    [ArticleClass].[isRelation] AS [isRelation], 
+    [ArticleClass].[ordernum] AS [ordernum], 
+    [ArticleClass].[ordernumstockbusiness] AS [ordernumstockbusiness], 
+    [ArticleClass].[ordernumindustry] AS [ordernumindustry], 
+    [ArticleClass].[ordernumestate] AS [ordernumestate], 
+    [ArticleClass].[ordernument] AS [ordernument], 
+    [ArticleClass].[ordernumbb1] AS [ordernumbb1], 
+    [ArticleClass].[ordernumbb2] AS [ordernumbb2]
+    FROM [dbo].[ArticleClass] AS [ArticleClass]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

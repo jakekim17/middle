@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Wow.Tv.Middle.Model.Db89.Sleep_wowbill.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="bak_tblUser">
+    <Key>
+      <PropertyRef Name="userNumber" />
+    </Key>
+    <Property Name="userNumber" Type="int" Nullable="false" />
+    <Property Name="userId" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="userTypeId" Type="tinyint" Nullable="false" />
+    <Property Name="userSectionId" Type="tinyint" Nullable="false" />
+    <Property Name="userGradeId" Type="tinyint" Nullable="false" />
+    <Property Name="companyDetailId" Type="int" />
+    <Property Name="password" Type="varchar" MaxLength="44" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ssno" Type="varchar" MaxLength="24" Nullable="false" />
+    <Property Name="tel" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="wowCashBalance" Type="int" Nullable="false" />
+    <Property Name="pointToWowCashBalance" Type="int" Nullable="false" />
+    <Property Name="accumulatePointBalance" Type="int" Nullable="false" />
+    <Property Name="fusiblePointBalance" Type="int" Nullable="false" />
+    <Property Name="passwordConfirmId" Type="tinyint" Nullable="false" />
+    <Property Name="passwordConfirmAnswer" Type="varchar" MaxLength="64" />
+    <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="isSendEmail" Type="bit" Nullable="false" />
+    <Property Name="longTermUncollectedCount" Type="tinyint" Nullable="false" />
+    <Property Name="isSendSMS" Type="char" MaxLength="1" />
+    <Property Name="isEmailOk" Type="char" MaxLength="1" />
+    <Property Name="option1" Type="varchar" MaxLength="50" />
+    <Property Name="option2" Type="varchar" MaxLength="50" />
+    <Property Name="registDt" Type="datetime" Nullable="false" />
+    <Property Name="adminId" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="apply" Type="bit" Nullable="false" />
+    <Property Name="club" Type="char" MaxLength="2" />
+    <Property Name="NickName" Type="varchar" MaxLength="50" />
+    <Property Name="Mobile" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityContainer Name="WowTvMiddleModelDb89Sleep_wowbillStoreContainer">
+    <EntitySet Name="bak_tblUser" EntityType="Self.bak_tblUser" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

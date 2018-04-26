@@ -1,0 +1,12 @@
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db16.wowfa\bin\Release\Wow.Tv.Middle.Model.Db16.wowfa.dll.config
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db16.wowfa\bin\Release\Wow.Tv.Middle.Model.Db16.wowfa.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db16.wowfa\bin\Release\Wow.Tv.Middle.Model.Db16.wowfa.pdb
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db16.wowfa\bin\Release\EntityFramework.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db16.wowfa\bin\Release\EntityFramework.SqlServer.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db16.wowfa\bin\Release\EntityFramework.xml
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db16.wowfa\bin\Release\EntityFramework.SqlServer.xml
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db16.wowfa\bin\Release\ko\EntityFramework.resources.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db16.wowfa\bin\Release\ko\EntityFramework.SqlServer.resources.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db16.wowfa\obj\Release\Wow.Tv.Middle.Model.Db16.wowfa.csproj.CoreCompileInputs.cache
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db16.wowfa\obj\Release\Wow.Tv.Middle.Model.Db16.wowfa.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db16.wowfa\obj\Release\Wow.Tv.Middle.Model.Db16.wowfa.pdb

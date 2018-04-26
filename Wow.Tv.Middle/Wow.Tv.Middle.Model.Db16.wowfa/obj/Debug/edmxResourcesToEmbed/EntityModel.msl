@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WowTvMiddleModelDb16wowfaStoreContainer" CdmEntityContainer="Db16_wowfa">
+    <EntitySetMapping Name="WOW_M_BANNER">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db16.wowfa.WOW_M_BANNER">
+        <MappingFragment StoreEntitySet="WOW_M_BANNER">
+          <ScalarProperty Name="nSort" ColumnName="nSort" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="sdate" ColumnName="sdate" />
+          <ScalarProperty Name="edate" ColumnName="edate" />
+          <ScalarProperty Name="post_on" ColumnName="post_on" />
+          <ScalarProperty Name="post_num" ColumnName="post_num" />
+          <ScalarProperty Name="post_img" ColumnName="post_img" />
+          <ScalarProperty Name="link_url" ColumnName="link_url" />
+          <ScalarProperty Name="post_target" ColumnName="post_target" />
+          <ScalarProperty Name="regdate" ColumnName="regdate" />
+          <ScalarProperty Name="position" ColumnName="position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

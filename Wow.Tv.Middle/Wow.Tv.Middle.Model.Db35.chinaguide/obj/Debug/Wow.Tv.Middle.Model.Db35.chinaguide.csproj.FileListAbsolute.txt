@@ -1,0 +1,12 @@
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db35.chinaguide\bin\Debug\Wow.Tv.Middle.Model.Db35.chinaguide.dll.config
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db35.chinaguide\bin\Debug\Wow.Tv.Middle.Model.Db35.chinaguide.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db35.chinaguide\bin\Debug\Wow.Tv.Middle.Model.Db35.chinaguide.pdb
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db35.chinaguide\bin\Debug\EntityFramework.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db35.chinaguide\bin\Debug\EntityFramework.SqlServer.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db35.chinaguide\bin\Debug\EntityFramework.xml
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db35.chinaguide\bin\Debug\EntityFramework.SqlServer.xml
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db35.chinaguide\bin\Debug\ko\EntityFramework.resources.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db35.chinaguide\bin\Debug\ko\EntityFramework.SqlServer.resources.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db35.chinaguide\obj\Debug\Wow.Tv.Middle.Model.Db35.chinaguide.csproj.CoreCompileInputs.cache
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db35.chinaguide\obj\Debug\Wow.Tv.Middle.Model.Db35.chinaguide.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db35.chinaguide\obj\Debug\Wow.Tv.Middle.Model.Db35.chinaguide.pdb

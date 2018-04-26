@@ -1,0 +1,9 @@
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Fx\bin\Debug\Wow.Fx.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Fx\bin\Debug\Wow.Fx.pdb
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Fx\bin\Debug\Interop.ADODB.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Fx\bin\Debug\Newtonsoft.Json.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Fx\bin\Debug\XdbNet.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Fx\bin\Debug\Newtonsoft.Json.xml
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Fx\obj\Debug\Wow.Fx.csproj.CoreCompileInputs.cache
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Fx\obj\Debug\Wow.Fx.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Fx\obj\Debug\Wow.Fx.pdb

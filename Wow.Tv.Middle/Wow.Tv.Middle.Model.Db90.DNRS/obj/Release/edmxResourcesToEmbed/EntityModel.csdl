@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Wow.Tv.Middle.Model.Db90.DNRS" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Db90_DNRS" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TAB_PROGRAM_LIST" EntityType="Wow.Tv.Middle.Model.Db90.DNRS.TAB_PROGRAM_LIST" />
+    <EntitySet Name="IMG_SCHEDULE" EntityType="Wow.Tv.Middle.Model.Db90.DNRS.IMG_SCHEDULE" />
+    <EntitySet Name="T_NEWS_PRG" EntityType="Wow.Tv.Middle.Model.Db90.DNRS.T_NEWS_PRG" />
+    <EntitySet Name="tv_program" EntityType="Wow.Tv.Middle.Model.Db90.DNRS.tv_program" />
+    <FunctionImport Name="usp_HDVOD_setEncodingList">
+      <Parameter Name="Broad_date" Mode="In" Type="String" />
+      <Parameter Name="Title" Mode="In" Type="String" />
+      <Parameter Name="FileDir" Mode="In" Type="String" />
+      <Parameter Name="FileName" Mode="In" Type="String" />
+      <Parameter Name="bu" Mode="In" Type="String" />
+      <Parameter Name="ProgramNM" Mode="In" Type="String" />
+      <Parameter Name="Dep" Mode="In" Type="String" />
+      <Parameter Name="Today" Mode="In" Type="String" />
+      <Parameter Name="Content" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_HDVOD_getTodayList" ReturnType="Collection(Wow.Tv.Middle.Model.Db90.DNRS.usp_HDVOD_getTodayList_Result)">
+      <Parameter Name="Today" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="T_USER" EntityType="Wow.Tv.Middle.Model.Db90.DNRS.T_USER" />
+    <EntitySet Name="NTB_NEWS_PROGRAM" EntityType="Wow.Tv.Middle.Model.Db90.DNRS.NTB_NEWS_PROGRAM" />
+    <EntitySet Name="T_RUNDOWN" EntityType="Wow.Tv.Middle.Model.Db90.DNRS.T_RUNDOWN" />
+    <EntitySet Name="NTB_BROAD_WATCH" EntityType="Wow.Tv.Middle.Model.Db90.DNRS.NTB_BROAD_WATCH" />
+    <FunctionImport Name="NUP_GetAllProgramEtcList" ReturnType="Collection(Wow.Tv.Middle.Model.Db90.DNRS.NUP_GetAllProgramEtcList_Result)">
+      <Parameter Name="YEAR" Mode="In" Type="String" />
+      <Parameter Name="START_INDEX" Mode="In" Type="Int32" />
+      <Parameter Name="END_INDEX" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="NUP_GetAllProgramList" ReturnType="Collection(Wow.Tv.Middle.Model.Db90.DNRS.NUP_GetAllProgramList_Result)">
+      <Parameter Name="PRG_NAME_START" Mode="In" Type="String" />
+      <Parameter Name="PRG_NAME_END" Mode="In" Type="String" />
+      <Parameter Name="YEAR" Mode="In" Type="String" />
+      <Parameter Name="START_INDEX" Mode="In" Type="Int32" />
+      <Parameter Name="END_INDEX" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="NUP_GetRandomProgramList" ReturnType="Collection(Wow.Tv.Middle.Model.Db90.DNRS.NUP_GetRandomProgramList_Result)" />
+    <FunctionImport Name="NUP_GetBroadWatchList" ReturnType="Collection(Wow.Tv.Middle.Model.Db90.DNRS.NUP_GetBroadWatchList_Result2)">
+      <Parameter Name="BROAD_SECTION_CODE" Mode="In" Type="String" />
+      <Parameter Name="ING_YN" Mode="In" Type="String" />
+      <Parameter Name="BROAD_TYPE_CODE" Mode="In" Type="String" />
+      <Parameter Name="FAME_YN" Mode="In" Type="String" />
+      <Parameter Name="START_INDEX" Mode="In" Type="Int32" />
+      <Parameter Name="END_INDEX" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="NUP_GetVodTodayList" ReturnType="Collection(Wow.Tv.Middle.Model.Db90.DNRS.NUP_GetVodTodayList_Result)">
+      <Parameter Name="SearchToday" Mode="In" Type="String" />
+      <Parameter Name="ProgramCode" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="TAB_PROGRAM_LIST">
+    <Key>
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="NUM" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CATE_CODE" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="PGM_ID" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="PGM_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="DEL_FLAG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ING_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="SPC_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PGM_LEVEL" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="IMG_SCHEDULE">
+    <Key>
+      <PropertyRef Name="prog_id" />
+    </Key>
+    <Property Name="prog_id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="prog_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="prog_content" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="link_url" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="img_path" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="img_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="img_name2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="folder_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="rebroadcast" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="corner" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="file_front_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="bu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hold_time" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="now_broadcast" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="web_state" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="point" Type="Int32" Nullable="false" />
+    <Property Name="runtime" Type="Int32" Nullable="false" />
+    <Property Name="formation" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="pageformat" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="parentid" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="sdate" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="edate" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="url" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="bitrate" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="dayName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="AutoEnc" Type="Byte" Nullable="false" />
+    <Property Name="SendType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SendFlag" Type="Boolean" Nullable="false" />
+    <Property Name="proginfo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_NEWS_PRG">
+    <Key>
+      <PropertyRef Name="PRG_CD" />
+    </Key>
+    <Property Name="PRG_CD" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="AREA_CD" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="PRG_NM" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="AREA_NM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ANC1_ID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ANC1_NM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ANC2_ID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="PD_ID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ANC2_NM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PD_NM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TD_ID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TD_NM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BRO_START" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="BRO_END" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="DIR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PD2_ID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="PD2_NM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TD2_ID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TD2_NM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PGMDATE" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PGMDAY" Type="Int32" />
+    <Property Name="DELFLAG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tv_program">
+    <Key>
+      <PropertyRef Name="Num" />
+    </Key>
+    <Property Name="Num" Type="Int32" Nullable="false" />
+    <Property Name="broad_date" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Title" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Contents" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Link" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="FilePath" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="FileName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ext" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="FileSize" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="FileorText" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="WriterID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="MailAddr" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Program_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Dep" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="tStep" Type="Int32" />
+    <Property Name="Ref" Type="Int32" />
+    <Property Name="Re_Level" Type="Int32" />
+    <Property Name="UploadTime" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="RecomNum" Type="Int32" />
+    <Property Name="ClickNum" Type="Int32" />
+    <Property Name="State" Type="Int32" />
+    <Property Name="StockCode" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="Flag_Copy1" Type="Int32" />
+    <Property Name="Flag_Copy2" Type="Int32" />
+    <Property Name="SendDaum" Type="Boolean" Nullable="false" />
+    <Property Name="ProgInfo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="usp_HDVOD_getTodayList_Result">
+    <Property Type="String" Name="prg_cd" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="prg_nm" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="run_start" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="prog_content" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="folder_name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="file_front_name" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="bu" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="T_USER">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+    </Key>
+    <Property Name="USER_ID" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="USER_NM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SEQ" Type="Decimal" Precision="22" Scale="0" />
+    <Property Name="USER_PW" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="DEPT_CD" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="AUTHORITY_NM" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DEPT_NM" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="USE_FLAG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PHONE1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PHONE2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AREA_CD" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="AREA_NM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CB11" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CB12" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CB13" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CB15" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CB21" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CB22" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CB23" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CB24" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CB25" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CB31" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CB32" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CB33" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CB34" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CB41" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CB42" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CB51" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CB52" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CB53" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CB54" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CB14" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PRIV_ID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="DEL_FLAG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="DEL_ID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="DEL_NM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UPDATE_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="UPDATE_NM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UPDATE_DATETIME" Type="String" MaxLength="19" FixedLength="false" Unicode="false" />
+    <Property Name="Filed1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Filed2" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="BylineName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="NTB_NEWS_PROGRAM">
+    <Key>
+      <PropertyRef Name="PRG_CD" />
+    </Key>
+    <Property Name="SERVICE_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="PUBLISH_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ENCODING" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CP_NM" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="PRG_CD" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="PLAN_BROAD" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="BROAD_TYPE_CODE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="FAME_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="FIRST_FREE_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="MAIN_VIEW_TYPE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="MAIN_BOTTOM_VIEW_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ALL_PROGRAM_VIEW_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="BROAD_SECTION_CODE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_RUNDOWN">
+    <Key>
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="SEQ" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AREA_CD" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="RUN_DATE" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="AREA_NM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PRG_CD" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="PRG_NM" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="REMARKS" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="RUN_START" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="RUN_END" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="RBO_TIME" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="DAY_FLAG" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="PD_ID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="PD_NM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TD_ID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TD_NM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ANC1_ID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ANC1_NM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ANC2_ID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ANC2_NM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MAKE_ID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="MAKE_NM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MAKE_DATETIME" Type="String" MaxLength="19" FixedLength="true" Unicode="false" />
+    <Property Name="DELETE_ID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="DELETE_NM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DELETE_DATETIME" Type="String" MaxLength="19" FixedLength="true" Unicode="false" />
+    <Property Name="DELETE_FLAG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="B_STATE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="DIR" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ASSIGNTIME" Type="String" MaxLength="19" FixedLength="true" Unicode="false" />
+    <Property Name="EDITOR_ID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="EDITOR_NM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PLAY_RUN_SEQ" Type="Decimal" Precision="22" Scale="0" />
+    <Property Name="STANDBY_RUN_SEQ" Type="Decimal" Precision="22" Scale="0" />
+    <Property Name="INNING" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="END_RUN_SEQ" Type="Decimal" Precision="22" Scale="0" />
+    <Property Name="UPDATE_ID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="UPDATE_NM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UPDATE_DATETIME" Type="String" MaxLength="19" FixedLength="false" Unicode="false" />
+    <Property Name="PD2_ID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="PD2_NM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TD2_ID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TD2_NM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PGMID" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="NTB_BROAD_WATCH">
+    <Key>
+      <PropertyRef Name="Num" />
+    </Key>
+    <Property Name="Num" Type="Int32" Nullable="false" />
+    <Property Name="PUBLISH_YN" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="REG_ID" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="REG_DATE" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="MOD_ID" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="MOD_DATE" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="NUP_GetAllProgramEtcList_Result">
+    <Property Type="String" Name="PRG_CD" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="PRG_NM" Nullable="true" MaxLength="200" />
+    <Property Type="Int64" Name="rownum" Nullable="true" />
+    <Property Type="Int32" Name="total" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="NUP_GetAllProgramList_Result">
+    <Property Type="String" Name="PRG_CD" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="PRG_NM" Nullable="true" MaxLength="200" />
+    <Property Type="Int64" Name="rownum" Nullable="true" />
+    <Property Type="Int32" Name="total" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="NUP_GetBroadWatchList_Result">
+    <Property Type="String" Name="Program_Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Num" Nullable="false" />
+    <Property Type="String" Name="Dep" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="broad_date" Nullable="true" MaxLength="20" />
+    <Property Type="Int64" Name="rownum" Nullable="true" />
+    <Property Type="Int32" Name="total" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="NUP_GetRandomProgramList_Result">
+    <Property Type="String" Name="PRG_CD" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="PRG_NM" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="NUP_GetBroadWatchList1_Result">
+    <Property Type="String" Name="Program_Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Num" Nullable="false" />
+    <Property Type="String" Name="Dep" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="broad_date" Nullable="true" MaxLength="20" />
+    <Property Type="Int64" Name="rownum" Nullable="true" />
+    <Property Type="Int32" Name="total" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="NUP_GetBroadWatchList_Result1">
+    <Property Type="String" Name="Program_Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Num" Nullable="false" />
+    <Property Type="String" Name="Dep" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="broad_date" Nullable="true" MaxLength="20" />
+    <Property Type="Int64" Name="rownum" Nullable="true" />
+    <Property Type="Int32" Name="total" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="NUP_GetBroadWatchList_Result2">
+    <Property Type="String" Name="Program_Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Num" Nullable="false" />
+    <Property Type="String" Name="Dep" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="broad_date" Nullable="true" MaxLength="20" />
+    <Property Type="Int64" Name="rownum" Nullable="true" />
+    <Property Type="Int32" Name="total" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="NUP_GetVodTodayList_Result">
+    <Property Type="String" Name="prg_cd" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="prg_nm" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="run_start" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="prog_content" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="folder_name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="file_front_name" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="bu" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

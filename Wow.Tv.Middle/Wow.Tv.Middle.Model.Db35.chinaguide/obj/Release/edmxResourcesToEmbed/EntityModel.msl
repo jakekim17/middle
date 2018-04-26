@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WowTbMiddleModelDb35chinaguideStoreContainer" CdmEntityContainer="Db35_chinaguide">
+    <EntitySetMapping Name="N_MAIN_MNG">
+      <EntityTypeMapping TypeName="Wow.Tb.Middle.Model.Db35.chinaguide.N_MAIN_MNG">
+        <MappingFragment StoreEntitySet="N_MAIN_MNG">
+          <ScalarProperty Name="IDX" ColumnName="IDX" />
+          <ScalarProperty Name="VIDEO_TITLE" ColumnName="VIDEO_TITLE" />
+          <ScalarProperty Name="VIDEO_CONTENT" ColumnName="VIDEO_CONTENT" />
+          <ScalarProperty Name="HOT_TICKER1" ColumnName="HOT_TICKER1" />
+          <ScalarProperty Name="HOT_TICKER2" ColumnName="HOT_TICKER2" />
+          <ScalarProperty Name="TOP_NEWS" ColumnName="TOP_NEWS" />
+          <ScalarProperty Name="UPDATE_U_ID" ColumnName="UPDATE_U_ID" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_getArticleList" FunctionName="Wow.Tb.Middle.Model.Db35.chinaguide.Store.usp_getArticleList" />
+  </EntityContainerMapping>
+</Mapping>

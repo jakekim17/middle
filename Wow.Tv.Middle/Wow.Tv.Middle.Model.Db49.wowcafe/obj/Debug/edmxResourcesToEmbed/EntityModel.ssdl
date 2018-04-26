@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="wowcafeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CafeInfo">
+    <Key>
+      <PropertyRef Name="CafeCode" />
+    </Key>
+    <Property Name="CafeCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CafeName" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="CafeExplanation" Type="varchar" MaxLength="4000" Nullable="false" />
+    <Property Name="KeyWord1" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="KeyWord2" Type="varchar" MaxLength="20" />
+    <Property Name="KeyWord3" Type="varchar" MaxLength="20" />
+    <Property Name="MainCode" Type="int" Nullable="false" />
+    <Property Name="SubCode" Type="int" Nullable="false" />
+    <Property Name="OpenFlag" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="RegFlag" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="RegMemFlag" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="CafeDomain" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CafeRegulation" Type="text" />
+    <Property Name="RegulationFlag" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="MainRegistFlag" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="RegDate" Type="datetime" Nullable="false" />
+    <Property Name="Question1" Type="varchar" MaxLength="200" />
+    <Property Name="Question2" Type="varchar" MaxLength="200" />
+    <Property Name="Question3" Type="varchar" MaxLength="200" />
+    <Property Name="Question4" Type="varchar" MaxLength="200" />
+    <Property Name="Question5" Type="varchar" MaxLength="200" />
+    <Property Name="DelFlag" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="UseFlag" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="CafeMemberInfo">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="CafeCode" />
+    </Key>
+    <Property Name="UserID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="CafeCode" Type="int" Nullable="false" />
+    <Property Name="GradeLevel" Type="int" Nullable="false" />
+    <Property Name="NickName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Jumin1" Type="char" MaxLength="6" />
+    <Property Name="Jumin2" Type="char" MaxLength="7" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="EmailOpenFlag" Type="char" MaxLength="1" />
+    <Property Name="Hphone" Type="varchar" MaxLength="15" />
+    <Property Name="SMSOpenFlag" Type="char" MaxLength="1" />
+    <Property Name="Introduction" Type="varchar" MaxLength="1000" />
+    <Property Name="RegDate" Type="datetime" />
+    <Property Name="VisitCount" Type="int" />
+    <Property Name="LastVisitDate" Type="datetime" />
+    <Property Name="DelFlag" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="ReJoin" Type="char" MaxLength="1" />
+    <Property Name="NameOpenLev" Type="char" MaxLength="2" />
+    <Property Name="SexOpenLev" Type="char" MaxLength="2" />
+    <Property Name="AgeOpenLev" Type="char" MaxLength="2" />
+    <Property Name="IntroOpenLev" Type="char" MaxLength="2" />
+    <Property Name="Answer1" Type="varchar" MaxLength="100" />
+    <Property Name="Answer1OpenLev" Type="char" MaxLength="2" />
+    <Property Name="Answer2" Type="varchar" MaxLength="100" />
+    <Property Name="Answer2OpenLev" Type="char" MaxLength="2" />
+    <Property Name="Answer3" Type="varchar" MaxLength="100" />
+    <Property Name="Answer3OpenLev" Type="char" MaxLength="2" />
+    <Property Name="Answer4" Type="varchar" MaxLength="100" />
+    <Property Name="Answer4OpenLev" Type="char" MaxLength="2" />
+    <Property Name="Answer5" Type="varchar" MaxLength="100" />
+    <Property Name="Answer5OpenLev" Type="char" MaxLength="2" />
+    <Property Name="DownStep" Type="int" />
+    <Property Name="starclubid" Type="varchar" MaxLength="20" />
+    <Property Name="goldEmail" Type="char" MaxLength="1" />
+    <Property Name="goldSMS" Type="char" MaxLength="1" />
+    <Property Name="AddrOpenLev" Type="char" MaxLength="2" />
+    <Property Name="test" Type="int" />
+  </EntityType>
+  <Association Name="FK_CafeMemberInfo_CafeInfo">
+    <End Role="CafeInfo" Type="Self.CafeInfo" Multiplicity="1" />
+    <End Role="CafeMemberInfo" Type="Self.CafeMemberInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CafeInfo">
+        <PropertyRef Name="CafeCode" />
+      </Principal>
+      <Dependent Role="CafeMemberInfo">
+        <PropertyRef Name="CafeCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="usp_RegistCafememberGold" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="proID" Type="varchar" Mode="In" />
+    <Parameter Name="userID" Type="varchar" Mode="In" />
+    <Parameter Name="strResultCafe" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="usp_select_stock_cafe_list" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ArjCode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_Select_TopNewBoard" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CafeCode" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="MyGradeLevel" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_Select_TopNewBoard_sakal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CafeCode" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="MyGradeLevel" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_web_select_stock_cafe_list" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ArjCode" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="wowcafeModelStoreContainer">
+    <EntitySet Name="CafeInfo" EntityType="Self.CafeInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CafeMemberInfo" EntityType="Self.CafeMemberInfo" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CafeMemberInfo_CafeInfo" Association="Self.FK_CafeMemberInfo_CafeInfo">
+      <End Role="CafeInfo" EntitySet="CafeInfo" />
+      <End Role="CafeMemberInfo" EntitySet="CafeMemberInfo" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

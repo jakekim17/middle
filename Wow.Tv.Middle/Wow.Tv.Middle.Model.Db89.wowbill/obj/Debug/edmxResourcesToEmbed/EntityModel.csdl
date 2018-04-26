@@ -1,0 +1,1585 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Wow.Tv.Middle.Model.Db89.wowbill" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblUser">
+    <Key>
+      <PropertyRef Name="userNumber" />
+    </Key>
+    <Property Name="userNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userId" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="userTypeId" Type="Byte" Nullable="false" />
+    <Property Name="userSectionId" Type="Byte" Nullable="false" />
+    <Property Name="userGradeId" Type="Byte" Nullable="false" />
+    <Property Name="companyDetailId" Type="Int32" />
+    <Property Name="password" Type="String" MaxLength="44" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ssno" Type="String" MaxLength="24" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tel" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="wowCashBalance" Type="Int32" Nullable="false" />
+    <Property Name="pointToWowCashBalance" Type="Int32" Nullable="false" />
+    <Property Name="accumulatePointBalance" Type="Int32" Nullable="false" />
+    <Property Name="fusiblePointBalance" Type="Int32" Nullable="false" />
+    <Property Name="passwordConfirmId" Type="Byte" Nullable="false" />
+    <Property Name="passwordConfirmAnswer" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="isSendEmail" Type="Boolean" Nullable="false" />
+    <Property Name="longTermUncollectedCount" Type="Byte" Nullable="false" />
+    <Property Name="isSendSMS" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="isEmailOk" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="option1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="option2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="registDt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="adminId" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apply" Type="Boolean" Nullable="false" />
+    <Property Name="club" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="NickName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Mobile" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblUserDetail" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblUser" FromRole="tblUser" ToRole="tblUserDetail" />
+    <NavigationProperty Name="tblTransaction" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblTransaction_tblUser" FromRole="tblUser" ToRole="tblTransaction" />
+  </EntityType>
+  <EntityContainer Name="Db89_wowbill" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblUser" EntityType="Self.tblUser" />
+    <EntitySet Name="TblMemberBlackList" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.TblMemberBlackList" />
+    <EntitySet Name="TblMemberIdSearchLog" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.TblMemberIdSearchLog" />
+    <EntitySet Name="tblUser_IPIN" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblUser_IPIN" />
+    <EntitySet Name="TblMemberDIDenialList" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.TblMemberDIDenialList" />
+    <EntitySet Name="tblUser_Log" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblUser_Log" />
+    <FunctionImport Name="sp_InsertContractSale" ReturnType="Collection(Int32)">
+      <Parameter Name="money" Mode="In" Type="Int32" />
+      <Parameter Name="number" Mode="In" Type="Int32" />
+      <Parameter Name="payerNumber" Mode="In" Type="Int32" />
+      <Parameter Name="serviceId" Mode="In" Type="String" />
+      <Parameter Name="contractSaleId" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="tblPost" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblPost" />
+    <EntitySet Name="tblUser_FailLog" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblUser_FailLog" />
+    <FunctionImport Name="NUP_MEMBER_CREATE">
+      <Parameter Name="USERID" Mode="In" Type="String" />
+      <Parameter Name="PASSWORD" Mode="In" Type="String" />
+      <Parameter Name="NAME" Mode="In" Type="String" />
+      <Parameter Name="SSNO" Mode="In" Type="String" />
+      <Parameter Name="TEL" Mode="In" Type="String" />
+      <Parameter Name="PASSWORDCONFIRMID" Mode="In" Type="Byte" />
+      <Parameter Name="PASSWORDCONFIRMANSWER" Mode="In" Type="String" />
+      <Parameter Name="EMAIL" Mode="In" Type="String" />
+      <Parameter Name="ZIPCODE" Mode="In" Type="String" />
+      <Parameter Name="ADDRESS" Mode="In" Type="String" />
+      <Parameter Name="ISSENDEMAIL" Mode="In" Type="Boolean" />
+      <Parameter Name="ISSENDSMS" Mode="In" Type="String" />
+      <Parameter Name="NICKNAME" Mode="In" Type="String" />
+      <Parameter Name="MOBILE" Mode="In" Type="String" />
+      <Parameter Name="OPTION1" Mode="In" Type="String" />
+      <Parameter Name="OPTION2" Mode="In" Type="String" />
+      <Parameter Name="CEO_NAME" Mode="In" Type="String" />
+      <Parameter Name="BUSINESS_ITEM" Mode="In" Type="String" />
+      <Parameter Name="BUSINESS_CONDITION" Mode="In" Type="String" />
+      <Parameter Name="BUSINESS_CATEGORY" Mode="In" Type="String" />
+      <Parameter Name="CORPORATION_NUMBER" Mode="In" Type="String" />
+      <Parameter Name="LISTED" Mode="In" Type="Boolean" />
+      <Parameter Name="ESTABLISHMENTANNIVERSARY" Mode="In" Type="String" />
+      <Parameter Name="LANDCENTERYN" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="TBL_STOCKLOAN_CONSLT" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.TBL_STOCKLOAN_CONSLT" />
+    <EntitySet Name="tbl_Nickname" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tbl_Nickname" />
+    <FunctionImport Name="NUP_MEMBER_PWD_ENC_SELECT" ReturnType="Collection(String)">
+      <Parameter Name="PASSWORD" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tblRecruit" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblRecruit" />
+    <FunctionImport Name="usp_RecruitData" EntitySet="tblRecruit" ReturnType="Collection(Wow.Tv.Middle.Model.Db89.wowbill.tblRecruit)">
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="ssno" Mode="In" Type="String" />
+      <Parameter Name="img" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="NUP_ENC_SELECT" ReturnType="Collection(String)">
+      <Parameter Name="TYPE" Mode="In" Type="String" />
+      <Parameter Name="ALGORITHM" Mode="In" Type="String" />
+      <Parameter Name="WORD" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="NUP_MEMBER_CREATE_IPIN">
+      <Parameter Name="USERID" Mode="In" Type="String" />
+      <Parameter Name="NICKNAME" Mode="In" Type="String" />
+      <Parameter Name="PASSWORD" Mode="In" Type="String" />
+      <Parameter Name="NAME" Mode="In" Type="String" />
+      <Parameter Name="SSNO" Mode="In" Type="String" />
+      <Parameter Name="TEL" Mode="In" Type="String" />
+      <Parameter Name="MOBILE" Mode="In" Type="String" />
+      <Parameter Name="PASSWORDCONFIRMID" Mode="In" Type="Byte" />
+      <Parameter Name="PASSWORDCONFIRMANSWER" Mode="In" Type="String" />
+      <Parameter Name="EMAIL" Mode="In" Type="String" />
+      <Parameter Name="ISSENDEMAIL" Mode="In" Type="Boolean" />
+      <Parameter Name="ISSENDSMS" Mode="In" Type="String" />
+      <Parameter Name="EMAILAD" Mode="In" Type="String" />
+      <Parameter Name="SMSAD" Mode="In" Type="String" />
+      <Parameter Name="OPTION1" Mode="In" Type="String" />
+      <Parameter Name="OPTION2" Mode="In" Type="String" />
+      <Parameter Name="ZIPCODE" Mode="In" Type="String" />
+      <Parameter Name="ADDRESS1" Mode="In" Type="String" />
+      <Parameter Name="ADDRESS2" Mode="In" Type="String" />
+      <Parameter Name="BIRTHDATE" Mode="In" Type="String" />
+      <Parameter Name="ISSOLAR" Mode="In" Type="Boolean" />
+      <Parameter Name="GENDER" Mode="In" Type="Boolean" />
+      <Parameter Name="DUP_INFO" Mode="In" Type="String" />
+      <Parameter Name="CONN_INFO" Mode="In" Type="String" />
+      <Parameter Name="RETURN_NUMBER" Mode="InOut" Type="Int32" />
+      <Parameter Name="RETURN_MESSAGE" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="NUP_MEMBER_CREATE_COMPANY">
+      <Parameter Name="USERID" Mode="In" Type="String" />
+      <Parameter Name="NICKNAME" Mode="In" Type="String" />
+      <Parameter Name="PASSWORD" Mode="In" Type="String" />
+      <Parameter Name="NAME" Mode="In" Type="String" />
+      <Parameter Name="SSNO" Mode="In" Type="String" />
+      <Parameter Name="TEL" Mode="In" Type="String" />
+      <Parameter Name="MOBILE" Mode="In" Type="String" />
+      <Parameter Name="PASSWORDCONFIRMID" Mode="In" Type="Byte" />
+      <Parameter Name="PASSWORDCONFIRMANSWER" Mode="In" Type="String" />
+      <Parameter Name="EMAIL" Mode="In" Type="String" />
+      <Parameter Name="ISSENDSMS" Mode="In" Type="Boolean" />
+      <Parameter Name="ISSENDSMSAD" Mode="In" Type="Boolean" />
+      <Parameter Name="ISSENDEMAIL" Mode="In" Type="Boolean" />
+      <Parameter Name="ISSENDEMAILAD" Mode="In" Type="Boolean" />
+      <Parameter Name="OPTION1" Mode="In" Type="String" />
+      <Parameter Name="OPTION2" Mode="In" Type="String" />
+      <Parameter Name="ZIPCODE" Mode="In" Type="String" />
+      <Parameter Name="ADDRESS" Mode="In" Type="String" />
+      <Parameter Name="OWNER" Mode="In" Type="String" />
+      <Parameter Name="BUSINESS_ITEM" Mode="In" Type="String" />
+      <Parameter Name="BUSINESS_CONDITION" Mode="In" Type="String" />
+      <Parameter Name="BUSINESS_TYPE" Mode="In" Type="String" />
+      <Parameter Name="COMPANY_NO" Mode="In" Type="String" />
+      <Parameter Name="LISTED" Mode="In" Type="Boolean" />
+      <Parameter Name="ESTABLISHMENT_ANNIVERSARY" Mode="In" Type="String" />
+      <Parameter Name="LANDCENTER" Mode="In" Type="Boolean" />
+      <Parameter Name="RETURN_NUMBER" Mode="InOut" Type="Int32" />
+      <Parameter Name="RETURN_MESSAGE" Mode="InOut" Type="String" />
+      <Parameter Name="USER_NUMBER" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="NUP_MEMBER_CREATE_SMS">
+      <Parameter Name="USERID" Mode="In" Type="String" />
+      <Parameter Name="NICKNAME" Mode="In" Type="String" />
+      <Parameter Name="PASSWORD" Mode="In" Type="String" />
+      <Parameter Name="NAME" Mode="In" Type="String" />
+      <Parameter Name="SSNO" Mode="In" Type="String" />
+      <Parameter Name="TEL" Mode="In" Type="String" />
+      <Parameter Name="MOBILE" Mode="In" Type="String" />
+      <Parameter Name="PASSWORDCONFIRMID" Mode="In" Type="Byte" />
+      <Parameter Name="PASSWORDCONFIRMANSWER" Mode="In" Type="String" />
+      <Parameter Name="EMAIL" Mode="In" Type="String" />
+      <Parameter Name="ISSENDEMAIL" Mode="In" Type="Boolean" />
+      <Parameter Name="ISSENDSMS" Mode="In" Type="String" />
+      <Parameter Name="EMAILAD" Mode="In" Type="String" />
+      <Parameter Name="SMSAD" Mode="In" Type="String" />
+      <Parameter Name="OPTION1" Mode="In" Type="String" />
+      <Parameter Name="OPTION2" Mode="In" Type="String" />
+      <Parameter Name="ZIPCODE" Mode="In" Type="String" />
+      <Parameter Name="ADDRESS1" Mode="In" Type="String" />
+      <Parameter Name="ADDRESS2" Mode="In" Type="String" />
+      <Parameter Name="BIRTHDATE" Mode="In" Type="String" />
+      <Parameter Name="ISSOLAR" Mode="In" Type="Boolean" />
+      <Parameter Name="GENDER" Mode="In" Type="Boolean" />
+      <Parameter Name="DUP_INFO" Mode="In" Type="String" />
+      <Parameter Name="CONN_INFO" Mode="In" Type="String" />
+      <Parameter Name="RETURN_NUMBER" Mode="InOut" Type="Int32" />
+      <Parameter Name="RETURN_MESSAGE" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_MemberSearch_dormancy" ReturnType="Collection(Wow.Tv.Middle.Model.Db89.wowbill.usp_MemberSearch_dormancy_Result)">
+      <Parameter Name="DupInfo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_MemberRestoreDormancy">
+      <Parameter Name="usernumber" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_MemberPasswordHistoryCheck" ReturnType="Collection(Wow.Tv.Middle.Model.Db89.wowbill.usp_MemberPasswordHistoryCheck_Result)">
+      <Parameter Name="userid" Mode="In" Type="String" />
+      <Parameter Name="setdate" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="NUP_ADMIN_MEMBER_LIST_SELECT" ReturnType="Collection(Wow.Tv.Middle.Model.Db89.wowbill.NUP_ADMIN_MEMBER_LIST_SELECT_Result)">
+      <Parameter Name="REGIST_DT_FROM" Mode="In" Type="DateTime" />
+      <Parameter Name="REGIST_DT_TO" Mode="In" Type="DateTime" />
+      <Parameter Name="LATEST_CONNECT_DT_FROM" Mode="In" Type="DateTime" />
+      <Parameter Name="LATEST_CONNECT_DT_TO" Mode="In" Type="DateTime" />
+      <Parameter Name="SEARCH_TYPE" Mode="In" Type="String" />
+      <Parameter Name="SEARCH_TEXT" Mode="In" Type="String" />
+      <Parameter Name="PAGE_INDEX" Mode="In" Type="Int32" />
+      <Parameter Name="PAGE_SIZE" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="tblCodeHobby" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeHobby" />
+    <EntitySet Name="tblCodeInfoAcquirement" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeInfoAcquirement" />
+    <EntitySet Name="tblCodeInterestItem" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeInterestItem" />
+    <EntitySet Name="tblCodeInvestmentPeriod" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeInvestmentPeriod" />
+    <EntitySet Name="tblCodeInvestmentPreferenceObject" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeInvestmentPreferenceObject" />
+    <EntitySet Name="tblCodeInvestmentPropensity" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeInvestmentPropensity" />
+    <EntitySet Name="tblCodeInvestmentScale" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeInvestmentScale" />
+    <EntitySet Name="tblCodeJob" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeJob" />
+    <EntitySet Name="tblCodeStockCompany" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeStockCompany" />
+    <EntitySet Name="tblCodeResidingStatus" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeResidingStatus" />
+    <EntitySet Name="tblCodeSalary" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeSalary" />
+    <FunctionImport Name="NUP_ADMIN_MEMBER_INFO_SELECT" ReturnType="Collection(Wow.Tv.Middle.Model.Db89.wowbill.NUP_ADMIN_MEMBER_INFO_SELECT_Result)">
+      <Parameter Name="USER_NUMBER" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="NUP_ADMIN_MEMBER_INFO_UPDATE">
+      <Parameter Name="USER_NUMBER" Mode="In" Type="Int32" />
+      <Parameter Name="USER_SECTION" Mode="In" Type="String" />
+      <Parameter Name="IS_SEND_EMAIL" Mode="In" Type="Boolean" />
+      <Parameter Name="IS_SEND_SMS" Mode="In" Type="Boolean" />
+      <Parameter Name="TEL_NO" Mode="In" Type="String" />
+      <Parameter Name="FAX_NO" Mode="In" Type="String" />
+      <Parameter Name="MOBILE_NO" Mode="In" Type="String" />
+      <Parameter Name="ZIPCODE" Mode="In" Type="String" />
+      <Parameter Name="ADDRESS" Mode="In" Type="String" />
+      <Parameter Name="SALARY_ID" Mode="In" Type="Byte" />
+      <Parameter Name="INVESTMENT_PREFERENCE_OBJECT_ID" Mode="In" Type="Byte" />
+      <Parameter Name="INFO_ACQUIREMENT_ID" Mode="In" Type="Byte" />
+      <Parameter Name="INVESTMENT_PERIOD_ID" Mode="In" Type="Byte" />
+      <Parameter Name="INVESTMENT_PROPENSITY_ID" Mode="In" Type="Byte" />
+      <Parameter Name="STOCK_COMPANY_ID" Mode="In" Type="Byte" />
+      <Parameter Name="INVESTMENT_SCALE_ID" Mode="In" Type="Byte" />
+      <Parameter Name="INTEREST_AREA" Mode="In" Type="String" />
+      <Parameter Name="COMPANY_NAME" Mode="In" Type="String" />
+      <Parameter Name="BUSINESS_CONDITION" Mode="In" Type="String" />
+      <Parameter Name="BUSINESS_ITEM" Mode="In" Type="String" />
+      <Parameter Name="BUSINESS_NUMBER" Mode="In" Type="String" />
+      <Parameter Name="ADMIN_ID" Mode="In" Type="String" />
+      <Parameter Name="RETURN_NUMBER" Mode="InOut" Type="Int32" />
+      <Parameter Name="RETURN_MESSAGE" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="NUP_ADMIN_MEMBER_INFO_DELETE">
+      <Parameter Name="USER_NUMBER" Mode="In" Type="Int32" />
+      <Parameter Name="RETURN_NUMBER" Mode="InOut" Type="Int32" />
+      <Parameter Name="RETURN_MESSAGE" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tblUserHistory" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblUserHistory" />
+    <FunctionImport Name="NUP_ADMIN_MEMBER_STATISTICS_SELECT" />
+    <EntitySet Name="tblCodeSalaryDetail" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeSalaryDetail" />
+    <EntitySet Name="tblUserDetail" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblUserDetail" />
+    <AssociationSet Name="FK_tblUserDetail_tblCodeHobby" Association="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeHobby">
+      <End Role="tblCodeHobby" EntitySet="tblCodeHobby" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblCodeInfoAcquirement" Association="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeInfoAcquirement">
+      <End Role="tblCodeInfoAcquirement" EntitySet="tblCodeInfoAcquirement" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblCodeInterestItem" Association="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeInterestItem">
+      <End Role="tblCodeInterestItem" EntitySet="tblCodeInterestItem" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblCodeInterestItem1" Association="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeInterestItem1">
+      <End Role="tblCodeInterestItem" EntitySet="tblCodeInterestItem" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblCodeInterestItem2" Association="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeInterestItem2">
+      <End Role="tblCodeInterestItem" EntitySet="tblCodeInterestItem" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblCodeInvestmentPeriod" Association="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeInvestmentPeriod">
+      <End Role="tblCodeInvestmentPeriod" EntitySet="tblCodeInvestmentPeriod" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblCodeInvestmentPreferenceObject" Association="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeInvestmentPreferenceObject">
+      <End Role="tblCodeInvestmentPreferenceObject" EntitySet="tblCodeInvestmentPreferenceObject" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblCodeInvestmentPropensity" Association="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeInvestmentPropensity">
+      <End Role="tblCodeInvestmentPropensity" EntitySet="tblCodeInvestmentPropensity" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblCodeInvestmentScale" Association="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeInvestmentScale">
+      <End Role="tblCodeInvestmentScale" EntitySet="tblCodeInvestmentScale" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblCodeJob" Association="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeJob">
+      <End Role="tblCodeJob" EntitySet="tblCodeJob" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblCodeResidingStatus" Association="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeResidingStatus">
+      <End Role="tblCodeResidingStatus" EntitySet="tblCodeResidingStatus" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblCodeSalary" Association="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeSalary">
+      <End Role="tblCodeSalary" EntitySet="tblCodeSalary" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblCodeStockCompany" Association="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeStockCompany">
+      <End Role="tblCodeStockCompany" EntitySet="tblCodeStockCompany" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblUser" Association="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblUser">
+      <End Role="tblUser" EntitySet="tblUser" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <EntitySet Name="tblCodeInfoAcquirementDetail" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeInfoAcquirementDetail" />
+    <EntitySet Name="tblCodeInvestmentPeriodDetail" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeInvestmentPeriodDetail" />
+    <EntitySet Name="tblCodeInvestmentPreferenceObjectDetail" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeInvestmentPreferenceObjectDetail" />
+    <EntitySet Name="tblCodeInvestmentPropensityDetail" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeInvestmentPropensityDetail" />
+    <EntitySet Name="tblCodeInvestmentScaleDetail" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeInvestmentScaleDetail" />
+    <EntitySet Name="tblCodeStockCompanyDetail" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeStockCompanyDetail" />
+    <EntitySet Name="tblCodeInterest" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeInterest" />
+    <EntitySet Name="tblCodeInterestDetail" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeInterestDetail" />
+    <FunctionImport Name="NUP_MEMBER_INFO_SELECT" ReturnType="Collection(Wow.Tv.Middle.Model.Db89.wowbill.NUP_MEMBER_INFO_SELECT_Result)">
+      <Parameter Name="USER_NUMBER" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="NUP_MEMBER_CREATE_GENERAL">
+      <Parameter Name="USERID" Mode="In" Type="String" />
+      <Parameter Name="NICKNAME" Mode="In" Type="String" />
+      <Parameter Name="PASSWORD" Mode="In" Type="String" />
+      <Parameter Name="NAME" Mode="In" Type="String" />
+      <Parameter Name="SSNO" Mode="In" Type="String" />
+      <Parameter Name="TEL" Mode="In" Type="String" />
+      <Parameter Name="MOBILE" Mode="In" Type="String" />
+      <Parameter Name="PASSWORDCONFIRMID" Mode="In" Type="Byte" />
+      <Parameter Name="PASSWORDCONFIRMANSWER" Mode="In" Type="String" />
+      <Parameter Name="EMAIL" Mode="In" Type="String" />
+      <Parameter Name="ISSENDSMS" Mode="In" Type="Boolean" />
+      <Parameter Name="ISSENDSMSAD" Mode="In" Type="Boolean" />
+      <Parameter Name="ISSENDEMAIL" Mode="In" Type="Boolean" />
+      <Parameter Name="ISSENDEMAILAD" Mode="In" Type="Boolean" />
+      <Parameter Name="OPTION1" Mode="In" Type="String" />
+      <Parameter Name="OPTION2" Mode="In" Type="String" />
+      <Parameter Name="SIDO" Mode="In" Type="String" />
+      <Parameter Name="GUGUN" Mode="In" Type="String" />
+      <Parameter Name="BIRTHDATE" Mode="In" Type="String" />
+      <Parameter Name="ISSOLAR" Mode="In" Type="Boolean" />
+      <Parameter Name="GENDER" Mode="In" Type="Boolean" />
+      <Parameter Name="DUP_INFO" Mode="In" Type="String" />
+      <Parameter Name="CONN_INFO" Mode="In" Type="String" />
+      <Parameter Name="USER_SECTION_ID" Mode="In" Type="Byte" />
+      <Parameter Name="RETURN_NUMBER" Mode="InOut" Type="Int32" />
+      <Parameter Name="RETURN_MESSAGE" Mode="InOut" Type="String" />
+      <Parameter Name="USER_NUMBER" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="tblMemberEmailAuth" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblMemberEmailAuth" />
+    <EntitySet Name="tblCodeRegistRoute" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeRegistRoute" />
+    <AssociationSet Name="FK_tblUserDetail_tblCodeRegistRoute" Association="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeRegistRoute">
+      <End Role="tblCodeRegistRoute" EntitySet="tblCodeRegistRoute" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <FunctionImport Name="NUP_MEMBER_UPDATE_GENERAL">
+      <Parameter Name="USERNUMBER" Mode="In" Type="Int32" />
+      <Parameter Name="NICKNAME" Mode="In" Type="String" />
+      <Parameter Name="TEL" Mode="In" Type="String" />
+      <Parameter Name="MOBILE" Mode="In" Type="String" />
+      <Parameter Name="EMAIL" Mode="In" Type="String" />
+      <Parameter Name="ISSENDSMS" Mode="In" Type="String" />
+      <Parameter Name="ISSENDEMAIL" Mode="In" Type="Boolean" />
+      <Parameter Name="SIDO" Mode="In" Type="String" />
+      <Parameter Name="GUGUN" Mode="In" Type="String" />
+      <Parameter Name="ZIPCODE" Mode="In" Type="String" />
+      <Parameter Name="ADDRESS" Mode="In" Type="String" />
+      <Parameter Name="SALARY_ID" Mode="In" Type="Byte" />
+      <Parameter Name="INVESTMENT_PERIOD_ID" Mode="In" Type="Byte" />
+      <Parameter Name="INVESTMENT_SCALE_ID" Mode="In" Type="Byte" />
+      <Parameter Name="INVESTMENT_PROPENSITY_ID" Mode="In" Type="Byte" />
+      <Parameter Name="INVESTMENT_PREFERENCE_OBJECT_ID" Mode="In" Type="Byte" />
+      <Parameter Name="STOCK_COMPANY_ID" Mode="In" Type="Byte" />
+      <Parameter Name="INFO_ACQUIREMENT_ID" Mode="In" Type="Byte" />
+      <Parameter Name="INTEREST_AREA" Mode="In" Type="String" />
+      <Parameter Name="JOB_ID" Mode="In" Type="Byte" />
+      <Parameter Name="REGIST_ROUTE_ID" Mode="In" Type="Byte" />
+      <Parameter Name="RETURN_NUMBER" Mode="InOut" Type="Int32" />
+      <Parameter Name="RETURN_MESSAGE" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="NUP_RecruitData" ReturnType="Collection(Wow.Tv.Middle.Model.Db89.wowbill.NUP_RecruitData_Result)">
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="ssno" Mode="In" Type="String" />
+      <Parameter Name="img" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="NUP_MEMBER_INFO_SELECT_COMPANY" ReturnType="Collection(Wow.Tv.Middle.Model.Db89.wowbill.NUP_MEMBER_INFO_SELECT_COMPANY_Result)">
+      <Parameter Name="USER_NUMBER" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="NUP_MEMBER_INFO_SELECT_GENERAL" ReturnType="Collection(Wow.Tv.Middle.Model.Db89.wowbill.NUP_MEMBER_INFO_SELECT_GENERAL_Result)">
+      <Parameter Name="USER_NUMBER" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="USP_GetMYCancelPoint" ReturnType="Collection(Int32)">
+      <Parameter Name="usernumber" Mode="In" Type="String" />
+      <Parameter Name="registDt" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="USP_GetMYCancelPointCash" ReturnType="Collection(Int32)">
+      <Parameter Name="usernumber" Mode="In" Type="String" />
+      <Parameter Name="registDt" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="USP_GetMYCurrentCash" ReturnType="Collection(Wow.Tv.Middle.Model.Db89.wowbill.USP_GetMYCurrentCash_Result)">
+      <Parameter Name="usernumber" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tblCodeTransactionType" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeTransactionType" />
+    <EntitySet Name="tblTransaction" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblTransaction" />
+    <AssociationSet Name="FK_tblTransaction_tblCodeTransactionType" Association="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblTransaction_tblCodeTransactionType">
+      <End Role="tblCodeTransactionType" EntitySet="tblCodeTransactionType" />
+      <End Role="tblTransaction" EntitySet="tblTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblTransaction_tblUser" Association="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblTransaction_tblUser">
+      <End Role="tblUser" EntitySet="tblUser" />
+      <End Role="tblTransaction" EntitySet="tblTransaction" />
+    </AssociationSet>
+    <EntitySet Name="tblcoupon_Daebak" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblcoupon_Daebak" />
+    <EntitySet Name="tblUserSNSKakao" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblUserSNSKakao" />
+    <EntitySet Name="tblUserSNSFacebook" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblUserSNSFacebook" />
+    <EntitySet Name="tblUserSNSNaver" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblUserSNSNaver" />
+    <FunctionImport Name="NUP_RECRUIT_SELECT" ReturnType="Collection(Wow.Tv.Middle.Model.Db89.wowbill.NUP_RECRUIT_SELECT_Result)">
+      <Parameter Name="NAME" Mode="In" Type="String" />
+      <Parameter Name="SSNO" Mode="In" Type="String" />
+      <Parameter Name="SEQ" Mode="In" Type="Int32" />
+      <Parameter Name="PAGE_SIZE" Mode="In" Type="Int32" />
+      <Parameter Name="PAGE" Mode="In" Type="Int32" />
+      <Parameter Name="PASSWORD" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="NUP_RECRUIT_INSERT">
+      <Parameter Name="TYPE" Mode="In" Type="String" />
+      <Parameter Name="NAME" Mode="In" Type="String" />
+      <Parameter Name="SSNO" Mode="In" Type="String" />
+      <Parameter Name="IMG" Mode="In" Type="String" />
+      <Parameter Name="JOB" Mode="In" Type="String" />
+      <Parameter Name="PASSWORD" Mode="In" Type="String" />
+      <Parameter Name="AGREEMENT" Mode="In" Type="String" />
+      <Parameter Name="MAXNO" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="NUP_ADMIN_MEMBER_STATISTICS_SELECT1" ReturnType="Collection(Wow.Tv.Middle.Model.Db89.wowbill.NUP_ADMIN_MEMBER_STATISTICS_SELECT1_Result)" />
+    <FunctionImport Name="NUP_MEMBER_UPDATE">
+      <Parameter Name="USERNUMBER" Mode="In" Type="Int32" />
+      <Parameter Name="USERNAME" Mode="In" Type="String" />
+      <Parameter Name="NICKNAME" Mode="In" Type="String" />
+      <Parameter Name="TEL" Mode="In" Type="String" />
+      <Parameter Name="MOBILE" Mode="In" Type="String" />
+      <Parameter Name="EMAIL" Mode="In" Type="String" />
+      <Parameter Name="ISSENDSMS" Mode="In" Type="String" />
+      <Parameter Name="ISSENDEMAIL" Mode="In" Type="Boolean" />
+      <Parameter Name="SIDO" Mode="In" Type="String" />
+      <Parameter Name="GUGUN" Mode="In" Type="String" />
+      <Parameter Name="ZIPCODE" Mode="In" Type="String" />
+      <Parameter Name="ADDRESS" Mode="In" Type="String" />
+      <Parameter Name="SALARY_ID" Mode="In" Type="Byte" />
+      <Parameter Name="INVESTMENT_PERIOD_ID" Mode="In" Type="Byte" />
+      <Parameter Name="INVESTMENT_SCALE_ID" Mode="In" Type="Byte" />
+      <Parameter Name="INVESTMENT_PROPENSITY_ID" Mode="In" Type="Byte" />
+      <Parameter Name="INVESTMENT_PREFERENCE_OBJECT_ID" Mode="In" Type="Byte" />
+      <Parameter Name="STOCK_COMPANY_ID" Mode="In" Type="Byte" />
+      <Parameter Name="INFO_ACQUIREMENT_ID" Mode="In" Type="Byte" />
+      <Parameter Name="INTEREST_AREA" Mode="In" Type="String" />
+      <Parameter Name="JOB_ID" Mode="In" Type="Byte" />
+      <Parameter Name="REGIST_ROUTE_ID" Mode="In" Type="Byte" />
+      <Parameter Name="BUSINESS_CONDITION" Mode="In" Type="String" />
+      <Parameter Name="BUSINESS_ITEM" Mode="In" Type="String" />
+      <Parameter Name="COMPANY_NO" Mode="In" Type="String" />
+      <Parameter Name="CEO_NAME" Mode="In" Type="String" />
+      <Parameter Name="LISTED" Mode="In" Type="Boolean" />
+      <Parameter Name="RETURN_NUMBER" Mode="InOut" Type="Int32" />
+      <Parameter Name="RETURN_MESSAGE" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tblContent" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblContent" />
+    <FunctionImport Name="NUP_MEMBER_TV_VOD_CRM_LOG_INSERT">
+      <Parameter Name="DEP" Mode="In" Type="String" />
+      <Parameter Name="VODNUM" Mode="In" Type="Int32" />
+      <Parameter Name="BROADDATE" Mode="In" Type="String" />
+      <Parameter Name="PROGRAMNAME" Mode="In" Type="String" />
+      <Parameter Name="USERNUMBER" Mode="In" Type="Int32" />
+      <Parameter Name="USERID" Mode="In" Type="String" />
+      <Parameter Name="ENTERROUTE" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tblUserSMS" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblUserSMS" />
+    <EntitySet Name="tblUserEmailSend" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblUserEmailSend" />
+    <EntitySet Name="tblUser_approvalLog" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblUser_approvalLog" />
+    <EntitySet Name="NTB_USER_LOGIN_LOG" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.NTB_USER_LOGIN_LOG" />
+    <EntitySet Name="TblMemberPasswordHistory" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.TblMemberPasswordHistory" />
+    <EntitySet Name="tblUserPost" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblUserPost" />
+    <EntitySet Name="tblCompanyDetail" EntityType="Wow.Tv.Middle.Model.Db89.wowbill.tblCompanyDetail" />
+    <FunctionImport Name="NUP_ADMIN_MEMBER_INFO_HISTORY_SELECT" ReturnType="Collection(Wow.Tv.Middle.Model.Db89.wowbill.NUP_ADMIN_MEMBER_INFO_HISTORY_SELECT_Result)">
+      <Parameter Name="USER_NUMBER" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="TblMemberBlackList">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="AlertText" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="RegDt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TblMemberIdSearchLog">
+    <Key>
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="Seq" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DupInfo" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="RegDt" Type="DateTime" Precision="3" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="REQ_SEQ_session" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="REQ_SEQ_sResult" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblUser_IPIN">
+    <Key>
+      <PropertyRef Name="usernumber" />
+      <PropertyRef Name="DupInfo" />
+    </Key>
+    <Property Name="usernumber" Nullable="false" Type="Int32" />
+    <Property Name="DupInfo" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="ConnInfo" MaxLength="88" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="registdt" Precision="3" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="TblMemberDIDenialList">
+    <Key>
+      <PropertyRef Name="seq" />
+    </Key>
+    <Property Name="seq" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DupInfo" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="AlertText" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="RequestMailMember" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RequestMailDate" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="RegDt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblUser_Log">
+    <Key>
+      <PropertyRef Name="idx" />
+    </Key>
+    <Property Name="idx" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userid" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="mode" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="nbox" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="regdate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblPost">
+    <Key>
+      <PropertyRef Name="postId" />
+    </Key>
+    <Property Name="zipcode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="sido" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="gugun" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="dong" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="bungi" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="postId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tblUser_FailLog">
+    <Key>
+      <PropertyRef Name="idx" />
+    </Key>
+    <Property Name="idx" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userid" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="mode" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="nbox" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="regdate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TBL_STOCKLOAN_CONSLT">
+    <Key>
+      <PropertyRef Name="seq" />
+      <PropertyRef Name="userid" />
+      <PropertyRef Name="reg_date" />
+    </Key>
+    <Property Name="seq" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userid" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="reg_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="state" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbl_Nickname">
+    <Key>
+      <PropertyRef Name="nickname" />
+    </Key>
+    <Property Name="nickname" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="udfCommon_StringSplitWithNo_Result">
+    <Property Type="Int32" Name="seq" Nullable="true" />
+    <Property Type="String" Name="value" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <EntityType Name="tblRecruit">
+    <Key>
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="Seq" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Ssno" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="Img" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="RegDt" Type="DateTime" Precision="3" />
+    <Property Name="JobApplication" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="Agreement" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Passed" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ViewCnt" Type="Int32" />
+  </EntityType>
+  <ComplexType Name="usp_RecruitData_Result">
+    <Property Type="Int32" Name="seq" Nullable="false" />
+    <Property Type="String" Name="no" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="type" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="name" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ssno" Nullable="true" MaxLength="24" />
+    <Property Type="String" Name="img" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="regdt" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="usp_MemberSearch_dormancy_Result">
+    <Property Type="String" Name="USERID" Nullable="false" MaxLength="12" />
+    <Property Type="Int32" Name="USERNUMBER" Nullable="false" />
+    <Property Type="Boolean" Name="Apply" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="usp_MemberPasswordHistoryCheck_Result">
+    <Property Type="Int32" Name="userNumber" Nullable="false" />
+    <Property Type="String" Name="alarmDt" Nullable="true" MaxLength="8" />
+    <Property Type="DateTime" Name="regDt" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="udtDt" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="NUP_ADMIN_MEMBER_LIST_SELECT_Result">
+    <Property Type="Int32" Name="JOIN_TODAY_COUNT" Nullable="true" />
+    <Property Type="Int32" Name="SEARCHED_TOTAL_COUNT" Nullable="true" />
+    <Property Type="Int64" Name="ROW_NUM" Nullable="true" />
+    <Property Type="String" Name="USERID" Nullable="false" MaxLength="12" />
+    <Property Type="String" Name="USERNAME" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="NICKNAME" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MOBILE_NO" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="TEL_NO" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="EMAIL" Nullable="false" MaxLength="255" />
+    <Property Type="Int32" Name="WOW_CASH" Nullable="false" />
+    <Property Type="String" Name="USER_SECTION" Nullable="false" MaxLength="6" />
+    <Property Type="String" Name="COMPANY_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="USER_TYPE" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="ALIVE_TYPE" Nullable="false" MaxLength="8" />
+    <Property Type="Int32" Name="USERNUMBER" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="tblCodeHobby">
+    <Key>
+      <PropertyRef Name="hobbyId" />
+    </Key>
+    <Property Name="hobbyId" Type="Byte" Nullable="false" />
+    <Property Name="descript" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="registDt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDt" Type="DateTime" Precision="3" />
+    <Property Name="adminId" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="apply" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblUserDetail" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeHobby" FromRole="tblCodeHobby" ToRole="tblUserDetail" />
+  </EntityType>
+  <EntityType Name="tblCodeInfoAcquirement">
+    <Key>
+      <PropertyRef Name="infoAcquirementId" />
+    </Key>
+    <Property Name="infoAcquirementId" Type="Byte" Nullable="false" />
+    <Property Name="descript" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="registDt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDt" Type="DateTime" Precision="3" />
+    <Property Name="adminId" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="apply" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblUserDetail" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeInfoAcquirement" FromRole="tblCodeInfoAcquirement" ToRole="tblUserDetail" />
+  </EntityType>
+  <EntityType Name="tblCodeInterestItem">
+    <Key>
+      <PropertyRef Name="itemCode" />
+    </Key>
+    <Property Name="itemCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="itemName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="industryCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="industryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="registDt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDt" Type="DateTime" Precision="3" />
+    <Property Name="adminId" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="apply" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblUserDetail" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeInterestItem" FromRole="tblCodeInterestItem" ToRole="tblUserDetail" />
+    <NavigationProperty Name="tblUserDetail1" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeInterestItem1" FromRole="tblCodeInterestItem" ToRole="tblUserDetail" />
+    <NavigationProperty Name="tblUserDetail2" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeInterestItem2" FromRole="tblCodeInterestItem" ToRole="tblUserDetail" />
+  </EntityType>
+  <EntityType Name="tblCodeInvestmentPeriod">
+    <Key>
+      <PropertyRef Name="investmentPeriodId" />
+    </Key>
+    <Property Name="investmentPeriodId" Type="Byte" Nullable="false" />
+    <Property Name="descript" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="registDt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDt" Type="DateTime" Precision="3" />
+    <Property Name="adminId" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="apply" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblUserDetail" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeInvestmentPeriod" FromRole="tblCodeInvestmentPeriod" ToRole="tblUserDetail" />
+  </EntityType>
+  <EntityType Name="tblCodeInvestmentPreferenceObject">
+    <Key>
+      <PropertyRef Name="investmentPreferenceObjectId" />
+    </Key>
+    <Property Name="investmentPreferenceObjectId" Type="Byte" Nullable="false" />
+    <Property Name="descript" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="registDt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDt" Type="DateTime" Precision="3" />
+    <Property Name="adminId" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="apply" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblUserDetail" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeInvestmentPreferenceObject" FromRole="tblCodeInvestmentPreferenceObject" ToRole="tblUserDetail" />
+  </EntityType>
+  <EntityType Name="tblCodeInvestmentPropensity">
+    <Key>
+      <PropertyRef Name="investmentPropensityId" />
+    </Key>
+    <Property Name="investmentPropensityId" Type="Byte" Nullable="false" />
+    <Property Name="descript" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="registDt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDt" Type="DateTime" Precision="3" />
+    <Property Name="adminId" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="apply" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblUserDetail" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeInvestmentPropensity" FromRole="tblCodeInvestmentPropensity" ToRole="tblUserDetail" />
+  </EntityType>
+  <EntityType Name="tblCodeInvestmentScale">
+    <Key>
+      <PropertyRef Name="investmentScaleId" />
+    </Key>
+    <Property Name="investmentScaleId" Type="Byte" Nullable="false" />
+    <Property Name="descript" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="registDt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDt" Type="DateTime" Precision="3" />
+    <Property Name="adminId" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="apply" Type="Boolean" />
+    <NavigationProperty Name="tblUserDetail" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeInvestmentScale" FromRole="tblCodeInvestmentScale" ToRole="tblUserDetail" />
+  </EntityType>
+  <EntityType Name="tblCodeJob">
+    <Key>
+      <PropertyRef Name="jobId" />
+    </Key>
+    <Property Name="jobId" Type="Byte" Nullable="false" />
+    <Property Name="descript" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="registDt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDt" Type="DateTime" Precision="3" />
+    <Property Name="adminId" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="apply" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblUserDetail" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeJob" FromRole="tblCodeJob" ToRole="tblUserDetail" />
+  </EntityType>
+  <EntityType Name="tblCodeStockCompany">
+    <Key>
+      <PropertyRef Name="stockCompanyId" />
+    </Key>
+    <Property Name="stockCompanyId" Type="Byte" Nullable="false" />
+    <Property Name="descript" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="registDt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDt" Type="DateTime" Precision="3" />
+    <Property Name="adminId" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="apply" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblUserDetail" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeStockCompany" FromRole="tblCodeStockCompany" ToRole="tblUserDetail" />
+  </EntityType>
+  <EntityType Name="tblCodeResidingStatus">
+    <Key>
+      <PropertyRef Name="residingStatusId" />
+    </Key>
+    <Property Name="residingStatusId" Type="Byte" Nullable="false" />
+    <Property Name="descript" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="registDt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDt" Type="DateTime" Precision="3" />
+    <Property Name="adminId" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="apply" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblUserDetail" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeResidingStatus" FromRole="tblCodeResidingStatus" ToRole="tblUserDetail" />
+  </EntityType>
+  <EntityType Name="tblCodeSalary">
+    <Key>
+      <PropertyRef Name="salaryId" />
+    </Key>
+    <Property Name="salaryId" Type="Byte" Nullable="false" />
+    <Property Name="descript" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="registDt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDt" Type="DateTime" Precision="3" />
+    <Property Name="adminId" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="apply" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblUserDetail" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeSalary" FromRole="tblCodeSalary" ToRole="tblUserDetail" />
+  </EntityType>
+  <ComplexType Name="NUP_ADMIN_MEMBER_INFO_SELECT_Result">
+    <Property Type="String" Name="USERID" Nullable="false" MaxLength="12" />
+    <Property Type="String" Name="USER_SECTION_CODE" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="USER_SECTION" Nullable="false" MaxLength="6" />
+    <Property Type="String" Name="COMPANY_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="BUSINESS_CONDITION" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BUSINESS_ITEM" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BUSINESS_NO" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="CEO_NAME" Nullable="true" MaxLength="25" />
+    <Property Type="Boolean" Name="INACTIVE" Nullable="true" />
+    <Property Type="Byte" Name="PASSWORD_CONFIRM_ID" Nullable="false" />
+    <Property Type="String" Name="PASSWORD_ANSWER" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="USERNAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="NICKNAME" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BIRTHDATE" Nullable="false" MaxLength="8" />
+    <Property Type="Boolean" Name="IS_SOLAR" Nullable="true" />
+    <Property Type="String" Name="USER_TYPE" Nullable="false" MaxLength="10" />
+    <Property Type="Boolean" Name="IS_SEND_EMAIL" Nullable="false" />
+    <Property Type="String" Name="IS_SEND_SMS" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="TEL_NO" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="MOBILE_NO" Nullable="true" MaxLength="15" />
+    <Property Type="DateTime" Name="REGIST_DATE" Nullable="false" Precision="23" />
+    <Property Type="String" Name="ADDRESS" Nullable="true" MaxLength="255" />
+    <Property Type="Byte" Name="SALARY_ID" Nullable="true" />
+    <Property Type="Byte" Name="INVESTMENT_PREFERENCE_OBJECT_ID" Nullable="true" />
+    <Property Type="Byte" Name="INFO_ACQUIREMENT_ID" Nullable="true" />
+    <Property Type="Byte" Name="INVESTMENT_PERIOD_ID" Nullable="true" />
+    <Property Type="Byte" Name="INVESTMENT_PROPENSITY_ID" Nullable="true" />
+    <Property Type="Byte" Name="STOCK_COMPANY_ID" Nullable="true" />
+    <Property Type="Byte" Name="INVESTMENT_SCALE_ID" Nullable="true" />
+    <Property Type="String" Name="INTEREST_AREA" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="PASSWORD_CONFIRM" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="ZIPCODE" Nullable="true" MaxLength="6" />
+    <Property Type="String" Name="FAX_NO" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="IS_SEND_EMAIL_AD" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="IS_SEND_SMS_AD" Nullable="true" MaxLength="1" />
+    <Property Type="Boolean" Name="APPROVED" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="tblUserHistory">
+    <Key>
+      <PropertyRef Name="userNumber" />
+      <PropertyRef Name="userId" />
+      <PropertyRef Name="userTypeId" />
+      <PropertyRef Name="userSectionId" />
+      <PropertyRef Name="userGradeId" />
+      <PropertyRef Name="password" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="ssno" />
+      <PropertyRef Name="tel" />
+      <PropertyRef Name="wowCashBalance" />
+      <PropertyRef Name="pointToWowCashBalance" />
+      <PropertyRef Name="accumulatePointBalance" />
+      <PropertyRef Name="fusiblePointBalance" />
+      <PropertyRef Name="passwordConfirmId" />
+      <PropertyRef Name="email" />
+      <PropertyRef Name="isSendEmail" />
+      <PropertyRef Name="longTermUncollectedCount" />
+      <PropertyRef Name="registDt" />
+      <PropertyRef Name="operationType" />
+    </Key>
+    <Property Name="userNumber" Type="Int32" Nullable="false" />
+    <Property Name="userId" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="userTypeId" Type="Byte" Nullable="false" />
+    <Property Name="userSectionId" Type="Byte" Nullable="false" />
+    <Property Name="userGradeId" Type="Byte" Nullable="false" />
+    <Property Name="companyDetailId" Type="Int32" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="44" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ssno" Type="String" Nullable="false" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="tel" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="wowCashBalance" Type="Int32" Nullable="false" />
+    <Property Name="pointToWowCashBalance" Type="Int32" Nullable="false" />
+    <Property Name="accumulatePointBalance" Type="Int32" Nullable="false" />
+    <Property Name="fusiblePointBalance" Type="Int32" Nullable="false" />
+    <Property Name="passwordConfirmId" Type="Byte" Nullable="false" />
+    <Property Name="passwordConfirmAnswer" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="isSendEmail" Type="Boolean" Nullable="false" />
+    <Property Name="longTermUncollectedCount" Type="Byte" Nullable="false" />
+    <Property Name="isSendSMS" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="isEmailOk" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="option1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="option2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="registDt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="operationType" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="adminId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="club" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="NickName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Mobile" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblCodeSalaryDetail">
+    <Key>
+      <PropertyRef Name="salaryId" />
+    </Key>
+    <Property Name="salaryId" Type="Byte" Nullable="false" />
+    <Property Name="sort" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblUserDetail">
+    <Key>
+      <PropertyRef Name="userNumber" />
+    </Key>
+    <Property Name="userNumber" Type="Int32" Nullable="false" />
+    <Property Name="isSolar" Type="Boolean" />
+    <Property Name="birthday" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="zipcode" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="handphone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="companyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="companyDepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="companyZipcode" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="companyAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="companyTel" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="jobId" Type="Byte" />
+    <Property Name="homepageUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="registRouteId" Type="Byte" />
+    <Property Name="statusChangeReasonId" Type="Byte" />
+    <Property Name="salaryId" Type="Byte" />
+    <Property Name="investmentPeriodId" Type="Byte" />
+    <Property Name="investmentScaleId" Type="Byte" />
+    <Property Name="investmentPropensityId" Type="Byte" />
+    <Property Name="investmentPreferenceObjectId" Type="Byte" />
+    <Property Name="stockCompanyId" Type="Byte" />
+    <Property Name="infoAcquirementId" Type="Byte" />
+    <Property Name="interestItemId1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="interestItemId2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="interestItemId3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hobbyId" Type="Byte" />
+    <Property Name="weddingAnniversary" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="residingStatusId" Type="Byte" />
+    <Property Name="registDt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="adminId" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="apply" Type="Boolean" Nullable="false" />
+    <Property Name="interestArea" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblCodeHobby" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeHobby" FromRole="tblUserDetail" ToRole="tblCodeHobby" />
+    <NavigationProperty Name="tblCodeInfoAcquirement" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeInfoAcquirement" FromRole="tblUserDetail" ToRole="tblCodeInfoAcquirement" />
+    <NavigationProperty Name="tblCodeInterestItem" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeInterestItem" FromRole="tblUserDetail" ToRole="tblCodeInterestItem" />
+    <NavigationProperty Name="tblCodeInterestItem1" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeInterestItem1" FromRole="tblUserDetail" ToRole="tblCodeInterestItem" />
+    <NavigationProperty Name="tblCodeInterestItem2" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeInterestItem2" FromRole="tblUserDetail" ToRole="tblCodeInterestItem" />
+    <NavigationProperty Name="tblCodeInvestmentPeriod" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeInvestmentPeriod" FromRole="tblUserDetail" ToRole="tblCodeInvestmentPeriod" />
+    <NavigationProperty Name="tblCodeInvestmentPreferenceObject" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeInvestmentPreferenceObject" FromRole="tblUserDetail" ToRole="tblCodeInvestmentPreferenceObject" />
+    <NavigationProperty Name="tblCodeInvestmentPropensity" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeInvestmentPropensity" FromRole="tblUserDetail" ToRole="tblCodeInvestmentPropensity" />
+    <NavigationProperty Name="tblCodeInvestmentScale" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeInvestmentScale" FromRole="tblUserDetail" ToRole="tblCodeInvestmentScale" />
+    <NavigationProperty Name="tblCodeJob" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeJob" FromRole="tblUserDetail" ToRole="tblCodeJob" />
+    <NavigationProperty Name="tblCodeResidingStatus" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeResidingStatus" FromRole="tblUserDetail" ToRole="tblCodeResidingStatus" />
+    <NavigationProperty Name="tblCodeSalary" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeSalary" FromRole="tblUserDetail" ToRole="tblCodeSalary" />
+    <NavigationProperty Name="tblCodeStockCompany" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeStockCompany" FromRole="tblUserDetail" ToRole="tblCodeStockCompany" />
+    <NavigationProperty Name="tblUser" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblUser" FromRole="tblUserDetail" ToRole="tblUser" />
+    <NavigationProperty Name="tblCodeRegistRoute" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeRegistRoute" FromRole="tblUserDetail" ToRole="tblCodeRegistRoute" />
+  </EntityType>
+  <Association Name="FK_tblUserDetail_tblCodeHobby">
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeHobby" Role="tblCodeHobby" Multiplicity="0..1" />
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblUserDetail" Role="tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeHobby">
+        <PropertyRef Name="hobbyId" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="hobbyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblCodeInfoAcquirement">
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeInfoAcquirement" Role="tblCodeInfoAcquirement" Multiplicity="0..1" />
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblUserDetail" Role="tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeInfoAcquirement">
+        <PropertyRef Name="infoAcquirementId" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="infoAcquirementId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblCodeInterestItem">
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeInterestItem" Role="tblCodeInterestItem" Multiplicity="0..1" />
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblUserDetail" Role="tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeInterestItem">
+        <PropertyRef Name="itemCode" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="interestItemId1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblCodeInterestItem1">
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeInterestItem" Role="tblCodeInterestItem" Multiplicity="0..1" />
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblUserDetail" Role="tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeInterestItem">
+        <PropertyRef Name="itemCode" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="interestItemId2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblCodeInterestItem2">
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeInterestItem" Role="tblCodeInterestItem" Multiplicity="0..1" />
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblUserDetail" Role="tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeInterestItem">
+        <PropertyRef Name="itemCode" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="interestItemId3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblCodeInvestmentPeriod">
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeInvestmentPeriod" Role="tblCodeInvestmentPeriod" Multiplicity="0..1" />
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblUserDetail" Role="tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeInvestmentPeriod">
+        <PropertyRef Name="investmentPeriodId" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="investmentPeriodId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblCodeInvestmentPreferenceObject">
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeInvestmentPreferenceObject" Role="tblCodeInvestmentPreferenceObject" Multiplicity="0..1" />
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblUserDetail" Role="tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeInvestmentPreferenceObject">
+        <PropertyRef Name="investmentPreferenceObjectId" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="investmentPreferenceObjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblCodeInvestmentPropensity">
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeInvestmentPropensity" Role="tblCodeInvestmentPropensity" Multiplicity="0..1" />
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblUserDetail" Role="tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeInvestmentPropensity">
+        <PropertyRef Name="investmentPropensityId" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="investmentPropensityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblCodeInvestmentScale">
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeInvestmentScale" Role="tblCodeInvestmentScale" Multiplicity="0..1" />
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblUserDetail" Role="tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeInvestmentScale">
+        <PropertyRef Name="investmentScaleId" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="investmentScaleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblCodeJob">
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeJob" Role="tblCodeJob" Multiplicity="0..1" />
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblUserDetail" Role="tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeJob">
+        <PropertyRef Name="jobId" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="jobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblCodeResidingStatus">
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeResidingStatus" Role="tblCodeResidingStatus" Multiplicity="0..1" />
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblUserDetail" Role="tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeResidingStatus">
+        <PropertyRef Name="residingStatusId" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="residingStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblCodeSalary">
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeSalary" Role="tblCodeSalary" Multiplicity="0..1" />
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblUserDetail" Role="tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeSalary">
+        <PropertyRef Name="salaryId" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="salaryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblCodeStockCompany">
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeStockCompany" Role="tblCodeStockCompany" Multiplicity="0..1" />
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblUserDetail" Role="tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeStockCompany">
+        <PropertyRef Name="stockCompanyId" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="stockCompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblUser">
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblUser" Role="tblUser" Multiplicity="1" />
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblUserDetail" Role="tblUserDetail" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tblUser">
+        <PropertyRef Name="userNumber" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="userNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tblCodeInfoAcquirementDetail">
+    <Key>
+      <PropertyRef Name="infoAcquirementId" />
+    </Key>
+    <Property Name="infoAcquirementId" Type="Byte" Nullable="false" />
+    <Property Name="sort" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCodeInvestmentPeriodDetail">
+    <Key>
+      <PropertyRef Name="investmentPeriodId" />
+    </Key>
+    <Property Name="investmentPeriodId" Type="Byte" Nullable="false" />
+    <Property Name="sort" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCodeInvestmentPreferenceObjectDetail">
+    <Key>
+      <PropertyRef Name="investmentPreferenceObjectId" />
+    </Key>
+    <Property Name="investmentPreferenceObjectId" Type="Byte" Nullable="false" />
+    <Property Name="sort" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCodeInvestmentPropensityDetail">
+    <Key>
+      <PropertyRef Name="investmentPropensityId" />
+    </Key>
+    <Property Name="investmentPropensityId" Type="Byte" Nullable="false" />
+    <Property Name="sort" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCodeInvestmentScaleDetail">
+    <Key>
+      <PropertyRef Name="investmentScaleId" />
+    </Key>
+    <Property Name="investmentScaleId" Type="Byte" Nullable="false" />
+    <Property Name="sort" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCodeStockCompanyDetail">
+    <Key>
+      <PropertyRef Name="stockCompanyId" />
+    </Key>
+    <Property Name="stockCompanyId" Type="Byte" Nullable="false" />
+    <Property Name="sort" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCodeInterest">
+    <Key>
+      <PropertyRef Name="interestId" />
+    </Key>
+    <Property Name="interestId" Type="Byte" Nullable="false" />
+    <Property Name="descript" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="registDt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDt" Type="DateTime" Precision="3" />
+    <Property Name="adminId" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="apply" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCodeInterestDetail">
+    <Key>
+      <PropertyRef Name="interestId" />
+    </Key>
+    <Property Name="interestId" Type="Byte" Nullable="false" />
+    <Property Name="sort" Type="Byte" Nullable="false" />
+  </EntityType>
+  <ComplexType Name="NUP_MEMBER_INFO_SELECT_Result">
+    <Property Type="String" Name="USERID" Nullable="false" MaxLength="12" />
+    <Property Type="String" Name="USER_SECTION_CODE" Nullable="false" MaxLength="7" />
+    <Property Type="Boolean" Name="INACTIVE" Nullable="true" />
+    <Property Type="String" Name="USERNAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="NICKNAME" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BIRTHDATE" Nullable="false" MaxLength="8" />
+    <Property Type="Boolean" Name="SEX" Nullable="true" />
+    <Property Type="Boolean" Name="IS_SOLAR" Nullable="true" />
+    <Property Type="String" Name="TEL_NO" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="MOBILE_NO" Nullable="true" MaxLength="15" />
+    <Property Type="DateTime" Name="REGIST_DATE" Nullable="false" Precision="23" />
+    <Property Type="String" Name="ZIPCODE" Nullable="true" MaxLength="6" />
+    <Property Type="String" Name="ADDRESS" Nullable="true" MaxLength="255" />
+    <Property Type="Byte" Name="SALARY_ID" Nullable="true" />
+    <Property Type="Byte" Name="INVESTMENT_PREFERENCE_OBJECT_ID" Nullable="true" />
+    <Property Type="Byte" Name="INFO_ACQUIREMENT_ID" Nullable="true" />
+    <Property Type="Byte" Name="INVESTMENT_PERIOD_ID" Nullable="true" />
+    <Property Type="Byte" Name="INVESTMENT_PROPENSITY_ID" Nullable="true" />
+    <Property Type="Byte" Name="STOCK_COMPANY_ID" Nullable="true" />
+    <Property Type="Byte" Name="INVESTMENT_SCALE_ID" Nullable="true" />
+    <Property Type="String" Name="INTEREST_AREA" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="EMAIL" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="SIDO" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="GUGUN" Nullable="true" MaxLength="20" />
+    <Property Type="Byte" Name="JOB_ID" Nullable="true" />
+    <Property Type="Byte" Name="REGIST_ROUTE_ID" Nullable="true" />
+    <Property Type="String" Name="USER_SECTION_NAME" Nullable="false" MaxLength="6" />
+    <Property Type="String" Name="OPTIONAL_AGREEMENT_STATUS" Nullable="true" MaxLength="50" />
+    <Property Type="Byte" Name="USER_TYPE_ID" Nullable="false" />
+    <Property Type="String" Name="USER_TYPE_NM" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="KAKAO_EMAIL" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="KAKAO_NICKNAME" Nullable="true" MaxLength="50" />
+    <Property Type="Int64" Name="KAKAO_ID" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="tblMemberEmailAuth">
+    <Key>
+      <PropertyRef Name="userNumber" />
+    </Key>
+    <Property Name="userNumber" Type="Int32" Nullable="false" />
+    <Property Name="emailAuth" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="registDt" Type="DateTime" Precision="3" />
+    <Property Name="expireDt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblCodeRegistRoute">
+    <Key>
+      <PropertyRef Name="registRouteId" />
+    </Key>
+    <Property Name="registRouteId" Type="Byte" Nullable="false" />
+    <Property Name="descript" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="registDt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDt" Type="DateTime" Precision="3" />
+    <Property Name="adminId" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="apply" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblUserDetail" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblUserDetail_tblCodeRegistRoute" FromRole="tblCodeRegistRoute" ToRole="tblUserDetail" />
+  </EntityType>
+  <Association Name="FK_tblUserDetail_tblCodeRegistRoute">
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeRegistRoute" Role="tblCodeRegistRoute" Multiplicity="0..1" />
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblUserDetail" Role="tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeRegistRoute">
+        <PropertyRef Name="registRouteId" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="registRouteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="NUP_RecruitData_Result">
+    <Property Type="Int32" Name="seq" Nullable="false" />
+    <Property Type="String" Name="no" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="type" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="name" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ssno" Nullable="true" MaxLength="24" />
+    <Property Type="String" Name="img" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="regdt" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="NUP_MEMBER_INFO_SELECT_COMPANY_Result">
+    <Property Type="String" Name="USERID" Nullable="false" MaxLength="12" />
+    <Property Type="String" Name="COMPANY_NAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="BUSINESS_CONDITION" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BUSINESS_ITEM" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BUSINESS_NO" Nullable="true" MaxLength="8000" />
+    <Property Type="String" Name="CEO_NAME" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="COMPANY_NO" Nullable="true" MaxLength="13" />
+    <Property Type="String" Name="ESTABLISHMENT_ANNIVERSARY" Nullable="true" MaxLength="8" />
+    <Property Type="Boolean" Name="INACTIVE" Nullable="true" />
+    <Property Type="Byte" Name="PASSWORD_CONFIRM_ID" Nullable="false" />
+    <Property Type="String" Name="PASSWORD_CONFIRM" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="PASSWORD_ANSWER" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="NICKNAME" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="USER_TYPE" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="EMAIL" Nullable="false" MaxLength="255" />
+    <Property Type="Boolean" Name="IS_SEND_EMAIL" Nullable="false" />
+    <Property Type="Boolean" Name="IS_SEND_SMS" Nullable="true" />
+    <Property Type="String" Name="TEL_NO" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="FAX_NO" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="MOBILE_NO" Nullable="true" MaxLength="15" />
+    <Property Type="DateTime" Name="REGIST_DATE" Nullable="false" Precision="23" />
+    <Property Type="String" Name="ZIPCODE" Nullable="true" MaxLength="6" />
+    <Property Type="String" Name="ADDRESS" Nullable="true" MaxLength="255" />
+    <Property Type="Byte" Name="SALARY_ID" Nullable="true" />
+    <Property Type="Byte" Name="INVESTMENT_PREFERENCE_OBJECT_ID" Nullable="true" />
+    <Property Type="Byte" Name="INFO_ACQUIREMENT_ID" Nullable="true" />
+    <Property Type="Byte" Name="INVESTMENT_PERIOD_ID" Nullable="true" />
+    <Property Type="Byte" Name="INVESTMENT_PROPENSITY_ID" Nullable="true" />
+    <Property Type="Byte" Name="STOCK_COMPANY_ID" Nullable="true" />
+    <Property Type="Byte" Name="INVESTMENT_SCALE_ID" Nullable="true" />
+    <Property Type="String" Name="INTEREST_AREA" Nullable="false" MaxLength="50" />
+    <Property Type="Byte" Name="JOB_ID" Nullable="true" />
+    <Property Type="Byte" Name="REGIST_ROUTE_ID" Nullable="true" />
+    <Property Type="Int32" Name="WOW_CASH" Nullable="false" />
+    <Property Type="Int32" Name="COUPON_COUNT" Nullable="false" />
+    <Property Type="String" Name="SIDO" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="GUGUN" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="LAST_NICKNAME" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="LAST_NICKNAME_CHANGED" Nullable="true" Precision="23" />
+    <Property Type="String" Name="EMAIL_AUTH" Nullable="true" MaxLength="1" />
+    <Property Type="Boolean" Name="IS_SEND_EMAIL_AD" Nullable="true" />
+    <Property Type="Boolean" Name="IS_SEND_SMS_AD" Nullable="true" />
+    <Property Type="String" Name="BUSINESS_CATEGORY" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="LISTED" Nullable="true" />
+    <Property Type="Int64" Name="KAKAO_ID" Nullable="true" />
+    <Property Type="String" Name="KAKAO_EMAIL" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="KAKAO_NICKNAME" Nullable="true" MaxLength="50" />
+    <Property Type="Int64" Name="FACEBOOK_ID" Nullable="true" />
+    <Property Type="String" Name="FACEBOOK_EMAIL" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="FACEBOOK_NAME" Nullable="true" MaxLength="50" />
+    <Property Type="Int64" Name="NAVER_ID" Nullable="true" />
+    <Property Type="String" Name="NAVER_EMAIL" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="NAVER_NAME" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="NUP_MEMBER_INFO_SELECT_GENERAL_Result">
+    <Property Type="String" Name="USERID" Nullable="false" MaxLength="12" />
+    <Property Type="Boolean" Name="INACTIVE" Nullable="true" />
+    <Property Type="Byte" Name="PASSWORD_CONFIRM_ID" Nullable="false" />
+    <Property Type="String" Name="PASSWORD_CONFIRM" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="PASSWORD_ANSWER" Nullable="true" MaxLength="64" />
+    <Property Type="String" Name="USERNAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="NICKNAME" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BIRTHDATE" Nullable="false" MaxLength="8" />
+    <Property Type="Boolean" Name="SEX" Nullable="true" />
+    <Property Type="Boolean" Name="IS_SOLAR" Nullable="true" />
+    <Property Type="String" Name="MEMBER_GRADE" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="USER_TYPE" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="EMAIL" Nullable="false" MaxLength="255" />
+    <Property Type="Boolean" Name="IS_SEND_EMAIL" Nullable="false" />
+    <Property Type="Boolean" Name="IS_SEND_EMAIL_AD" Nullable="true" />
+    <Property Type="Boolean" Name="IS_SEND_SMS" Nullable="true" />
+    <Property Type="Boolean" Name="IS_SEND_SMS_AD" Nullable="true" />
+    <Property Type="String" Name="TEL_NO" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="MOBILE_NO" Nullable="true" MaxLength="15" />
+    <Property Type="DateTime" Name="REGIST_DATE" Nullable="false" Precision="23" />
+    <Property Type="String" Name="ZIPCODE" Nullable="true" MaxLength="6" />
+    <Property Type="String" Name="ADDRESS" Nullable="true" MaxLength="255" />
+    <Property Type="Byte" Name="SALARY_ID" Nullable="true" />
+    <Property Type="Byte" Name="INVESTMENT_PREFERENCE_OBJECT_ID" Nullable="true" />
+    <Property Type="Byte" Name="INFO_ACQUIREMENT_ID" Nullable="true" />
+    <Property Type="Byte" Name="INVESTMENT_PERIOD_ID" Nullable="true" />
+    <Property Type="Byte" Name="INVESTMENT_PROPENSITY_ID" Nullable="true" />
+    <Property Type="Byte" Name="STOCK_COMPANY_ID" Nullable="true" />
+    <Property Type="Byte" Name="INVESTMENT_SCALE_ID" Nullable="true" />
+    <Property Type="String" Name="INTEREST_AREA" Nullable="false" MaxLength="50" />
+    <Property Type="Byte" Name="JOB_ID" Nullable="true" />
+    <Property Type="Byte" Name="REGIST_ROUTE_ID" Nullable="true" />
+    <Property Type="Int32" Name="WOW_CASH" Nullable="false" />
+    <Property Type="Int32" Name="COUPON_COUNT" Nullable="false" />
+    <Property Type="String" Name="SIDO" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="GUGUN" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="LAST_NICKNAME" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="LAST_NICKNAME_CHANGED" Nullable="true" Precision="23" />
+    <Property Type="String" Name="EMAIL_AUTH" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="KAKAO_EMAIL" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="KAKAO_NICKNAME" Nullable="true" MaxLength="50" />
+    <Property Type="Int64" Name="KAKAO_ID" Nullable="true" />
+    <Property Type="Int64" Name="FACEBOOK_ID" Nullable="true" />
+    <Property Type="String" Name="FACEBOOK_EMAIL" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="FACEBOOK_NAME" Nullable="true" MaxLength="50" />
+    <Property Type="Int64" Name="NAVER_ID" Nullable="true" />
+    <Property Type="String" Name="NAVER_EMAIL" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="NAVER_NAME" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="USP_GetMYCurrentCash_Result">
+    <Property Type="Int32" Name="charge_cash" Nullable="false" />
+    <Property Type="Int32" Name="use_cash" Nullable="false" />
+    <Property Type="Int32" Name="wowCashBalance" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="tblCodeTransactionType">
+    <Key>
+      <PropertyRef Name="transactionCode" />
+    </Key>
+    <Property Name="transactionCode" Type="Byte" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="descript" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="registDt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDt" Type="DateTime" Precision="3" />
+    <Property Name="adminId" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="apply" Type="Boolean" />
+    <NavigationProperty Name="tblTransaction" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblTransaction_tblCodeTransactionType" FromRole="tblCodeTransactionType" ToRole="tblTransaction" />
+  </EntityType>
+  <EntityType Name="tblTransaction">
+    <Key>
+      <PropertyRef Name="transactionId" />
+    </Key>
+    <Property Name="transactionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="transactionCode" Type="Byte" Nullable="false" />
+    <Property Name="userNumber" Type="Int32" Nullable="false" />
+    <Property Name="wowCashBalance" Type="Int32" Nullable="false" />
+    <Property Name="pointToWowCashBalance" Type="Int32" Nullable="false" />
+    <Property Name="pointBalance" Type="Int32" Nullable="false" />
+    <Property Name="wowCashAmount" Type="Int32" Nullable="false" />
+    <Property Name="pointToWowCashAmount" Type="Int32" Nullable="false" />
+    <Property Name="pointAmount" Type="Int32" Nullable="false" />
+    <Property Name="registDt" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="tblCodeTransactionType" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblTransaction_tblCodeTransactionType" FromRole="tblTransaction" ToRole="tblCodeTransactionType" />
+    <NavigationProperty Name="tblUser" Relationship="Wow.Tv.Middle.Model.Db89.wowbill.FK_tblTransaction_tblUser" FromRole="tblTransaction" ToRole="tblUser" />
+  </EntityType>
+  <Association Name="FK_tblTransaction_tblCodeTransactionType">
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblCodeTransactionType" Role="tblCodeTransactionType" Multiplicity="1" />
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblTransaction" Role="tblTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeTransactionType">
+        <PropertyRef Name="transactionCode" />
+      </Principal>
+      <Dependent Role="tblTransaction">
+        <PropertyRef Name="transactionCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblTransaction_tblUser">
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblUser" Role="tblUser" Multiplicity="1" />
+    <End Type="Wow.Tv.Middle.Model.Db89.wowbill.tblTransaction" Role="tblTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUser">
+        <PropertyRef Name="userNumber" />
+      </Principal>
+      <Dependent Role="tblTransaction">
+        <PropertyRef Name="userNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tblcoupon_Daebak">
+    <Key>
+      <PropertyRef Name="idx_no" />
+      <PropertyRef Name="userid" />
+      <PropertyRef Name="c_no" />
+    </Key>
+    <Property Name="idx_no" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Gubun" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="userid" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="c_no" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="c_regdate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblUserSNSKakao">
+    <Key>
+      <PropertyRef Name="userNumber" />
+    </Key>
+    <Property Name="userNumber" Type="Int32" Nullable="false" />
+    <Property Name="id" Type="Int64" Nullable="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="nickname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblUserSNSFacebook">
+    <Key>
+      <PropertyRef Name="userNumber" />
+    </Key>
+    <Property Name="userNumber" Type="Int32" Nullable="false" />
+    <Property Name="id" Type="Int64" Nullable="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblUserSNSNaver">
+    <Key>
+      <PropertyRef Name="userNumber" />
+    </Key>
+    <Property Name="userNumber" Type="Int32" Nullable="false" />
+    <Property Name="id" Type="Int64" Nullable="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="NUP_RECRUIT_SELECT_Result">
+    <Property Type="Int32" Name="ROWCNT" Nullable="true" />
+    <Property Type="Int64" Name="ROWNUM" Nullable="true" />
+    <Property Type="Int32" Name="SEQ" Nullable="false" />
+    <Property Type="String" Name="NO" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TYPE" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="NAME" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="SSNO" Nullable="true" MaxLength="8000" />
+    <Property Type="String" Name="IMG" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="REG_DATE" Nullable="true" Precision="23" />
+    <Property Type="String" Name="JOB_APPLICATION" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="PASSWORD" Nullable="true" MaxLength="24" />
+    <Property Type="String" Name="AGREEMENT" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="PASSED" Nullable="true" MaxLength="1" />
+    <Property Type="Int32" Name="VIEW_CNT" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="NUP_ADMIN_MEMBER_STATISTICS_SELECT1_Result">
+    <Property Type="Int32" Name="TOTAL_MEMBER_COUNT" Nullable="true" />
+    <Property Type="Int32" Name="ALIVE_MEMBER_COUNT" Nullable="true" />
+    <Property Type="Int32" Name="JOIN_TODAY_COUNT" Nullable="true" />
+    <Property Type="Int32" Name="SMS_RECEIVE_MEMBER_COUNT" Nullable="true" />
+    <Property Type="Int32" Name="EMAIL_RECEIVE_MEMBER_COUNT" Nullable="true" />
+    <Property Type="Int32" Name="TOTAL_GENDER_COUNT" Nullable="true" />
+    <Property Type="Int32" Name="MAN_COUNT" Nullable="true" />
+    <Property Type="Int32" Name="WOMAN_COUNT" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="tblContent">
+    <Key>
+      <PropertyRef Name="contentId" />
+    </Key>
+    <Property Name="contentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descript" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="root" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="isMain" Type="Boolean" Nullable="false" />
+    <Property Name="upperMenu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="registDt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updateDt" Type="DateTime" Precision="3" />
+    <Property Name="apply" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblUserSMS">
+    <Key>
+      <PropertyRef Name="userNumber" />
+    </Key>
+    <Property Name="userNumber" Type="Int32" Nullable="false" />
+    <Property Name="smsInfo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="smsAd" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="adminId" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="registDt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblUserEmailSend">
+    <Key>
+      <PropertyRef Name="userNumber" />
+    </Key>
+    <Property Name="userNumber" Type="Int32" Nullable="false" />
+    <Property Name="emailAD" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="registDt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblUser_approvalLog">
+    <Key>
+      <PropertyRef Name="seq" />
+    </Key>
+    <Property Name="seq" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="usernumber" Type="Int32" Nullable="false" />
+    <Property Name="approved" Type="Boolean" Nullable="false" />
+    <Property Name="reason" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="registDt" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="NTB_USER_LOGIN_LOG">
+    <Key>
+      <PropertyRef Name="LOG_SEQ" />
+    </Key>
+    <Property Name="LOG_SEQ" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USER_NUMBER" Type="Int32" />
+    <Property Name="USER_ID" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="WEB_TYPE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="WEB_FROM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="WEB_SERVER_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="LOGIN_SITE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LOGIN_DT" Type="DateTime" Precision="3" />
+    <Property Name="CLIENT_IP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="REQUEST_URL" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TblMemberPasswordHistory">
+    <Key>
+      <PropertyRef Name="userNumber" />
+    </Key>
+    <Property Name="userNumber" Type="Int32" Nullable="false" />
+    <Property Name="alarmDt" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="regDt" Type="DateTime" Precision="3" />
+    <Property Name="udtDt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblUserPost">
+    <Key>
+      <PropertyRef Name="userNumber" />
+    </Key>
+    <Property Name="userNumber" Type="Int32" Nullable="false" />
+    <Property Name="sido" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="gugun" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="registDt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblCompanyDetail">
+    <Key>
+      <PropertyRef Name="companyDetailId" />
+    </Key>
+    <Property Name="companyDetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="businessNumber" Type="String" Nullable="false" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="ceoName" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="businessItem" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="businessCondition" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="businessCategory" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="corporationNumber" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="listed" Type="Boolean" Nullable="false" />
+    <Property Name="establishmentAnniversary" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="registDt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="adminId" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="apply" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <ComplexType Name="NUP_ADMIN_MEMBER_INFO_HISTORY_SELECT_Result">
+    <Property Type="String" Name="DATA_TYPE" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="PASSWORD" Nullable="false" MaxLength="44" />
+    <Property Type="String" Name="USERNAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TEL_NO" Nullable="false" MaxLength="15" />
+    <Property Type="Byte" Name="PASSWORD_CONFIRM_ID" Nullable="true" />
+    <Property Type="String" Name="PASSWORD_CONFIRM_ANSWER" Nullable="false" MaxLength="64" />
+    <Property Type="String" Name="EMAIL" Nullable="false" MaxLength="255" />
+    <Property Type="Boolean" Name="IS_SEND_EMAIL" Nullable="true" />
+    <Property Type="String" Name="IS_SEND_SMS" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="NICKNAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="MOBILE_NO" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="OPERATIONTYPE" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="ZIPCODE" Nullable="false" MaxLength="6" />
+    <Property Type="String" Name="ADDRESS" Nullable="false" MaxLength="255" />
+    <Property Type="Byte" Name="JOB_ID" Nullable="true" />
+    <Property Type="String" Name="HOMEPAGE_URL" Nullable="false" MaxLength="255" />
+    <Property Type="Byte" Name="REGIST_ROUTE_ID" Nullable="true" />
+    <Property Type="Byte" Name="SALARY_ID" Nullable="true" />
+    <Property Type="Byte" Name="INVESTMENT_PERIOD_ID" Nullable="true" />
+    <Property Type="Byte" Name="INVESTMENT_SCALE_ID" Nullable="true" />
+    <Property Type="Byte" Name="INVESTMENT_PROPENSITY_ID" Nullable="true" />
+    <Property Type="Byte" Name="INVESTMENT_PREFERENCE_OBJECT_ID" Nullable="true" />
+    <Property Type="Byte" Name="STOCK_COMPANY_ID" Nullable="true" />
+    <Property Type="Byte" Name="INFO_ACCQUIREMENT_ID" Nullable="true" />
+    <Property Type="Int32" Name="INTEREST_ITEM_ID_1" Nullable="true" />
+    <Property Type="Int32" Name="INTEREST_ITEM_ID_2" Nullable="true" />
+    <Property Type="Int32" Name="INTEREST_ITEM_ID_3" Nullable="true" />
+    <Property Type="Byte" Name="HOBBY_ID" Nullable="true" />
+    <Property Type="String" Name="WEDDING_ANNIVERSARY" Nullable="false" MaxLength="8" />
+    <Property Type="Byte" Name="RESIDING_STATUS_ID" Nullable="true" />
+    <Property Type="String" Name="BUSINESS_NUMBER" Nullable="false" MaxLength="24" />
+    <Property Type="String" Name="CEO_NAME" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="BUSINESS_ITEM" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="BUSINESS_CONDITION" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="BUSINESS_CATEGORY" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ESTABLISHMENT_ANNIVERSARY" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="ADMIN_ID" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="REGIST_DATE" Nullable="false" Precision="23" />
+  </ComplexType>
+</Schema>

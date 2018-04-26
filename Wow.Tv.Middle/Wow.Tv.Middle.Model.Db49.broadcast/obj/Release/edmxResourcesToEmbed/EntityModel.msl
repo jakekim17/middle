@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="broadcastModelStoreContainer" CdmEntityContainer="Db49_broadcast">
+    <EntitySetMapping Name="NTB_PROGRAM_CAST">
+      <EntityTypeMapping TypeName="broadcastModel.NTB_PROGRAM_CAST">
+        <MappingFragment StoreEntitySet="NTB_PROGRAM_CAST">
+          <ScalarProperty Name="REG_NAME" ColumnName="REG_NAME" />
+          <ScalarProperty Name="CAST_NAME" ColumnName="CAST_NAME" />
+          <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+          <ScalarProperty Name="SUNDAY_YN" ColumnName="SUNDAY_YN" />
+          <ScalarProperty Name="STURDAY_YN" ColumnName="STURDAY_YN" />
+          <ScalarProperty Name="FRIDAY_YN" ColumnName="FRIDAY_YN" />
+          <ScalarProperty Name="THURSDAY_YN" ColumnName="THURSDAY_YN" />
+          <ScalarProperty Name="WEDNESDAY_YN" ColumnName="WEDNESDAY_YN" />
+          <ScalarProperty Name="TUESDAY_YN" ColumnName="TUESDAY_YN" />
+          <ScalarProperty Name="MONDAY_YN" ColumnName="MONDAY_YN" />
+          <ScalarProperty Name="DEL_YN" ColumnName="DEL_YN" />
+          <ScalarProperty Name="MOD_DATE" ColumnName="MOD_DATE" />
+          <ScalarProperty Name="MOD_ID" ColumnName="MOD_ID" />
+          <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+          <ScalarProperty Name="REG_ID" ColumnName="REG_ID" />
+          <ScalarProperty Name="PRG_CD" ColumnName="PRG_CD" />
+          <ScalarProperty Name="PUBLISH_YN" ColumnName="PUBLISH_YN" />
+          <ScalarProperty Name="CAST_TYPE" ColumnName="CAST_TYPE" />
+          <ScalarProperty Name="pay_no" ColumnName="pay_no" />
+          <ScalarProperty Name="PROGRAM_CAST_SEQ" ColumnName="PROGRAM_CAST_SEQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pro_wowList">
+      <EntityTypeMapping TypeName="broadcastModel.Pro_wowList">
+        <MappingFragment StoreEntitySet="Pro_wowList">
+          <ScalarProperty Name="NEWPhoto_Recommend" ColumnName="NEWPhoto_Recommend" />
+          <ScalarProperty Name="NEWphoto_service" ColumnName="NEWphoto_service" />
+          <ScalarProperty Name="NEWphoto_big" ColumnName="NEWphoto_big" />
+          <ScalarProperty Name="NEWphoto_small2" ColumnName="NEWphoto_small2" />
+          <ScalarProperty Name="NEWphoto_small" ColumnName="NEWphoto_small" />
+          <ScalarProperty Name="MainValue" ColumnName="MainValue" />
+          <ScalarProperty Name="Photo_Expert" ColumnName="Photo_Expert" />
+          <ScalarProperty Name="sort" ColumnName="sort" />
+          <ScalarProperty Name="recommand_url" ColumnName="recommand_url" />
+          <ScalarProperty Name="recommandYN" ColumnName="recommandYN" />
+          <ScalarProperty Name="Photo_Consult" ColumnName="Photo_Consult" />
+          <ScalarProperty Name="Pro_mode" ColumnName="Pro_mode" />
+          <ScalarProperty Name="Pro_wowmsn" ColumnName="Pro_wowmsn" />
+          <ScalarProperty Name="ProItem_ID" ColumnName="ProItem_ID" />
+          <ScalarProperty Name="Product_ID_VIP" ColumnName="Product_ID_VIP" />
+          <ScalarProperty Name="Product_ID_12" ColumnName="Product_ID_12" />
+          <ScalarProperty Name="Product_ID_6" ColumnName="Product_ID_6" />
+          <ScalarProperty Name="Product_ID_3" ColumnName="Product_ID_3" />
+          <ScalarProperty Name="Product_ID_1" ColumnName="Product_ID_1" />
+          <ScalarProperty Name="Intro_Profile" ColumnName="Intro_Profile" />
+          <ScalarProperty Name="Photo_Service" ColumnName="Photo_Service" />
+          <ScalarProperty Name="ProductIDVIP" ColumnName="ProductIDVIP" />
+          <ScalarProperty Name="ProGubun" ColumnName="ProGubun" />
+          <ScalarProperty Name="GradePro" ColumnName="GradePro" />
+          <ScalarProperty Name="kookgoTop" ColumnName="kookgoTop" />
+          <ScalarProperty Name="COrder" ColumnName="COrder" />
+          <ScalarProperty Name="CEnable" ColumnName="CEnable" />
+          <ScalarProperty Name="CTop" ColumnName="CTop" />
+          <ScalarProperty Name="CRegist" ColumnName="CRegist" />
+          <ScalarProperty Name="oath" ColumnName="oath" />
+          <ScalarProperty Name="joins" ColumnName="joins" />
+          <ScalarProperty Name="Price03" ColumnName="Price03" />
+          <ScalarProperty Name="Price01" ColumnName="Price01" />
+          <ScalarProperty Name="MemberShip" ColumnName="MemberShip" />
+          <ScalarProperty Name="ProBest_future" ColumnName="ProBest_future" />
+          <ScalarProperty Name="Best_Bnb" ColumnName="Best_Bnb" />
+          <ScalarProperty Name="Ars_Bnb" ColumnName="Ars_Bnb" />
+          <ScalarProperty Name="Debate_MainPro" ColumnName="Debate_MainPro" />
+          <ScalarProperty Name="Ars_Danal" ColumnName="Ars_Danal" />
+          <ScalarProperty Name="Pro_estock" ColumnName="Pro_estock" />
+          <ScalarProperty Name="Pro_future" ColumnName="Pro_future" />
+          <ScalarProperty Name="stockName" ColumnName="stockName" />
+          <ScalarProperty Name="stockCode" ColumnName="stockCode" />
+          <ScalarProperty Name="jumin_number" ColumnName="jumin_number" />
+          <ScalarProperty Name="ProReCommand" ColumnName="ProReCommand" />
+          <ScalarProperty Name="ProBest" ColumnName="ProBest" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Zip_Code" ColumnName="Zip_Code" />
+          <ScalarProperty Name="Specialist_gubun" ColumnName="Specialist_gubun" />
+          <ScalarProperty Name="top10" ColumnName="top10" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="ProARS_new" ColumnName="ProARS_new" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Invest" ColumnName="Invest" />
+          <ScalarProperty Name="aIntro" ColumnName="aIntro" />
+          <ScalarProperty Name="ProductID6" ColumnName="ProductID6" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Wowtv_id" ColumnName="Wowtv_id" />
+          <ScalarProperty Name="Cell_Phone" ColumnName="Cell_Phone" />
+          <ScalarProperty Name="Normal_Phone" ColumnName="Normal_Phone" />
+          <ScalarProperty Name="BookWriter" ColumnName="BookWriter" />
+          <ScalarProperty Name="Qulification" ColumnName="Qulification" />
+          <ScalarProperty Name="InvestKind" ColumnName="InvestKind" />
+          <ScalarProperty Name="BankAccount" ColumnName="BankAccount" />
+          <ScalarProperty Name="bank" ColumnName="bank" />
+          <ScalarProperty Name="Photo_Big" ColumnName="Photo_Big" />
+          <ScalarProperty Name="Photo_Small" ColumnName="Photo_Small" />
+          <ScalarProperty Name="Profile" ColumnName="Profile" />
+          <ScalarProperty Name="NickName" ColumnName="NickName" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Ars_Number" ColumnName="Ars_Number" />
+          <ScalarProperty Name="overseaType" ColumnName="overseaType" />
+          <ScalarProperty Name="Pro_Type" ColumnName="Pro_Type" />
+          <ScalarProperty Name="Pro_id" ColumnName="Pro_id" />
+          <ScalarProperty Name="Pay_no" ColumnName="Pay_no" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="USP_GetBroadcast1ByProId" FunctionName="broadcastModel.Store.USP_GetBroadcast1ByProId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="broadcastModel.USP_GetBroadcast1ByProId_Result">
+          <ScalarProperty Name="PRO_ID" ColumnName="PRO_ID" />
+          <ScalarProperty Name="NICKNAME" ColumnName="NICKNAME" />
+          <ScalarProperty Name="Pro_Type" ColumnName="Pro_Type" />
+          <ScalarProperty Name="overseaType" ColumnName="overseaType" />
+          <ScalarProperty Name="PHOTO_SMALL" ColumnName="PHOTO_SMALL" />
+          <ScalarProperty Name="BTITLE" ColumnName="BTITLE" />
+          <ScalarProperty Name="BCONTENTS" ColumnName="BCONTENTS" />
+          <ScalarProperty Name="BRSTARTTIME" ColumnName="BRSTARTTIME" />
+          <ScalarProperty Name="BRENDTIME" ColumnName="BRENDTIME" />
+          <ScalarProperty Name="BCOST" ColumnName="BCOST" />
+          <ScalarProperty Name="STATE" ColumnName="STATE" />
+          <ScalarProperty Name="BMEMTYPE" ColumnName="BMEMTYPE" />
+          <ScalarProperty Name="BROOM" ColumnName="BROOM" />
+          <ScalarProperty Name="CLICKNUM" ColumnName="CLICKNUM" />
+          <ScalarProperty Name="CURCOUNT" ColumnName="CURCOUNT" />
+          <ScalarProperty Name="ONAIRTIME" ColumnName="ONAIRTIME" />
+          <ScalarProperty Name="BPLAYTYPE" ColumnName="BPLAYTYPE" />
+          <ScalarProperty Name="PROBEST" ColumnName="PROBEST" />
+          <ScalarProperty Name="INVESTKIND" ColumnName="INVESTKIND" />
+          <ScalarProperty Name="PHOTO_BIG" ColumnName="PHOTO_BIG" />
+          <ScalarProperty Name="PHOTO_SERVICE" ColumnName="PHOTO_SERVICE" />
+          <ScalarProperty Name="PRODUCT_ID_1" ColumnName="PRODUCT_ID_1" />
+          <ScalarProperty Name="NEWPHOTO_BIG" ColumnName="NEWPHOTO_BIG" />
+          <ScalarProperty Name="NEWPHOTO_SMALL" ColumnName="NEWPHOTO_SMALL" />
+          <ScalarProperty Name="NEWPHOTO_SMALL2" ColumnName="NEWPHOTO_SMALL2" />
+          <ScalarProperty Name="NEWphoto_service" ColumnName="NEWphoto_service" />
+          <ScalarProperty Name="Intro_Profile" ColumnName="Intro_Profile" />
+          <ScalarProperty Name="btype" ColumnName="btype" />
+          <ScalarProperty Name="Photo_Consult" ColumnName="Photo_Consult" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_GetRecommendPro3" FunctionName="broadcastModel.Store.USP_GetRecommendPro3">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="broadcastModel.USP_GetRecommendPro3_Result">
+          <ScalarProperty Name="ProOrder" ColumnName="ProOrder" />
+          <ScalarProperty Name="PRO_ID" ColumnName="PRO_ID" />
+          <ScalarProperty Name="NICKNAME" ColumnName="NICKNAME" />
+          <ScalarProperty Name="BTITLE" ColumnName="BTITLE" />
+          <ScalarProperty Name="BCONTENTS" ColumnName="BCONTENTS" />
+          <ScalarProperty Name="BINTRODUCE" ColumnName="BINTRODUCE" />
+          <ScalarProperty Name="BRSTARTTIME" ColumnName="BRSTARTTIME" />
+          <ScalarProperty Name="BRENDTIME" ColumnName="BRENDTIME" />
+          <ScalarProperty Name="BCOST" ColumnName="BCOST" />
+          <ScalarProperty Name="STATE" ColumnName="STATE" />
+          <ScalarProperty Name="BMEMTYPE" ColumnName="BMEMTYPE" />
+          <ScalarProperty Name="BROOM" ColumnName="BROOM" />
+          <ScalarProperty Name="BPLAYTYPE" ColumnName="BPLAYTYPE" />
+          <ScalarProperty Name="PRODUCTID" ColumnName="PRODUCTID" />
+          <ScalarProperty Name="CLICKNUM" ColumnName="CLICKNUM" />
+          <ScalarProperty Name="CURCOUNT" ColumnName="CURCOUNT" />
+          <ScalarProperty Name="INVESTKIND" ColumnName="INVESTKIND" />
+          <ScalarProperty Name="ONAIRTIME" ColumnName="ONAIRTIME" />
+          <ScalarProperty Name="PROBEST" ColumnName="PROBEST" />
+          <ScalarProperty Name="PRODUCT_ID_1" ColumnName="PRODUCT_ID_1" />
+          <ScalarProperty Name="PAY_NO" ColumnName="PAY_NO" />
+          <ScalarProperty Name="WOWTV_ID" ColumnName="WOWTV_ID" />
+          <ScalarProperty Name="PHOTO_SMALL" ColumnName="PHOTO_SMALL" />
+          <ScalarProperty Name="NewPhoto_Recommend" ColumnName="NewPhoto_Recommend" />
+          <ScalarProperty Name="Intro_Profile" ColumnName="Intro_Profile" />
+          <ScalarProperty Name="PHOTO_BIG" ColumnName="PHOTO_BIG" />
+          <ScalarProperty Name="PHOTO_SERVICE" ColumnName="PHOTO_SERVICE" />
+          <ScalarProperty Name="PHOTO_EXPERT" ColumnName="PHOTO_EXPERT" />
+          <ScalarProperty Name="NEWPHOTO_SMALL" ColumnName="NEWPHOTO_SMALL" />
+          <ScalarProperty Name="NEWPHOTO_BIG" ColumnName="NEWPHOTO_BIG" />
+          <ScalarProperty Name="NEWPHOTO_SMALL2" ColumnName="NEWPHOTO_SMALL2" />
+          <ScalarProperty Name="NEWphoto_service" ColumnName="NEWphoto_service" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Pro_wowWellList">
+      <EntityTypeMapping TypeName="broadcastModel.Pro_wowWellList">
+        <MappingFragment StoreEntitySet="Pro_wowWellList">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Pro_id" ColumnName="Pro_id" />
+          <ScalarProperty Name="Gubun" ColumnName="Gubun" />
+          <ScalarProperty Name="seq" ColumnName="seq" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="USP_GetBroadcast1ByWellList" FunctionName="broadcastModel.Store.USP_GetBroadcast1ByWellList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="broadcastModel.USP_GetBroadcast1ByWellList_Result">
+          <ScalarProperty Name="Pro_ID" ColumnName="Pro_ID" />
+          <ScalarProperty Name="NICKNAME" ColumnName="NICKNAME" />
+          <ScalarProperty Name="Pro_Type" ColumnName="Pro_Type" />
+          <ScalarProperty Name="overseaType" ColumnName="overseaType" />
+          <ScalarProperty Name="PHOTO_SMALL" ColumnName="PHOTO_SMALL" />
+          <ScalarProperty Name="BTITLE" ColumnName="BTITLE" />
+          <ScalarProperty Name="BCONTENTS" ColumnName="BCONTENTS" />
+          <ScalarProperty Name="BINTRODUCE" ColumnName="BINTRODUCE" />
+          <ScalarProperty Name="BRSTARTTIME" ColumnName="BRSTARTTIME" />
+          <ScalarProperty Name="BRENDTIME" ColumnName="BRENDTIME" />
+          <ScalarProperty Name="BCOST" ColumnName="BCOST" />
+          <ScalarProperty Name="STATE" ColumnName="STATE" />
+          <ScalarProperty Name="BMEMTYPE" ColumnName="BMEMTYPE" />
+          <ScalarProperty Name="BROOM" ColumnName="BROOM" />
+          <ScalarProperty Name="CLICKNUM" ColumnName="CLICKNUM" />
+          <ScalarProperty Name="CURCOUNT" ColumnName="CURCOUNT" />
+          <ScalarProperty Name="ONAIRTIME" ColumnName="ONAIRTIME" />
+          <ScalarProperty Name="BPLAYTYPE" ColumnName="BPLAYTYPE" />
+          <ScalarProperty Name="PROBEST" ColumnName="PROBEST" />
+          <ScalarProperty Name="INVESTKIND" ColumnName="INVESTKIND" />
+          <ScalarProperty Name="PHOTO_BIG" ColumnName="PHOTO_BIG" />
+          <ScalarProperty Name="PHOTO_SERVICE" ColumnName="PHOTO_SERVICE" />
+          <ScalarProperty Name="PRODUCT_ID_1" ColumnName="PRODUCT_ID_1" />
+          <ScalarProperty Name="NEWPHOTO_BIG" ColumnName="NEWPHOTO_BIG" />
+          <ScalarProperty Name="NEWPHOTO_SMALL" ColumnName="NEWPHOTO_SMALL" />
+          <ScalarProperty Name="NEWPHOTO_SMALL2" ColumnName="NEWPHOTO_SMALL2" />
+          <ScalarProperty Name="NEWphoto_service" ColumnName="NEWphoto_service" />
+          <ScalarProperty Name="NewPhoto_Recommend" ColumnName="NewPhoto_Recommend" />
+          <ScalarProperty Name="Intro_Profile" ColumnName="Intro_Profile" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Pro_wowListStockKing">
+      <EntityTypeMapping TypeName="broadcastModel.Pro_wowListStockKing">
+        <MappingFragment StoreEntitySet="Pro_wowListStockKing">
+          <ScalarProperty Name="Regdate" ColumnName="Regdate" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Pro_id" ColumnName="Pro_id" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRO_SETOPTION">
+      <EntityTypeMapping TypeName="broadcastModel.PRO_SETOPTION">
+        <MappingFragment StoreEntitySet="PRO_SETOPTION">
+          <ScalarProperty Name="UseFlag" ColumnName="UseFlag" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="Pay_No" ColumnName="Pay_No" />
+          <ScalarProperty Name="Pro_ID" ColumnName="Pro_ID" />
+          <ScalarProperty Name="SetOption" ColumnName="SetOption" />
+          <ScalarProperty Name="seq" ColumnName="seq" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pro_wow_junmunga_broadcast">
+      <EntityTypeMapping TypeName="broadcastModel.Pro_wow_junmunga_broadcast">
+        <MappingFragment StoreEntitySet="Pro_wow_junmunga_broadcast">
+          <ScalarProperty Name="bPlayType" ColumnName="bPlayType" />
+          <ScalarProperty Name="bMemTypeCafe" ColumnName="bMemTypeCafe" />
+          <ScalarProperty Name="MaxPeakTime" ColumnName="MaxPeakTime" />
+          <ScalarProperty Name="OnAirTime" ColumnName="OnAirTime" />
+          <ScalarProperty Name="btype" ColumnName="btype" />
+          <ScalarProperty Name="flag" ColumnName="flag" />
+          <ScalarProperty Name="ClickNum" ColumnName="ClickNum" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="MaxCount" ColumnName="MaxCount" />
+          <ScalarProperty Name="CurCount" ColumnName="CurCount" />
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="Pro_id" ColumnName="Pro_id" />
+          <ScalarProperty Name="bVodCost" ColumnName="bVodCost" />
+          <ScalarProperty Name="brUserCount" ColumnName="brUserCount" />
+          <ScalarProperty Name="brEndTime" ColumnName="brEndTime" />
+          <ScalarProperty Name="brStartTime" ColumnName="brStartTime" />
+          <ScalarProperty Name="bCost" ColumnName="bCost" />
+          <ScalarProperty Name="bMemType" ColumnName="bMemType" />
+          <ScalarProperty Name="bIntroduce" ColumnName="bIntroduce" />
+          <ScalarProperty Name="bContents" ColumnName="bContents" />
+          <ScalarProperty Name="bTitle" ColumnName="bTitle" />
+          <ScalarProperty Name="nickName" ColumnName="nickName" />
+          <ScalarProperty Name="bRoom" ColumnName="bRoom" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_getInvestmentPartners" FunctionName="broadcastModel.Store.usp_getInvestmentPartners">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="broadcastModel.usp_getInvestmentPartners_Result">
+          <ScalarProperty Name="PRO_ID" ColumnName="PRO_ID" />
+          <ScalarProperty Name="NICKNAME" ColumnName="NICKNAME" />
+          <ScalarProperty Name="NEWphoto_small" ColumnName="NEWphoto_small" />
+          <ScalarProperty Name="rankOrder" ColumnName="rankOrder" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="BestStockPro">
+      <EntityTypeMapping TypeName="broadcastModel.BestStockPro">
+        <MappingFragment StoreEntitySet="BestStockPro">
+          <ScalarProperty Name="regdate" ColumnName="regdate" />
+          <ScalarProperty Name="earningRate" ColumnName="earningRate" />
+          <ScalarProperty Name="sellPrice" ColumnName="sellPrice" />
+          <ScalarProperty Name="sellDate" ColumnName="sellDate" />
+          <ScalarProperty Name="stockName" ColumnName="stockName" />
+          <ScalarProperty Name="nickname" ColumnName="nickname" />
+          <ScalarProperty Name="proRank" ColumnName="proRank" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="export_personal_menu">
+      <EntityTypeMapping TypeName="broadcastModel.export_personal_menu">
+        <MappingFragment StoreEntitySet="export_personal_menu">
+          <ScalarProperty Name="export_intro" ColumnName="export_intro" />
+          <ScalarProperty Name="modyid" ColumnName="modyid" />
+          <ScalarProperty Name="modydate" ColumnName="modydate" />
+          <ScalarProperty Name="regdate" ColumnName="regdate" />
+          <ScalarProperty Name="AddMenuCount" ColumnName="AddMenuCount" />
+          <ScalarProperty Name="export_pro" ColumnName="export_pro" />
+          <ScalarProperty Name="export_nic" ColumnName="export_nic" />
+          <ScalarProperty Name="export_id" ColumnName="export_id" />
+          <ScalarProperty Name="proID" ColumnName="proID" />
+          <ScalarProperty Name="idx" ColumnName="idx" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EXPORT_PRODUCT">
+      <EntityTypeMapping TypeName="broadcastModel.EXPORT_PRODUCT">
+        <MappingFragment StoreEntitySet="EXPORT_PRODUCT">
+          <ScalarProperty Name="MODDATE" ColumnName="MODDATE" />
+          <ScalarProperty Name="ADDDATE" ColumnName="ADDDATE" />
+          <ScalarProperty Name="ITEMID" ColumnName="ITEMID" />
+          <ScalarProperty Name="EDATE" ColumnName="EDATE" />
+          <ScalarProperty Name="SDATE" ColumnName="SDATE" />
+          <ScalarProperty Name="MODE" ColumnName="MODE" />
+          <ScalarProperty Name="EPKID" ColumnName="EPKID" />
+          <ScalarProperty Name="PKID" ColumnName="PKID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_web_getBestProHintStocking" FunctionName="broadcastModel.Store.usp_web_getBestProHintStocking">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="broadcastModel.usp_web_getBestProHintStocking_Result">
+          <ScalarProperty Name="Pro_id" ColumnName="Pro_id" />
+          <ScalarProperty Name="Pro_Type" ColumnName="Pro_Type" />
+          <ScalarProperty Name="NickName" ColumnName="NickName" />
+          <ScalarProperty Name="Profile" ColumnName="Profile" />
+          <ScalarProperty Name="InvestKind" ColumnName="InvestKind" />
+          <ScalarProperty Name="Wowtv_id" ColumnName="Wowtv_id" />
+          <ScalarProperty Name="Intro_Profile" ColumnName="Intro_Profile" />
+          <ScalarProperty Name="Product_ID_1" ColumnName="Product_ID_1" />
+          <ScalarProperty Name="NEWphoto_small" ColumnName="NEWphoto_small" />
+          <ScalarProperty Name="NEWphoto_big" ColumnName="NEWphoto_big" />
+          <ScalarProperty Name="NEWphoto_service" ColumnName="NEWphoto_service" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="bestEarningRate" ColumnName="bestEarningRate" />
+          <ScalarProperty Name="avgWeeklyItem" ColumnName="avgWeeklyItem" />
+          <ScalarProperty Name="BaseDate" ColumnName="BaseDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_web_getWorldProHintPartner" FunctionName="broadcastModel.Store.usp_web_getWorldProHintPartner">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="broadcastModel.usp_web_getWorldProHintPartner_Result">
+          <ScalarProperty Name="Pro_id" ColumnName="Pro_id" />
+          <ScalarProperty Name="Pro_Type" ColumnName="Pro_Type" />
+          <ScalarProperty Name="NickName" ColumnName="NickName" />
+          <ScalarProperty Name="Profile" ColumnName="Profile" />
+          <ScalarProperty Name="InvestKind" ColumnName="InvestKind" />
+          <ScalarProperty Name="Wowtv_id" ColumnName="Wowtv_id" />
+          <ScalarProperty Name="Intro_Profile" ColumnName="Intro_Profile" />
+          <ScalarProperty Name="Product_ID_1" ColumnName="Product_ID_1" />
+          <ScalarProperty Name="NEWphoto_small" ColumnName="NEWphoto_small" />
+          <ScalarProperty Name="NEWphoto_big" ColumnName="NEWphoto_big" />
+          <ScalarProperty Name="NEWphoto_service" ColumnName="NEWphoto_service" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="bestEarningRate" ColumnName="bestEarningRate" />
+          <ScalarProperty Name="avgWeeklyItem" ColumnName="avgWeeklyItem" />
+          <ScalarProperty Name="BaseDate" ColumnName="BaseDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_GetlivePro" FunctionName="broadcastModel.Store.usp_GetlivePro">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="broadcastModel.usp_GetlivePro_Result">
+          <ScalarProperty Name="PRO_ID" ColumnName="PRO_ID" />
+          <ScalarProperty Name="NICKNAME" ColumnName="NICKNAME" />
+          <ScalarProperty Name="BTITLE" ColumnName="BTITLE" />
+          <ScalarProperty Name="BCONTENTS" ColumnName="BCONTENTS" />
+          <ScalarProperty Name="BINTRODUCE" ColumnName="BINTRODUCE" />
+          <ScalarProperty Name="BRSTARTTIME" ColumnName="BRSTARTTIME" />
+          <ScalarProperty Name="BRENDTIME" ColumnName="BRENDTIME" />
+          <ScalarProperty Name="BCOST" ColumnName="BCOST" />
+          <ScalarProperty Name="STATE" ColumnName="STATE" />
+          <ScalarProperty Name="BPLAYTYPE" ColumnName="BPLAYTYPE" />
+          <ScalarProperty Name="BMEMTYPE" ColumnName="BMEMTYPE" />
+          <ScalarProperty Name="BROOM" ColumnName="BROOM" />
+          <ScalarProperty Name="PRODUCTID" ColumnName="PRODUCTID" />
+          <ScalarProperty Name="PHOTO_SMALL" ColumnName="PHOTO_SMALL" />
+          <ScalarProperty Name="CLICKNUM" ColumnName="CLICKNUM" />
+          <ScalarProperty Name="CURCOUNT" ColumnName="CURCOUNT" />
+          <ScalarProperty Name="INVESTKIND" ColumnName="INVESTKIND" />
+          <ScalarProperty Name="onairtime" ColumnName="onairtime" />
+          <ScalarProperty Name="PROBEST" ColumnName="PROBEST" />
+          <ScalarProperty Name="PHOTO_BIG" ColumnName="PHOTO_BIG" />
+          <ScalarProperty Name="PHOTO_SERVICE" ColumnName="PHOTO_SERVICE" />
+          <ScalarProperty Name="PRODUCT_ID_1" ColumnName="PRODUCT_ID_1" />
+          <ScalarProperty Name="PAY_NO" ColumnName="PAY_NO" />
+          <ScalarProperty Name="Photo_Expert" ColumnName="Photo_Expert" />
+          <ScalarProperty Name="Wowtv_id" ColumnName="Wowtv_id" />
+          <ScalarProperty Name="NEWPHOTO_BIG" ColumnName="NEWPHOTO_BIG" />
+          <ScalarProperty Name="NEWPHOTO_SMALL" ColumnName="NEWPHOTO_SMALL" />
+          <ScalarProperty Name="NewPhoto_Recommend" ColumnName="NewPhoto_Recommend" />
+          <ScalarProperty Name="NEWPHOTO_SMALL2" ColumnName="NEWPHOTO_SMALL2" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

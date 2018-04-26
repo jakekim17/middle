@@ -1,0 +1,716 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Wow.Tv.Middle.Model.Db49.wownet" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TAB_BOARD_AA">
+    <Key>
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="SEQ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BCODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TITLE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CONTENT" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="USER_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="USER_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="REF" Type="Int32" />
+    <Property Name="REF_STEP" Type="Int32" />
+    <Property Name="REF_LEVEL" Type="Int32" />
+    <Property Name="READ_CNT" Type="Int32" />
+    <Property Name="MEMO_CNT" Type="Int32" />
+    <Property Name="RECOMMEND_CNT" Type="Int32" />
+    <Property Name="REVERSE_CNT" Type="Int32" />
+    <Property Name="ASTROMANCY_CNT" Type="Int32" />
+    <Property Name="ASTROMANCY_NUM" Type="Int32" />
+    <Property Name="VIEW_FLAG" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EMOTICON" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="REG_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="GUBUN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SOURCE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PUBLICITY_CNT" Type="Int32" />
+    <Property Name="CODE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CNAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MY_WRITE" Type="Int32" />
+    <Property Name="TEMP_NUM" Type="Int32" />
+    <Property Name="TEMP_GBN" Type="Int32" />
+    <Property Name="USER_IP" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="Db49_wownet" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TAB_BOARD" EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_BOARD_AA" />
+    <EntitySet Name="TAB_STOCK_SITUATION" EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_STOCK_SITUATION" />
+    <EntitySet Name="TAB_BOARD_CONFIG_49_NET" EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_BOARD_CONFIG_49_NET" />
+    <EntitySet Name="TAB_BOARD_TOP_49_NET" EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_BOARD_TOP_49_NET" />
+    <EntitySet Name="TAB_NOTICE_49_NET" EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_NOTICE_49_NET" />
+    <EntitySet Name="TAB_NOTICE_LOG_49_NET" EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_NOTICE_LOG_49_NET" />
+    <FunctionImport Name="NUP_TAB_NOTICE_PAGE" ReturnType="Collection(Wow.Tv.Middle.Model.Db49.wownet.NUP_TAB_NOTICE_PAGE_Result)">
+      <Parameter Name="I_PAGENUM" Mode="In" Type="Int32" />
+      <Parameter Name="I_PAGESIZE" Mode="In" Type="Int32" />
+      <Parameter Name="I_SEARCHCONDITION" Mode="In" Type="String" />
+      <Parameter Name="I_ORDERBY" Mode="In" Type="String" />
+      <Parameter Name="I_ORDERCOLUMN" Mode="In" Type="String" />
+      <Parameter Name="O_TOTALCOUNT" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="TAB_IR_CLUB_2010" EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_IR_CLUB_2010" />
+    <EntitySet Name="TAB_STOCK_RESULT" EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_STOCK_RESULT" />
+    <EntitySet Name="TAB_STOCK_RESULT_CONNECT" EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_STOCK_RESULT_CONNECT" />
+    <EntitySet Name="TAB_LECTURES" EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_LECTURES" />
+    <EntitySet Name="TAB_LECTURES_SCHEDULE" EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_LECTURES_SCHEDULE" />
+    <EntitySet Name="NTB_LECTURES_LECTURER" EntityType="Wow.Tv.Middle.Model.Db49.wownet.NTB_LECTURES_LECTURER" />
+    <EntitySet Name="tblEvents" EntityType="Wow.Tv.Middle.Model.Db49.wownet.tblEvent" />
+    <EntitySet Name="TAB_SCRAP_CATEGORY" EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_SCRAP_CATEGORY" />
+    <EntitySet Name="TAB_SCRAP" EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_SCRAP" />
+    <EntitySet Name="TAB_SCRAP_CONTENT" EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_SCRAP_CONTENT" />
+    <EntitySet Name="TAB_SCRAP_MENU" EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_SCRAP_MENU" />
+    <EntitySet Name="TAB_CONSULTATION_APPLICATION" EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_CONSULTATION_APPLICATION" />
+    <EntitySet Name="TAB_ACADEMY_APPL" EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_ACADEMY_APPL" />
+    <FunctionImport Name="USP_GetTabStrategetApplication" ReturnType="Collection(Wow.Tv.Middle.Model.Db49.wownet.USP_GetTabStrategetApplication_Result)">
+      <Parameter Name="rowCount" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="NSP_BANNER_RANDOM" ReturnType="Collection(Wow.Tv.Middle.Model.Db49.wownet.NSP_BANNER_RANDOM_Result)">
+      <Parameter Name="TYPE" Mode="In" Type="Int32" />
+      <Parameter Name="AREA" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_web_getStockDiscussionTop9List" ReturnType="Collection(Wow.Tv.Middle.Model.Db49.wownet.usp_web_getStockDiscussionTop9List_Result)">
+      <Parameter Name="BCode" Mode="In" Type="String" />
+      <Parameter Name="ArjCode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_web_getStockConsultTop9List" ReturnType="Collection(Wow.Tv.Middle.Model.Db49.wownet.usp_web_getStockConsultTop9List_Result)">
+      <Parameter Name="BCode" Mode="In" Type="String" />
+      <Parameter Name="CName" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="TBLCMSMNU_GIFT_USER" EntityType="Wow.Tv.Middle.Model.Db49.wownet.TBLCMSMNU_GIFT_USER" />
+    <FunctionImport Name="FN_JOIN_CAFE_LIST_New" IsComposable="true" ReturnType="Collection(Wow.Tv.Middle.Model.Db49.wownet.FN_JOIN_CAFE_LIST_New_Result)">
+      <Parameter Name="USERID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_Select_MasterOpenCafeInfo" ReturnType="Collection(Wow.Tv.Middle.Model.Db49.wownet.usp_Select_MasterOpenCafeInfo_Result)">
+      <Parameter Name="UserID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="NUP_MY_LECTURES_SELECT" ReturnType="Collection(Wow.Tv.Middle.Model.Db49.wownet.NUP_MY_LECTURES_SELECT_Result)">
+      <Parameter Name="USER_ID" Mode="In" Type="String" />
+      <Parameter Name="START_DATE" Mode="In" Type="String" />
+      <Parameter Name="END_DATE" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="NUP_MAIN_COMMON_LECTURE_SELECT" ReturnType="Collection(Wow.Tv.Middle.Model.Db49.wownet.NUP_MAIN_COMMON_LECTURE_SELECT_Result)" />
+    <EntitySet Name="TAB_STRATEGY_APPLICATION" EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_STRATEGY_APPLICATION" />
+    <EntitySet Name="TAB_CODE" EntityType="Wow.Tv.Middle.Model.Db49.wownet.TAB_CODE_NET" />
+    <FunctionImport Name="usp_tblEvent_select" ReturnType="Collection(Wow.Tv.Middle.Model.Db49.wownet.usp_tblEvent_select_Result)" />
+  </EntityContainer>
+  <EntityType Name="TAB_STOCK_SITUATION">
+    <Key>
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="SEQ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STOCK" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="STOCK_FLAG" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="STOCK_CNT" Type="Int32" />
+    <Property Name="DISP_ORDER" Type="Byte" />
+    <Property Name="REG_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TAB_BOARD_CONFIG_49_NET">
+    <Key>
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="SEQ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BCODE" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="GUBUN" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FILE_CNT" Type="Byte" />
+    <Property Name="FILE_UPLOAD" Type="Boolean" />
+    <Property Name="WRITE" Type="Boolean" />
+    <Property Name="MEMO" Type="Boolean" />
+    <Property Name="REPLY" Type="Boolean" />
+    <Property Name="RECOMMEND" Type="Boolean" />
+    <Property Name="ASTROMANCY" Type="Boolean" />
+    <Property Name="HTML" Type="Boolean" />
+    <Property Name="REVERSE" Type="Boolean" />
+    <Property Name="WRITE_LEVEL" Type="Byte" />
+    <Property Name="MEMO_LEVEL" Type="Byte" />
+    <Property Name="REPLY_LEVEL" Type="Byte" />
+    <Property Name="RECOMMEND_LEVEL" Type="Byte" />
+    <Property Name="ASTROMANCY_LEVEL" Type="Byte" />
+    <Property Name="REVERSE_LEVEL" Type="Byte" />
+    <Property Name="VIEW_FLAG" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="REG_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SCRAP" Type="Boolean" />
+    <Property Name="SCRAP_LEVEL" Type="Byte" />
+    <Property Name="SOURCE" Type="Boolean" />
+    <Property Name="PUBLICITY" Type="Boolean" />
+    <Property Name="PRINTS" Type="Boolean" />
+    <Property Name="LIST_CNT" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="Boolean" />
+    <Property Name="PRINTS_LEVEL" Type="Byte" />
+    <Property Name="EMAIL_LEVEL" Type="Byte" />
+    <Property Name="ANNOUNCEMENT" Type="Boolean" />
+    <Property Name="ASTROMANCY_MEMO" Type="Boolean" />
+    <Property Name="HARDSHIP" Type="Boolean" />
+    <Property Name="ITEMCODE" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="TAB_BOARD_TOP_49_NET">
+    <Key>
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="SEQ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BCODE" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CODES" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="TITLE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CONTENT" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="USER_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="USER_NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="READ_CNT" Type="Int32" />
+    <Property Name="MEMO_CNT" Type="Int32" />
+    <Property Name="RECOMMEND_CNT" Type="Int32" />
+    <Property Name="REVERSE_CNT" Type="Int32" />
+    <Property Name="ASTROMANCY_CNT" Type="Int32" />
+    <Property Name="ASTROMANCY_NUM" Type="Int32" />
+    <Property Name="VIEW_FLAG" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="EMOTICON" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="REG_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="GUBUN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SOURCE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PUBLICITY_CNT" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TAB_NOTICE_49_NET">
+    <Key>
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="SEQ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BCODE" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TITLE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CONTENT" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="USER_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="USER_NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="REF" Type="Int32" />
+    <Property Name="REF_STEP" Type="Int32" />
+    <Property Name="REF_LEVEL" Type="Int32" />
+    <Property Name="READ_CNT" Type="Int32" />
+    <Property Name="MEMO_CNT" Type="Int32" />
+    <Property Name="RECOMMEND_CNT" Type="Int32" />
+    <Property Name="REVERSE_CNT" Type="Int32" />
+    <Property Name="ASTROMANCY_CNT" Type="Int32" />
+    <Property Name="ASTROMANCY_NUM" Type="Int32" />
+    <Property Name="VIEW_FLAG" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="EMOTICON" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="REG_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="GUBUN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SOURCE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PUBLICITY_CNT" Type="Int32" />
+    <Property Name="TOTAL_NUM" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TAB_NOTICE_LOG_49_NET">
+    <Key>
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="SEQ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BSEQ" Type="Int32" Nullable="false" />
+    <Property Name="BCODE" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TITLE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CONTENT" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="USER_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="USER_NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ADMIN_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ADMIN_NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="REF" Type="Int32" />
+    <Property Name="REF_STEP" Type="Int32" />
+    <Property Name="REF_LEVEL" Type="Int32" />
+    <Property Name="READ_CNT" Type="Int32" />
+    <Property Name="MEMO_CNT" Type="Int32" />
+    <Property Name="RECOMMEND_CNT" Type="Int32" />
+    <Property Name="REVERSE_CNT" Type="Int32" />
+    <Property Name="ASTROMANCY_CNT" Type="Int32" />
+    <Property Name="ASTROMANCY_NUM" Type="Int32" />
+    <Property Name="EMOTICON" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="REG_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="GUBUN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SOURCE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PUBLICITY_CNT" Type="Int32" />
+    <Property Name="TOTAL_NUM" Type="Int32" />
+  </EntityType>
+  <ComplexType Name="NUP_TAB_NOTICE_PAGE_Result">
+    <Property Type="Int64" Name="ROWNUM" Nullable="true" />
+    <Property Type="Int32" Name="SEQ" Nullable="false" />
+    <Property Type="String" Name="BCODE" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="TITLE" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CONTENT" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="USER_ID" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="USER_NAME" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="REF" Nullable="true" />
+    <Property Type="Int32" Name="REF_STEP" Nullable="true" />
+    <Property Type="Int32" Name="REF_LEVEL" Nullable="true" />
+    <Property Type="Int32" Name="READ_CNT" Nullable="true" />
+    <Property Type="Int32" Name="MEMO_CNT" Nullable="true" />
+    <Property Type="Int32" Name="RECOMMEND_CNT" Nullable="true" />
+    <Property Type="Int32" Name="REVERSE_CNT" Nullable="true" />
+    <Property Type="Int32" Name="ASTROMANCY_CNT" Nullable="true" />
+    <Property Type="Int32" Name="ASTROMANCY_NUM" Nullable="true" />
+    <Property Type="String" Name="VIEW_FLAG" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="EMOTICON" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="REG_DATE" Nullable="false" Precision="23" />
+    <Property Type="String" Name="GUBUN" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="SOURCE" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="EMAIL" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="PUBLICITY_CNT" Nullable="true" />
+    <Property Type="Int32" Name="TOTAL_NUM" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="TAB_IR_CLUB_2010">
+    <Key>
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="SEQ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="COMPANY_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="INDUSTRY_VOLUME" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="APPROVAL_FLAG" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="INDUSTRY_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="INDUSTRY_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANY_LOGO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="HOMEPAGE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANY_PHONE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="START_DATE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="END_DATE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="REG_TYPE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="VIEW_FLAG" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="MOD_DATE" Type="DateTime" Precision="3" />
+    <Property Name="REG_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TAB_STOCK_RESULT">
+    <Key>
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="SEQ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DIVERGE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SYEAR" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SMONTH" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="SDAY" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="SWEEK" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="STIME1" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="STIME2" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="PLACE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="REG_DATE" Type="DateTime" Precision="3" />
+    <Property Name="REG_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MOD_DATE" Type="DateTime" Precision="3" />
+    <Property Name="MOD_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="VIEW_FLAG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TAB_STOCK_RESULT_CONNECT">
+    <Key>
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="SEQ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MSEQ" Type="Int32" />
+    <Property Name="CONTENT" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="STOCK" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="STOCK_FLAG" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="REG_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TAB_LECTURES">
+    <Key>
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="SEQ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TYPE_FLAG" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="VIEW_SITE" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="VIEW_FLAG" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="TITLE" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="SUMMARY" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CONTENTS" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="EXPENSE" Type="Int32" Nullable="false" />
+    <Property Name="MANAGER" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PHONE" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="ADMIN_ID" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="REG_DATE" Type="DateTime" Precision="3" />
+    <Property Name="IMAGE_FLAG" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="IMAGE_FILE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="L_SEQ" Type="Int32" />
+    <Property Name="METHOD" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="GUBUN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WG_IMAGE_FILE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MAIN_CTGR" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="THUMNAIL_FILE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TAB_LECTURES_SCHEDULE">
+    <Key>
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="SEQ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MSEQ" Type="Int32" Nullable="false" />
+    <Property Name="REGION" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="PLACE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="LECTURES_DATE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LECTURES_TIME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LECTURER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ROUGH_SKETCH_PATH" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Banner" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="attendCount" Type="Int32" />
+    <Property Name="salesCount" Type="Int32" />
+    <Property Name="salesMoney" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="refundMoney" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="pureSalesMoney" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="operatingFee" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="rentalFee" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="REG_DATE" Type="DateTime" Precision="3" />
+    <Property Name="ETC" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="NTB_LECTURES_LECTURER">
+    <Key>
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="SEQ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MSEQ" Type="Int32" Nullable="false" />
+    <Property Name="LECTURER_TYPE" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="PARTNER_NO" Type="Int32" />
+    <Property Name="LECTURER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="REG_DATE" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblEvent">
+    <Key>
+      <PropertyRef Name="seq" />
+    </Key>
+    <Property Name="seq" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bcode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="proId" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="eventType" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="title" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="bannerImage" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="linkUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="linkTarget" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="startDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="endDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="viewFlag" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="adminId" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="readCount" Type="Int32" />
+    <Property Name="regdate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="VIEW_SITE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="WINNER_DATE" Type="DateTime" Precision="3" />
+    <Property Name="WIN_VIEW_FLAG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="WIN_CONTENT" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DEL_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TAB_SCRAP_CATEGORY">
+    <Key>
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="SEQ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GUBUN" Type="Boolean" />
+    <Property Name="FOLDER" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="USER_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TAB_SCRAP">
+    <Key>
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="SEQ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MSEQ" Type="Int32" />
+    <Property Name="USER_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="BCODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="URL" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="REG_DATE" Type="DateTime" Precision="3" />
+    <Property Name="TITLE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MENUURL" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TAB_SCRAP_CONTENT">
+    <Key>
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="SEQ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BSEQ" Type="Int32" />
+    <Property Name="CNAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="URL" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PRO_ID" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="USER_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TITLE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="REGDATE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SCRAPDATE" Type="DateTime" Precision="3" />
+    <Property Name="ArticleID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TAB_SCRAP_MENU">
+    <Key>
+      <PropertyRef Name="MSEQ" />
+    </Key>
+    <Property Name="MSEQ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PSEQ" Type="Int32" Nullable="false" />
+    <Property Name="FOLDER_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="USER_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DISP_ORDER" Type="Byte" />
+    <Property Name="REG_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TAB_CONSULTATION_APPLICATION">
+    <Key>
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="SEQ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BSEQ" Type="Int32" />
+    <Property Name="BCODE" Type="String" Nullable="false" MaxLength="9" FixedLength="true" Unicode="false" />
+    <Property Name="CAREER" Type="Byte" />
+    <Property Name="SCALE" Type="Byte" />
+    <Property Name="CHARACTER" Type="Byte" />
+    <Property Name="GRAVITY" Type="Byte" />
+    <Property Name="MAKET" Type="Byte" />
+    <Property Name="RELIANCE" Type="Byte" />
+    <Property Name="TITLE" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CONTENT" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="USER_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="USER_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SEX" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="AGE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="CODE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CNAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="VIEW_FLAG" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_GRAVITY" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="AVERAGE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CRITICISM" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="BUY_DATE" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="INVESTMENT_OPTION" Type="Byte" />
+    <Property Name="READ_CNT" Type="Int32" />
+    <Property Name="RECOMMEND_CNT" Type="Int32" />
+    <Property Name="BEST_CODE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="BEST_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="PUBLICITY_CNT" Type="Int32" />
+    <Property Name="REF" Type="Int32" />
+    <Property Name="REF_STEP" Type="Int32" />
+    <Property Name="REG_DATE" Type="DateTime" Precision="3" />
+    <Property Name="MEMO_CNT" Type="Int32" />
+    <Property Name="MY_WRITE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="FUTUREWIZ_YN" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="MSN_YN" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="BROOM" Type="String" MaxLength="17" FixedLength="true" Unicode="false" />
+    <Property Name="VODID" Type="Int32" />
+    <Property Name="VODTYPE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="BCOST" Type="Int32" />
+    <Property Name="CAFE_REF" Type="Int32" />
+    <Property Name="USER_IP" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TAB_ACADEMY_APPL">
+    <Key>
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="SEQ" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EA_TYPE" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="AL_SEQ" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="L_SEQ" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="LS_SEQ" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CENTER_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EDU_S" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="EDU_E" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SSNO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TEL" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="MOBILE" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MAINSTOCK" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BIRTHDAY" Type="DateTime" Precision="3" />
+    <Property Name="LIVEAREA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="REGDATE" Type="DateTime" Precision="3" />
+    <Property Name="ATTEN_FLAG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="REG_FLAG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="FLAG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="USERID" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="AGREE_PI" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="AGREE_AD" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="USP_GetTabStrategetApplication_Result">
+    <Property Type="Int32" Name="SEQ" Nullable="false" />
+    <Property Type="String" Name="BCODE" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="TITLE" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="USER_ID" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="USER_NAME" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="REF" Nullable="true" />
+    <Property Type="Int32" Name="REF_STEP" Nullable="true" />
+    <Property Type="String" Name="CODE" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CNAME" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="READ_CNT" Nullable="true" />
+    <Property Type="Int32" Name="RECOMMEND_CNT" Nullable="true" />
+    <Property Type="Int32" Name="PUBLICITY_CNT" Nullable="true" />
+    <Property Type="DateTime" Name="REG_DATE" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="MEMO_CNT" Nullable="true" />
+    <Property Type="String" Name="market" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="FREAD_CNT" Nullable="true" />
+    <Property Type="String" Name="SUB_CODE" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="REF_LEVEL" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="usp_web_getStockDiscussionTop9List_Result">
+    <Property Type="Int32" Name="SEQ" Nullable="false" />
+    <Property Type="String" Name="BCODE" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="TITLE" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="USER_ID" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="USER_NAME" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="REF" Nullable="true" />
+    <Property Type="Int32" Name="REF_STEP" Nullable="true" />
+    <Property Type="Int32" Name="REF_LEVEL" Nullable="true" />
+    <Property Type="Int32" Name="READ_CNT" Nullable="true" />
+    <Property Type="Int32" Name="MEMO_CNT" Nullable="true" />
+    <Property Type="Int32" Name="RECOMMEND_CNT" Nullable="true" />
+    <Property Type="Int32" Name="REVERSE_CNT" Nullable="true" />
+    <Property Type="Int32" Name="ASTROMANCY_CNT" Nullable="true" />
+    <Property Type="String" Name="VIEW_FLAG" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="EMOTICON" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="REG_DATE" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="GUBUN" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="SOURCE" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="EMAIL" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="PUBLICITY_CNT" Nullable="true" />
+    <Property Type="String" Name="CODE" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CNAME" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="usp_web_getStockConsultTop9List_Result">
+    <Property Type="Int32" Name="SEQ" Nullable="false" />
+    <Property Type="String" Name="BCODE" Nullable="false" MaxLength="9" />
+    <Property Type="String" Name="TITLE" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="USER_ID" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="USER_NAME" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CODE" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CNAME" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="REF" Nullable="true" />
+    <Property Type="Int32" Name="REF_STEP" Nullable="true" />
+    <Property Type="String" Name="REG_DATE" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="FUTUREWIZ_YN" Nullable="true" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="NSP_BANNER_RANDOM_Result">
+    <Property Type="Int32" Name="B_IDX" Nullable="false" />
+    <Property Type="String" Name="B_IMAGE1" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="B_IMAGE2" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="B_URL" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="B_ETC1" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="B_ETC2" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="B_TITLE" Nullable="true" MaxLength="150" />
+    <Property Type="Int32" Name="B_VIEW_RATE" Nullable="true" />
+    <Property Type="Int32" Name="START_NUM" Nullable="true" />
+    <Property Type="Int32" Name="END_NUM" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="TBLCMSMNU_GIFT_USER">
+    <Key>
+      <PropertyRef Name="PKID" />
+    </Key>
+    <Property Name="PKID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EVENTID" Type="Int32" Nullable="false" />
+    <Property Name="USER_ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="USER_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="USER_NAME2" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GET_USER_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PNAME" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="POSTNUM" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ADDR" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="TEL" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="STATUS" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="WIN_DATE" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="SEND_DATE" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="DELY_CO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="INVOICE_NUM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="REG_DATE" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <ComplexType Name="FN_JOIN_CAFE_LIST_New_Result">
+    <Property Type="Int32" Name="CAFECODE" Nullable="true" />
+    <Property Type="DateTime" Name="JOINDATE" Nullable="true" Precision="23" />
+    <Property Type="String" Name="GRADENAME" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="CAFEDOMAIN" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CAFENAME" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CAFEEXPLANATION" Nullable="true" MaxLength="4000" />
+    <Property Type="DateTime" Name="REGDATE" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="RANK" Nullable="true" />
+    <Property Type="Int32" Name="MEMBERCOUNT" Nullable="true" />
+    <Property Type="String" Name="CAFEMASTER" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="GRADELEVEL" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="OPEN_YN" Nullable="true" MaxLength="2" />
+  </ComplexType>
+  <ComplexType Name="usp_Select_MasterOpenCafeInfo_Result">
+    <Property Type="Int32" Name="CafeCode" Nullable="false" />
+    <Property Type="String" Name="CafeDomain" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="NUP_MY_LECTURES_SELECT_Result">
+    <Property Type="DateTime" Name="REGDATE" Nullable="true" Precision="23" />
+    <Property Type="String" Name="LECTURES_DATE" Nullable="true" MaxLength="111" />
+    <Property Type="String" Name="GUBUN" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TITLE" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="LECTURER" Nullable="true" />
+    <Property Type="String" Name="PARTNER_NO" Nullable="true" />
+    <Property Type="String" Name="PLACE" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="SEQ" Nullable="true" />
+    <Property Type="Int32" Name="MSEQ" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="NUP_MAIN_COMMON_LECTURE_SELECT_Result">
+    <Property Type="Int32" Name="SEQ" Nullable="false" />
+    <Property Type="Int32" Name="MSEQ" Nullable="false" />
+    <Property Type="String" Name="REGION" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="PLACE" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="LECTURES_DATE" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="LECTURES_TIME" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="LECTURER" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ROUGH_SKETCH_PATH" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="REG_DATE" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="TITLE" Nullable="false" MaxLength="500" />
+    <Property Type="Int32" Name="EXPENSE" Nullable="false" />
+    <Property Type="String" Name="GUBUN" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="TAB_STRATEGY_APPLICATION">
+    <Key>
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="SEQ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BCODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TITLE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CONTENT" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="USER_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="USER_NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CODE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CNAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="READ_CNT" Type="Int32" />
+    <Property Name="RECOMMEND_CNT" Type="Int32" />
+    <Property Name="PUBLICITY_CNT" Type="Int32" />
+    <Property Name="REG_DATE" Type="DateTime" Precision="3" />
+    <Property Name="MEMO_CNT" Type="Int32" />
+    <Property Name="REF" Type="Int32" />
+    <Property Name="REF_STEP" Type="Int32" />
+    <Property Name="REF_LEVEL" Type="Int32" />
+    <Property Name="VOICE_LINK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MARKET" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="VIEW_FLAG" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="CHECK_SUB" Type="Int32" />
+    <Property Name="SUB_CODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FREAD_CNT" Type="Int32" />
+    <Property Name="isMainHead" Type="Int32" />
+    <Property Name="isMainList" Type="Int32" />
+    <Property Name="isMainBold" Type="Int32" />
+    <Property Name="itype" Type="Int32" />
+    <Property Name="isSMS" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TAB_CODE_NET">
+    <Key>
+      <PropertyRef Name="MSEQ" />
+    </Key>
+    <Property Name="MSEQ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PSEQ" Type="Int32" Nullable="false" />
+    <Property Name="CODE_NAME" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CODE_VAL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DISP_ORDER" Type="Byte" />
+    <Property Name="REG_DATE" Type="DateTime" Precision="3" />
+    <Property Name="MOD_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <ComplexType Name="usp_tblEvent_select_Result">
+    <Property Type="Int32" Name="seq" Nullable="false" />
+    <Property Type="String" Name="bcode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="proId" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="eventType" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="title" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="content" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="bannerImage" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="linkUrl" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="linkTarget" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="viewFlag" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="adminId" Nullable="true" MaxLength="15" />
+    <Property Type="Int32" Name="readCount" Nullable="true" />
+    <Property Type="DateTime" Name="regdate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="VIEW_SITE" Nullable="true" MaxLength="1" />
+    <Property Type="DateTime" Name="WINNER_DATE" Nullable="true" Precision="23" />
+    <Property Type="String" Name="WIN_VIEW_FLAG" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="WIN_CONTENT" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="DEL_YN" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="Product_ID_1" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Wowtv_id" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="NEWphoto_small2" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Nickname" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="StartDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="EndDate" Nullable="false" Precision="23" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,15 @@
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.wowbill\bin\Release\Wow.Tv.Middle.Model.Db89.wowbill.dll.config
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.wowbill\bin\Release\Wow.Tv.Middle.Model.Db89.wowbill.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.wowbill\bin\Release\Wow.Tv.Middle.Model.Db89.wowbill.pdb
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.wowbill\bin\Release\EntityFramework.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.wowbill\bin\Release\EntityFramework.SqlServer.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.wowbill\bin\Release\Wow.Tv.Middle.Model.Common.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.wowbill\bin\Release\Wow.Tv.Middle.Model.Common.pdb
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.wowbill\bin\Release\EntityFramework.xml
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.wowbill\bin\Release\EntityFramework.SqlServer.xml
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.wowbill\bin\Release\ko\EntityFramework.resources.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.wowbill\bin\Release\ko\EntityFramework.SqlServer.resources.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.wowbill\obj\Release\Wow.Tv.Middle.Model.Db89.wowbill.csproj.CoreCompileInputs.cache
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.wowbill\obj\Release\Wow.Tv.Middle.Model.Db89.wowbill.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.wowbill\obj\Release\Wow.Tv.Middle.Model.Db89.wowbill.pdb
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.wowbill\obj\Release\Wow.Tv.Middle.Model.Db89.wowbill.csprojResolveAssemblyReference.cache

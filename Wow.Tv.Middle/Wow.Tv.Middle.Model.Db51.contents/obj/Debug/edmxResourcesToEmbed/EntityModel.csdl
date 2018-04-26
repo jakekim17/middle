@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="contentsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Db51_contents" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="NTB_FINANCE_STATUS" EntityType="contentsModel.NTB_FINANCE_STATUS" />
+  </EntityContainer>
+  <EntityType Name="NTB_FINANCE_STATUS">
+    <Key>
+      <PropertyRef Name="NO" />
+    </Key>
+    <Property Name="NO" Type="Int32" Nullable="false" />
+    <Property Name="YEAR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CURNT_ASSET" Type="Int32" />
+    <Property Name="NON_CURNT_ASSET" Type="Int32" />
+    <Property Name="TOTAL_ASSET" Type="Int32" />
+    <Property Name="CURNT_LIABILITES" Type="Int32" />
+    <Property Name="NON_CURNT_LIABILITES" Type="Int32" />
+    <Property Name="TOTAL_LIABILITES" Type="Int32" />
+    <Property Name="CAPITAL_STOCK" Type="Int32" />
+    <Property Name="TOTAL_CAPITAL" Type="Int32" />
+    <Property Name="OPERATING_PROFIT" Type="Int32" />
+    <Property Name="NET_INCOME" Type="Int32" />
+    <Property Name="REVENUE" Type="Int32" />
+    <Property Name="FLAG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="REG_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MOD_DATE" Type="DateTime" Precision="3" />
+    <Property Name="REG_ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DEL_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+</Schema>

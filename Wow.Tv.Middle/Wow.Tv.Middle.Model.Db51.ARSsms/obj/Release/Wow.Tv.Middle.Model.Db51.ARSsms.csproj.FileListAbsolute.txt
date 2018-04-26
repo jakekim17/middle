@@ -1,0 +1,12 @@
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db51.ARSsms\bin\Release\Wow.Tv.Middle.Model.Db51.ARSsms.dll.config
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db51.ARSsms\bin\Release\Wow.Tv.Middle.Model.Db51.ARSsms.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db51.ARSsms\bin\Release\Wow.Tv.Middle.Model.Db51.ARSsms.pdb
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db51.ARSsms\bin\Release\EntityFramework.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db51.ARSsms\bin\Release\EntityFramework.SqlServer.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db51.ARSsms\bin\Release\EntityFramework.xml
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db51.ARSsms\bin\Release\EntityFramework.SqlServer.xml
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db51.ARSsms\bin\Release\ko\EntityFramework.resources.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db51.ARSsms\bin\Release\ko\EntityFramework.SqlServer.resources.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db51.ARSsms\obj\Release\Wow.Tv.Middle.Model.Db51.ARSsms.csproj.CoreCompileInputs.cache
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db51.ARSsms\obj\Release\Wow.Tv.Middle.Model.Db51.ARSsms.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db51.ARSsms\obj\Release\Wow.Tv.Middle.Model.Db51.ARSsms.pdb

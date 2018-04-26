@@ -1,0 +1,15 @@
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB\bin\Debug\Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.dll.config
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB\bin\Debug\Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB\bin\Debug\Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.pdb
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB\bin\Debug\EntityFramework.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB\bin\Debug\EntityFramework.SqlServer.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB\bin\Debug\Wow.Tv.Middle.Model.Common.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB\bin\Debug\Wow.Tv.Middle.Model.Common.pdb
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB\bin\Debug\EntityFramework.xml
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB\bin\Debug\EntityFramework.SqlServer.xml
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB\bin\Debug\ko\EntityFramework.resources.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB\bin\Debug\ko\EntityFramework.SqlServer.resources.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB\obj\Debug\Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.csproj.CoreCompileInputs.cache
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB\obj\Debug\Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB\obj\Debug\Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.pdb
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB\obj\Debug\Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.csprojResolveAssemblyReference.cache

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7f0f7e4fb06c4590a4f06d0ddf700360" Name="Diagram1">
+        <EntityTypeShape EntityType="wowtvModel.dtproperties" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.sysdiagrams" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_ANCHOR" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_BANNER" Width="1.5" PointX="5.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_BANNER_EVENT_LOG" Width="1.5" PointX="8" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_BANNER_VIEWING_LOG" Width="1.5" PointX="8" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_BOARD" Width="1.5" PointX="10.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_BOARD_COMMENT" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_BOARD_CONFIG" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_BOARD_FILE" Width="1.5" PointX="12.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_BOARD_LOG" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_BOARD_TOP" Width="1.5" PointX="5.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_BOARD_TOP_COMMENT" Width="1.5" PointX="14.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_BOARD_TOP_FILE" Width="1.5" PointX="7.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_BOARD_TOP_LOG" Width="1.5" PointX="14.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_CMS_ADMIN" Width="1.5" PointX="5.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_CMS_MENU" Width="1.5" PointX="8" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_CODE" Width="1.5" PointX="2.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_COMMON_FILE" Width="1.5" PointX="9.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_IR_CLUB" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_IR_CLUB_2010" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_JOB_COMMENT" Width="1.5" PointX="16.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_JOB_FILE" Width="1.5" PointX="16.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_JOBRESUME" Width="1.5" PointX="11.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_JOBUCC" Width="1.5" PointX="16.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_NOTICE" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_NOTICE_FILE" Width="1.5" PointX="18.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_PGM_ORDER" Width="1.5" PointX="18.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_POPUP" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_POPUP_VIEWING_LOG" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_PUBLIC" Width="1.5" PointX="13.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_PUBLIC_FILE" Width="1.5" PointX="15.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_PUBLIC_LOG" Width="1.5" PointX="17.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_QUEST_EMAIL" Width="1.5" PointX="0.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_QUEST_EMAIL_FILE" Width="1.5" PointX="2.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_TOUR" Width="1.5" PointX="7.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_TOUR_MEMBER" Width="1.5" PointX="19.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_VOTEAPT" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_WOWEVENT" Width="1.5" PointX="20.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_WOWEVENT_SUB" Width="1.5" PointX="4.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TblArtVietnam" Width="1.5" PointX="20.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.tblBaseballRankUpdateDate" Width="1.5" PointX="20.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TBLBASEBALLSCH" Width="1.5" PointX="21.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.tblBaseBallustream" Width="1.5" PointX="21.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TBLBC" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TBLBCBOARD" Width="1.5" PointX="22.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TBLBCCODE2" Width="1.5" PointX="6.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.tblBoard_tmpUrl" Width="1.5" PointX="22.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.tblDaeBakChunKuk" Width="1.5" PointX="8.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.tblDaeBakChunKukGibeob" Width="1.5" PointX="23.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.tblLoginConfirm" Width="1.5" PointX="23.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.tblmedia" Width="1.5" PointX="23.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.tblmediacnt" Width="1.5" PointX="24.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.tblMobileAppDown" Width="1.5" PointX="0.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.tblProjectEmergencyOpenYN" Width="1.5" PointX="2.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.tblStockWindow" Width="1.5" PointX="24.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.tblStockWindowApplyUser" Width="1.5" PointX="24.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.tblTextAndLinkBox" Width="1.5" PointX="10.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.tblTextAndLinkCategory" Width="1.5" PointX="12.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.tblTradingStarRanking" Width="1.5" PointX="14.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.tblTradingStarTrade" Width="1.5" PointX="16.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.tblTradingStarUser" Width="1.5" PointX="21.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.tblwownetinvest" Width="1.5" PointX="23.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.sf1_TAB_BOARD" Width="1.5" PointX="4.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.sf1_TAB_PUBLIC" Width="1.5" PointX="25.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_AREA_CHANNEL" Width="1.5" PointX="25.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_BANNER_VIEWING_LOG_Temp" Width="1.5" PointX="25.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_FAQ" Width="1.5" PointX="18.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_IR_CLUB_MANAGER" Width="1.5" PointX="3" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_MAIN_EVENT" Width="1.5" PointX="25.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_MAIN_EVENT_BACKUP" Width="1.5" PointX="25.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_MAIN_NEW" Width="1.5" PointX="26.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_MANAGER_REG" Width="1.5" PointX="26.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_PGM_ORDER_PROCESS" Width="1.5" PointX="26.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.TAB_POPUP_EVENT_LOG" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.tblmedia_Code" Width="1.5" PointX="26.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="wowtvModel.tblmedia_platform_code" Width="1.5" PointX="0.75" PointY="27.75" IsExpanded="true" />
+        <AssociationConnector Association="wowtvModel.FK_TAB_BANNER_EVENT_LOG_TAB_BANNER" ManuallyRouted="false" />
+        <AssociationConnector Association="wowtvModel.FK_TAB_BANNER_VIEWING_LOG_TAB_BANNER" ManuallyRouted="false" />
+        <AssociationConnector Association="wowtvModel.FK_TAB_IR_CLUB_MANAGER_TAB_IR_CLUB" ManuallyRouted="false" />
+        <AssociationConnector Association="wowtvModel.FK_TAB_POPUP_EVENT_LOG_TAB_POPUP" ManuallyRouted="false" />
+        <AssociationConnector Association="wowtvModel.FK_TAB_POPUP_VIEWING_LOG_TAB_POPUP" ManuallyRouted="false" />
+        <AssociationConnector Association="wowtvModel.TAB_CMS_ADMIN_AUTH" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

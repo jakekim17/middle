@@ -1,0 +1,626 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Db89_WOWTV_BILL_DB" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="UP_PORTAL_BONUSCASH_TX_INS">
+      <Parameter Name="pi_intUserNo" Mode="In" Type="Int32" />
+      <Parameter Name="pi_strUserID" Mode="In" Type="String" />
+      <Parameter Name="pi_strUserName" Mode="In" Type="String" />
+      <Parameter Name="pi_strPersonNo" Mode="In" Type="String" />
+      <Parameter Name="pi_strCashAttr" Mode="In" Type="String" />
+      <Parameter Name="pi_intCashAmt" Mode="In" Type="Decimal" />
+      <Parameter Name="pi_strPayToolName" Mode="In" Type="String" />
+      <Parameter Name="pi_strAdminID" Mode="In" Type="String" />
+      <Parameter Name="pi_strIPAddr" Mode="In" Type="String" />
+      <Parameter Name="pi_strEYMD" Mode="In" Type="String" />
+      <Parameter Name="po_intCashReal" Mode="InOut" Type="Decimal" />
+      <Parameter Name="po_intCashBonus" Mode="InOut" Type="Decimal" />
+      <Parameter Name="po_intCashNo" Mode="InOut" Type="Int64" />
+      <Parameter Name="po_strErrMsg" Mode="InOut" Type="String" />
+      <Parameter Name="po_intRetVal" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="NUP_MEMBER_CAFE_CHARGE_SELECT" ReturnType="Collection(Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.NUP_MEMBER_CAFE_CHARGE_SELECT_Result)">
+      <Parameter Name="USERNUMBER" Mode="In" Type="Int32" />
+      <Parameter Name="ITEMNO" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="NUP_ADMIN_MEMBER_SUB_SELECT" ReturnType="Collection(Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.NUP_ADMIN_MEMBER_SUB_SELECT_Result)">
+      <Parameter Name="USERNUMBER_LIST" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UP_PORTAL_COUPON_LST" ReturnType="Collection(Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.UP_PORTAL_COUPON_LST_Result)">
+      <Parameter Name="pi_intUserNo" Mode="In" Type="Int32" />
+      <Parameter Name="pi_intUseState" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UP_PORTAL_CHARGE_LST">
+      <Parameter Name="pi_intSearchType" Mode="In" Type="Byte" />
+      <Parameter Name="pi_strSearchKey" Mode="In" Type="String" />
+      <Parameter Name="pi_strYear" Mode="In" Type="String" />
+      <Parameter Name="pi_strMonth" Mode="In" Type="String" />
+      <Parameter Name="pi_intUseState" Mode="In" Type="Int32" />
+      <Parameter Name="pi_intPageNo" Mode="In" Type="Int32" />
+      <Parameter Name="pi_intPageSize" Mode="In" Type="Int32" />
+      <Parameter Name="po_intRecordCnt" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UP_PORTAL_REFUND_LST" ReturnType="Collection(Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.UP_PORTAL_REFUND_LST_Result)">
+      <Parameter Name="pi_intRefundNo" Mode="In" Type="Int64" />
+      <Parameter Name="pi_intUserNo" Mode="In" Type="Int32" />
+      <Parameter Name="pi_strFromYMD" Mode="In" Type="String" />
+      <Parameter Name="pi_strToYMD" Mode="In" Type="String" />
+      <Parameter Name="pi_intPageSize" Mode="In" Type="Int32" />
+      <Parameter Name="pi_intPageNo" Mode="In" Type="Int32" />
+      <Parameter Name="po_intRecordCnt" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="TCouponMst" EntityType="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TCouponMst" />
+    <EntitySet Name="TCouponPubMst" EntityType="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TCouponPubMst" />
+    <FunctionImport Name="NUP_MEMBER_INFO_SUB_SELECT" ReturnType="Collection(Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.NUP_MEMBER_INFO_SUB_SELECT_Result)">
+      <Parameter Name="USERNUMBER" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UP_PORTAL_DELIVERY_LST" ReturnType="Collection(Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.UP_PORTAL_DELIVERY_LST_Result)">
+      <Parameter Name="pi_intChargeNo" Mode="In" Type="Int64" />
+      <Parameter Name="pi_intSearchType" Mode="In" Type="Byte" />
+      <Parameter Name="pi_strSearchKey" Mode="In" Type="String" />
+      <Parameter Name="pi_strYear" Mode="In" Type="String" />
+      <Parameter Name="pi_strMonth" Mode="In" Type="String" />
+      <Parameter Name="pi_strCategoryID" Mode="In" Type="String" />
+      <Parameter Name="pi_strItemPriceID" Mode="In" Type="String" />
+      <Parameter Name="pi_intUseState" Mode="In" Type="Int32" />
+      <Parameter Name="pi_intPayState" Mode="In" Type="Int32" />
+      <Parameter Name="pi_intPageNo" Mode="In" Type="Int32" />
+      <Parameter Name="pi_intPageSize" Mode="In" Type="Int32" />
+      <Parameter Name="po_intRecordCnt" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="WOWSP_GET_BALANCE" ReturnType="Collection(Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.WOWSP_GET_BALANCE_Result)">
+      <Parameter Name="UserNo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UP_PORTAL_MYPAGE_DELIVERY_UR_LST" ReturnType="Collection(Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.UP_PORTAL_MYPAGE_DELIVERY_UR_LST_Result)">
+      <Parameter Name="pi_intUserNo" Mode="In" Type="Int32" />
+      <Parameter Name="pi_strFromYMD" Mode="In" Type="String" />
+      <Parameter Name="pi_strToYMD" Mode="In" Type="String" />
+      <Parameter Name="pi_intPageSize" Mode="In" Type="Int32" />
+      <Parameter Name="pi_intPageNo" Mode="In" Type="Int32" />
+      <Parameter Name="po_intRecordCnt" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="TItemPriceMst" EntityType="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TItemPriceMst" />
+    <EntitySet Name="TEventDtl" EntityType="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TEventDtl" />
+    <EntitySet Name="TEventMst" EntityType="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TEventMst" />
+    <FunctionImport Name="UP_PORTAL_USERCLASS_INFO_GET">
+      <Parameter Name="pi_intUserNo" Mode="In" Type="Int32" />
+      <Parameter Name="po_intUsedPrice" Mode="InOut" Type="Int32" />
+      <Parameter Name="po_intUserClass" Mode="InOut" Type="Int32" />
+      <Parameter Name="po_intNextClassAmount" Mode="InOut" Type="Int32" />
+      <Parameter Name="po_intNextAgainClassAmount" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="TChargeCancelRequestDtl" EntityType="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TChargeCancelRequestDtl" />
+    <EntitySet Name="TChargeCancelRequestMst" EntityType="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TChargeCancelRequestMst" />
+    <EntitySet Name="TCPMst" EntityType="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TCPMst" />
+    <EntitySet Name="TItemMst" EntityType="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TItemMst" />
+    <FunctionImport Name="UP_PORTAL_MYPAGE_SERVICE_UR_LST" ReturnType="Collection(Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.UP_PORTAL_MYPAGE_SERVICE_UR_LST_Result)">
+      <Parameter Name="pi_intUserNo" Mode="In" Type="Int32" />
+      <Parameter Name="pi_strFromYMD" Mode="In" Type="String" />
+      <Parameter Name="pi_strToYMD" Mode="In" Type="String" />
+      <Parameter Name="pi_strServiceName" Mode="In" Type="String" />
+      <Parameter Name="pi_intServiceStatus" Mode="In" Type="Byte" />
+      <Parameter Name="pi_intPageSize" Mode="In" Type="Int32" />
+      <Parameter Name="pi_intPageNo" Mode="In" Type="Int32" />
+      <Parameter Name="po_intRecordCnt" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UP_PORTAL_PAYNCHARGE_LST" ReturnType="Collection(Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.UP_PORTAL_PAYNCHARGE_LST_Result)">
+      <Parameter Name="pi_intSearchType" Mode="In" Type="Byte" />
+      <Parameter Name="pi_strSearchKey" Mode="In" Type="String" />
+      <Parameter Name="pi_strFromYMD" Mode="In" Type="String" />
+      <Parameter Name="pi_strToYMD" Mode="In" Type="String" />
+      <Parameter Name="pi_intPageNo" Mode="In" Type="Int32" />
+      <Parameter Name="pi_intPageSize" Mode="In" Type="Int32" />
+      <Parameter Name="po_intRecordCnt" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="NUP_TVREPLAY_PAYMENT" EntityType="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.NUP_TVREPLAY_PAYMENT" />
+    <FunctionImport Name="UP_PORTAL_MYPAGE_PAYNCHARGE_UR_LST" ReturnType="Collection(Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.UP_PORTAL_MYPAGE_PAYNCHARGE_UR_LST_Result)">
+      <Parameter Name="pi_intUserNo" Mode="In" Type="Int32" />
+      <Parameter Name="pi_strFromYMD" Mode="In" Type="String" />
+      <Parameter Name="pi_strToYMD" Mode="In" Type="String" />
+      <Parameter Name="pi_intPageNo" Mode="In" Type="Int32" />
+      <Parameter Name="pi_intPageSize" Mode="In" Type="Int32" />
+      <Parameter Name="po_intRecordCnt" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="TAccountCashMst" EntityType="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TAccountCashMst" />
+    <EntitySet Name="TCashMst" EntityType="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TCashMst" />
+    <FunctionImport Name="UP_PORTAL_USER_ANAL_LST" ReturnType="Collection(Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.UP_PORTAL_USER_ANAL_LST_Result)">
+      <Parameter Name="pi_intUserNo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="TItemHoldMst" EntityType="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TItemHoldMst" />
+    <FunctionImport Name="UP_KVINA_PURCHASE_AR_LST">
+      <Parameter Name="pi_strUserName" Mode="In" Type="String" />
+      <Parameter Name="pi_strMobileNum" Mode="In" Type="String" />
+      <Parameter Name="pi_strProdName" Mode="In" Type="String" />
+      <Parameter Name="pi_intStateCode" Mode="In" Type="Byte" />
+      <Parameter Name="pi_intChargeNo" Mode="In" Type="Int64" />
+      <Parameter Name="pi_strStartYMD" Mode="In" Type="String" />
+      <Parameter Name="pi_strEndYMD" Mode="In" Type="String" />
+      <Parameter Name="pi_intPageSize" Mode="In" Type="Int32" />
+      <Parameter Name="pi_intPageNo" Mode="In" Type="Int32" />
+      <Parameter Name="po_DblTotalPurAmt" Mode="InOut" Type="Decimal" />
+      <Parameter Name="po_DblTotalCnlAmt" Mode="InOut" Type="Decimal" />
+      <Parameter Name="po_DblTotalPurCnt" Mode="InOut" Type="Int32" />
+      <Parameter Name="po_DblTotalCnlCnt" Mode="InOut" Type="Int32" />
+      <Parameter Name="po_intRecordCnt" Mode="InOut" Type="Int32" />
+      <Parameter Name="po_intRatval" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="NUP_MEMBER_CAFE_CHARGE_SELECT_Result">
+    <Property Type="String" Name="USERNAME" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="USERID" Nullable="false" MaxLength="12" />
+    <Property Type="String" Name="NICKNAME" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ITEMNAME" Nullable="true" MaxLength="256" />
+    <Property Type="String" Name="STARTDT" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="ENDDT" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="REGDATE" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="CANCELYMD" Nullable="true" />
+    <Property Type="Int32" Name="STOPSTARTYMD" Nullable="true" />
+    <Property Type="Int32" Name="STOPENDYMD" Nullable="true" />
+    <Property Type="Int32" Name="DURATION" Nullable="true" />
+    <Property Type="String" Name="DURATIONSTR" Nullable="true" MaxLength="50" />
+    <Property Type="Byte" Name="USERTYPEID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="NUP_ADMIN_MEMBER_SUB_SELECT_Result">
+    <Property Type="Int32" Name="USERNUMBER" Nullable="true" />
+    <Property Type="Decimal" Name="WOW_CASH" Nullable="false" Precision="19" />
+    <Property Type="Int32" Name="USER_CLASS" Nullable="false" />
+    <Property Type="Decimal" Name="USED_PRICE" Nullable="false" Precision="19" />
+    <Property Type="Int32" Name="COUPON_COUNT" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="UP_PORTAL_COUPON_LST_Result">
+    <Property Type="String" Name="COUPONNO" Nullable="true" />
+    <Property Type="String" Name="COUPONNAME" />
+    <Property Type="Byte" Name="USESTATE" Nullable="false" />
+    <Property Type="Byte" Name="COUPONTYPE" Nullable="false" />
+    <Property Type="String" Name="APPLYUNIT" />
+    <Property Type="String" Name="CEXPDATE" />
+    <Property Type="String" Name="COUPONITEMS" />
+    <Property Type="String" Name="USEDDATE" />
+    <Property Type="String" Name="USEDTITLE" />
+    <Property Type="String" Name="REASON" />
+    <Property Type="Int32" Name="APPLYDETAIL" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="UP_PORTAL_REFUND_LST_Result">
+    <Property Type="String" Name="REFUNDNO" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="USERNO" Nullable="false" MaxLength="1" />
+    <Property Type="Int32" Name="REQAMT" Nullable="true" />
+    <Property Type="String" Name="REFUNDAMT" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="REFUNDFEE" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="BANKCODE" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="BANKNAME" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="BANKACCOUNTNO" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="BANKACCOUNTNAME" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="REFUNDDESC" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="APPROVEDATE" Nullable="false" MaxLength="1" />
+    <Property Type="DateTime" Name="REFUNDENDDATE" Nullable="true" />
+    <Property Type="String" Name="WAITCHARGENO" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="USESTATE" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="ADMINID" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="YMD" Nullable="false" MaxLength="1" />
+    <Property Type="DateTime" Name="REGDATE" Nullable="true" />
+    <Property Type="String" Name="USESTATEM" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <EntityType Name="TCouponMst">
+    <Key>
+      <PropertyRef Name="CouponNo" />
+    </Key>
+    <Property Name="CouponSeqNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CouponNo" Type="String" Nullable="false" MaxLength="19" FixedLength="false" Unicode="false" />
+    <Property Name="GameCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="UserNo" Type="Int32" />
+    <Property Name="UserID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CouponID" Type="Int32" Nullable="false" />
+    <Property Name="SeqNo" Type="Int32" Nullable="false" />
+    <Property Name="PubSeqNo" Type="Int32" Nullable="false" />
+    <Property Name="HExpYMD" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="CExpYMD" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="ChargeNo" Type="Int64" />
+    <Property Name="CashNo" Type="Int64" />
+    <Property Name="UseState" Type="Byte" Nullable="false" />
+    <Property Name="YMD" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="RYMD" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="IPAddr" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="UsedTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RegDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TCouponPubMst">
+    <Key>
+      <PropertyRef Name="CouponID" />
+    </Key>
+    <Property Name="CouponID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GameCode" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="CouponName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CouponType" Type="Byte" Nullable="false" />
+    <Property Name="ExpireType" Type="Byte" Nullable="false" />
+    <Property Name="ApplyDetail" Type="Int32" Nullable="false" />
+    <Property Name="CashAttr" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ItemOrPackage" Type="Byte" />
+    <Property Name="DiscountArea" Type="Byte" />
+    <Property Name="MinPrice" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MHoldAvail" Type="Byte" Nullable="false" />
+    <Property Name="PerUserMaxRegCnt" Type="Int32" Nullable="false" />
+    <Property Name="EYMD" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="DurationType" Type="Byte" Nullable="false" />
+    <Property Name="Duration" Type="Int32" Nullable="false" />
+    <Property Name="TotalPubCnt" Type="Int32" Nullable="false" />
+    <Property Name="TotalUseCnt" Type="Int32" Nullable="false" />
+    <Property Name="AdminID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="UseState" Type="Byte" Nullable="false" />
+    <Property Name="RegDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdDate" Type="DateTime" Precision="3" />
+    <Property Name="CouponPubDesc" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="EventDCFlag" Type="Byte" />
+  </EntityType>
+  <ComplexType Name="NUP_MEMBER_INFO_SUB_SELECT_Result">
+    <Property Type="Decimal" Name="WOW_CASH" Nullable="false" Precision="19" />
+    <Property Type="Int32" Name="COUPON_COUNT" Nullable="false" />
+    <Property Type="Int32" Name="USER_CLASS" Nullable="false" />
+    <Property Type="Decimal" Name="USED_PRICE" Nullable="false" Precision="19" />
+  </ComplexType>
+  <ComplexType Name="UP_PORTAL_DELIVERY_LST_Result">
+    <Property Type="String" Name="CHARGENO" Nullable="true" />
+    <Property Type="String" Name="ITEMID" Nullable="true" />
+    <Property Type="String" Name="USERNO" Nullable="true" />
+    <Property Type="String" Name="USERID" Nullable="true" />
+    <Property Type="String" Name="USERNAME" Nullable="true" />
+    <Property Type="String" Name="PERSONNO" Nullable="true" />
+    <Property Type="String" Name="YMD" Nullable="true" />
+    <Property Type="String" Name="PRODNAME" Nullable="true" />
+    <Property Type="Int32" Name="UNITPRICE" Nullable="true" />
+    <Property Type="Int32" Name="ITEMCNT" Nullable="true" />
+    <Property Type="Int32" Name="PRICE" Nullable="true" />
+    <Property Type="String" Name="TEL" Nullable="true" />
+    <Property Type="String" Name="MOBILENO" Nullable="true" />
+    <Property Type="String" Name="ZIPCODE" Nullable="true" />
+    <Property Type="Time" Name="ADDRESS1" Nullable="true" />
+    <Property Type="String" Name="ADDRESS2" Nullable="true" />
+    <Property Type="Int32" Name="PAYTOOL" Nullable="true" />
+    <Property Type="DateTime" Name="PAYDATE" Nullable="true" />
+    <Property Type="String" Name="PAYSTATEM" Nullable="true" />
+    <Property Type="String" Name="USESTATE" Nullable="true" />
+    <Property Type="String" Name="USESTATEM" Nullable="true" />
+    <Property Type="DateTime" Name="DELIVERYDATE" Nullable="true" />
+    <Property Type="String" Name="EMAIL" Nullable="true" />
+    <Property Type="String" Name="DELIVERYDESC" Nullable="true" />
+    <Property Type="DateTime" Name="REGDATE" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="WOWSP_GET_BALANCE_Result">
+    <Property Type="Decimal" Name="CASHBONUS" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="CASHREAL" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="CASHTOTAL" Nullable="true" Precision="19" />
+  </ComplexType>
+  <ComplexType Name="UP_PORTAL_MYPAGE_DELIVERY_UR_LST_Result">
+    <Property Type="Int64" Name="ROWNUM" Nullable="true" />
+    <Property Type="String" Name="CATEGORYNAME" Nullable="true" MaxLength="256" />
+    <Property Type="String" Name="YMD" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="PRODNAME" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="ORGPRICE" Nullable="true" Precision="19" />
+    <Property Type="Int16" Name="PRODCNT" Nullable="false" />
+    <Property Type="Decimal" Name="PRICE" Nullable="false" Precision="19" />
+    <Property Type="Byte" Name="USESTATE" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="TItemPriceMst">
+    <Key>
+      <PropertyRef Name="ItemPriceID" />
+    </Key>
+    <Property Name="ItemID" Type="Int32" Nullable="false" />
+    <Property Name="ItemPriceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ChargeType" Type="Byte" Nullable="false" />
+    <Property Name="DurationType" Type="Byte" Nullable="false" />
+    <Property Name="Duration" Type="Int32" Nullable="false" />
+    <Property Name="MaxAccessCnt" Type="Int32" Nullable="false" />
+    <Property Name="SYMD" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="FYMD" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="ExpireYMD" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="CPItemID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ServiceURL" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="Mileage" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="DiscountRate" Type="Byte" Nullable="false" />
+    <Property Name="DeliveryAvail" Type="Byte" Nullable="false" />
+    <Property Name="DeliveryAmt" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="GiftItemPrice" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="GeneralFlag" Type="Byte" Nullable="false" />
+    <Property Name="AnalID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ARSFlag" Type="Byte" />
+    <Property Name="CafeFlag" Type="Byte" />
+    <Property Name="CafeLevel" Type="Byte" />
+    <Property Name="CancelCafeLevel" Type="Byte" />
+    <Property Name="DisplayLocation" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="DisplayFlag" Type="Byte" Nullable="false" />
+    <Property Name="ReductionFlag" Type="Byte" Nullable="false" />
+    <Property Name="ExchangeFlag" Type="Byte" Nullable="false" />
+    <Property Name="CancelFlag" Type="Byte" Nullable="false" />
+    <Property Name="ReNewFlag" Type="Byte" Nullable="false" />
+    <Property Name="UseState" Type="Byte" Nullable="false" />
+    <Property Name="AdminID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="RegDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdDate" Type="DateTime" Precision="3" />
+    <Property Name="CoopPointFlag" Type="Byte" />
+    <Property Name="DupDCFlag" Type="Byte" />
+    <Property Name="ClassDcFlag" Type="Int32" />
+    <Property Name="DupBuyFlag" Type="Byte" />
+    <Property Name="IsAvailBonus" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TEventDtl">
+    <Key>
+      <PropertyRef Name="EventID" />
+      <PropertyRef Name="SeqNo" />
+    </Key>
+    <Property Name="EventID" Type="Int32" Nullable="false" />
+    <Property Name="SeqNo" Type="Int32" Nullable="false" />
+    <Property Name="AvailType" Type="Byte" />
+    <Property Name="ItemID" Type="Int32" />
+    <Property Name="CategoryID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="UseState" Type="Byte" Nullable="false" />
+    <Property Name="AdminID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="RegDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TEventMst">
+    <Key>
+      <PropertyRef Name="EventID" />
+      <PropertyRef Name="SeqNo" />
+    </Key>
+    <Property Name="EventID" Type="Int32" Nullable="false" />
+    <Property Name="SeqNo" Type="Int32" Nullable="false" />
+    <Property Name="EventName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EventKind" Type="Byte" Nullable="false" />
+    <Property Name="EventType" Type="Byte" Nullable="false" />
+    <Property Name="EventAttr" Type="Byte" />
+    <Property Name="EventArea" Type="Byte" />
+    <Property Name="PayTool" Type="Int32" />
+    <Property Name="ApplyDetail" Type="Int32" Nullable="false" />
+    <Property Name="GameCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="CashAttr" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ExpireFlag" Type="Byte" Nullable="false" />
+    <Property Name="ExpireDayType" Type="Byte" Nullable="false" />
+    <Property Name="ExpireDayCnt" Type="Int32" Nullable="false" />
+    <Property Name="StartDate" Type="String" Nullable="false" MaxLength="14" FixedLength="true" Unicode="false" />
+    <Property Name="EndDate" Type="String" Nullable="false" MaxLength="14" FixedLength="true" Unicode="false" />
+    <Property Name="MinPrice" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="AvailGender" Type="Byte" Nullable="false" />
+    <Property Name="FromAge" Type="Byte" Nullable="false" />
+    <Property Name="ToAge" Type="Byte" Nullable="false" />
+    <Property Name="MaxAvailCnt" Type="Int32" Nullable="false" />
+    <Property Name="AppliedCnt" Type="Int32" Nullable="false" />
+    <Property Name="UseState" Type="Byte" Nullable="false" />
+    <Property Name="AdminID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="RegDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdDate" Type="DateTime" Precision="3" />
+    <Property Name="PersonMaxAvailCnt" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TChargeCancelRequestDtl">
+    <Key>
+      <PropertyRef Name="SeqNo" />
+    </Key>
+    <Property Name="SeqNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RequestNo" Type="Int32" Nullable="false" />
+    <Property Name="ChargeNo" Type="Int64" Nullable="false" />
+    <Property Name="ProdName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="TChargeCancelRequestMst">
+    <Key>
+      <PropertyRef Name="SeqNo" />
+    </Key>
+    <Property Name="SeqNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserNo" Type="Int32" Nullable="false" />
+    <Property Name="ChargeNo" Type="Int64" Nullable="false" />
+    <Property Name="DayPrice" Type="Int32" />
+    <Property Name="UsedDay" Type="Int32" />
+    <Property Name="CancelFee" Type="Int32" />
+    <Property Name="CancelFlag" Type="Byte" />
+    <Property Name="AdminID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CallTime" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="CallMsg" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="UseState" Type="Byte" Nullable="false" />
+    <Property Name="RetMsg" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="UpdDate" Type="DateTime" Precision="3" />
+    <Property Name="RegDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AcctBank" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="AcctNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TCPMst">
+    <Key>
+      <PropertyRef Name="CPID" />
+    </Key>
+    <Property Name="CPID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CPVersion" Type="Int16" Nullable="false" />
+    <Property Name="CPName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CEOName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MICName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MICEmail" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="MICTelNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="BankName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AccountNo" Type="String" MaxLength="48" FixedLength="false" Unicode="false" />
+    <Property Name="AccountName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SettleMethod" Type="Byte" Nullable="false" />
+    <Property Name="SettleAmt" Type="Decimal" Nullable="false" Precision="5" Scale="2" />
+    <Property Name="PGRate" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="MyRate" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="ETCComm1" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="ETCComm2" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="MINComm" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="MAXComm" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="COMFlag" Type="Byte" Nullable="false" />
+    <Property Name="INCVAT" Type="Byte" Nullable="false" />
+    <Property Name="UseState" Type="Byte" Nullable="false" />
+    <Property Name="AdminID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="RegDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TItemMst">
+    <Key>
+      <PropertyRef Name="ItemID" />
+    </Key>
+    <Property Name="ItemID" Type="Int32" Nullable="false" />
+    <Property Name="ItemVersion" Type="Int16" Nullable="false" />
+    <Property Name="ItemName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ItemDesc" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="GameCode" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ShowRate" Type="Byte" Nullable="false" />
+    <Property Name="CPID" Type="Int32" Nullable="false" />
+    <Property Name="CPVersion" Type="Int16" Nullable="false" />
+    <Property Name="DeptCode" Type="Byte" />
+    <Property Name="UseState" Type="Byte" Nullable="false" />
+    <Property Name="AdminID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="RegDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdDate" Type="DateTime" Precision="3" />
+    <Property Name="KOSCOMACCTNO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="IsAvailBonus" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="UP_PORTAL_MYPAGE_SERVICE_UR_LST_Result">
+    <Property Type="Int64" Name="ROWNUM" Nullable="true" />
+    <Property Type="Int64" Name="CHARGENO" Nullable="false" />
+    <Property Type="Int64" Name="CASHNO" Nullable="false" />
+    <Property Type="Int32" Name="USERNO" Nullable="false" />
+    <Property Type="String" Name="YMD" Nullable="false" MaxLength="8" />
+    <Property Type="Int32" Name="FREEFLAG" Nullable="false" />
+    <Property Type="String" Name="PRODNAME" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="CONSUMEDATE" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="EXPDATE" Nullable="true" Precision="23" />
+    <Property Type="String" Name="STOPSTARTYMD" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="STOPENDYMD" Nullable="true" MaxLength="8" />
+    <Property Type="Int32" Name="STOPCNT" Nullable="false" />
+    <Property Type="Int32" Name="USEDDAY" Nullable="true" />
+    <Property Type="Decimal" Name="CANCELFEE" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="USEDAMT" Nullable="true" Precision="19" />
+    <Property Type="Int32" Name="EXTRAFEE" Nullable="true" />
+    <Property Type="String" Name="CNLYMD" Nullable="true" MaxLength="8" />
+    <Property Type="Int32" Name="SERVICESTATUS" Nullable="true" />
+    <Property Type="String" Name="PAYTOOLNAME" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="REALCASH" Nullable="false" Precision="19" />
+    <Property Type="Decimal" Name="BONUSCASH" Nullable="false" Precision="19" />
+    <Property Type="Byte" Name="USESTATE" Nullable="false" />
+    <Property Type="String" Name="CASHYMD" Nullable="false" MaxLength="8" />
+    <Property Type="Int32" Name="ITEMORPACKAGE" Nullable="false" />
+    <Property Type="Int32" Name="ITEMPACKPRICEID" Nullable="true" />
+    <Property Type="String" Name="SERVICEYMD" Nullable="false" MaxLength="8" />
+    <Property Type="Int32" Name="CPID" Nullable="true" />
+    <Property Type="String" Name="CASHENDYMD" Nullable="false" MaxLength="8" />
+  </ComplexType>
+  <ComplexType Name="UP_PORTAL_PAYNCHARGE_LST_Result">
+    <Property Type="Int64" Name="BUYIDX" Nullable="false" />
+    <Property Type="String" Name="REGDATE" Nullable="false" />
+    <Property Type="String" Name="BUYTYPE" Nullable="false" />
+    <Property Type="String" Name="BUYNAME" Nullable="false" />
+    <Property Type="Decimal" Name="PRICE" Nullable="true" />
+    <Property Type="Byte" Name="USESTATE" Nullable="true" />
+    <Property Type="String" Name="USESTATEM" Nullable="true" />
+    <Property Type="String" Name="CASHSTATUS" Nullable="false" />
+    <Property Type="String" Name="EYMD" Nullable="false" />
+    <Property Type="String" Name="CASHFLAG" Nullable="true" />
+    <Property Type="Int32" Name="CASHTYPE" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="NUP_TVREPLAY_PAYMENT">
+    <Key>
+      <PropertyRef Name="seq" />
+    </Key>
+    <Property Name="seq" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="usernumber" Type="Int32" Nullable="false" />
+    <Property Name="num" Type="Int32" Nullable="false" />
+    <Property Name="chargeno" Type="Int64" Nullable="false" />
+    <Property Name="paydt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="expiredt" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <ComplexType Name="UP_PORTAL_MYPAGE_PAYNCHARGE_UR_LST_Result">
+    <Property Type="Int64" Name="ROWNUM" Nullable="true" />
+    <Property Type="Int64" Name="BUYIDX" Nullable="false" />
+    <Property Type="String" Name="REGDATE" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="BUYTYPE" Nullable="true" MaxLength="11" />
+    <Property Type="String" Name="BUYNAME" Nullable="false" MaxLength="256" />
+    <Property Type="Decimal" Name="PRICE" Nullable="false" Precision="19" />
+    <Property Type="Byte" Name="USESTATE" Nullable="true" />
+    <Property Type="String" Name="USESTATEM" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="CASHSTATUS" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="EYMD" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="CASHFLAG" Nullable="false" MaxLength="1" />
+    <Property Type="Byte" Name="CASHTYPE" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="TAccountCashMst">
+    <Key>
+      <PropertyRef Name="UserNo" />
+      <PropertyRef Name="GameCode" />
+      <PropertyRef Name="CashAttr" />
+    </Key>
+    <Property Name="UserNo" Type="Int32" Nullable="false" />
+    <Property Name="GameCode" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="CashAttr" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Cash" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="TINCash" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="TOUTCash" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="RegDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TCashMst">
+    <Key>
+      <PropertyRef Name="CashNo" />
+    </Key>
+    <Property Name="CashNo" Type="Int64" Nullable="false" />
+    <Property Name="UserNo" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GameCode" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="CashAttr" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="CashType" Type="Byte" Nullable="false" />
+    <Property Name="Flags" Type="Byte" Nullable="false" />
+    <Property Name="OrgCashAmt" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="CashAmt" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="RemainCashAmt" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="PayTool" Type="Byte" Nullable="false" />
+    <Property Name="PayToolName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="PGCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MallID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PGVersion" Type="Int16" Nullable="false" />
+    <Property Name="TID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="YMD" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="TYMD" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="CYMD" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="TCYMD" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="EYMD" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="AdminID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="IPAddr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OrgCashNo" Type="Int64" />
+    <Property Name="IssueFlag" Type="Byte" />
+    <Property Name="IssueNo" Type="Int32" />
+    <Property Name="UseState" Type="Byte" Nullable="false" />
+    <Property Name="RegDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <ComplexType Name="UP_PORTAL_USER_ANAL_LST_Result">
+    <Property Type="String" Name="ITEMID" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="ITEMPRICEID" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="ITEMNAME" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="ANALID" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <EntityType Name="TItemHoldMst">
+    <Key>
+      <PropertyRef Name="ChargeNo" />
+    </Key>
+    <Property Name="SeqNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserNo" Type="Int32" Nullable="false" />
+    <Property Name="ChargeNo" Type="Int64" Nullable="false" />
+    <Property Name="ItemOrPackage" Type="Byte" />
+    <Property Name="ItemPackID" Type="Int32" Nullable="false" />
+    <Property Name="ItemPackPriceID" Type="Int32" />
+    <Property Name="MaxAccessCnt" Type="Int32" Nullable="false" />
+    <Property Name="AccessedCnt" Type="Int32" Nullable="false" />
+    <Property Name="ConsumeDate" Type="DateTime" Precision="3" />
+    <Property Name="ExpDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="StopStartYMD" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="StopEndYMD" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="ChangedCnt" Type="Byte" Nullable="false" />
+    <Property Name="RenewFlag" Type="Byte" Nullable="false" />
+    <Property Name="DelayCnt" Type="Byte" Nullable="false" />
+    <Property Name="UseState" Type="Byte" Nullable="false" />
+    <Property Name="AdminID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="RebuildFlag" Type="Byte" />
+    <Property Name="DelayRegDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdDate" Type="DateTime" Precision="3" />
+    <Property Name="RegDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+</Schema>

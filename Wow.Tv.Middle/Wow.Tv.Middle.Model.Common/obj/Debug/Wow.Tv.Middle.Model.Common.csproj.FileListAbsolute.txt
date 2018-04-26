@@ -1,0 +1,5 @@
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Common\bin\Debug\Wow.Tv.Middle.Model.Common.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Common\bin\Debug\Wow.Tv.Middle.Model.Common.pdb
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Common\obj\Debug\Wow.Tv.Middle.Model.Common.csproj.CoreCompileInputs.cache
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Common\obj\Debug\Wow.Tv.Middle.Model.Common.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Common\obj\Debug\Wow.Tv.Middle.Model.Common.pdb

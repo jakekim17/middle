@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a9e3be12eb9849c089a417078116950b" Name="Diagram1" ZoomLevel="22" >
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TCouponMst" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TCouponPubMst" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TItemPriceMst" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TEventDtl" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TEventMst" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TChargeCancelRequestDtl" Width="1.5" PointX="7.375" PointY="4.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TChargeCancelRequestMst" Width="1.5" PointX="7.375" PointY="7.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TCPMst" Width="1.5" PointX="9.375" PointY="4.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TItemMst" Width="1.5" PointX="3.375" PointY="10.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.NUP_TVREPLAY_PAYMENT" Width="1.5" PointX="10.375" PointY="0.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TAccountCashMst" Width="1.5" PointX="11.375" PointY="3.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TCashMst" Width="1.5" PointX="11.375" PointY="7.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TItemHoldMst" Width="1.5" PointX="5.375" PointY="12.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

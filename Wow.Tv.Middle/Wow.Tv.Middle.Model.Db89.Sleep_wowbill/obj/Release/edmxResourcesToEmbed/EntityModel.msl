@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WowTvMiddleModelDb89Sleep_wowbillStoreContainer" CdmEntityContainer="Db89_Sleep_wowbill">
+    <EntitySetMapping Name="bak_tblUser">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db89.Sleep_wowbill.bak_tblUser">
+        <MappingFragment StoreEntitySet="bak_tblUser">
+          <ScalarProperty Name="userNumber" ColumnName="userNumber" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="userTypeId" ColumnName="userTypeId" />
+          <ScalarProperty Name="userSectionId" ColumnName="userSectionId" />
+          <ScalarProperty Name="userGradeId" ColumnName="userGradeId" />
+          <ScalarProperty Name="companyDetailId" ColumnName="companyDetailId" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="ssno" ColumnName="ssno" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+          <ScalarProperty Name="wowCashBalance" ColumnName="wowCashBalance" />
+          <ScalarProperty Name="pointToWowCashBalance" ColumnName="pointToWowCashBalance" />
+          <ScalarProperty Name="accumulatePointBalance" ColumnName="accumulatePointBalance" />
+          <ScalarProperty Name="fusiblePointBalance" ColumnName="fusiblePointBalance" />
+          <ScalarProperty Name="passwordConfirmId" ColumnName="passwordConfirmId" />
+          <ScalarProperty Name="passwordConfirmAnswer" ColumnName="passwordConfirmAnswer" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="isSendEmail" ColumnName="isSendEmail" />
+          <ScalarProperty Name="longTermUncollectedCount" ColumnName="longTermUncollectedCount" />
+          <ScalarProperty Name="isSendSMS" ColumnName="isSendSMS" />
+          <ScalarProperty Name="isEmailOk" ColumnName="isEmailOk" />
+          <ScalarProperty Name="option1" ColumnName="option1" />
+          <ScalarProperty Name="option2" ColumnName="option2" />
+          <ScalarProperty Name="registDt" ColumnName="registDt" />
+          <ScalarProperty Name="adminId" ColumnName="adminId" />
+          <ScalarProperty Name="apply" ColumnName="apply" />
+          <ScalarProperty Name="club" ColumnName="club" />
+          <ScalarProperty Name="NickName" ColumnName="NickName" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

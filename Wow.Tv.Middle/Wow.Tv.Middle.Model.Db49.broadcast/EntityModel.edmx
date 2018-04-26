@@ -1,0 +1,1227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="broadcastModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--생성 중 오류 발생:
+경고 6002: 테이블/뷰 'broadcast.dbo.BestStockPro'에 기본 키가 정의되지 않았습니다. 키가 유추되었고 읽기 전용 테이블/뷰로 정의되었습니다.-->
+        <EntityType Name="BestStockPro">
+          <Key>
+            <PropertyRef Name="proRank" />
+            <PropertyRef Name="nickname" />
+            <PropertyRef Name="stockName" />
+            <PropertyRef Name="sellDate" />
+            <PropertyRef Name="sellPrice" />
+            <PropertyRef Name="earningRate" />
+            <PropertyRef Name="regdate" />
+          </Key>
+          <Property Name="proRank" Type="int" Nullable="false" />
+          <Property Name="nickname" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="stockName" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="sellDate" Type="smalldatetime" Nullable="false" />
+          <Property Name="sellPrice" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="earningRate" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="regdate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="export_personal_menu">
+          <Key>
+            <PropertyRef Name="idx" />
+          </Key>
+          <Property Name="idx" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="proID" Type="varchar" MaxLength="10" />
+          <Property Name="export_id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="export_nic" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="export_pro" Type="text" />
+          <Property Name="AddMenuCount" Type="smallint" Nullable="false" />
+          <Property Name="regdate" Type="datetime" Nullable="false" />
+          <Property Name="modydate" Type="datetime" Nullable="false" />
+          <Property Name="modyid" Type="varbinary" MaxLength="50" />
+          <Property Name="export_intro" Type="text" />
+        </EntityType>
+        <EntityType Name="EXPORT_PRODUCT">
+          <Key>
+            <PropertyRef Name="PKID" />
+          </Key>
+          <Property Name="PKID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EPKID" Type="int" Nullable="false" />
+          <Property Name="MODE" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="SDATE" Type="varchar" MaxLength="10" />
+          <Property Name="EDATE" Type="varchar" MaxLength="10" />
+          <Property Name="ITEMID" Type="int" Nullable="false" />
+          <Property Name="ADDDATE" Type="datetime" Nullable="false" />
+          <Property Name="MODDATE" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NTB_PROGRAM_CAST">
+          <Key>
+            <PropertyRef Name="PROGRAM_CAST_SEQ" />
+          </Key>
+          <Property Name="PROGRAM_CAST_SEQ" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="pay_no" Type="int" />
+          <Property Name="PRG_CD" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="CAST_TYPE" Type="varchar" MaxLength="10" />
+          <Property Name="PUBLISH_YN" Type="char" MaxLength="1" />
+          <Property Name="MONDAY_YN" Type="char" MaxLength="1" />
+          <Property Name="TUESDAY_YN" Type="char" MaxLength="1" />
+          <Property Name="WEDNESDAY_YN" Type="char" MaxLength="1" />
+          <Property Name="THURSDAY_YN" Type="char" MaxLength="1" />
+          <Property Name="FRIDAY_YN" Type="char" MaxLength="1" />
+          <Property Name="STURDAY_YN" Type="char" MaxLength="1" />
+          <Property Name="SUNDAY_YN" Type="char" MaxLength="1" />
+          <Property Name="REMARK" Type="ntext" />
+          <Property Name="CAST_NAME" Type="nvarchar" MaxLength="30" />
+          <Property Name="REG_ID" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="REG_NAME" Type="varchar" MaxLength="30" />
+          <Property Name="REG_DATE" Type="datetime" Nullable="false" />
+          <Property Name="MOD_ID" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="MOD_DATE" Type="datetime" Nullable="false" />
+          <Property Name="DEL_YN" Type="char" MaxLength="1" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PRO_SETOPTION">
+          <Key>
+            <PropertyRef Name="seq" />
+            <PropertyRef Name="SetOption" />
+          </Key>
+          <Property Name="seq" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SetOption" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Pro_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Pay_No" Type="int" />
+          <Property Name="RegDate" Type="datetime" />
+          <Property Name="UseFlag" Type="char" MaxLength="1" />
+        </EntityType>
+        <!--생성 중 오류 발생:
+경고 6002: 테이블/뷰 'broadcast.dbo.Pro_wow_junmunga_broadcast'에 기본 키가 정의되지 않았습니다. 키가 유추되었고 읽기 전용 테이블/뷰로 정의되었습니다.-->
+        <EntityType Name="Pro_wow_junmunga_broadcast">
+          <Key>
+            <PropertyRef Name="bRoom" />
+            <PropertyRef Name="nickName" />
+            <PropertyRef Name="bTitle" />
+            <PropertyRef Name="bContents" />
+            <PropertyRef Name="bMemType" />
+            <PropertyRef Name="brStartTime" />
+            <PropertyRef Name="brEndTime" />
+            <PropertyRef Name="brUserCount" />
+            <PropertyRef Name="Pro_id" />
+            <PropertyRef Name="Num" />
+            <PropertyRef Name="RegDate" />
+          </Key>
+          <Property Name="bRoom" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="nickName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="bTitle" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="bContents" Type="varchar" MaxLength="300" Nullable="false" />
+          <Property Name="bIntroduce" Type="varchar" MaxLength="600" />
+          <Property Name="bMemType" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="bCost" Type="int" />
+          <Property Name="brStartTime" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="brEndTime" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="brUserCount" Type="int" Nullable="false" />
+          <Property Name="bVodCost" Type="int" />
+          <Property Name="Pro_id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Num" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CurCount" Type="int" />
+          <Property Name="MaxCount" Type="int" />
+          <Property Name="RegDate" Type="datetime" Nullable="false" />
+          <Property Name="state" Type="int" />
+          <Property Name="ClickNum" Type="int" />
+          <Property Name="flag" Type="int" />
+          <Property Name="btype" Type="varchar" MaxLength="2" />
+          <Property Name="OnAirTime" Type="datetime" />
+          <Property Name="MaxPeakTime" Type="datetime" />
+          <Property Name="bMemTypeCafe" Type="varchar" MaxLength="5" />
+          <Property Name="bPlayType" Type="varchar" MaxLength="4" />
+        </EntityType>
+        <EntityType Name="Pro_wowList">
+          <Key>
+            <PropertyRef Name="Pay_no" />
+          </Key>
+          <Property Name="Pay_no" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Pro_id" Type="varchar" MaxLength="10" />
+          <Property Name="Pro_Type" Type="smallint" />
+          <Property Name="overseaType" Type="smallint" />
+          <Property Name="Ars_Number" Type="char" MaxLength="10" />
+          <Property Name="FullName" Type="varchar" MaxLength="50" />
+          <Property Name="NickName" Type="varchar" MaxLength="50" />
+          <Property Name="Profile" Type="text" Nullable="false" />
+          <Property Name="Photo_Small" Type="varchar" MaxLength="100" />
+          <Property Name="Photo_Big" Type="varchar" MaxLength="100" />
+          <Property Name="bank" Type="varchar" MaxLength="20" />
+          <Property Name="BankAccount" Type="varchar" MaxLength="30" />
+          <Property Name="InvestKind" Type="char" MaxLength="6" />
+          <Property Name="Qulification" Type="text" />
+          <Property Name="BookWriter" Type="text" />
+          <Property Name="Normal_Phone" Type="varchar" MaxLength="20" />
+          <Property Name="Cell_Phone" Type="varchar" MaxLength="20" />
+          <Property Name="Wowtv_id" Type="char" MaxLength="15" />
+          <Property Name="Email" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="ProductID" Type="char" MaxLength="16" />
+          <Property Name="ProductID6" Type="char" MaxLength="16" />
+          <Property Name="aIntro" Type="text" />
+          <Property Name="Invest" Type="text" Nullable="false" />
+          <Property Name="State" Type="char" MaxLength="1" />
+          <Property Name="ProARS_new" Type="char" MaxLength="1" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="top10" Type="int" />
+          <Property Name="Specialist_gubun" Type="varchar" MaxLength="17" Nullable="false" />
+          <Property Name="Zip_Code" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="Address" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="ProBest" Type="int" />
+          <Property Name="ProReCommand" Type="int" />
+          <Property Name="jumin_number" Type="varchar" MaxLength="24" />
+          <Property Name="stockCode" Type="varchar" MaxLength="70" />
+          <Property Name="stockName" Type="varchar" MaxLength="200" />
+          <Property Name="Pro_future" Type="varchar" MaxLength="10" />
+          <Property Name="Pro_estock" Type="varchar" MaxLength="4" />
+          <Property Name="Ars_Danal" Type="char" MaxLength="10" />
+          <Property Name="Debate_MainPro" Type="char" MaxLength="1" />
+          <Property Name="Ars_Bnb" Type="char" MaxLength="10" />
+          <Property Name="Best_Bnb" Type="int" />
+          <Property Name="ProBest_future" Type="int" />
+          <Property Name="MemberShip" Type="text" />
+          <Property Name="Price01" Type="int" />
+          <Property Name="Price03" Type="int" />
+          <Property Name="joins" Type="int" />
+          <Property Name="oath" Type="varchar" MaxLength="50" />
+          <Property Name="CRegist" Type="char" MaxLength="1" />
+          <Property Name="CTop" Type="char" MaxLength="1" />
+          <Property Name="CEnable" Type="char" MaxLength="1" />
+          <Property Name="COrder" Type="int" />
+          <Property Name="kookgoTop" Type="char" MaxLength="1" />
+          <Property Name="GradePro" Type="int" />
+          <Property Name="ProGubun" Type="varchar" MaxLength="10" />
+          <Property Name="ProductIDVIP" Type="varchar" MaxLength="18" />
+          <Property Name="Photo_Service" Type="varchar" MaxLength="100" />
+          <Property Name="Intro_Profile" Type="varchar" MaxLength="100" />
+          <Property Name="Product_ID_1" Type="varchar" MaxLength="20" />
+          <Property Name="Product_ID_3" Type="varchar" MaxLength="20" />
+          <Property Name="Product_ID_6" Type="varchar" MaxLength="20" />
+          <Property Name="Product_ID_12" Type="varchar" MaxLength="20" />
+          <Property Name="Product_ID_VIP" Type="varchar" MaxLength="20" />
+          <Property Name="ProItem_ID" Type="int" />
+          <Property Name="Pro_wowmsn" Type="char" MaxLength="1" />
+          <Property Name="Pro_mode" Type="char" MaxLength="1" />
+          <Property Name="Photo_Consult" Type="varchar" MaxLength="100" />
+          <Property Name="recommandYN" Type="char" MaxLength="1" />
+          <Property Name="recommand_url" Type="varchar" MaxLength="250" />
+          <Property Name="sort" Type="int" />
+          <Property Name="Photo_Expert" Type="varchar" MaxLength="100" />
+          <Property Name="MainValue" Type="varchar" MaxLength="10" />
+          <Property Name="NEWphoto_small" Type="varchar" MaxLength="100" />
+          <Property Name="NEWphoto_small2" Type="varchar" MaxLength="100" />
+          <Property Name="NEWphoto_big" Type="varchar" MaxLength="100" />
+          <Property Name="NEWphoto_service" Type="varchar" MaxLength="100" />
+          <Property Name="NEWPhoto_Recommend" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <!--생성 중 오류 발생:
+경고 6002: 테이블/뷰 'broadcast.dbo.Pro_wowListStockKing'에 기본 키가 정의되지 않았습니다. 키가 유추되었고 읽기 전용 테이블/뷰로 정의되었습니다.-->
+        <EntityType Name="Pro_wowListStockKing">
+          <Key>
+            <PropertyRef Name="Rank" />
+          </Key>
+          <Property Name="Rank" Type="smallint" Nullable="false" />
+          <Property Name="Pro_id" Type="varchar" MaxLength="10" />
+          <Property Name="Rate" Type="varchar" MaxLength="10" />
+          <Property Name="Regdate" Type="smalldatetime" />
+        </EntityType>
+        <!--생성 중 오류 발생:
+경고 6002: 테이블/뷰 'broadcast.dbo.Pro_wowWellList'에 기본 키가 정의되지 않았습니다. 키가 유추되었고 읽기 전용 테이블/뷰로 정의되었습니다.-->
+        <EntityType Name="Pro_wowWellList">
+          <Key>
+            <PropertyRef Name="seq" />
+          </Key>
+          <Property Name="seq" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Gubun" Type="varchar" MaxLength="50" />
+          <Property Name="Pro_id" Type="varchar" MaxLength="10" />
+          <Property Name="Description" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <Association Name="R_14">
+          <End Role="Pro_wowList" Type="Self.Pro_wowList" Multiplicity="0..1" />
+          <End Role="NTB_PROGRAM_CAST" Type="Self.NTB_PROGRAM_CAST" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pro_wowList">
+              <PropertyRef Name="Pay_no" />
+            </Principal>
+            <Dependent Role="NTB_PROGRAM_CAST">
+              <PropertyRef Name="pay_no" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="USP_GetBroadcast1ByProId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="proId" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="USP_GetBroadcast1ByWellList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="gubun" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="usp_getInvestmentPartners" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="proNickname1" Type="varchar" Mode="In" />
+          <Parameter Name="proNickname2" Type="varchar" Mode="In" />
+          <Parameter Name="proNickname3" Type="varchar" Mode="In" />
+          <Parameter Name="proNickname4" Type="varchar" Mode="In" />
+          <Parameter Name="proNickname5" Type="varchar" Mode="In" />
+          <Parameter Name="proNickname6" Type="varchar" Mode="In" />
+          <Parameter Name="proNickname7" Type="varchar" Mode="In" />
+          <Parameter Name="proNickname8" Type="varchar" Mode="In" />
+          <Parameter Name="proNickname9" Type="varchar" Mode="In" />
+          <Parameter Name="proNickname10" Type="varchar" Mode="In" />
+          <Parameter Name="proNickname11" Type="varchar" Mode="In" />
+          <Parameter Name="proNickname12" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="usp_GetlivePro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="memType" Type="char" Mode="In" />
+          <Parameter Name="rowCount" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_GetRecommendPro3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_web_getBestProHintStocking" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_web_getWorldProHintPartner" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="broadcastModelStoreContainer">
+          <EntitySet Name="export_personal_menu" EntityType="Self.export_personal_menu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EXPORT_PRODUCT" EntityType="Self.EXPORT_PRODUCT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NTB_PROGRAM_CAST" EntityType="Self.NTB_PROGRAM_CAST" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PRO_SETOPTION" EntityType="Self.PRO_SETOPTION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pro_wowList" EntityType="Self.Pro_wowList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BestStockPro" EntityType="Self.BestStockPro" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [BestStockPro].[proRank] AS [proRank], 
+    [BestStockPro].[nickname] AS [nickname], 
+    [BestStockPro].[stockName] AS [stockName], 
+    [BestStockPro].[sellDate] AS [sellDate], 
+    [BestStockPro].[sellPrice] AS [sellPrice], 
+    [BestStockPro].[earningRate] AS [earningRate], 
+    [BestStockPro].[regdate] AS [regdate]
+    FROM [dbo].[BestStockPro] AS [BestStockPro]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Pro_wow_junmunga_broadcast" EntityType="Self.Pro_wow_junmunga_broadcast" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Pro_wow_junmunga_broadcast].[bRoom] AS [bRoom], 
+    [Pro_wow_junmunga_broadcast].[nickName] AS [nickName], 
+    [Pro_wow_junmunga_broadcast].[bTitle] AS [bTitle], 
+    [Pro_wow_junmunga_broadcast].[bContents] AS [bContents], 
+    [Pro_wow_junmunga_broadcast].[bIntroduce] AS [bIntroduce], 
+    [Pro_wow_junmunga_broadcast].[bMemType] AS [bMemType], 
+    [Pro_wow_junmunga_broadcast].[bCost] AS [bCost], 
+    [Pro_wow_junmunga_broadcast].[brStartTime] AS [brStartTime], 
+    [Pro_wow_junmunga_broadcast].[brEndTime] AS [brEndTime], 
+    [Pro_wow_junmunga_broadcast].[brUserCount] AS [brUserCount], 
+    [Pro_wow_junmunga_broadcast].[bVodCost] AS [bVodCost], 
+    [Pro_wow_junmunga_broadcast].[Pro_id] AS [Pro_id], 
+    [Pro_wow_junmunga_broadcast].[Num] AS [Num], 
+    [Pro_wow_junmunga_broadcast].[CurCount] AS [CurCount], 
+    [Pro_wow_junmunga_broadcast].[MaxCount] AS [MaxCount], 
+    [Pro_wow_junmunga_broadcast].[RegDate] AS [RegDate], 
+    [Pro_wow_junmunga_broadcast].[state] AS [state], 
+    [Pro_wow_junmunga_broadcast].[ClickNum] AS [ClickNum], 
+    [Pro_wow_junmunga_broadcast].[flag] AS [flag], 
+    [Pro_wow_junmunga_broadcast].[btype] AS [btype], 
+    [Pro_wow_junmunga_broadcast].[OnAirTime] AS [OnAirTime], 
+    [Pro_wow_junmunga_broadcast].[MaxPeakTime] AS [MaxPeakTime], 
+    [Pro_wow_junmunga_broadcast].[bMemTypeCafe] AS [bMemTypeCafe], 
+    [Pro_wow_junmunga_broadcast].[bPlayType] AS [bPlayType]
+    FROM [dbo].[Pro_wow_junmunga_broadcast] AS [Pro_wow_junmunga_broadcast]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Pro_wowListStockKing" EntityType="Self.Pro_wowListStockKing" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Pro_wowListStockKing].[Rank] AS [Rank], 
+    [Pro_wowListStockKing].[Pro_id] AS [Pro_id], 
+    [Pro_wowListStockKing].[Rate] AS [Rate], 
+    [Pro_wowListStockKing].[Regdate] AS [Regdate]
+    FROM [dbo].[Pro_wowListStockKing] AS [Pro_wowListStockKing]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Pro_wowWellList" EntityType="Self.Pro_wowWellList" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Pro_wowWellList].[seq] AS [seq], 
+    [Pro_wowWellList].[Gubun] AS [Gubun], 
+    [Pro_wowWellList].[Pro_id] AS [Pro_id], 
+    [Pro_wowWellList].[Description] AS [Description]
+    FROM [dbo].[Pro_wowWellList] AS [Pro_wowWellList]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="R_14" Association="Self.R_14">
+            <End Role="Pro_wowList" EntitySet="Pro_wowList" />
+            <End Role="NTB_PROGRAM_CAST" EntitySet="NTB_PROGRAM_CAST" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="broadcastModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Db49_broadcast" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="NTB_PROGRAM_CAST" EntityType="broadcastModel.NTB_PROGRAM_CAST" />
+          <EntitySet Name="Pro_wowList" EntityType="broadcastModel.Pro_wowList" />
+          <AssociationSet Name="R_14" Association="broadcastModel.R_14">
+            <End Role="Pro_wowList" EntitySet="Pro_wowList" />
+            <End Role="NTB_PROGRAM_CAST" EntitySet="NTB_PROGRAM_CAST" />
+          </AssociationSet>
+          <FunctionImport Name="USP_GetBroadcast1ByProId" ReturnType="Collection(broadcastModel.USP_GetBroadcast1ByProId_Result)">
+          <Parameter Name="proId" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="USP_GetRecommendPro3" ReturnType="Collection(broadcastModel.USP_GetRecommendPro3_Result)" />
+          <EntitySet Name="Pro_wowWellList" EntityType="broadcastModel.Pro_wowWellList" />
+          <FunctionImport Name="USP_GetBroadcast1ByWellList" ReturnType="Collection(broadcastModel.USP_GetBroadcast1ByWellList_Result)">
+          <Parameter Name="gubun" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="Pro_wowListStockKing" EntityType="broadcastModel.Pro_wowListStockKing" />
+          <EntitySet Name="PRO_SETOPTION" EntityType="broadcastModel.PRO_SETOPTION" />
+          <EntitySet Name="Pro_wow_junmunga_broadcast" EntityType="broadcastModel.Pro_wow_junmunga_broadcast" />
+          <FunctionImport Name="usp_getInvestmentPartners" ReturnType="Collection(broadcastModel.usp_getInvestmentPartners_Result)">
+            <Parameter Name="proNickname1" Mode="In" Type="String" />
+            <Parameter Name="proNickname2" Mode="In" Type="String" />
+            <Parameter Name="proNickname3" Mode="In" Type="String" />
+            <Parameter Name="proNickname4" Mode="In" Type="String" />
+            <Parameter Name="proNickname5" Mode="In" Type="String" />
+            <Parameter Name="proNickname6" Mode="In" Type="String" />
+            <Parameter Name="proNickname7" Mode="In" Type="String" />
+            <Parameter Name="proNickname8" Mode="In" Type="String" />
+            <Parameter Name="proNickname9" Mode="In" Type="String" />
+            <Parameter Name="proNickname10" Mode="In" Type="String" />
+            <Parameter Name="proNickname11" Mode="In" Type="String" />
+            <Parameter Name="proNickname12" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="BestStockPro" EntityType="broadcastModel.BestStockPro" />
+          <EntitySet Name="export_personal_menu" EntityType="broadcastModel.export_personal_menu" />
+          <EntitySet Name="EXPORT_PRODUCT" EntityType="broadcastModel.EXPORT_PRODUCT" />
+          <FunctionImport Name="usp_web_getBestProHintStocking" ReturnType="Collection(broadcastModel.usp_web_getBestProHintStocking_Result)" />
+          <FunctionImport Name="usp_web_getWorldProHintPartner" ReturnType="Collection(broadcastModel.usp_web_getWorldProHintPartner_Result)" />
+          <FunctionImport Name="usp_GetlivePro" ReturnType="Collection(broadcastModel.usp_GetlivePro_Result)">
+            <Parameter Name="memType" Mode="In" Type="String" />
+            <Parameter Name="rowCount" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="NTB_PROGRAM_CAST">
+          <Key>
+            <PropertyRef Name="PROGRAM_CAST_SEQ" />
+          </Key>
+          <Property Name="PROGRAM_CAST_SEQ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pay_no" Type="Int32" />
+          <Property Name="CAST_TYPE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PUBLISH_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PRG_CD" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="REG_ID" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="REG_DATE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="MOD_ID" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="MOD_DATE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DEL_YN" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Pro_wowList" Relationship="broadcastModel.R_14" FromRole="NTB_PROGRAM_CAST" ToRole="Pro_wowList" />
+          <Property Name="MONDAY_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="TUESDAY_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="WEDNESDAY_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="THURSDAY_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="FRIDAY_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="STURDAY_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="SUNDAY_YN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="REMARK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CAST_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="REG_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Pro_wowList">
+          <Key>
+            <PropertyRef Name="Pay_no" />
+          </Key>
+          <Property Name="Pay_no" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Pro_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Pro_Type" Type="Int16" />
+          <Property Name="overseaType" Type="Int16" />
+          <Property Name="Ars_Number" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NickName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Profile" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Photo_Small" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Photo_Big" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="bank" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="BankAccount" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="InvestKind" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="Qulification" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="BookWriter" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Normal_Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Cell_Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Wowtv_id" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="ProductID" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="ProductID6" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="aIntro" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Invest" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="State" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="ProARS_new" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+          <Property Name="top10" Type="Int32" />
+          <Property Name="Specialist_gubun" Type="String" Nullable="false" MaxLength="17" FixedLength="false" Unicode="false" />
+          <Property Name="Zip_Code" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ProBest" Type="Int32" />
+          <Property Name="ProReCommand" Type="Int32" />
+          <Property Name="jumin_number" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+          <Property Name="stockCode" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="stockName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Pro_future" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Pro_estock" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Ars_Danal" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Debate_MainPro" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Ars_Bnb" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Best_Bnb" Type="Int32" />
+          <Property Name="ProBest_future" Type="Int32" />
+          <Property Name="MemberShip" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Price01" Type="Int32" />
+          <Property Name="Price03" Type="Int32" />
+          <Property Name="joins" Type="Int32" />
+          <Property Name="oath" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CRegist" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CTop" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CEnable" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="COrder" Type="Int32" />
+          <Property Name="kookgoTop" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="GradePro" Type="Int32" />
+          <Property Name="ProGubun" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ProductIDVIP" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+          <Property Name="Photo_Service" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Intro_Profile" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Product_ID_1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Product_ID_3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Product_ID_6" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Product_ID_12" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Product_ID_VIP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ProItem_ID" Type="Int32" />
+          <Property Name="Pro_wowmsn" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Pro_mode" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Photo_Consult" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="recommandYN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="recommand_url" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="sort" Type="Int32" />
+          <Property Name="Photo_Expert" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MainValue" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="NEWphoto_small" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NEWphoto_small2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NEWphoto_big" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NEWphoto_service" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NEWPhoto_Recommend" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="NTB_PROGRAM_CAST" Relationship="broadcastModel.R_14" FromRole="Pro_wowList" ToRole="NTB_PROGRAM_CAST" />
+        </EntityType>
+        <Association Name="R_14">
+          <End Type="broadcastModel.Pro_wowList" Role="Pro_wowList" Multiplicity="0..1" />
+          <End Type="broadcastModel.NTB_PROGRAM_CAST" Role="NTB_PROGRAM_CAST" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pro_wowList">
+              <PropertyRef Name="Pay_no" />
+            </Principal>
+            <Dependent Role="NTB_PROGRAM_CAST">
+              <PropertyRef Name="pay_no" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="USP_GetBroadcast1ByProId_Result">
+          <Property Type="String" Name="PRO_ID" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="NICKNAME" Nullable="true" MaxLength="50" />
+          <Property Type="Int16" Name="Pro_Type" Nullable="true" />
+          <Property Type="Int16" Name="overseaType" Nullable="true" />
+          <Property Type="String" Name="PHOTO_SMALL" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="BTITLE" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="BCONTENTS" Nullable="true" MaxLength="300" />
+          <Property Type="String" Name="BRSTARTTIME" Nullable="true" MaxLength="14" />
+          <Property Type="String" Name="BRENDTIME" Nullable="true" MaxLength="14" />
+          <Property Type="Int32" Name="BCOST" Nullable="true" />
+          <Property Type="Int32" Name="STATE" Nullable="true" />
+          <Property Type="String" Name="BMEMTYPE" Nullable="true" MaxLength="5" />
+          <Property Type="String" Name="BROOM" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="CLICKNUM" Nullable="true" />
+          <Property Type="Int32" Name="CURCOUNT" Nullable="true" />
+          <Property Type="DateTime" Name="ONAIRTIME" Nullable="true" Precision="23" />
+          <Property Type="String" Name="BPLAYTYPE" Nullable="true" MaxLength="4" />
+          <Property Type="Int32" Name="PROBEST" Nullable="true" />
+          <Property Type="String" Name="INVESTKIND" Nullable="true" MaxLength="6" />
+          <Property Type="String" Name="PHOTO_BIG" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="PHOTO_SERVICE" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="PRODUCT_ID_1" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="NEWPHOTO_BIG" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="NEWPHOTO_SMALL" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="NEWPHOTO_SMALL2" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="NEWphoto_service" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Intro_Profile" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="btype" Nullable="true" MaxLength="2" />
+          <Property Type="String" Name="Photo_Consult" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="USP_GetRecommendPro3_Result">
+          <Property Type="String" Name="ProOrder" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="PRO_ID" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="NICKNAME" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="BTITLE" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="BCONTENTS" Nullable="true" MaxLength="300" />
+          <Property Type="String" Name="BINTRODUCE" Nullable="true" MaxLength="600" />
+          <Property Type="String" Name="BRSTARTTIME" Nullable="true" MaxLength="14" />
+          <Property Type="String" Name="BRENDTIME" Nullable="true" MaxLength="14" />
+          <Property Type="Int32" Name="BCOST" Nullable="true" />
+          <Property Type="Int32" Name="STATE" Nullable="true" />
+          <Property Type="String" Name="BMEMTYPE" Nullable="true" MaxLength="5" />
+          <Property Type="String" Name="BROOM" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="BPLAYTYPE" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="PRODUCTID" Nullable="true" MaxLength="16" />
+          <Property Type="Int32" Name="CLICKNUM" Nullable="true" />
+          <Property Type="Int32" Name="CURCOUNT" Nullable="true" />
+          <Property Type="String" Name="INVESTKIND" Nullable="true" MaxLength="6" />
+          <Property Type="DateTime" Name="ONAIRTIME" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="PROBEST" Nullable="true" />
+          <Property Type="String" Name="PRODUCT_ID_1" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="PAY_NO" Nullable="true" />
+          <Property Type="String" Name="WOWTV_ID" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="PHOTO_SMALL" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="NewPhoto_Recommend" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Intro_Profile" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="PHOTO_BIG" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="PHOTO_SERVICE" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="PHOTO_EXPERT" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="NEWPHOTO_SMALL" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="NEWPHOTO_BIG" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="NEWPHOTO_SMALL2" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="NEWphoto_service" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <EntityType Name="Pro_wowWellList">
+          <Key>
+            <PropertyRef Name="seq" />
+          </Key>
+          <Property Name="seq" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Gubun" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Pro_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <ComplexType Name="USP_GetBroadcast1ByWellList_Result">
+          <Property Type="String" Name="Pro_ID" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="NICKNAME" Nullable="true" MaxLength="50" />
+          <Property Type="Int16" Name="Pro_Type" Nullable="true" />
+          <Property Type="Int16" Name="overseaType" Nullable="true" />
+          <Property Type="String" Name="PHOTO_SMALL" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="BTITLE" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="BCONTENTS" Nullable="true" MaxLength="300" />
+          <Property Type="String" Name="BINTRODUCE" Nullable="true" MaxLength="600" />
+          <Property Type="String" Name="BRSTARTTIME" Nullable="true" MaxLength="14" />
+          <Property Type="String" Name="BRENDTIME" Nullable="true" MaxLength="14" />
+          <Property Type="Int32" Name="BCOST" Nullable="true" />
+          <Property Type="Int32" Name="STATE" Nullable="true" />
+          <Property Type="String" Name="BMEMTYPE" Nullable="true" MaxLength="5" />
+          <Property Type="String" Name="BROOM" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="CLICKNUM" Nullable="true" />
+          <Property Type="Int32" Name="CURCOUNT" Nullable="true" />
+          <Property Type="DateTime" Name="ONAIRTIME" Nullable="true" Precision="23" />
+          <Property Type="String" Name="BPLAYTYPE" Nullable="true" MaxLength="4" />
+          <Property Type="Int32" Name="PROBEST" Nullable="true" />
+          <Property Type="String" Name="INVESTKIND" Nullable="true" MaxLength="6" />
+          <Property Type="String" Name="PHOTO_BIG" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="PHOTO_SERVICE" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="PRODUCT_ID_1" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="NEWPHOTO_BIG" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="NEWPHOTO_SMALL" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="NEWPHOTO_SMALL2" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="NEWphoto_service" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="NewPhoto_Recommend" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Intro_Profile" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <EntityType Name="Pro_wowListStockKing">
+          <Key>
+            <PropertyRef Name="Rank" />
+          </Key>
+          <Property Name="Rank" Type="Int16" Nullable="false" />
+          <Property Name="Pro_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Rate" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Regdate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="PRO_SETOPTION">
+          <Key>
+            <PropertyRef Name="seq" />
+            <PropertyRef Name="SetOption" />
+          </Key>
+          <Property Name="seq" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SetOption" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Pro_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Pay_No" Type="Int32" />
+          <Property Name="RegDate" Type="DateTime" Precision="3" />
+          <Property Name="UseFlag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Pro_wow_junmunga_broadcast">
+          <Key>
+            <PropertyRef Name="bRoom" />
+            <PropertyRef Name="nickName" />
+            <PropertyRef Name="bTitle" />
+            <PropertyRef Name="bContents" />
+            <PropertyRef Name="bMemType" />
+            <PropertyRef Name="brStartTime" />
+            <PropertyRef Name="brEndTime" />
+            <PropertyRef Name="brUserCount" />
+            <PropertyRef Name="Pro_id" />
+            <PropertyRef Name="Num" />
+            <PropertyRef Name="RegDate" />
+          </Key>
+          <Property Name="bRoom" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="nickName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="bTitle" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="bContents" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="bIntroduce" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+          <Property Name="bMemType" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="bCost" Type="Int32" />
+          <Property Name="brStartTime" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="false" />
+          <Property Name="brEndTime" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="false" />
+          <Property Name="brUserCount" Type="Int32" Nullable="false" />
+          <Property Name="bVodCost" Type="Int32" />
+          <Property Name="Pro_id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Num" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CurCount" Type="Int32" />
+          <Property Name="MaxCount" Type="Int32" />
+          <Property Name="RegDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="state" Type="Int32" />
+          <Property Name="ClickNum" Type="Int32" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="btype" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="OnAirTime" Type="DateTime" Precision="3" />
+          <Property Name="MaxPeakTime" Type="DateTime" Precision="3" />
+          <Property Name="bMemTypeCafe" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="bPlayType" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <ComplexType Name="usp_getInvestmentPartners_Result">
+          <Property Type="String" Name="PRO_ID" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="NICKNAME" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="NEWphoto_small" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="rankOrder" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="BestStockPro">
+          <Key>
+            <PropertyRef Name="proRank" />
+            <PropertyRef Name="nickname" />
+            <PropertyRef Name="stockName" />
+            <PropertyRef Name="sellDate" />
+            <PropertyRef Name="sellPrice" />
+            <PropertyRef Name="earningRate" />
+            <PropertyRef Name="regdate" />
+          </Key>
+          <Property Name="proRank" Type="Int32" Nullable="false" />
+          <Property Name="nickname" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="stockName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="sellDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="sellPrice" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="earningRate" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="regdate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="export_personal_menu">
+          <Key>
+            <PropertyRef Name="idx" />
+          </Key>
+          <Property Name="idx" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="proID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="export_id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="export_nic" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="export_pro" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="AddMenuCount" Type="Int16" Nullable="false" />
+          <Property Name="regdate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="modydate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="modyid" Type="Binary" MaxLength="50" FixedLength="false" />
+          <Property Name="export_intro" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="EXPORT_PRODUCT">
+          <Key>
+            <PropertyRef Name="PKID" />
+          </Key>
+          <Property Name="PKID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EPKID" Type="Int32" Nullable="false" />
+          <Property Name="MODE" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="SDATE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="EDATE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ITEMID" Type="Int32" Nullable="false" />
+          <Property Name="ADDDATE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="MODDATE" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <ComplexType Name="usp_web_getBestProHintStocking_Result">
+          <Property Type="String" Name="Pro_id" Nullable="true" MaxLength="10" />
+          <Property Type="Int16" Name="Pro_Type" Nullable="true" />
+          <Property Type="String" Name="NickName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Profile" Nullable="false" MaxLength="Max" />
+          <Property Type="String" Name="InvestKind" Nullable="true" MaxLength="6" />
+          <Property Type="String" Name="Wowtv_id" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Intro_Profile" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Product_ID_1" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="NEWphoto_small" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="NEWphoto_big" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="NEWphoto_service" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Rate" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="bestEarningRate" Nullable="true" Precision="10" Scale="2" />
+          <Property Type="Int16" Name="avgWeeklyItem" Nullable="true" />
+          <Property Type="String" Name="BaseDate" Nullable="true" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="usp_web_getWorldProHintPartner_Result">
+          <Property Type="String" Name="Pro_id" Nullable="true" MaxLength="10" />
+          <Property Type="Int16" Name="Pro_Type" Nullable="true" />
+          <Property Type="String" Name="NickName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Profile" Nullable="false" MaxLength="Max" />
+          <Property Type="String" Name="InvestKind" Nullable="true" MaxLength="6" />
+          <Property Type="String" Name="Wowtv_id" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Intro_Profile" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Product_ID_1" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="NEWphoto_small" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="NEWphoto_big" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="NEWphoto_service" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Rate" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="bestEarningRate" Nullable="true" Precision="10" Scale="2" />
+          <Property Type="Int16" Name="avgWeeklyItem" Nullable="true" />
+          <Property Type="String" Name="BaseDate" Nullable="true" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="usp_GetlivePro_Result">
+          <Property Type="String" Name="PRO_ID" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="NICKNAME" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="BTITLE" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="BCONTENTS" Nullable="false" MaxLength="300" />
+          <Property Type="String" Name="BINTRODUCE" Nullable="true" MaxLength="600" />
+          <Property Type="String" Name="BRSTARTTIME" Nullable="false" MaxLength="14" />
+          <Property Type="String" Name="BRENDTIME" Nullable="false" MaxLength="14" />
+          <Property Type="Int32" Name="BCOST" Nullable="true" />
+          <Property Type="Int32" Name="STATE" Nullable="true" />
+          <Property Type="String" Name="BPLAYTYPE" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="BMEMTYPE" Nullable="false" MaxLength="5" />
+          <Property Type="String" Name="BROOM" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="PRODUCTID" Nullable="true" MaxLength="16" />
+          <Property Type="String" Name="PHOTO_SMALL" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="CLICKNUM" Nullable="true" />
+          <Property Type="Int32" Name="CURCOUNT" Nullable="true" />
+          <Property Type="String" Name="INVESTKIND" Nullable="true" MaxLength="6" />
+          <Property Type="DateTime" Name="onairtime" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="PROBEST" Nullable="true" />
+          <Property Type="String" Name="PHOTO_BIG" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="PHOTO_SERVICE" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="PRODUCT_ID_1" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="PAY_NO" Nullable="false" />
+          <Property Type="String" Name="Photo_Expert" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Wowtv_id" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="NEWPHOTO_BIG" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="NEWPHOTO_SMALL" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="NewPhoto_Recommend" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="NEWPHOTO_SMALL2" Nullable="true" MaxLength="100" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="broadcastModelStoreContainer" CdmEntityContainer="Db49_broadcast">
+          <EntitySetMapping Name="NTB_PROGRAM_CAST">
+            <EntityTypeMapping TypeName="broadcastModel.NTB_PROGRAM_CAST">
+              <MappingFragment StoreEntitySet="NTB_PROGRAM_CAST">
+                <ScalarProperty Name="REG_NAME" ColumnName="REG_NAME" />
+                <ScalarProperty Name="CAST_NAME" ColumnName="CAST_NAME" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="SUNDAY_YN" ColumnName="SUNDAY_YN" />
+                <ScalarProperty Name="STURDAY_YN" ColumnName="STURDAY_YN" />
+                <ScalarProperty Name="FRIDAY_YN" ColumnName="FRIDAY_YN" />
+                <ScalarProperty Name="THURSDAY_YN" ColumnName="THURSDAY_YN" />
+                <ScalarProperty Name="WEDNESDAY_YN" ColumnName="WEDNESDAY_YN" />
+                <ScalarProperty Name="TUESDAY_YN" ColumnName="TUESDAY_YN" />
+                <ScalarProperty Name="MONDAY_YN" ColumnName="MONDAY_YN" />
+                <ScalarProperty Name="DEL_YN" ColumnName="DEL_YN" />
+                <ScalarProperty Name="MOD_DATE" ColumnName="MOD_DATE" />
+                <ScalarProperty Name="MOD_ID" ColumnName="MOD_ID" />
+                <ScalarProperty Name="REG_DATE" ColumnName="REG_DATE" />
+                <ScalarProperty Name="REG_ID" ColumnName="REG_ID" />
+                <ScalarProperty Name="PRG_CD" ColumnName="PRG_CD" />
+                <ScalarProperty Name="PUBLISH_YN" ColumnName="PUBLISH_YN" />
+                <ScalarProperty Name="CAST_TYPE" ColumnName="CAST_TYPE" />
+                <ScalarProperty Name="pay_no" ColumnName="pay_no" />
+                <ScalarProperty Name="PROGRAM_CAST_SEQ" ColumnName="PROGRAM_CAST_SEQ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pro_wowList">
+            <EntityTypeMapping TypeName="broadcastModel.Pro_wowList">
+              <MappingFragment StoreEntitySet="Pro_wowList">
+                <ScalarProperty Name="NEWPhoto_Recommend" ColumnName="NEWPhoto_Recommend" />
+                <ScalarProperty Name="NEWphoto_service" ColumnName="NEWphoto_service" />
+                <ScalarProperty Name="NEWphoto_big" ColumnName="NEWphoto_big" />
+                <ScalarProperty Name="NEWphoto_small2" ColumnName="NEWphoto_small2" />
+                <ScalarProperty Name="NEWphoto_small" ColumnName="NEWphoto_small" />
+                <ScalarProperty Name="MainValue" ColumnName="MainValue" />
+                <ScalarProperty Name="Photo_Expert" ColumnName="Photo_Expert" />
+                <ScalarProperty Name="sort" ColumnName="sort" />
+                <ScalarProperty Name="recommand_url" ColumnName="recommand_url" />
+                <ScalarProperty Name="recommandYN" ColumnName="recommandYN" />
+                <ScalarProperty Name="Photo_Consult" ColumnName="Photo_Consult" />
+                <ScalarProperty Name="Pro_mode" ColumnName="Pro_mode" />
+                <ScalarProperty Name="Pro_wowmsn" ColumnName="Pro_wowmsn" />
+                <ScalarProperty Name="ProItem_ID" ColumnName="ProItem_ID" />
+                <ScalarProperty Name="Product_ID_VIP" ColumnName="Product_ID_VIP" />
+                <ScalarProperty Name="Product_ID_12" ColumnName="Product_ID_12" />
+                <ScalarProperty Name="Product_ID_6" ColumnName="Product_ID_6" />
+                <ScalarProperty Name="Product_ID_3" ColumnName="Product_ID_3" />
+                <ScalarProperty Name="Product_ID_1" ColumnName="Product_ID_1" />
+                <ScalarProperty Name="Intro_Profile" ColumnName="Intro_Profile" />
+                <ScalarProperty Name="Photo_Service" ColumnName="Photo_Service" />
+                <ScalarProperty Name="ProductIDVIP" ColumnName="ProductIDVIP" />
+                <ScalarProperty Name="ProGubun" ColumnName="ProGubun" />
+                <ScalarProperty Name="GradePro" ColumnName="GradePro" />
+                <ScalarProperty Name="kookgoTop" ColumnName="kookgoTop" />
+                <ScalarProperty Name="COrder" ColumnName="COrder" />
+                <ScalarProperty Name="CEnable" ColumnName="CEnable" />
+                <ScalarProperty Name="CTop" ColumnName="CTop" />
+                <ScalarProperty Name="CRegist" ColumnName="CRegist" />
+                <ScalarProperty Name="oath" ColumnName="oath" />
+                <ScalarProperty Name="joins" ColumnName="joins" />
+                <ScalarProperty Name="Price03" ColumnName="Price03" />
+                <ScalarProperty Name="Price01" ColumnName="Price01" />
+                <ScalarProperty Name="MemberShip" ColumnName="MemberShip" />
+                <ScalarProperty Name="ProBest_future" ColumnName="ProBest_future" />
+                <ScalarProperty Name="Best_Bnb" ColumnName="Best_Bnb" />
+                <ScalarProperty Name="Ars_Bnb" ColumnName="Ars_Bnb" />
+                <ScalarProperty Name="Debate_MainPro" ColumnName="Debate_MainPro" />
+                <ScalarProperty Name="Ars_Danal" ColumnName="Ars_Danal" />
+                <ScalarProperty Name="Pro_estock" ColumnName="Pro_estock" />
+                <ScalarProperty Name="Pro_future" ColumnName="Pro_future" />
+                <ScalarProperty Name="stockName" ColumnName="stockName" />
+                <ScalarProperty Name="stockCode" ColumnName="stockCode" />
+                <ScalarProperty Name="jumin_number" ColumnName="jumin_number" />
+                <ScalarProperty Name="ProReCommand" ColumnName="ProReCommand" />
+                <ScalarProperty Name="ProBest" ColumnName="ProBest" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Zip_Code" ColumnName="Zip_Code" />
+                <ScalarProperty Name="Specialist_gubun" ColumnName="Specialist_gubun" />
+                <ScalarProperty Name="top10" ColumnName="top10" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="ProARS_new" ColumnName="ProARS_new" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Invest" ColumnName="Invest" />
+                <ScalarProperty Name="aIntro" ColumnName="aIntro" />
+                <ScalarProperty Name="ProductID6" ColumnName="ProductID6" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Wowtv_id" ColumnName="Wowtv_id" />
+                <ScalarProperty Name="Cell_Phone" ColumnName="Cell_Phone" />
+                <ScalarProperty Name="Normal_Phone" ColumnName="Normal_Phone" />
+                <ScalarProperty Name="BookWriter" ColumnName="BookWriter" />
+                <ScalarProperty Name="Qulification" ColumnName="Qulification" />
+                <ScalarProperty Name="InvestKind" ColumnName="InvestKind" />
+                <ScalarProperty Name="BankAccount" ColumnName="BankAccount" />
+                <ScalarProperty Name="bank" ColumnName="bank" />
+                <ScalarProperty Name="Photo_Big" ColumnName="Photo_Big" />
+                <ScalarProperty Name="Photo_Small" ColumnName="Photo_Small" />
+                <ScalarProperty Name="Profile" ColumnName="Profile" />
+                <ScalarProperty Name="NickName" ColumnName="NickName" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Ars_Number" ColumnName="Ars_Number" />
+                <ScalarProperty Name="overseaType" ColumnName="overseaType" />
+                <ScalarProperty Name="Pro_Type" ColumnName="Pro_Type" />
+                <ScalarProperty Name="Pro_id" ColumnName="Pro_id" />
+                <ScalarProperty Name="Pay_no" ColumnName="Pay_no" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="USP_GetBroadcast1ByProId" FunctionName="broadcastModel.Store.USP_GetBroadcast1ByProId">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="broadcastModel.USP_GetBroadcast1ByProId_Result">
+                <ScalarProperty Name="PRO_ID" ColumnName="PRO_ID" />
+                <ScalarProperty Name="NICKNAME" ColumnName="NICKNAME" />
+                <ScalarProperty Name="Pro_Type" ColumnName="Pro_Type" />
+                <ScalarProperty Name="overseaType" ColumnName="overseaType" />
+                <ScalarProperty Name="PHOTO_SMALL" ColumnName="PHOTO_SMALL" />
+                <ScalarProperty Name="BTITLE" ColumnName="BTITLE" />
+                <ScalarProperty Name="BCONTENTS" ColumnName="BCONTENTS" />
+                <ScalarProperty Name="BRSTARTTIME" ColumnName="BRSTARTTIME" />
+                <ScalarProperty Name="BRENDTIME" ColumnName="BRENDTIME" />
+                <ScalarProperty Name="BCOST" ColumnName="BCOST" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+                <ScalarProperty Name="BMEMTYPE" ColumnName="BMEMTYPE" />
+                <ScalarProperty Name="BROOM" ColumnName="BROOM" />
+                <ScalarProperty Name="CLICKNUM" ColumnName="CLICKNUM" />
+                <ScalarProperty Name="CURCOUNT" ColumnName="CURCOUNT" />
+                <ScalarProperty Name="ONAIRTIME" ColumnName="ONAIRTIME" />
+                <ScalarProperty Name="BPLAYTYPE" ColumnName="BPLAYTYPE" />
+                <ScalarProperty Name="PROBEST" ColumnName="PROBEST" />
+                <ScalarProperty Name="INVESTKIND" ColumnName="INVESTKIND" />
+                <ScalarProperty Name="PHOTO_BIG" ColumnName="PHOTO_BIG" />
+                <ScalarProperty Name="PHOTO_SERVICE" ColumnName="PHOTO_SERVICE" />
+                <ScalarProperty Name="PRODUCT_ID_1" ColumnName="PRODUCT_ID_1" />
+                <ScalarProperty Name="NEWPHOTO_BIG" ColumnName="NEWPHOTO_BIG" />
+                <ScalarProperty Name="NEWPHOTO_SMALL" ColumnName="NEWPHOTO_SMALL" />
+                <ScalarProperty Name="NEWPHOTO_SMALL2" ColumnName="NEWPHOTO_SMALL2" />
+                <ScalarProperty Name="NEWphoto_service" ColumnName="NEWphoto_service" />
+                <ScalarProperty Name="Intro_Profile" ColumnName="Intro_Profile" />
+                <ScalarProperty Name="btype" ColumnName="btype" />
+                <ScalarProperty Name="Photo_Consult" ColumnName="Photo_Consult" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="USP_GetRecommendPro3" FunctionName="broadcastModel.Store.USP_GetRecommendPro3">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="broadcastModel.USP_GetRecommendPro3_Result">
+                <ScalarProperty Name="ProOrder" ColumnName="ProOrder" />
+                <ScalarProperty Name="PRO_ID" ColumnName="PRO_ID" />
+                <ScalarProperty Name="NICKNAME" ColumnName="NICKNAME" />
+                <ScalarProperty Name="BTITLE" ColumnName="BTITLE" />
+                <ScalarProperty Name="BCONTENTS" ColumnName="BCONTENTS" />
+                <ScalarProperty Name="BINTRODUCE" ColumnName="BINTRODUCE" />
+                <ScalarProperty Name="BRSTARTTIME" ColumnName="BRSTARTTIME" />
+                <ScalarProperty Name="BRENDTIME" ColumnName="BRENDTIME" />
+                <ScalarProperty Name="BCOST" ColumnName="BCOST" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+                <ScalarProperty Name="BMEMTYPE" ColumnName="BMEMTYPE" />
+                <ScalarProperty Name="BROOM" ColumnName="BROOM" />
+                <ScalarProperty Name="BPLAYTYPE" ColumnName="BPLAYTYPE" />
+                <ScalarProperty Name="PRODUCTID" ColumnName="PRODUCTID" />
+                <ScalarProperty Name="CLICKNUM" ColumnName="CLICKNUM" />
+                <ScalarProperty Name="CURCOUNT" ColumnName="CURCOUNT" />
+                <ScalarProperty Name="INVESTKIND" ColumnName="INVESTKIND" />
+                <ScalarProperty Name="ONAIRTIME" ColumnName="ONAIRTIME" />
+                <ScalarProperty Name="PROBEST" ColumnName="PROBEST" />
+                <ScalarProperty Name="PRODUCT_ID_1" ColumnName="PRODUCT_ID_1" />
+                <ScalarProperty Name="PAY_NO" ColumnName="PAY_NO" />
+                <ScalarProperty Name="WOWTV_ID" ColumnName="WOWTV_ID" />
+                <ScalarProperty Name="PHOTO_SMALL" ColumnName="PHOTO_SMALL" />
+                <ScalarProperty Name="NewPhoto_Recommend" ColumnName="NewPhoto_Recommend" />
+                <ScalarProperty Name="Intro_Profile" ColumnName="Intro_Profile" />
+                <ScalarProperty Name="PHOTO_BIG" ColumnName="PHOTO_BIG" />
+                <ScalarProperty Name="PHOTO_SERVICE" ColumnName="PHOTO_SERVICE" />
+                <ScalarProperty Name="PHOTO_EXPERT" ColumnName="PHOTO_EXPERT" />
+                <ScalarProperty Name="NEWPHOTO_SMALL" ColumnName="NEWPHOTO_SMALL" />
+                <ScalarProperty Name="NEWPHOTO_BIG" ColumnName="NEWPHOTO_BIG" />
+                <ScalarProperty Name="NEWPHOTO_SMALL2" ColumnName="NEWPHOTO_SMALL2" />
+                <ScalarProperty Name="NEWphoto_service" ColumnName="NEWphoto_service" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="Pro_wowWellList">
+            <EntityTypeMapping TypeName="broadcastModel.Pro_wowWellList">
+              <MappingFragment StoreEntitySet="Pro_wowWellList">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Pro_id" ColumnName="Pro_id" />
+                <ScalarProperty Name="Gubun" ColumnName="Gubun" />
+                <ScalarProperty Name="seq" ColumnName="seq" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="USP_GetBroadcast1ByWellList" FunctionName="broadcastModel.Store.USP_GetBroadcast1ByWellList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="broadcastModel.USP_GetBroadcast1ByWellList_Result">
+                <ScalarProperty Name="Pro_ID" ColumnName="Pro_ID" />
+                <ScalarProperty Name="NICKNAME" ColumnName="NICKNAME" />
+                <ScalarProperty Name="Pro_Type" ColumnName="Pro_Type" />
+                <ScalarProperty Name="overseaType" ColumnName="overseaType" />
+                <ScalarProperty Name="PHOTO_SMALL" ColumnName="PHOTO_SMALL" />
+                <ScalarProperty Name="BTITLE" ColumnName="BTITLE" />
+                <ScalarProperty Name="BCONTENTS" ColumnName="BCONTENTS" />
+                <ScalarProperty Name="BINTRODUCE" ColumnName="BINTRODUCE" />
+                <ScalarProperty Name="BRSTARTTIME" ColumnName="BRSTARTTIME" />
+                <ScalarProperty Name="BRENDTIME" ColumnName="BRENDTIME" />
+                <ScalarProperty Name="BCOST" ColumnName="BCOST" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+                <ScalarProperty Name="BMEMTYPE" ColumnName="BMEMTYPE" />
+                <ScalarProperty Name="BROOM" ColumnName="BROOM" />
+                <ScalarProperty Name="CLICKNUM" ColumnName="CLICKNUM" />
+                <ScalarProperty Name="CURCOUNT" ColumnName="CURCOUNT" />
+                <ScalarProperty Name="ONAIRTIME" ColumnName="ONAIRTIME" />
+                <ScalarProperty Name="BPLAYTYPE" ColumnName="BPLAYTYPE" />
+                <ScalarProperty Name="PROBEST" ColumnName="PROBEST" />
+                <ScalarProperty Name="INVESTKIND" ColumnName="INVESTKIND" />
+                <ScalarProperty Name="PHOTO_BIG" ColumnName="PHOTO_BIG" />
+                <ScalarProperty Name="PHOTO_SERVICE" ColumnName="PHOTO_SERVICE" />
+                <ScalarProperty Name="PRODUCT_ID_1" ColumnName="PRODUCT_ID_1" />
+                <ScalarProperty Name="NEWPHOTO_BIG" ColumnName="NEWPHOTO_BIG" />
+                <ScalarProperty Name="NEWPHOTO_SMALL" ColumnName="NEWPHOTO_SMALL" />
+                <ScalarProperty Name="NEWPHOTO_SMALL2" ColumnName="NEWPHOTO_SMALL2" />
+                <ScalarProperty Name="NEWphoto_service" ColumnName="NEWphoto_service" />
+                <ScalarProperty Name="NewPhoto_Recommend" ColumnName="NewPhoto_Recommend" />
+                <ScalarProperty Name="Intro_Profile" ColumnName="Intro_Profile" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="Pro_wowListStockKing">
+            <EntityTypeMapping TypeName="broadcastModel.Pro_wowListStockKing">
+              <MappingFragment StoreEntitySet="Pro_wowListStockKing">
+                <ScalarProperty Name="Regdate" ColumnName="Regdate" />
+                <ScalarProperty Name="Rate" ColumnName="Rate" />
+                <ScalarProperty Name="Pro_id" ColumnName="Pro_id" />
+                <ScalarProperty Name="Rank" ColumnName="Rank" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRO_SETOPTION">
+            <EntityTypeMapping TypeName="broadcastModel.PRO_SETOPTION">
+              <MappingFragment StoreEntitySet="PRO_SETOPTION">
+                <ScalarProperty Name="UseFlag" ColumnName="UseFlag" />
+                <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+                <ScalarProperty Name="Pay_No" ColumnName="Pay_No" />
+                <ScalarProperty Name="Pro_ID" ColumnName="Pro_ID" />
+                <ScalarProperty Name="SetOption" ColumnName="SetOption" />
+                <ScalarProperty Name="seq" ColumnName="seq" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pro_wow_junmunga_broadcast">
+            <EntityTypeMapping TypeName="broadcastModel.Pro_wow_junmunga_broadcast">
+              <MappingFragment StoreEntitySet="Pro_wow_junmunga_broadcast">
+                <ScalarProperty Name="bPlayType" ColumnName="bPlayType" />
+                <ScalarProperty Name="bMemTypeCafe" ColumnName="bMemTypeCafe" />
+                <ScalarProperty Name="MaxPeakTime" ColumnName="MaxPeakTime" />
+                <ScalarProperty Name="OnAirTime" ColumnName="OnAirTime" />
+                <ScalarProperty Name="btype" ColumnName="btype" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="ClickNum" ColumnName="ClickNum" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+                <ScalarProperty Name="MaxCount" ColumnName="MaxCount" />
+                <ScalarProperty Name="CurCount" ColumnName="CurCount" />
+                <ScalarProperty Name="Num" ColumnName="Num" />
+                <ScalarProperty Name="Pro_id" ColumnName="Pro_id" />
+                <ScalarProperty Name="bVodCost" ColumnName="bVodCost" />
+                <ScalarProperty Name="brUserCount" ColumnName="brUserCount" />
+                <ScalarProperty Name="brEndTime" ColumnName="brEndTime" />
+                <ScalarProperty Name="brStartTime" ColumnName="brStartTime" />
+                <ScalarProperty Name="bCost" ColumnName="bCost" />
+                <ScalarProperty Name="bMemType" ColumnName="bMemType" />
+                <ScalarProperty Name="bIntroduce" ColumnName="bIntroduce" />
+                <ScalarProperty Name="bContents" ColumnName="bContents" />
+                <ScalarProperty Name="bTitle" ColumnName="bTitle" />
+                <ScalarProperty Name="nickName" ColumnName="nickName" />
+                <ScalarProperty Name="bRoom" ColumnName="bRoom" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="usp_getInvestmentPartners" FunctionName="broadcastModel.Store.usp_getInvestmentPartners">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="broadcastModel.usp_getInvestmentPartners_Result">
+                <ScalarProperty Name="PRO_ID" ColumnName="PRO_ID" />
+                <ScalarProperty Name="NICKNAME" ColumnName="NICKNAME" />
+                <ScalarProperty Name="NEWphoto_small" ColumnName="NEWphoto_small" />
+                <ScalarProperty Name="rankOrder" ColumnName="rankOrder" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="BestStockPro">
+            <EntityTypeMapping TypeName="broadcastModel.BestStockPro">
+              <MappingFragment StoreEntitySet="BestStockPro">
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+                <ScalarProperty Name="earningRate" ColumnName="earningRate" />
+                <ScalarProperty Name="sellPrice" ColumnName="sellPrice" />
+                <ScalarProperty Name="sellDate" ColumnName="sellDate" />
+                <ScalarProperty Name="stockName" ColumnName="stockName" />
+                <ScalarProperty Name="nickname" ColumnName="nickname" />
+                <ScalarProperty Name="proRank" ColumnName="proRank" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="export_personal_menu">
+            <EntityTypeMapping TypeName="broadcastModel.export_personal_menu">
+              <MappingFragment StoreEntitySet="export_personal_menu">
+                <ScalarProperty Name="export_intro" ColumnName="export_intro" />
+                <ScalarProperty Name="modyid" ColumnName="modyid" />
+                <ScalarProperty Name="modydate" ColumnName="modydate" />
+                <ScalarProperty Name="regdate" ColumnName="regdate" />
+                <ScalarProperty Name="AddMenuCount" ColumnName="AddMenuCount" />
+                <ScalarProperty Name="export_pro" ColumnName="export_pro" />
+                <ScalarProperty Name="export_nic" ColumnName="export_nic" />
+                <ScalarProperty Name="export_id" ColumnName="export_id" />
+                <ScalarProperty Name="proID" ColumnName="proID" />
+                <ScalarProperty Name="idx" ColumnName="idx" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EXPORT_PRODUCT">
+            <EntityTypeMapping TypeName="broadcastModel.EXPORT_PRODUCT">
+              <MappingFragment StoreEntitySet="EXPORT_PRODUCT">
+                <ScalarProperty Name="MODDATE" ColumnName="MODDATE" />
+                <ScalarProperty Name="ADDDATE" ColumnName="ADDDATE" />
+                <ScalarProperty Name="ITEMID" ColumnName="ITEMID" />
+                <ScalarProperty Name="EDATE" ColumnName="EDATE" />
+                <ScalarProperty Name="SDATE" ColumnName="SDATE" />
+                <ScalarProperty Name="MODE" ColumnName="MODE" />
+                <ScalarProperty Name="EPKID" ColumnName="EPKID" />
+                <ScalarProperty Name="PKID" ColumnName="PKID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="usp_web_getBestProHintStocking" FunctionName="broadcastModel.Store.usp_web_getBestProHintStocking">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="broadcastModel.usp_web_getBestProHintStocking_Result">
+                <ScalarProperty Name="Pro_id" ColumnName="Pro_id" />
+                <ScalarProperty Name="Pro_Type" ColumnName="Pro_Type" />
+                <ScalarProperty Name="NickName" ColumnName="NickName" />
+                <ScalarProperty Name="Profile" ColumnName="Profile" />
+                <ScalarProperty Name="InvestKind" ColumnName="InvestKind" />
+                <ScalarProperty Name="Wowtv_id" ColumnName="Wowtv_id" />
+                <ScalarProperty Name="Intro_Profile" ColumnName="Intro_Profile" />
+                <ScalarProperty Name="Product_ID_1" ColumnName="Product_ID_1" />
+                <ScalarProperty Name="NEWphoto_small" ColumnName="NEWphoto_small" />
+                <ScalarProperty Name="NEWphoto_big" ColumnName="NEWphoto_big" />
+                <ScalarProperty Name="NEWphoto_service" ColumnName="NEWphoto_service" />
+                <ScalarProperty Name="Rate" ColumnName="Rate" />
+                <ScalarProperty Name="bestEarningRate" ColumnName="bestEarningRate" />
+                <ScalarProperty Name="avgWeeklyItem" ColumnName="avgWeeklyItem" />
+                <ScalarProperty Name="BaseDate" ColumnName="BaseDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_web_getWorldProHintPartner" FunctionName="broadcastModel.Store.usp_web_getWorldProHintPartner">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="broadcastModel.usp_web_getWorldProHintPartner_Result">
+                <ScalarProperty Name="Pro_id" ColumnName="Pro_id" />
+                <ScalarProperty Name="Pro_Type" ColumnName="Pro_Type" />
+                <ScalarProperty Name="NickName" ColumnName="NickName" />
+                <ScalarProperty Name="Profile" ColumnName="Profile" />
+                <ScalarProperty Name="InvestKind" ColumnName="InvestKind" />
+                <ScalarProperty Name="Wowtv_id" ColumnName="Wowtv_id" />
+                <ScalarProperty Name="Intro_Profile" ColumnName="Intro_Profile" />
+                <ScalarProperty Name="Product_ID_1" ColumnName="Product_ID_1" />
+                <ScalarProperty Name="NEWphoto_small" ColumnName="NEWphoto_small" />
+                <ScalarProperty Name="NEWphoto_big" ColumnName="NEWphoto_big" />
+                <ScalarProperty Name="NEWphoto_service" ColumnName="NEWphoto_service" />
+                <ScalarProperty Name="Rate" ColumnName="Rate" />
+                <ScalarProperty Name="bestEarningRate" ColumnName="bestEarningRate" />
+                <ScalarProperty Name="avgWeeklyItem" ColumnName="avgWeeklyItem" />
+                <ScalarProperty Name="BaseDate" ColumnName="BaseDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_GetlivePro" FunctionName="broadcastModel.Store.usp_GetlivePro">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="broadcastModel.usp_GetlivePro_Result">
+                <ScalarProperty Name="PRO_ID" ColumnName="PRO_ID" />
+                <ScalarProperty Name="NICKNAME" ColumnName="NICKNAME" />
+                <ScalarProperty Name="BTITLE" ColumnName="BTITLE" />
+                <ScalarProperty Name="BCONTENTS" ColumnName="BCONTENTS" />
+                <ScalarProperty Name="BINTRODUCE" ColumnName="BINTRODUCE" />
+                <ScalarProperty Name="BRSTARTTIME" ColumnName="BRSTARTTIME" />
+                <ScalarProperty Name="BRENDTIME" ColumnName="BRENDTIME" />
+                <ScalarProperty Name="BCOST" ColumnName="BCOST" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+                <ScalarProperty Name="BPLAYTYPE" ColumnName="BPLAYTYPE" />
+                <ScalarProperty Name="BMEMTYPE" ColumnName="BMEMTYPE" />
+                <ScalarProperty Name="BROOM" ColumnName="BROOM" />
+                <ScalarProperty Name="PRODUCTID" ColumnName="PRODUCTID" />
+                <ScalarProperty Name="PHOTO_SMALL" ColumnName="PHOTO_SMALL" />
+                <ScalarProperty Name="CLICKNUM" ColumnName="CLICKNUM" />
+                <ScalarProperty Name="CURCOUNT" ColumnName="CURCOUNT" />
+                <ScalarProperty Name="INVESTKIND" ColumnName="INVESTKIND" />
+                <ScalarProperty Name="onairtime" ColumnName="onairtime" />
+                <ScalarProperty Name="PROBEST" ColumnName="PROBEST" />
+                <ScalarProperty Name="PHOTO_BIG" ColumnName="PHOTO_BIG" />
+                <ScalarProperty Name="PHOTO_SERVICE" ColumnName="PHOTO_SERVICE" />
+                <ScalarProperty Name="PRODUCT_ID_1" ColumnName="PRODUCT_ID_1" />
+                <ScalarProperty Name="PAY_NO" ColumnName="PAY_NO" />
+                <ScalarProperty Name="Photo_Expert" ColumnName="Photo_Expert" />
+                <ScalarProperty Name="Wowtv_id" ColumnName="Wowtv_id" />
+                <ScalarProperty Name="NEWPHOTO_BIG" ColumnName="NEWPHOTO_BIG" />
+                <ScalarProperty Name="NEWPHOTO_SMALL" ColumnName="NEWPHOTO_SMALL" />
+                <ScalarProperty Name="NewPhoto_Recommend" ColumnName="NewPhoto_Recommend" />
+                <ScalarProperty Name="NEWPHOTO_SMALL2" ColumnName="NEWPHOTO_SMALL2" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="없음" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

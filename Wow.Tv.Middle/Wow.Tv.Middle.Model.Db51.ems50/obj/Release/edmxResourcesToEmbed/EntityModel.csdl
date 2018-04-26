@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ems50Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Db51_ems50" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="NUP_MAILQUEUE_INSERT">
+      <Parameter Name="MAIL_CODE" Mode="In" Type="String" />
+      <Parameter Name="TO_EMAIL" Mode="In" Type="String" />
+      <Parameter Name="TO_NAME" Mode="In" Type="String" />
+      <Parameter Name="FROM_EMAIL" Mode="In" Type="String" />
+      <Parameter Name="FROM_NAME" Mode="In" Type="String" />
+      <Parameter Name="SUBJECT" Mode="In" Type="String" />
+      <Parameter Name="TARGET_FLAG" Mode="In" Type="String" />
+      <Parameter Name="TARGET_DATE" Mode="In" Type="DateTime" />
+      <Parameter Name="REG_DATE" Mode="In" Type="DateTime" />
+      <Parameter Name="MAP1" Mode="In" Type="String" />
+      <Parameter Name="MAP2" Mode="In" Type="String" />
+      <Parameter Name="MAP3" Mode="In" Type="String" />
+      <Parameter Name="MAP4" Mode="In" Type="String" />
+      <Parameter Name="MAP5" Mode="In" Type="String" />
+      <Parameter Name="MAP_CONTENT" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="EMS_MAILQUEUE" EntityType="ems50Model.EMS_MAILQUEUE" />
+    <FunctionImport Name="usp_ExportSendEmail_GFC">
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="year" Mode="In" Type="String" />
+      <Parameter Name="language" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="EMS_MAILQUEUE">
+    <Key>
+      <PropertyRef Name="SEQ" />
+    </Key>
+    <Property Name="SEQ" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="MAIL_CODE" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="TO_EMAIL" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TO_NAME" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="FROM_EMAIL" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FROM_NAME" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="SUBJECT" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TARGET_FLAG" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="TARGET_DATE" Type="DateTime" Precision="3" />
+    <Property Name="REG_DATE" Type="DateTime" Precision="3" />
+    <Property Name="MAP1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MAP2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MAP3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MAP4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MAP5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MAP_CONTENT" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,15 @@
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db51.ARSConsult\bin\Debug\Wow.Tv.Middle.Model.Db51.ARSConsult.dll.config
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db51.ARSConsult\bin\Debug\Wow.Tv.Middle.Model.Db51.ARSConsult.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db51.ARSConsult\bin\Debug\Wow.Tv.Middle.Model.Db51.ARSConsult.pdb
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db51.ARSConsult\bin\Debug\EntityFramework.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db51.ARSConsult\bin\Debug\EntityFramework.SqlServer.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db51.ARSConsult\bin\Debug\Wow.Tv.Middle.Model.Common.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db51.ARSConsult\bin\Debug\Wow.Tv.Middle.Model.Common.pdb
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db51.ARSConsult\bin\Debug\EntityFramework.xml
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db51.ARSConsult\bin\Debug\EntityFramework.SqlServer.xml
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db51.ARSConsult\bin\Debug\ko\EntityFramework.resources.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db51.ARSConsult\bin\Debug\ko\EntityFramework.SqlServer.resources.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db51.ARSConsult\obj\Debug\Wow.Tv.Middle.Model.Db51.ARSConsult.csproj.CoreCompileInputs.cache
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db51.ARSConsult\obj\Debug\Wow.Tv.Middle.Model.Db51.ARSConsult.dll
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db51.ARSConsult\obj\Debug\Wow.Tv.Middle.Model.Db51.ARSConsult.pdb
+C:\SVN\WORKING\Wow.Tv.Middle\Wow.Tv.Middle.Model.Db51.ARSConsult\obj\Debug\Wow.Tv.Middle.Model.Db51.ARSConsult.csprojResolveAssemblyReference.cache

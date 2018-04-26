@@ -1,0 +1,533 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Db89_WOWTV_BILL_DBStoreContainer" CdmEntityContainer="Db89_WOWTV_BILL_DB">
+    <FunctionImportMapping FunctionImportName="UP_PORTAL_BONUSCASH_TX_INS" FunctionName="Db89_WOWTV_BILL_DB.Store.UP_PORTAL_BONUSCASH_TX_INS" />
+    <FunctionImportMapping FunctionImportName="NUP_MEMBER_CAFE_CHARGE_SELECT" FunctionName="Db89_WOWTV_BILL_DB.Store.NUP_MEMBER_CAFE_CHARGE_SELECT">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.NUP_MEMBER_CAFE_CHARGE_SELECT_Result">
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="NICKNAME" ColumnName="NICKNAME" />
+          <ScalarProperty Name="ITEMNAME" ColumnName="ITEMNAME" />
+          <ScalarProperty Name="STARTDT" ColumnName="STARTDT" />
+          <ScalarProperty Name="ENDDT" ColumnName="ENDDT" />
+          <ScalarProperty Name="REGDATE" ColumnName="REGDATE" />
+          <ScalarProperty Name="CANCELYMD" ColumnName="CANCELYMD" />
+          <ScalarProperty Name="STOPSTARTYMD" ColumnName="STOPSTARTYMD" />
+          <ScalarProperty Name="STOPENDYMD" ColumnName="STOPENDYMD" />
+          <ScalarProperty Name="DURATION" ColumnName="DURATION" />
+          <ScalarProperty Name="DURATIONSTR" ColumnName="DURATIONSTR" />
+          <ScalarProperty Name="USERTYPEID" ColumnName="USERTYPEID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="NUP_ADMIN_MEMBER_SUB_SELECT" FunctionName="Db89_WOWTV_BILL_DB.Store.NUP_ADMIN_MEMBER_SUB_SELECT">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.NUP_ADMIN_MEMBER_SUB_SELECT_Result">
+          <ScalarProperty Name="USERNUMBER" ColumnName="USERNUMBER" />
+          <ScalarProperty Name="WOW_CASH" ColumnName="WOW_CASH" />
+          <ScalarProperty Name="USER_CLASS" ColumnName="USER_CLASS" />
+          <ScalarProperty Name="USED_PRICE" ColumnName="USED_PRICE" />
+          <ScalarProperty Name="COUPON_COUNT" ColumnName="COUPON_COUNT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UP_PORTAL_COUPON_LST" FunctionName="Db89_WOWTV_BILL_DB.Store.UP_PORTAL_COUPON_LST">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.UP_PORTAL_COUPON_LST_Result">
+          <ScalarProperty Name="COUPONNO" ColumnName="COUPONNO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UP_PORTAL_CHARGE_LST" FunctionName="Db89_WOWTV_BILL_DB.Store.UP_PORTAL_CHARGE_LST" />
+    <FunctionImportMapping FunctionImportName="UP_PORTAL_REFUND_LST" FunctionName="Db89_WOWTV_BILL_DB.Store.UP_PORTAL_REFUND_LST">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.UP_PORTAL_REFUND_LST_Result">
+          <ScalarProperty Name="REFUNDNO" ColumnName="REFUNDNO" />
+          <ScalarProperty Name="USERNO" ColumnName="USERNO" />
+          <ScalarProperty Name="REQAMT" ColumnName="REQAMT" />
+          <ScalarProperty Name="REFUNDAMT" ColumnName="REFUNDAMT" />
+          <ScalarProperty Name="REFUNDFEE" ColumnName="REFUNDFEE" />
+          <ScalarProperty Name="BANKCODE" ColumnName="BANKCODE" />
+          <ScalarProperty Name="BANKNAME" ColumnName="BANKNAME" />
+          <ScalarProperty Name="BANKACCOUNTNO" ColumnName="BANKACCOUNTNO" />
+          <ScalarProperty Name="BANKACCOUNTNAME" ColumnName="BANKACCOUNTNAME" />
+          <ScalarProperty Name="REFUNDDESC" ColumnName="REFUNDDESC" />
+          <ScalarProperty Name="APPROVEDATE" ColumnName="APPROVEDATE" />
+          <ScalarProperty Name="REFUNDENDDATE" ColumnName="REFUNDENDDATE" />
+          <ScalarProperty Name="WAITCHARGENO" ColumnName="WAITCHARGENO" />
+          <ScalarProperty Name="USESTATE" ColumnName="USESTATE" />
+          <ScalarProperty Name="ADMINID" ColumnName="ADMINID" />
+          <ScalarProperty Name="YMD" ColumnName="YMD" />
+          <ScalarProperty Name="REGDATE" ColumnName="REGDATE" />
+          <ScalarProperty Name="USESTATEM" ColumnName="USESTATEM" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="TCouponMst">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TCouponMst">
+        <MappingFragment StoreEntitySet="TCouponMst">
+          <ScalarProperty Name="UpdDate" ColumnName="UpdDate" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="UsedTitle" ColumnName="UsedTitle" />
+          <ScalarProperty Name="IPAddr" ColumnName="IPAddr" />
+          <ScalarProperty Name="RYMD" ColumnName="RYMD" />
+          <ScalarProperty Name="YMD" ColumnName="YMD" />
+          <ScalarProperty Name="UseState" ColumnName="UseState" />
+          <ScalarProperty Name="CashNo" ColumnName="CashNo" />
+          <ScalarProperty Name="ChargeNo" ColumnName="ChargeNo" />
+          <ScalarProperty Name="CExpYMD" ColumnName="CExpYMD" />
+          <ScalarProperty Name="HExpYMD" ColumnName="HExpYMD" />
+          <ScalarProperty Name="PubSeqNo" ColumnName="PubSeqNo" />
+          <ScalarProperty Name="SeqNo" ColumnName="SeqNo" />
+          <ScalarProperty Name="CouponID" ColumnName="CouponID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserNo" ColumnName="UserNo" />
+          <ScalarProperty Name="GameCode" ColumnName="GameCode" />
+          <ScalarProperty Name="CouponNo" ColumnName="CouponNo" />
+          <ScalarProperty Name="CouponSeqNo" ColumnName="CouponSeqNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TCouponPubMst">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TCouponPubMst">
+        <MappingFragment StoreEntitySet="TCouponPubMst">
+          <ScalarProperty Name="EventDCFlag" ColumnName="EventDCFlag" />
+          <ScalarProperty Name="CouponPubDesc" ColumnName="CouponPubDesc" />
+          <ScalarProperty Name="UpdDate" ColumnName="UpdDate" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="UseState" ColumnName="UseState" />
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="TotalUseCnt" ColumnName="TotalUseCnt" />
+          <ScalarProperty Name="TotalPubCnt" ColumnName="TotalPubCnt" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="DurationType" ColumnName="DurationType" />
+          <ScalarProperty Name="EYMD" ColumnName="EYMD" />
+          <ScalarProperty Name="PerUserMaxRegCnt" ColumnName="PerUserMaxRegCnt" />
+          <ScalarProperty Name="MHoldAvail" ColumnName="MHoldAvail" />
+          <ScalarProperty Name="MinPrice" ColumnName="MinPrice" />
+          <ScalarProperty Name="DiscountArea" ColumnName="DiscountArea" />
+          <ScalarProperty Name="ItemOrPackage" ColumnName="ItemOrPackage" />
+          <ScalarProperty Name="CashAttr" ColumnName="CashAttr" />
+          <ScalarProperty Name="ApplyDetail" ColumnName="ApplyDetail" />
+          <ScalarProperty Name="ExpireType" ColumnName="ExpireType" />
+          <ScalarProperty Name="CouponType" ColumnName="CouponType" />
+          <ScalarProperty Name="CouponName" ColumnName="CouponName" />
+          <ScalarProperty Name="GameCode" ColumnName="GameCode" />
+          <ScalarProperty Name="CouponID" ColumnName="CouponID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="NUP_MEMBER_INFO_SUB_SELECT" FunctionName="Db89_WOWTV_BILL_DB.Store.NUP_MEMBER_INFO_SUB_SELECT">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.NUP_MEMBER_INFO_SUB_SELECT_Result">
+          <ScalarProperty Name="WOW_CASH" ColumnName="WOW_CASH" />
+          <ScalarProperty Name="COUPON_COUNT" ColumnName="COUPON_COUNT" />
+          <ScalarProperty Name="USER_CLASS" ColumnName="USER_CLASS" />
+          <ScalarProperty Name="USED_PRICE" ColumnName="USED_PRICE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UP_PORTAL_DELIVERY_LST" FunctionName="Db89_WOWTV_BILL_DB.Store.UP_PORTAL_DELIVERY_LST">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.UP_PORTAL_DELIVERY_LST_Result">
+          <ScalarProperty Name="CHARGENO" ColumnName="CHARGENO" />
+          <ScalarProperty Name="ITEMID" ColumnName="ITEMID" />
+          <ScalarProperty Name="USERNO" ColumnName="USERNO" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="PERSONNO" ColumnName="PERSONNO" />
+          <ScalarProperty Name="YMD" ColumnName="YMD" />
+          <ScalarProperty Name="PRODNAME" ColumnName="PRODNAME" />
+          <ScalarProperty Name="UNITPRICE" ColumnName="UNITPRICE" />
+          <ScalarProperty Name="ITEMCNT" ColumnName="ITEMCNT" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+          <ScalarProperty Name="TEL" ColumnName="TEL" />
+          <ScalarProperty Name="MOBILENO" ColumnName="MOBILENO" />
+          <ScalarProperty Name="ZIPCODE" ColumnName="ZIPCODE" />
+          <ScalarProperty Name="ADDRESS1" ColumnName="ADDRESS1" />
+          <ScalarProperty Name="ADDRESS2" ColumnName="ADDRESS2" />
+          <ScalarProperty Name="PAYTOOL" ColumnName="PAYTOOL" />
+          <ScalarProperty Name="PAYDATE" ColumnName="PAYDATE" />
+          <ScalarProperty Name="PAYSTATEM" ColumnName="PAYSTATEM" />
+          <ScalarProperty Name="USESTATE" ColumnName="USESTATE" />
+          <ScalarProperty Name="USESTATEM" ColumnName="USESTATEM" />
+          <ScalarProperty Name="DELIVERYDATE" ColumnName="DELIVERYDATE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="DELIVERYDESC" ColumnName="DELIVERYDESC" />
+          <ScalarProperty Name="REGDATE" ColumnName="REGDATE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="WOWSP_GET_BALANCE" FunctionName="Db89_WOWTV_BILL_DB.Store.WOWSP_GET_BALANCE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.WOWSP_GET_BALANCE_Result">
+          <ScalarProperty Name="CASHBONUS" ColumnName="CASHBONUS" />
+          <ScalarProperty Name="CASHREAL" ColumnName="CASHREAL" />
+          <ScalarProperty Name="CASHTOTAL" ColumnName="CASHTOTAL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UP_PORTAL_MYPAGE_DELIVERY_UR_LST" FunctionName="Db89_WOWTV_BILL_DB.Store.UP_PORTAL_MYPAGE_DELIVERY_UR_LST">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.UP_PORTAL_MYPAGE_DELIVERY_UR_LST_Result">
+          <ScalarProperty Name="ROWNUM" ColumnName="ROWNUM" />
+          <ScalarProperty Name="CATEGORYNAME" ColumnName="CATEGORYNAME" />
+          <ScalarProperty Name="YMD" ColumnName="YMD" />
+          <ScalarProperty Name="PRODNAME" ColumnName="PRODNAME" />
+          <ScalarProperty Name="ORGPRICE" ColumnName="ORGPRICE" />
+          <ScalarProperty Name="PRODCNT" ColumnName="PRODCNT" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+          <ScalarProperty Name="USESTATE" ColumnName="USESTATE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="TItemPriceMst">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TItemPriceMst">
+        <MappingFragment StoreEntitySet="TItemPriceMst">
+          <ScalarProperty Name="IsAvailBonus" ColumnName="IsAvailBonus" />
+          <ScalarProperty Name="DupBuyFlag" ColumnName="DupBuyFlag" />
+          <ScalarProperty Name="ClassDcFlag" ColumnName="ClassDcFlag" />
+          <ScalarProperty Name="DupDCFlag" ColumnName="DupDCFlag" />
+          <ScalarProperty Name="CoopPointFlag" ColumnName="CoopPointFlag" />
+          <ScalarProperty Name="UpdDate" ColumnName="UpdDate" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="UseState" ColumnName="UseState" />
+          <ScalarProperty Name="ReNewFlag" ColumnName="ReNewFlag" />
+          <ScalarProperty Name="CancelFlag" ColumnName="CancelFlag" />
+          <ScalarProperty Name="ExchangeFlag" ColumnName="ExchangeFlag" />
+          <ScalarProperty Name="ReductionFlag" ColumnName="ReductionFlag" />
+          <ScalarProperty Name="DisplayFlag" ColumnName="DisplayFlag" />
+          <ScalarProperty Name="DisplayLocation" ColumnName="DisplayLocation" />
+          <ScalarProperty Name="CancelCafeLevel" ColumnName="CancelCafeLevel" />
+          <ScalarProperty Name="CafeLevel" ColumnName="CafeLevel" />
+          <ScalarProperty Name="CafeFlag" ColumnName="CafeFlag" />
+          <ScalarProperty Name="ARSFlag" ColumnName="ARSFlag" />
+          <ScalarProperty Name="AnalID" ColumnName="AnalID" />
+          <ScalarProperty Name="GeneralFlag" ColumnName="GeneralFlag" />
+          <ScalarProperty Name="GiftItemPrice" ColumnName="GiftItemPrice" />
+          <ScalarProperty Name="DeliveryAmt" ColumnName="DeliveryAmt" />
+          <ScalarProperty Name="DeliveryAvail" ColumnName="DeliveryAvail" />
+          <ScalarProperty Name="DiscountRate" ColumnName="DiscountRate" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+          <ScalarProperty Name="ServiceURL" ColumnName="ServiceURL" />
+          <ScalarProperty Name="CPItemID" ColumnName="CPItemID" />
+          <ScalarProperty Name="ExpireYMD" ColumnName="ExpireYMD" />
+          <ScalarProperty Name="FYMD" ColumnName="FYMD" />
+          <ScalarProperty Name="SYMD" ColumnName="SYMD" />
+          <ScalarProperty Name="MaxAccessCnt" ColumnName="MaxAccessCnt" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="DurationType" ColumnName="DurationType" />
+          <ScalarProperty Name="ChargeType" ColumnName="ChargeType" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemPriceID" ColumnName="ItemPriceID" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TEventDtl">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TEventDtl">
+        <MappingFragment StoreEntitySet="TEventDtl">
+          <ScalarProperty Name="UpdDate" ColumnName="UpdDate" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="UseState" ColumnName="UseState" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="AvailType" ColumnName="AvailType" />
+          <ScalarProperty Name="SeqNo" ColumnName="SeqNo" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TEventMst">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TEventMst">
+        <MappingFragment StoreEntitySet="TEventMst">
+          <ScalarProperty Name="PersonMaxAvailCnt" ColumnName="PersonMaxAvailCnt" />
+          <ScalarProperty Name="UpdDate" ColumnName="UpdDate" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="UseState" ColumnName="UseState" />
+          <ScalarProperty Name="AppliedCnt" ColumnName="AppliedCnt" />
+          <ScalarProperty Name="MaxAvailCnt" ColumnName="MaxAvailCnt" />
+          <ScalarProperty Name="ToAge" ColumnName="ToAge" />
+          <ScalarProperty Name="FromAge" ColumnName="FromAge" />
+          <ScalarProperty Name="AvailGender" ColumnName="AvailGender" />
+          <ScalarProperty Name="MinPrice" ColumnName="MinPrice" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ExpireDayCnt" ColumnName="ExpireDayCnt" />
+          <ScalarProperty Name="ExpireDayType" ColumnName="ExpireDayType" />
+          <ScalarProperty Name="ExpireFlag" ColumnName="ExpireFlag" />
+          <ScalarProperty Name="CashAttr" ColumnName="CashAttr" />
+          <ScalarProperty Name="GameCode" ColumnName="GameCode" />
+          <ScalarProperty Name="ApplyDetail" ColumnName="ApplyDetail" />
+          <ScalarProperty Name="PayTool" ColumnName="PayTool" />
+          <ScalarProperty Name="EventArea" ColumnName="EventArea" />
+          <ScalarProperty Name="EventAttr" ColumnName="EventAttr" />
+          <ScalarProperty Name="EventType" ColumnName="EventType" />
+          <ScalarProperty Name="EventKind" ColumnName="EventKind" />
+          <ScalarProperty Name="EventName" ColumnName="EventName" />
+          <ScalarProperty Name="SeqNo" ColumnName="SeqNo" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="UP_PORTAL_USERCLASS_INFO_GET" FunctionName="Db89_WOWTV_BILL_DB.Store.UP_PORTAL_USERCLASS_INFO_GET" />
+    <EntitySetMapping Name="TChargeCancelRequestDtl">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TChargeCancelRequestDtl">
+        <MappingFragment StoreEntitySet="TChargeCancelRequestDtl">
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ProdName" ColumnName="ProdName" />
+          <ScalarProperty Name="ChargeNo" ColumnName="ChargeNo" />
+          <ScalarProperty Name="RequestNo" ColumnName="RequestNo" />
+          <ScalarProperty Name="SeqNo" ColumnName="SeqNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TChargeCancelRequestMst">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TChargeCancelRequestMst">
+        <MappingFragment StoreEntitySet="TChargeCancelRequestMst">
+          <ScalarProperty Name="AcctNo" ColumnName="AcctNo" />
+          <ScalarProperty Name="AcctBank" ColumnName="AcctBank" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="UpdDate" ColumnName="UpdDate" />
+          <ScalarProperty Name="RetMsg" ColumnName="RetMsg" />
+          <ScalarProperty Name="UseState" ColumnName="UseState" />
+          <ScalarProperty Name="CallMsg" ColumnName="CallMsg" />
+          <ScalarProperty Name="CallTime" ColumnName="CallTime" />
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="CancelFlag" ColumnName="CancelFlag" />
+          <ScalarProperty Name="CancelFee" ColumnName="CancelFee" />
+          <ScalarProperty Name="UsedDay" ColumnName="UsedDay" />
+          <ScalarProperty Name="DayPrice" ColumnName="DayPrice" />
+          <ScalarProperty Name="ChargeNo" ColumnName="ChargeNo" />
+          <ScalarProperty Name="UserNo" ColumnName="UserNo" />
+          <ScalarProperty Name="SeqNo" ColumnName="SeqNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TCPMst">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TCPMst">
+        <MappingFragment StoreEntitySet="TCPMst">
+          <ScalarProperty Name="UpdDate" ColumnName="UpdDate" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="UseState" ColumnName="UseState" />
+          <ScalarProperty Name="INCVAT" ColumnName="INCVAT" />
+          <ScalarProperty Name="COMFlag" ColumnName="COMFlag" />
+          <ScalarProperty Name="MAXComm" ColumnName="MAXComm" />
+          <ScalarProperty Name="MINComm" ColumnName="MINComm" />
+          <ScalarProperty Name="ETCComm2" ColumnName="ETCComm2" />
+          <ScalarProperty Name="ETCComm1" ColumnName="ETCComm1" />
+          <ScalarProperty Name="MyRate" ColumnName="MyRate" />
+          <ScalarProperty Name="PGRate" ColumnName="PGRate" />
+          <ScalarProperty Name="SettleAmt" ColumnName="SettleAmt" />
+          <ScalarProperty Name="SettleMethod" ColumnName="SettleMethod" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="MICTelNo" ColumnName="MICTelNo" />
+          <ScalarProperty Name="MICEmail" ColumnName="MICEmail" />
+          <ScalarProperty Name="MICName" ColumnName="MICName" />
+          <ScalarProperty Name="CEOName" ColumnName="CEOName" />
+          <ScalarProperty Name="CPName" ColumnName="CPName" />
+          <ScalarProperty Name="CPVersion" ColumnName="CPVersion" />
+          <ScalarProperty Name="CPID" ColumnName="CPID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TItemMst">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TItemMst">
+        <MappingFragment StoreEntitySet="TItemMst">
+          <ScalarProperty Name="IsAvailBonus" ColumnName="IsAvailBonus" />
+          <ScalarProperty Name="KOSCOMACCTNO" ColumnName="KOSCOMACCTNO" />
+          <ScalarProperty Name="UpdDate" ColumnName="UpdDate" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="UseState" ColumnName="UseState" />
+          <ScalarProperty Name="DeptCode" ColumnName="DeptCode" />
+          <ScalarProperty Name="CPVersion" ColumnName="CPVersion" />
+          <ScalarProperty Name="CPID" ColumnName="CPID" />
+          <ScalarProperty Name="ShowRate" ColumnName="ShowRate" />
+          <ScalarProperty Name="GameCode" ColumnName="GameCode" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="ItemDesc" ColumnName="ItemDesc" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemVersion" ColumnName="ItemVersion" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="UP_PORTAL_MYPAGE_SERVICE_UR_LST" FunctionName="Db89_WOWTV_BILL_DB.Store.UP_PORTAL_MYPAGE_SERVICE_UR_LST">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.UP_PORTAL_MYPAGE_SERVICE_UR_LST_Result">
+          <ScalarProperty Name="ROWNUM" ColumnName="ROWNUM" />
+          <ScalarProperty Name="CHARGENO" ColumnName="CHARGENO" />
+          <ScalarProperty Name="CASHNO" ColumnName="CASHNO" />
+          <ScalarProperty Name="USERNO" ColumnName="USERNO" />
+          <ScalarProperty Name="YMD" ColumnName="YMD" />
+          <ScalarProperty Name="FREEFLAG" ColumnName="FREEFLAG" />
+          <ScalarProperty Name="PRODNAME" ColumnName="PRODNAME" />
+          <ScalarProperty Name="CONSUMEDATE" ColumnName="CONSUMEDATE" />
+          <ScalarProperty Name="EXPDATE" ColumnName="EXPDATE" />
+          <ScalarProperty Name="STOPSTARTYMD" ColumnName="STOPSTARTYMD" />
+          <ScalarProperty Name="STOPENDYMD" ColumnName="STOPENDYMD" />
+          <ScalarProperty Name="STOPCNT" ColumnName="STOPCNT" />
+          <ScalarProperty Name="USEDDAY" ColumnName="USEDDAY" />
+          <ScalarProperty Name="CANCELFEE" ColumnName="CANCELFEE" />
+          <ScalarProperty Name="USEDAMT" ColumnName="USEDAMT" />
+          <ScalarProperty Name="EXTRAFEE" ColumnName="EXTRAFEE" />
+          <ScalarProperty Name="CNLYMD" ColumnName="CNLYMD" />
+          <ScalarProperty Name="SERVICESTATUS" ColumnName="SERVICESTATUS" />
+          <ScalarProperty Name="PAYTOOLNAME" ColumnName="PAYTOOLNAME" />
+          <ScalarProperty Name="REALCASH" ColumnName="REALCASH" />
+          <ScalarProperty Name="BONUSCASH" ColumnName="BONUSCASH" />
+          <ScalarProperty Name="USESTATE" ColumnName="USESTATE" />
+          <ScalarProperty Name="CASHYMD" ColumnName="CASHYMD" />
+          <ScalarProperty Name="ITEMORPACKAGE" ColumnName="ITEMORPACKAGE" />
+          <ScalarProperty Name="ITEMPACKPRICEID" ColumnName="ITEMPACKPRICEID" />
+          <ScalarProperty Name="SERVICEYMD" ColumnName="SERVICEYMD" />
+          <ScalarProperty Name="CPID" ColumnName="CPID" />
+          <ScalarProperty Name="CASHENDYMD" ColumnName="CASHENDYMD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UP_PORTAL_PAYNCHARGE_LST" FunctionName="Db89_WOWTV_BILL_DB.Store.UP_PORTAL_PAYNCHARGE_LST">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.UP_PORTAL_PAYNCHARGE_LST_Result">
+          <ScalarProperty Name="BUYIDX" ColumnName="BUYIDX" />
+          <ScalarProperty Name="REGDATE" ColumnName="REGDATE" />
+          <ScalarProperty Name="BUYTYPE" ColumnName="BUYTYPE" />
+          <ScalarProperty Name="BUYNAME" ColumnName="BUYNAME" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+          <ScalarProperty Name="USESTATE" ColumnName="USESTATE" />
+          <ScalarProperty Name="USESTATEM" ColumnName="USESTATEM" />
+          <ScalarProperty Name="CASHSTATUS" ColumnName="CASHSTATUS" />
+          <ScalarProperty Name="EYMD" ColumnName="EYMD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="NUP_TVREPLAY_PAYMENT">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.NUP_TVREPLAY_PAYMENT">
+        <MappingFragment StoreEntitySet="NUP_TVREPLAY_PAYMENT">
+          <ScalarProperty Name="expiredt" ColumnName="expiredt" />
+          <ScalarProperty Name="paydt" ColumnName="paydt" />
+          <ScalarProperty Name="chargeno" ColumnName="chargeno" />
+          <ScalarProperty Name="num" ColumnName="num" />
+          <ScalarProperty Name="usernumber" ColumnName="usernumber" />
+          <ScalarProperty Name="seq" ColumnName="seq" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="UP_PORTAL_MYPAGE_PAYNCHARGE_UR_LST" FunctionName="Db89_WOWTV_BILL_DB.Store.UP_PORTAL_MYPAGE_PAYNCHARGE_UR_LST">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.UP_PORTAL_MYPAGE_PAYNCHARGE_UR_LST_Result">
+          <ScalarProperty Name="ROWNUM" ColumnName="ROWNUM" />
+          <ScalarProperty Name="BUYIDX" ColumnName="BUYIDX" />
+          <ScalarProperty Name="REGDATE" ColumnName="REGDATE" />
+          <ScalarProperty Name="BUYTYPE" ColumnName="BUYTYPE" />
+          <ScalarProperty Name="BUYNAME" ColumnName="BUYNAME" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+          <ScalarProperty Name="USESTATE" ColumnName="USESTATE" />
+          <ScalarProperty Name="USESTATEM" ColumnName="USESTATEM" />
+          <ScalarProperty Name="CASHSTATUS" ColumnName="CASHSTATUS" />
+          <ScalarProperty Name="EYMD" ColumnName="EYMD" />
+          <ScalarProperty Name="CASHFLAG" ColumnName="CASHFLAG" />
+          <ScalarProperty Name="CASHTYPE" ColumnName="CASHTYPE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="TAccountCashMst">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TAccountCashMst">
+        <MappingFragment StoreEntitySet="TAccountCashMst">
+          <ScalarProperty Name="UpdDate" ColumnName="UpdDate" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="TOUTCash" ColumnName="TOUTCash" />
+          <ScalarProperty Name="TINCash" ColumnName="TINCash" />
+          <ScalarProperty Name="Cash" ColumnName="Cash" />
+          <ScalarProperty Name="CashAttr" ColumnName="CashAttr" />
+          <ScalarProperty Name="GameCode" ColumnName="GameCode" />
+          <ScalarProperty Name="UserNo" ColumnName="UserNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TCashMst">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TCashMst">
+        <MappingFragment StoreEntitySet="TCashMst">
+          <ScalarProperty Name="UpdDate" ColumnName="UpdDate" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="UseState" ColumnName="UseState" />
+          <ScalarProperty Name="IssueNo" ColumnName="IssueNo" />
+          <ScalarProperty Name="IssueFlag" ColumnName="IssueFlag" />
+          <ScalarProperty Name="OrgCashNo" ColumnName="OrgCashNo" />
+          <ScalarProperty Name="IPAddr" ColumnName="IPAddr" />
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="EYMD" ColumnName="EYMD" />
+          <ScalarProperty Name="TCYMD" ColumnName="TCYMD" />
+          <ScalarProperty Name="CYMD" ColumnName="CYMD" />
+          <ScalarProperty Name="TYMD" ColumnName="TYMD" />
+          <ScalarProperty Name="YMD" ColumnName="YMD" />
+          <ScalarProperty Name="CID" ColumnName="CID" />
+          <ScalarProperty Name="TID" ColumnName="TID" />
+          <ScalarProperty Name="PGVersion" ColumnName="PGVersion" />
+          <ScalarProperty Name="MallID" ColumnName="MallID" />
+          <ScalarProperty Name="PGCode" ColumnName="PGCode" />
+          <ScalarProperty Name="PayToolName" ColumnName="PayToolName" />
+          <ScalarProperty Name="PayTool" ColumnName="PayTool" />
+          <ScalarProperty Name="RemainCashAmt" ColumnName="RemainCashAmt" />
+          <ScalarProperty Name="CashAmt" ColumnName="CashAmt" />
+          <ScalarProperty Name="OrgCashAmt" ColumnName="OrgCashAmt" />
+          <ScalarProperty Name="Flags" ColumnName="Flags" />
+          <ScalarProperty Name="CashType" ColumnName="CashType" />
+          <ScalarProperty Name="CashAttr" ColumnName="CashAttr" />
+          <ScalarProperty Name="GameCode" ColumnName="GameCode" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserNo" ColumnName="UserNo" />
+          <ScalarProperty Name="CashNo" ColumnName="CashNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="UP_PORTAL_USER_ANAL_LST" FunctionName="Db89_WOWTV_BILL_DB.Store.UP_PORTAL_USER_ANAL_LST">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.UP_PORTAL_USER_ANAL_LST_Result">
+          <ScalarProperty Name="ITEMID" ColumnName="ITEMID" />
+          <ScalarProperty Name="ITEMPRICEID" ColumnName="ITEMPRICEID" />
+          <ScalarProperty Name="ITEMNAME" ColumnName="ITEMNAME" />
+          <ScalarProperty Name="ANALID" ColumnName="ANALID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="TItemHoldMst">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.TItemHoldMst">
+        <MappingFragment StoreEntitySet="TItemHoldMst">
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="UpdDate" ColumnName="UpdDate" />
+          <ScalarProperty Name="DelayRegDate" ColumnName="DelayRegDate" />
+          <ScalarProperty Name="RebuildFlag" ColumnName="RebuildFlag" />
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="UseState" ColumnName="UseState" />
+          <ScalarProperty Name="DelayCnt" ColumnName="DelayCnt" />
+          <ScalarProperty Name="RenewFlag" ColumnName="RenewFlag" />
+          <ScalarProperty Name="ChangedCnt" ColumnName="ChangedCnt" />
+          <ScalarProperty Name="StopEndYMD" ColumnName="StopEndYMD" />
+          <ScalarProperty Name="StopStartYMD" ColumnName="StopStartYMD" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="ConsumeDate" ColumnName="ConsumeDate" />
+          <ScalarProperty Name="AccessedCnt" ColumnName="AccessedCnt" />
+          <ScalarProperty Name="MaxAccessCnt" ColumnName="MaxAccessCnt" />
+          <ScalarProperty Name="ItemPackPriceID" ColumnName="ItemPackPriceID" />
+          <ScalarProperty Name="ItemPackID" ColumnName="ItemPackID" />
+          <ScalarProperty Name="ItemOrPackage" ColumnName="ItemOrPackage" />
+          <ScalarProperty Name="ChargeNo" ColumnName="ChargeNo" />
+          <ScalarProperty Name="UserNo" ColumnName="UserNo" />
+          <ScalarProperty Name="SeqNo" ColumnName="SeqNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="UP_KVINA_PURCHASE_AR_LST" FunctionName="Db89_WOWTV_BILL_DB.Store.UP_KVINA_PURCHASE_AR_LST" />
+  </EntityContainerMapping>
+</Mapping>

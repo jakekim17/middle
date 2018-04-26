@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WowTvMiddleModelDb51WOWMMSStoreContainer" CdmEntityContainer="Db51_WOWMMS">
+    <EntitySetMapping Name="mms_msg">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db51.WOWMMS.mms_msg">
+        <MappingFragment StoreEntitySet="mms_msg">
+          <ScalarProperty Name="MSGKEY" ColumnName="MSGKEY" />
+          <ScalarProperty Name="SUBJECT" ColumnName="SUBJECT" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="CALLBACK" ColumnName="CALLBACK" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="REQDATE" ColumnName="REQDATE" />
+          <ScalarProperty Name="MSG" ColumnName="MSG" />
+          <ScalarProperty Name="FILE_CNT" ColumnName="FILE_CNT" />
+          <ScalarProperty Name="FILE_CNT_REAL" ColumnName="FILE_CNT_REAL" />
+          <ScalarProperty Name="FILE_PATH1" ColumnName="FILE_PATH1" />
+          <ScalarProperty Name="FILE_PATH1_SIZ" ColumnName="FILE_PATH1_SIZ" />
+          <ScalarProperty Name="FILE_PATH2" ColumnName="FILE_PATH2" />
+          <ScalarProperty Name="FILE_PATH2_SIZ" ColumnName="FILE_PATH2_SIZ" />
+          <ScalarProperty Name="FILE_PATH3" ColumnName="FILE_PATH3" />
+          <ScalarProperty Name="FILE_PATH3_SIZ" ColumnName="FILE_PATH3_SIZ" />
+          <ScalarProperty Name="FILE_PATH4" ColumnName="FILE_PATH4" />
+          <ScalarProperty Name="FILE_PATH4_SIZ" ColumnName="FILE_PATH4_SIZ" />
+          <ScalarProperty Name="FILE_PATH5" ColumnName="FILE_PATH5" />
+          <ScalarProperty Name="FILE_PATH5_SIZ" ColumnName="FILE_PATH5_SIZ" />
+          <ScalarProperty Name="EXPIRETIME" ColumnName="EXPIRETIME" />
+          <ScalarProperty Name="SENTDATE" ColumnName="SENTDATE" />
+          <ScalarProperty Name="RSLTDATE" ColumnName="RSLTDATE" />
+          <ScalarProperty Name="REPORTDATE" ColumnName="REPORTDATE" />
+          <ScalarProperty Name="TERMINATEDDATE" ColumnName="TERMINATEDDATE" />
+          <ScalarProperty Name="RSLT" ColumnName="RSLT" />
+          <ScalarProperty Name="REPCNT" ColumnName="REPCNT" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="TELCOINFO" ColumnName="TELCOINFO" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="POST" ColumnName="POST" />
+          <ScalarProperty Name="ETC1" ColumnName="ETC1" />
+          <ScalarProperty Name="ETC2" ColumnName="ETC2" />
+          <ScalarProperty Name="ETC3" ColumnName="ETC3" />
+          <ScalarProperty Name="ETC4" ColumnName="ETC4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="NUP_MMS_LOG_SELECT" FunctionName="Wow.Tv.Middle.Model.Db51.WOWMMS.Store.NUP_MMS_LOG_SELECT">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db51.WOWMMS.NUP_MMS_LOG_SELECT_Result">
+          <ScalarProperty Name="ROWNUM" ColumnName="ROWNUM" />
+          <ScalarProperty Name="TR_SENDDATE" ColumnName="TR_SENDDATE" />
+          <ScalarProperty Name="TR_ID" ColumnName="TR_ID" />
+          <ScalarProperty Name="TR_RSLTDATE" ColumnName="TR_RSLTDATE" />
+          <ScalarProperty Name="TR_CALLBACK" ColumnName="TR_CALLBACK" />
+          <ScalarProperty Name="TR_MSG" ColumnName="TR_MSG" />
+          <ScalarProperty Name="TR_ETC1" ColumnName="TR_ETC1" />
+          <ScalarProperty Name="TR_ETC3" ColumnName="TR_ETC3" />
+          <ScalarProperty Name="TR_ETC4" ColumnName="TR_ETC4" />
+          <ScalarProperty Name="ROWCNT" ColumnName="ROWCNT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

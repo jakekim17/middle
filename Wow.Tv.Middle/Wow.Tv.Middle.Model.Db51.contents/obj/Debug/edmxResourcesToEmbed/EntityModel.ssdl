@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="contentsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="NTB_FINANCE_STATUS">
+    <Key>
+      <PropertyRef Name="NO" />
+    </Key>
+    <Property Name="NO" Type="int" Nullable="false" />
+    <Property Name="YEAR" Type="varchar" MaxLength="50" />
+    <Property Name="CURNT_ASSET" Type="int" />
+    <Property Name="NON_CURNT_ASSET" Type="int" />
+    <Property Name="TOTAL_ASSET" Type="int" />
+    <Property Name="CURNT_LIABILITES" Type="int" />
+    <Property Name="NON_CURNT_LIABILITES" Type="int" />
+    <Property Name="TOTAL_LIABILITES" Type="int" />
+    <Property Name="CAPITAL_STOCK" Type="int" />
+    <Property Name="TOTAL_CAPITAL" Type="int" />
+    <Property Name="OPERATING_PROFIT" Type="int" />
+    <Property Name="NET_INCOME" Type="int" />
+    <Property Name="REVENUE" Type="int" />
+    <Property Name="FLAG" Type="char" MaxLength="1" />
+    <Property Name="REG_DATE" Type="datetime" Nullable="false" />
+    <Property Name="MOD_DATE" Type="datetime" />
+    <Property Name="REG_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DEL_YN" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityContainer Name="contentsModelStoreContainer">
+    <EntitySet Name="NTB_FINANCE_STATUS" EntityType="Self.NTB_FINANCE_STATUS" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

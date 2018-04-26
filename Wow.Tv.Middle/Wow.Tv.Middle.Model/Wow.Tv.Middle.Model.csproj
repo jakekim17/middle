@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D6E6E92A-8C97-42A3-9615-03B3C614D340}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wow.Tv.Middle.Model</RootNamespace>
+    <AssemblyName>Wow.Tv.Middle.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\ArssmsModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ArssmsModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ArssmsModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ArssmsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ArssmsModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ArssmsModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseCondition.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Common\ListModel.cs" />
+    <Compile Include="Common\LoginUser.cs" />
+    <Compile Include="dtproperties.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pilot\PilotCondition.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Model\SC_TRAN.cs">
+      <DependentUpon>ArssmsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sf1_TAB_BOARD.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sf1_TAB_PUBLIC.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_ANCHOR.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_AREA_CHANNEL.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_BANNER.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_BANNER_EVENT_LOG.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_BANNER_VIEWING_LOG.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_BANNER_VIEWING_LOG_Temp.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_BOARD.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_BOARD_COMMENT.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_BOARD_CONFIG.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_BOARD_FILE.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_BOARD_LOG.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_BOARD_TOP.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_BOARD_TOP_COMMENT.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_BOARD_TOP_FILE.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_BOARD_TOP_LOG.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_CMS_ADMIN.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_CMS_MENU.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_CODE.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_COMMON_FILE.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_FAQ.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_IR_CLUB.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_IR_CLUB_2010.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_IR_CLUB_MANAGER.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_JOBRESUME.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_JOBUCC.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_JOB_COMMENT.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_JOB_FILE.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_MAIN_EVENT.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_MAIN_EVENT_BACKUP.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_MAIN_NEW.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_MANAGER_REG.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_NOTICE.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_NOTICE_FILE.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_PGM_ORDER.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_PGM_ORDER_PROCESS.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_POPUP.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_POPUP_EVENT_LOG.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_POPUP_VIEWING_LOG.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_PUBLIC.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_PUBLIC_FILE.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_PUBLIC_LOG.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_QUEST_EMAIL.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_QUEST_EMAIL_FILE.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_TOUR.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_TOUR_MEMBER.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_VOTEAPT.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_WOWEVENT.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_WOWEVENT_SUB.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblArtVietnam.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblBaseballRankUpdateDate.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBLBASEBALLSCH.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblBaseBallustream.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBLBC.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBLBCBOARD.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBLBCCODE2.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblBoard_tmpUrl.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblDaeBakChunKuk.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblDaeBakChunKukGibeob.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblLoginConfirm.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblmedia.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblmediacnt.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblmedia_Code.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblmedia_platform_code.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblMobileAppDown.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblProjectEmergencyOpenYN.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblStockWindow.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblStockWindowApplyUser.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblTextAndLinkBox.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblTextAndLinkCategory.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblTradingStarRanking.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblTradingStarTrade.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblTradingStarUser.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblwownetinvest.cs">
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WowTvDb.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WowTvDb.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WowTvDb.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WowTvDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WowTvDb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WowTvDb.edmx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="WowTvDb.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>WowTvDb.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="Model\ArssmsModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ArssmsModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\ArssmsModel.edmx.diagram">
+      <DependentUpon>ArssmsModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="WowTvDb.edmx.diagram">
+      <DependentUpon>WowTvDb.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\ArssmsModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ArssmsModel.edmx</DependentUpon>
+      <LastGenOutput>ArssmsModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\ArssmsModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ArssmsModel.edmx</DependentUpon>
+      <LastGenOutput>ArssmsModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="WowTvDb.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>WowTvDb.Context.cs</LastGenOutput>
+      <DependentUpon>WowTvDb.edmx</DependentUpon>
+    </Content>
+    <Content Include="WowTvDb.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>WowTvDb.edmx</DependentUpon>
+      <LastGenOutput>WowTvDb.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

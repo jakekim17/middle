@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WOwTvMiddleModelDb123WOW4989StoreContainer" CdmEntityContainer="Db123_WOw4989">
+    <FunctionImportMapping FunctionImportName="wowstar_unliststock" FunctionName="WOw.Tv.Middle.Model.Db123.WOW4989.Store.wowstar_unliststock">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WOw.Tv.Middle.Model.Db123.WOW4989.wowstar_unliststock_Result">
+          <ScalarProperty Name="sales_start_date" ColumnName="sales_start_date" />
+          <ScalarProperty Name="company_name" ColumnName="company_name" />
+          <ScalarProperty Name="logo_img" ColumnName="logo_img" />
+          <ScalarProperty Name="oc_idx" ColumnName="oc_idx" />
+          <ScalarProperty Name="stock_price" ColumnName="stock_price" />
+          <ScalarProperty Name="stock_percent" ColumnName="stock_percent" />
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+          <ScalarProperty Name="Column2" ColumnName="Column2" />
+          <ScalarProperty Name="stock_rest" ColumnName="stock_rest" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="wowstar_video" FunctionName="WOw.Tv.Middle.Model.Db123.WOW4989.Store.wowstar_video">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WOw.Tv.Middle.Model.Db123.WOW4989.wowstar_video_Result">
+          <ScalarProperty Name="vl_idx" ColumnName="vl_idx" />
+          <ScalarProperty Name="img" ColumnName="img" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="company_name" ColumnName="company_name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="NUP_wowstar_unliststock" FunctionName="WOw.Tv.Middle.Model.Db123.WOW4989.Store.NUP_wowstar_unliststock">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WOw.Tv.Middle.Model.Db123.WOW4989.NUP_wowstar_unliststock_Result">
+          <ScalarProperty Name="sales_start_date" ColumnName="sales_start_date" />
+          <ScalarProperty Name="company_name" ColumnName="company_name" />
+          <ScalarProperty Name="logo_img" ColumnName="logo_img" />
+          <ScalarProperty Name="oc_idx" ColumnName="oc_idx" />
+          <ScalarProperty Name="stock_price" ColumnName="stock_price" />
+          <ScalarProperty Name="stock_percent" ColumnName="stock_percent" />
+          <ScalarProperty Name="sales_start_time" ColumnName="sales_start_time" />
+          <ScalarProperty Name="sales_end_date_Status" ColumnName="sales_end_date_Status" />
+          <ScalarProperty Name="stock_rest" ColumnName="stock_rest" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="wowstar_p2p_wowtv" FunctionName="WOw.Tv.Middle.Model.Db123.WOW4989.Store.wowstar_p2p_wowtv">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WOw.Tv.Middle.Model.Db123.WOW4989.wowstar_p2p_wowtv_Result">
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+          <ScalarProperty Name="PROVIDER" ColumnName="PROVIDER" />
+          <ScalarProperty Name="OPEN_TYPE" ColumnName="OPEN_TYPE" />
+          <ScalarProperty Name="Fund_no" ColumnName="Fund_no" />
+          <ScalarProperty Name="item_name" ColumnName="item_name" />
+          <ScalarProperty Name="loan_period" ColumnName="loan_period" />
+          <ScalarProperty Name="LOAN_INTE_RATE" ColumnName="LOAN_INTE_RATE" />
+          <ScalarProperty Name="COLL_INFO" ColumnName="COLL_INFO" />
+          <ScalarProperty Name="LOAN_AMT_MAX" ColumnName="LOAN_AMT_MAX" />
+          <ScalarProperty Name="FUND_JOIN_AMT" ColumnName="FUND_JOIN_AMT" />
+          <ScalarProperty Name="FUND_JOIN_CNT" ColumnName="FUND_JOIN_CNT" />
+          <ScalarProperty Name="FUND_PROG_RATE" ColumnName="FUND_PROG_RATE" />
+          <ScalarProperty Name="FUND_START_TM" ColumnName="FUND_START_TM" />
+          <ScalarProperty Name="FUND_END_TM" ColumnName="FUND_END_TM" />
+          <ScalarProperty Name="THUMBNAIL_PATH" ColumnName="THUMBNAIL_PATH" />
+          <ScalarProperty Name="LOAN_PERIOD_UNIT" ColumnName="LOAN_PERIOD_UNIT" />
+          <ScalarProperty Name="PC_LINK_VIEW" ColumnName="PC_LINK_VIEW" />
+          <ScalarProperty Name="MO_LINK_VIEW" ColumnName="MO_LINK_VIEW" />
+          <ScalarProperty Name="LOGO_IMG" ColumnName="LOGO_IMG" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c7631f2bc94f4d7a8d6141bab7afd324" Name="Diagram1" ZoomLevel="100">
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.tblNewsStand" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.ArticleClass" Width="1.5" PointX="2.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.tblNewsStandArticleManage" Width="1.5" PointX="0.5" PointY="3.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.tblArticleCreation" Width="1.5" PointX="5.75" PointY="0.5" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.ArticleList_HK" Width="1.5" PointX="0.5" PointY="6" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.ArticleList_WO" Width="1.5" PointX="2.25" PointY="6" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.ArticleList_YH" Width="1.5" PointX="4" PointY="6" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.NTB_ARTICLE_CONFIG" Width="1.5" PointX="7.5" PointY="0.5" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.NTB_TEXT_LINK" Width="1.5" PointX="9.25" PointY="0.5" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.tblArticleListFTS" Width="1.375" PointX="5.75" PointY="6" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.ArtClickCount" Width="1.375" PointX="7.375" PointY="6" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.ArtClickCountHtml" Width="1.375" PointX="9" PointY="6" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.NTB_ARTICLE_SHOW_CONFIG" Width="1.5" PointX="12.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.NTB_ARTICLE_SHOW_NUM" Width="1.5" PointX="11" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.NTB_ARTICLE_VIEWPAGE_MANAGE" Width="1.5" PointX="10.5" PointY="6" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.NTB_ARTICLE_COMMENT" Width="1.5" PointX="8.625" PointY="9" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.NTB_HARD_CODING_AD" Width="1.5" PointX="12.125" PointY="6" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.tblPlanArticle" Width="1.5" PointX="0.5" PointY="9" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.tblRelationImage" Width="1.5" PointX="7.5" PointY="3.375" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.NTB_ARTICLE_RELATION_CONFIG" Width="1.5" PointX="10.25" PointY="9" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.NTB_REPORTER_AWORD" Width="1.5" PointX="5.375" PointY="9" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.NTB_REPORTER_RECOMMEND" Width="1.5" PointX="7" PointY="9" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.NTB_ARTICLE_SUBSCRIPTION" Width="1.5" PointX="11.875" PointY="9" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.ArticleStock" Width="1.5" PointX="5.75" PointY="3.375" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.tblArticleList" Width="1.5" PointX="4" PointY="0.5" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.NTB_ARTICLE_LIKEIT" Width="1.5" PointX="9.25" PointY="3.375" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.NTB_PREV_ARTICLE_COUNT" Width="1.5" PointX="11" PointY="3.375" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.ArticleClass_Hanatour" Width="1.5" PointX="7" PointY="10.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.NTB_POST" Width="1.5" PointX="12.75" PointY="3.625" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.NTB_ARTICLE_LIKEIT_HANATOUR" Width="1.5" PointX="13.75" PointY="6" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.NTB_REPORTER_MANAGE" Width="1.5" PointX="2.125" PointY="9" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.NTB_HUB_BUSINESS" Width="1.5" PointX="13.5" PointY="9" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.Article.NTB_REPORTER_PROFILE" Width="1.5" PointX="3.75" PointY="9" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

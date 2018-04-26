@@ -1,0 +1,1229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Wow.Tv.Middle.Model.Db89.wowbill.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="NTB_USER_LOGIN_LOG">
+    <Key>
+      <PropertyRef Name="LOG_SEQ" />
+    </Key>
+    <Property Name="LOG_SEQ" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USER_NUMBER" Type="int" />
+    <Property Name="USER_ID" Type="varchar" MaxLength="12" />
+    <Property Name="WEB_TYPE" Type="varchar" MaxLength="10" />
+    <Property Name="WEB_FROM" Type="varchar" MaxLength="10" />
+    <Property Name="WEB_SERVER_NAME" Type="varchar" MaxLength="30" />
+    <Property Name="LOGIN_SITE" Type="varchar" MaxLength="10" />
+    <Property Name="LOGIN_DT" Type="datetime" />
+    <Property Name="CLIENT_IP" Type="varchar" MaxLength="20" />
+    <Property Name="REQUEST_URL" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <!--생성 중 오류 발생:
+경고 6002: 테이블/뷰 'wowbill.dbo.tbl_Nickname'에 기본 키가 정의되지 않았습니다. 키가 유추되었고 읽기 전용 테이블/뷰로 정의되었습니다.-->
+  <EntityType Name="tbl_Nickname">
+    <Key>
+      <PropertyRef Name="nickname" />
+    </Key>
+    <Property Name="nickname" Type="varchar" MaxLength="64" Nullable="false" />
+  </EntityType>
+  <!--생성 중 오류 발생:
+경고 6002: 테이블/뷰 'wowbill.dbo.TBL_STOCKLOAN_CONSLT'에 기본 키가 정의되지 않았습니다. 키가 유추되었고 읽기 전용 테이블/뷰로 정의되었습니다.-->
+  <EntityType Name="TBL_STOCKLOAN_CONSLT">
+    <Key>
+      <PropertyRef Name="seq" />
+      <PropertyRef Name="userid" />
+      <PropertyRef Name="reg_date" />
+    </Key>
+    <Property Name="seq" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userid" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="reg_date" Type="datetime" Nullable="false" />
+    <Property Name="state" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="tblCodeHobby">
+    <Key>
+      <PropertyRef Name="hobbyId" />
+    </Key>
+    <Property Name="hobbyId" Type="tinyint" Nullable="false" />
+    <Property Name="descript" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="registDt" Type="datetime" Nullable="false" />
+    <Property Name="updateDt" Type="datetime" />
+    <Property Name="adminId" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="apply" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCodeInfoAcquirement">
+    <Key>
+      <PropertyRef Name="infoAcquirementId" />
+    </Key>
+    <Property Name="infoAcquirementId" Type="tinyint" Nullable="false" />
+    <Property Name="descript" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="registDt" Type="datetime" Nullable="false" />
+    <Property Name="updateDt" Type="datetime" />
+    <Property Name="adminId" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="apply" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCodeInfoAcquirementDetail">
+    <Key>
+      <PropertyRef Name="infoAcquirementId" />
+    </Key>
+    <Property Name="infoAcquirementId" Type="tinyint" Nullable="false" />
+    <Property Name="sort" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCodeInterest">
+    <Key>
+      <PropertyRef Name="interestId" />
+    </Key>
+    <Property Name="interestId" Type="tinyint" Nullable="false" />
+    <Property Name="descript" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="registDt" Type="datetime" Nullable="false" />
+    <Property Name="updateDt" Type="datetime" />
+    <Property Name="adminId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="apply" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCodeInterestDetail">
+    <Key>
+      <PropertyRef Name="interestId" />
+    </Key>
+    <Property Name="interestId" Type="tinyint" Nullable="false" />
+    <Property Name="sort" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCodeInterestItem">
+    <Key>
+      <PropertyRef Name="itemCode" />
+    </Key>
+    <Property Name="itemCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="itemName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="industryCode" Type="varchar" MaxLength="50" />
+    <Property Name="industryName" Type="varchar" MaxLength="50" />
+    <Property Name="registDt" Type="datetime" Nullable="false" />
+    <Property Name="updateDt" Type="datetime" />
+    <Property Name="adminId" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="apply" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCodeInvestmentPeriod">
+    <Key>
+      <PropertyRef Name="investmentPeriodId" />
+    </Key>
+    <Property Name="investmentPeriodId" Type="tinyint" Nullable="false" />
+    <Property Name="descript" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="registDt" Type="datetime" Nullable="false" />
+    <Property Name="updateDt" Type="datetime" />
+    <Property Name="adminId" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="apply" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCodeInvestmentPeriodDetail">
+    <Key>
+      <PropertyRef Name="investmentPeriodId" />
+    </Key>
+    <Property Name="investmentPeriodId" Type="tinyint" Nullable="false" />
+    <Property Name="sort" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCodeInvestmentPreferenceObject">
+    <Key>
+      <PropertyRef Name="investmentPreferenceObjectId" />
+    </Key>
+    <Property Name="investmentPreferenceObjectId" Type="tinyint" Nullable="false" />
+    <Property Name="descript" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="registDt" Type="datetime" Nullable="false" />
+    <Property Name="updateDt" Type="datetime" />
+    <Property Name="adminId" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="apply" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCodeInvestmentPreferenceObjectDetail">
+    <Key>
+      <PropertyRef Name="investmentPreferenceObjectId" />
+    </Key>
+    <Property Name="investmentPreferenceObjectId" Type="tinyint" Nullable="false" />
+    <Property Name="sort" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCodeInvestmentPropensity">
+    <Key>
+      <PropertyRef Name="investmentPropensityId" />
+    </Key>
+    <Property Name="investmentPropensityId" Type="tinyint" Nullable="false" />
+    <Property Name="descript" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="registDt" Type="datetime" Nullable="false" />
+    <Property Name="updateDt" Type="datetime" />
+    <Property Name="adminId" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="apply" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCodeInvestmentPropensityDetail">
+    <Key>
+      <PropertyRef Name="investmentPropensityId" />
+    </Key>
+    <Property Name="investmentPropensityId" Type="tinyint" Nullable="false" />
+    <Property Name="sort" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCodeInvestmentScale">
+    <Key>
+      <PropertyRef Name="investmentScaleId" />
+    </Key>
+    <Property Name="investmentScaleId" Type="tinyint" Nullable="false" />
+    <Property Name="descript" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="registDt" Type="datetime" Nullable="false" />
+    <Property Name="updateDt" Type="datetime" />
+    <Property Name="adminId" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="apply" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblCodeInvestmentScaleDetail">
+    <Key>
+      <PropertyRef Name="investmentScaleId" />
+    </Key>
+    <Property Name="investmentScaleId" Type="tinyint" Nullable="false" />
+    <Property Name="sort" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCodeJob">
+    <Key>
+      <PropertyRef Name="jobId" />
+    </Key>
+    <Property Name="jobId" Type="tinyint" Nullable="false" />
+    <Property Name="descript" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="registDt" Type="datetime" Nullable="false" />
+    <Property Name="updateDt" Type="datetime" />
+    <Property Name="adminId" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="apply" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCodeRegistRoute">
+    <Key>
+      <PropertyRef Name="registRouteId" />
+    </Key>
+    <Property Name="registRouteId" Type="tinyint" Nullable="false" />
+    <Property Name="descript" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="registDt" Type="datetime" Nullable="false" />
+    <Property Name="updateDt" Type="datetime" />
+    <Property Name="adminId" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="apply" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCodeResidingStatus">
+    <Key>
+      <PropertyRef Name="residingStatusId" />
+    </Key>
+    <Property Name="residingStatusId" Type="tinyint" Nullable="false" />
+    <Property Name="descript" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="registDt" Type="datetime" Nullable="false" />
+    <Property Name="updateDt" Type="datetime" />
+    <Property Name="adminId" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="apply" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCodeSalary">
+    <Key>
+      <PropertyRef Name="salaryId" />
+    </Key>
+    <Property Name="salaryId" Type="tinyint" Nullable="false" />
+    <Property Name="descript" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="registDt" Type="datetime" Nullable="false" />
+    <Property Name="updateDt" Type="datetime" />
+    <Property Name="adminId" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="apply" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCodeSalaryDetail">
+    <Key>
+      <PropertyRef Name="salaryId" />
+    </Key>
+    <Property Name="salaryId" Type="tinyint" Nullable="false" />
+    <Property Name="sort" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCodeStockCompany">
+    <Key>
+      <PropertyRef Name="stockCompanyId" />
+    </Key>
+    <Property Name="stockCompanyId" Type="tinyint" Nullable="false" />
+    <Property Name="descript" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="registDt" Type="datetime" Nullable="false" />
+    <Property Name="updateDt" Type="datetime" />
+    <Property Name="adminId" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="apply" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCodeStockCompanyDetail">
+    <Key>
+      <PropertyRef Name="stockCompanyId" />
+    </Key>
+    <Property Name="stockCompanyId" Type="tinyint" Nullable="false" />
+    <Property Name="sort" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCodeTransactionType">
+    <Key>
+      <PropertyRef Name="transactionCode" />
+    </Key>
+    <Property Name="transactionCode" Type="tinyint" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="descript" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="registDt" Type="datetime" Nullable="false" />
+    <Property Name="updateDt" Type="datetime" />
+    <Property Name="adminId" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="apply" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblCompanyDetail">
+    <Key>
+      <PropertyRef Name="companyDetailId" />
+    </Key>
+    <Property Name="companyDetailId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="businessNumber" Type="varchar" MaxLength="24" Nullable="false" />
+    <Property Name="ceoName" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="businessItem" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="businessCondition" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="businessCategory" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="corporationNumber" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="listed" Type="bit" Nullable="false" />
+    <Property Name="establishmentAnniversary" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="registDt" Type="datetime" Nullable="false" />
+    <Property Name="adminId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="apply" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblContent">
+    <Key>
+      <PropertyRef Name="contentId" />
+    </Key>
+    <Property Name="contentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descript" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="root" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="isMain" Type="bit" Nullable="false" />
+    <Property Name="upperMenu" Type="varchar" MaxLength="50" />
+    <Property Name="registDt" Type="datetime" Nullable="false" />
+    <Property Name="updateDt" Type="datetime" />
+    <Property Name="apply" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--생성 중 오류 발생:
+경고 6002: 테이블/뷰 'wowbill.dbo.tblcoupon_Daebak'에 기본 키가 정의되지 않았습니다. 키가 유추되었고 읽기 전용 테이블/뷰로 정의되었습니다.-->
+  <EntityType Name="tblcoupon_Daebak">
+    <Key>
+      <PropertyRef Name="idx_no" />
+      <PropertyRef Name="userid" />
+      <PropertyRef Name="c_no" />
+    </Key>
+    <Property Name="idx_no" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Gubun" Type="char" MaxLength="4" />
+    <Property Name="userid" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="c_no" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="c_regdate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TblMemberBlackList">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="AlertText" Type="varchar" MaxLength="1000" />
+    <Property Name="RegDt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TblMemberDIDenialList">
+    <Key>
+      <PropertyRef Name="seq" />
+    </Key>
+    <Property Name="seq" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DupInfo" Type="varchar" MaxLength="64" />
+    <Property Name="AlertText" Type="varchar" MaxLength="1000" />
+    <Property Name="RequestMailMember" Type="varchar" MaxLength="100" />
+    <Property Name="RequestMailDate" Type="varchar" MaxLength="500" />
+    <Property Name="RegDt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblMemberEmailAuth">
+    <Key>
+      <PropertyRef Name="userNumber" />
+    </Key>
+    <Property Name="userNumber" Type="int" Nullable="false" />
+    <Property Name="emailAuth" Type="char" MaxLength="1" />
+    <Property Name="registDt" Type="datetime" />
+    <Property Name="expireDt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TblMemberIdSearchLog">
+    <Key>
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="Seq" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Name" Type="varchar" MaxLength="30" />
+    <Property Name="DupInfo" Type="varchar" MaxLength="64" />
+    <Property Name="RegDt" Type="datetime" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="REQ_SEQ_session" Type="varchar" MaxLength="100" />
+    <Property Name="REQ_SEQ_sResult" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TblMemberPasswordHistory">
+    <Key>
+      <PropertyRef Name="userNumber" />
+    </Key>
+    <Property Name="userNumber" Type="int" Nullable="false" />
+    <Property Name="alarmDt" Type="varchar" MaxLength="8" />
+    <Property Name="regDt" Type="datetime" />
+    <Property Name="udtDt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblPost">
+    <Key>
+      <PropertyRef Name="postId" />
+    </Key>
+    <Property Name="zipcode" Type="varchar" MaxLength="10" />
+    <Property Name="sido" Type="varchar" MaxLength="20" />
+    <Property Name="gugun" Type="varchar" MaxLength="20" />
+    <Property Name="dong" Type="varchar" MaxLength="70" />
+    <Property Name="bungi" Type="varchar" MaxLength="20" />
+    <Property Name="postId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblRecruit">
+    <Key>
+      <PropertyRef Name="Seq" />
+    </Key>
+    <Property Name="Seq" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="No" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Name" Type="varchar" MaxLength="20" />
+    <Property Name="Ssno" Type="varchar" MaxLength="24" />
+    <Property Name="Img" Type="varchar" MaxLength="500" />
+    <Property Name="RegDt" Type="datetime" />
+    <Property Name="JobApplication" Type="varchar" MaxLength="500" />
+    <Property Name="Password" Type="varchar" MaxLength="24" />
+    <Property Name="Agreement" Type="char" MaxLength="1" />
+    <Property Name="Passed" Type="char" MaxLength="1" />
+    <Property Name="ViewCnt" Type="int" />
+  </EntityType>
+  <EntityType Name="tblTransaction">
+    <Key>
+      <PropertyRef Name="transactionId" />
+    </Key>
+    <Property Name="transactionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="transactionCode" Type="tinyint" Nullable="false" />
+    <Property Name="userNumber" Type="int" Nullable="false" />
+    <Property Name="wowCashBalance" Type="int" Nullable="false" />
+    <Property Name="pointToWowCashBalance" Type="int" Nullable="false" />
+    <Property Name="pointBalance" Type="int" Nullable="false" />
+    <Property Name="wowCashAmount" Type="int" Nullable="false" />
+    <Property Name="pointToWowCashAmount" Type="int" Nullable="false" />
+    <Property Name="pointAmount" Type="int" Nullable="false" />
+    <Property Name="registDt" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblUser">
+    <Key>
+      <PropertyRef Name="userNumber" />
+    </Key>
+    <Property Name="userNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userId" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="userTypeId" Type="tinyint" Nullable="false" />
+    <Property Name="userSectionId" Type="tinyint" Nullable="false" />
+    <Property Name="userGradeId" Type="tinyint" Nullable="false" />
+    <Property Name="companyDetailId" Type="int" />
+    <Property Name="password" Type="varchar" MaxLength="44" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ssno" Type="varchar" MaxLength="24" Nullable="false" />
+    <Property Name="tel" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="wowCashBalance" Type="int" Nullable="false" />
+    <Property Name="pointToWowCashBalance" Type="int" Nullable="false" />
+    <Property Name="accumulatePointBalance" Type="int" Nullable="false" />
+    <Property Name="fusiblePointBalance" Type="int" Nullable="false" />
+    <Property Name="passwordConfirmId" Type="tinyint" Nullable="false" />
+    <Property Name="passwordConfirmAnswer" Type="varchar" MaxLength="64" />
+    <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="isSendEmail" Type="bit" Nullable="false" />
+    <Property Name="longTermUncollectedCount" Type="tinyint" Nullable="false" />
+    <Property Name="isSendSMS" Type="char" MaxLength="1" />
+    <Property Name="isEmailOk" Type="char" MaxLength="1" />
+    <Property Name="option1" Type="varchar" MaxLength="50" />
+    <Property Name="option2" Type="varchar" MaxLength="50" />
+    <Property Name="registDt" Type="datetime" Nullable="false" />
+    <Property Name="adminId" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="apply" Type="bit" Nullable="false" />
+    <Property Name="club" Type="char" MaxLength="2" />
+    <Property Name="NickName" Type="varchar" MaxLength="50" />
+    <Property Name="Mobile" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="tblUser_approvalLog">
+    <Key>
+      <PropertyRef Name="seq" />
+    </Key>
+    <Property Name="seq" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="usernumber" Type="int" Nullable="false" />
+    <Property Name="approved" Type="bit" Nullable="false" />
+    <Property Name="reason" Type="varchar" MaxLength="500" />
+    <Property Name="registDt" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblUser_FailLog">
+    <Key>
+      <PropertyRef Name="idx" />
+    </Key>
+    <Property Name="idx" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userid" Type="varchar" MaxLength="12" />
+    <Property Name="mode" Type="varchar" MaxLength="16" />
+    <Property Name="nbox" Type="text" />
+    <Property Name="regdate" Type="datetime" />
+  </EntityType>
+  <!--생성 중 오류 발생:
+경고 6002: 테이블/뷰 'wowbill.dbo.tblUser_IPIN'에 기본 키가 정의되지 않았습니다. 키가 유추되었고 읽기 전용 테이블/뷰로 정의되었습니다.-->
+  <EntityType Name="tblUser_IPIN">
+    <Key>
+      <PropertyRef Name="usernumber" />
+      <PropertyRef Name="DupInfo" />
+    </Key>
+    <Property Name="usernumber" Type="int" Nullable="false" />
+    <Property Name="DupInfo" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="ConnInfo" Type="varchar" MaxLength="88" />
+    <Property Name="registdt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblUser_Log">
+    <Key>
+      <PropertyRef Name="idx" />
+    </Key>
+    <Property Name="idx" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userid" Type="varchar" MaxLength="12" />
+    <Property Name="mode" Type="varchar" MaxLength="16" />
+    <Property Name="nbox" Type="text" />
+    <Property Name="regdate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblUserDetail">
+    <Key>
+      <PropertyRef Name="userNumber" />
+    </Key>
+    <Property Name="userNumber" Type="int" Nullable="false" />
+    <Property Name="isSolar" Type="bit" />
+    <Property Name="birthday" Type="char" MaxLength="8" />
+    <Property Name="zipcode" Type="char" MaxLength="6" />
+    <Property Name="address" Type="varchar" MaxLength="255" />
+    <Property Name="handphone" Type="varchar" MaxLength="15" />
+    <Property Name="companyName" Type="varchar" MaxLength="50" />
+    <Property Name="companyDepartmentName" Type="varchar" MaxLength="50" />
+    <Property Name="companyZipcode" Type="char" MaxLength="6" />
+    <Property Name="companyAddress" Type="varchar" MaxLength="255" />
+    <Property Name="companyTel" Type="varchar" MaxLength="15" />
+    <Property Name="jobId" Type="tinyint" />
+    <Property Name="homepageUrl" Type="varchar" MaxLength="255" />
+    <Property Name="registRouteId" Type="tinyint" />
+    <Property Name="statusChangeReasonId" Type="tinyint" />
+    <Property Name="salaryId" Type="tinyint" />
+    <Property Name="investmentPeriodId" Type="tinyint" />
+    <Property Name="investmentScaleId" Type="tinyint" />
+    <Property Name="investmentPropensityId" Type="tinyint" />
+    <Property Name="investmentPreferenceObjectId" Type="tinyint" />
+    <Property Name="stockCompanyId" Type="tinyint" />
+    <Property Name="infoAcquirementId" Type="tinyint" />
+    <Property Name="interestItemId1" Type="varchar" MaxLength="50" />
+    <Property Name="interestItemId2" Type="varchar" MaxLength="50" />
+    <Property Name="interestItemId3" Type="varchar" MaxLength="50" />
+    <Property Name="hobbyId" Type="tinyint" />
+    <Property Name="weddingAnniversary" Type="char" MaxLength="8" />
+    <Property Name="residingStatusId" Type="tinyint" />
+    <Property Name="registDt" Type="datetime" Nullable="false" />
+    <Property Name="adminId" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="apply" Type="bit" Nullable="false" />
+    <Property Name="interestArea" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblUserEmailSend">
+    <Key>
+      <PropertyRef Name="userNumber" />
+    </Key>
+    <Property Name="userNumber" Type="int" Nullable="false" />
+    <Property Name="emailAD" Type="char" MaxLength="1" />
+    <Property Name="registDt" Type="datetime" />
+  </EntityType>
+  <!--생성 중 오류 발생:
+경고 6002: 테이블/뷰 'wowbill.dbo.tblUserHistory'에 기본 키가 정의되지 않았습니다. 키가 유추되었고 읽기 전용 테이블/뷰로 정의되었습니다.-->
+  <EntityType Name="tblUserHistory">
+    <Key>
+      <PropertyRef Name="userNumber" />
+      <PropertyRef Name="userId" />
+      <PropertyRef Name="userTypeId" />
+      <PropertyRef Name="userSectionId" />
+      <PropertyRef Name="userGradeId" />
+      <PropertyRef Name="password" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="ssno" />
+      <PropertyRef Name="tel" />
+      <PropertyRef Name="wowCashBalance" />
+      <PropertyRef Name="pointToWowCashBalance" />
+      <PropertyRef Name="accumulatePointBalance" />
+      <PropertyRef Name="fusiblePointBalance" />
+      <PropertyRef Name="passwordConfirmId" />
+      <PropertyRef Name="email" />
+      <PropertyRef Name="isSendEmail" />
+      <PropertyRef Name="longTermUncollectedCount" />
+      <PropertyRef Name="registDt" />
+      <PropertyRef Name="operationType" />
+    </Key>
+    <Property Name="userNumber" Type="int" Nullable="false" />
+    <Property Name="userId" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="userTypeId" Type="tinyint" Nullable="false" />
+    <Property Name="userSectionId" Type="tinyint" Nullable="false" />
+    <Property Name="userGradeId" Type="tinyint" Nullable="false" />
+    <Property Name="companyDetailId" Type="int" />
+    <Property Name="password" Type="varchar" MaxLength="44" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ssno" Type="varchar" MaxLength="24" Nullable="false" />
+    <Property Name="tel" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="wowCashBalance" Type="int" Nullable="false" />
+    <Property Name="pointToWowCashBalance" Type="int" Nullable="false" />
+    <Property Name="accumulatePointBalance" Type="int" Nullable="false" />
+    <Property Name="fusiblePointBalance" Type="int" Nullable="false" />
+    <Property Name="passwordConfirmId" Type="tinyint" Nullable="false" />
+    <Property Name="passwordConfirmAnswer" Type="varchar" MaxLength="64" />
+    <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="isSendEmail" Type="bit" Nullable="false" />
+    <Property Name="longTermUncollectedCount" Type="tinyint" Nullable="false" />
+    <Property Name="isSendSMS" Type="char" MaxLength="1" />
+    <Property Name="isEmailOk" Type="char" MaxLength="1" />
+    <Property Name="option1" Type="varchar" MaxLength="50" />
+    <Property Name="option2" Type="varchar" MaxLength="50" />
+    <Property Name="registDt" Type="datetime" Nullable="false" />
+    <Property Name="operationType" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="adminId" Type="varchar" MaxLength="20" />
+    <Property Name="club" Type="char" MaxLength="2" />
+    <Property Name="NickName" Type="varchar" MaxLength="50" />
+    <Property Name="Mobile" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="tblUserPost">
+    <Key>
+      <PropertyRef Name="userNumber" />
+    </Key>
+    <Property Name="userNumber" Type="int" Nullable="false" />
+    <Property Name="sido" Type="varchar" MaxLength="20" />
+    <Property Name="gugun" Type="varchar" MaxLength="20" />
+    <Property Name="registDt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblUserSMS">
+    <Key>
+      <PropertyRef Name="userNumber" />
+    </Key>
+    <Property Name="userNumber" Type="int" Nullable="false" />
+    <Property Name="smsInfo" Type="char" MaxLength="1" />
+    <Property Name="smsAd" Type="char" MaxLength="1" />
+    <Property Name="adminId" Type="varchar" MaxLength="12" />
+    <Property Name="registDt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblUserSNSFacebook">
+    <Key>
+      <PropertyRef Name="userNumber" />
+    </Key>
+    <Property Name="userNumber" Type="int" Nullable="false" />
+    <Property Name="id" Type="bigint" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblUserSNSKakao">
+    <Key>
+      <PropertyRef Name="userNumber" />
+    </Key>
+    <Property Name="userNumber" Type="int" Nullable="false" />
+    <Property Name="id" Type="bigint" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="nickname" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblUserSNSNaver">
+    <Key>
+      <PropertyRef Name="userNumber" />
+    </Key>
+    <Property Name="userNumber" Type="int" Nullable="false" />
+    <Property Name="id" Type="bigint" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_tblTransaction_tblCodeTransactionType">
+    <End Role="tblCodeTransactionType" Type="Self.tblCodeTransactionType" Multiplicity="1" />
+    <End Role="tblTransaction" Type="Self.tblTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeTransactionType">
+        <PropertyRef Name="transactionCode" />
+      </Principal>
+      <Dependent Role="tblTransaction">
+        <PropertyRef Name="transactionCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblTransaction_tblUser">
+    <End Role="tblUser" Type="Self.tblUser" Multiplicity="1" />
+    <End Role="tblTransaction" Type="Self.tblTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUser">
+        <PropertyRef Name="userNumber" />
+      </Principal>
+      <Dependent Role="tblTransaction">
+        <PropertyRef Name="userNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblCodeHobby">
+    <End Role="tblCodeHobby" Type="Self.tblCodeHobby" Multiplicity="0..1" />
+    <End Role="tblUserDetail" Type="Self.tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeHobby">
+        <PropertyRef Name="hobbyId" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="hobbyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblCodeInfoAcquirement">
+    <End Role="tblCodeInfoAcquirement" Type="Self.tblCodeInfoAcquirement" Multiplicity="0..1" />
+    <End Role="tblUserDetail" Type="Self.tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeInfoAcquirement">
+        <PropertyRef Name="infoAcquirementId" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="infoAcquirementId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblCodeInterestItem">
+    <End Role="tblCodeInterestItem" Type="Self.tblCodeInterestItem" Multiplicity="0..1" />
+    <End Role="tblUserDetail" Type="Self.tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeInterestItem">
+        <PropertyRef Name="itemCode" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="interestItemId1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblCodeInterestItem1">
+    <End Role="tblCodeInterestItem" Type="Self.tblCodeInterestItem" Multiplicity="0..1" />
+    <End Role="tblUserDetail" Type="Self.tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeInterestItem">
+        <PropertyRef Name="itemCode" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="interestItemId2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblCodeInterestItem2">
+    <End Role="tblCodeInterestItem" Type="Self.tblCodeInterestItem" Multiplicity="0..1" />
+    <End Role="tblUserDetail" Type="Self.tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeInterestItem">
+        <PropertyRef Name="itemCode" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="interestItemId3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblCodeInvestmentPeriod">
+    <End Role="tblCodeInvestmentPeriod" Type="Self.tblCodeInvestmentPeriod" Multiplicity="0..1" />
+    <End Role="tblUserDetail" Type="Self.tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeInvestmentPeriod">
+        <PropertyRef Name="investmentPeriodId" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="investmentPeriodId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblCodeInvestmentPreferenceObject">
+    <End Role="tblCodeInvestmentPreferenceObject" Type="Self.tblCodeInvestmentPreferenceObject" Multiplicity="0..1" />
+    <End Role="tblUserDetail" Type="Self.tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeInvestmentPreferenceObject">
+        <PropertyRef Name="investmentPreferenceObjectId" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="investmentPreferenceObjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblCodeInvestmentPropensity">
+    <End Role="tblCodeInvestmentPropensity" Type="Self.tblCodeInvestmentPropensity" Multiplicity="0..1" />
+    <End Role="tblUserDetail" Type="Self.tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeInvestmentPropensity">
+        <PropertyRef Name="investmentPropensityId" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="investmentPropensityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblCodeInvestmentScale">
+    <End Role="tblCodeInvestmentScale" Type="Self.tblCodeInvestmentScale" Multiplicity="0..1" />
+    <End Role="tblUserDetail" Type="Self.tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeInvestmentScale">
+        <PropertyRef Name="investmentScaleId" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="investmentScaleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblCodeJob">
+    <End Role="tblCodeJob" Type="Self.tblCodeJob" Multiplicity="0..1" />
+    <End Role="tblUserDetail" Type="Self.tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeJob">
+        <PropertyRef Name="jobId" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="jobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblCodeRegistRoute">
+    <End Role="tblCodeRegistRoute" Type="Self.tblCodeRegistRoute" Multiplicity="0..1" />
+    <End Role="tblUserDetail" Type="Self.tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeRegistRoute">
+        <PropertyRef Name="registRouteId" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="registRouteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblCodeResidingStatus">
+    <End Role="tblCodeResidingStatus" Type="Self.tblCodeResidingStatus" Multiplicity="0..1" />
+    <End Role="tblUserDetail" Type="Self.tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeResidingStatus">
+        <PropertyRef Name="residingStatusId" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="residingStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblCodeSalary">
+    <End Role="tblCodeSalary" Type="Self.tblCodeSalary" Multiplicity="0..1" />
+    <End Role="tblUserDetail" Type="Self.tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeSalary">
+        <PropertyRef Name="salaryId" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="salaryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblCodeStockCompany">
+    <End Role="tblCodeStockCompany" Type="Self.tblCodeStockCompany" Multiplicity="0..1" />
+    <End Role="tblUserDetail" Type="Self.tblUserDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCodeStockCompany">
+        <PropertyRef Name="stockCompanyId" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="stockCompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUserDetail_tblUser">
+    <End Role="tblUser" Type="Self.tblUser" Multiplicity="1" />
+    <End Role="tblUserDetail" Type="Self.tblUserDetail" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tblUser">
+        <PropertyRef Name="userNumber" />
+      </Principal>
+      <Dependent Role="tblUserDetail">
+        <PropertyRef Name="userNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="NUP_ADMIN_MEMBER_INFO_DELETE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="USER_NUMBER" Type="int" Mode="In" />
+    <Parameter Name="RETURN_NUMBER" Type="int" Mode="InOut" />
+    <Parameter Name="RETURN_MESSAGE" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="NUP_ADMIN_MEMBER_INFO_HISTORY_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="USER_NUMBER" Type="int" Mode="In" />
+  </Function>
+  <Function Name="NUP_ADMIN_MEMBER_INFO_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="USER_NUMBER" Type="int" Mode="In" />
+  </Function>
+  <Function Name="NUP_ADMIN_MEMBER_LIST_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="REGIST_DT_FROM" Type="datetime" Mode="In" />
+    <Parameter Name="REGIST_DT_TO" Type="datetime" Mode="In" />
+    <Parameter Name="LATEST_CONNECT_DT_FROM" Type="datetime" Mode="In" />
+    <Parameter Name="LATEST_CONNECT_DT_TO" Type="datetime" Mode="In" />
+    <Parameter Name="SEARCH_TYPE" Type="varchar" Mode="In" />
+    <Parameter Name="SEARCH_TEXT" Type="varchar" Mode="In" />
+    <Parameter Name="PAGE_INDEX" Type="int" Mode="In" />
+    <Parameter Name="PAGE_SIZE" Type="int" Mode="In" />
+  </Function>
+  <Function Name="NUP_ADMIN_MEMBER_STATISTICS_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="NUP_ENC_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TYPE" Type="varchar" Mode="In" />
+    <Parameter Name="ALGORITHM" Type="varchar" Mode="In" />
+    <Parameter Name="WORD" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="NUP_MEMBER_CREATE_COMPANY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="USERID" Type="varchar" Mode="In" />
+    <Parameter Name="NICKNAME" Type="varchar" Mode="In" />
+    <Parameter Name="PASSWORD" Type="varchar" Mode="In" />
+    <Parameter Name="NAME" Type="varchar" Mode="In" />
+    <Parameter Name="SSNO" Type="varchar" Mode="In" />
+    <Parameter Name="TEL" Type="varchar" Mode="In" />
+    <Parameter Name="MOBILE" Type="varchar" Mode="In" />
+    <Parameter Name="PASSWORDCONFIRMID" Type="tinyint" Mode="In" />
+    <Parameter Name="PASSWORDCONFIRMANSWER" Type="varchar" Mode="In" />
+    <Parameter Name="EMAIL" Type="varchar" Mode="In" />
+    <Parameter Name="ISSENDSMS" Type="bit" Mode="In" />
+    <Parameter Name="ISSENDSMSAD" Type="bit" Mode="In" />
+    <Parameter Name="ISSENDEMAIL" Type="bit" Mode="In" />
+    <Parameter Name="ISSENDEMAILAD" Type="bit" Mode="In" />
+    <Parameter Name="OPTION1" Type="varchar" Mode="In" />
+    <Parameter Name="OPTION2" Type="varchar" Mode="In" />
+    <Parameter Name="ZIPCODE" Type="varchar" Mode="In" />
+    <Parameter Name="ADDRESS" Type="varchar" Mode="In" />
+    <Parameter Name="OWNER" Type="varchar" Mode="In" />
+    <Parameter Name="BUSINESS_ITEM" Type="varchar" Mode="In" />
+    <Parameter Name="BUSINESS_CONDITION" Type="varchar" Mode="In" />
+    <Parameter Name="BUSINESS_TYPE" Type="varchar" Mode="In" />
+    <Parameter Name="COMPANY_NO" Type="varchar" Mode="In" />
+    <Parameter Name="LISTED" Type="bit" Mode="In" />
+    <Parameter Name="ESTABLISHMENT_ANNIVERSARY" Type="varchar" Mode="In" />
+    <Parameter Name="LANDCENTER" Type="bit" Mode="In" />
+    <Parameter Name="RETURN_NUMBER" Type="int" Mode="InOut" />
+    <Parameter Name="RETURN_MESSAGE" Type="varchar" Mode="InOut" />
+    <Parameter Name="USER_NUMBER" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="NUP_MEMBER_CREATE_GENERAL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="USERID" Type="varchar" Mode="In" />
+    <Parameter Name="NICKNAME" Type="varchar" Mode="In" />
+    <Parameter Name="PASSWORD" Type="varchar" Mode="In" />
+    <Parameter Name="NAME" Type="varchar" Mode="In" />
+    <Parameter Name="SSNO" Type="varchar" Mode="In" />
+    <Parameter Name="TEL" Type="varchar" Mode="In" />
+    <Parameter Name="MOBILE" Type="varchar" Mode="In" />
+    <Parameter Name="PASSWORDCONFIRMID" Type="tinyint" Mode="In" />
+    <Parameter Name="PASSWORDCONFIRMANSWER" Type="varchar" Mode="In" />
+    <Parameter Name="EMAIL" Type="varchar" Mode="In" />
+    <Parameter Name="ISSENDSMS" Type="bit" Mode="In" />
+    <Parameter Name="ISSENDSMSAD" Type="bit" Mode="In" />
+    <Parameter Name="ISSENDEMAIL" Type="bit" Mode="In" />
+    <Parameter Name="ISSENDEMAILAD" Type="bit" Mode="In" />
+    <Parameter Name="OPTION1" Type="varchar" Mode="In" />
+    <Parameter Name="OPTION2" Type="varchar" Mode="In" />
+    <Parameter Name="SIDO" Type="varchar" Mode="In" />
+    <Parameter Name="GUGUN" Type="varchar" Mode="In" />
+    <Parameter Name="BIRTHDATE" Type="varchar" Mode="In" />
+    <Parameter Name="ISSOLAR" Type="bit" Mode="In" />
+    <Parameter Name="GENDER" Type="bit" Mode="In" />
+    <Parameter Name="DUP_INFO" Type="varchar" Mode="In" />
+    <Parameter Name="CONN_INFO" Type="varchar" Mode="In" />
+    <Parameter Name="USER_SECTION_ID" Type="tinyint" Mode="In" />
+    <Parameter Name="RETURN_NUMBER" Type="int" Mode="InOut" />
+    <Parameter Name="RETURN_MESSAGE" Type="varchar" Mode="InOut" />
+    <Parameter Name="USER_NUMBER" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="NUP_MEMBER_CREATE_IPIN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="USERID" Type="varchar" Mode="In" />
+    <Parameter Name="NICKNAME" Type="varchar" Mode="In" />
+    <Parameter Name="PASSWORD" Type="varchar" Mode="In" />
+    <Parameter Name="NAME" Type="varchar" Mode="In" />
+    <Parameter Name="SSNO" Type="varchar" Mode="In" />
+    <Parameter Name="TEL" Type="varchar" Mode="In" />
+    <Parameter Name="MOBILE" Type="varchar" Mode="In" />
+    <Parameter Name="PASSWORDCONFIRMID" Type="tinyint" Mode="In" />
+    <Parameter Name="PASSWORDCONFIRMANSWER" Type="varchar" Mode="In" />
+    <Parameter Name="EMAIL" Type="varchar" Mode="In" />
+    <Parameter Name="ISSENDEMAIL" Type="bit" Mode="In" />
+    <Parameter Name="ISSENDSMS" Type="char" Mode="In" />
+    <Parameter Name="EMAILAD" Type="char" Mode="In" />
+    <Parameter Name="SMSAD" Type="char" Mode="In" />
+    <Parameter Name="OPTION1" Type="varchar" Mode="In" />
+    <Parameter Name="OPTION2" Type="varchar" Mode="In" />
+    <Parameter Name="ZIPCODE" Type="varchar" Mode="In" />
+    <Parameter Name="ADDRESS1" Type="varchar" Mode="In" />
+    <Parameter Name="ADDRESS2" Type="varchar" Mode="In" />
+    <Parameter Name="BIRTHDATE" Type="varchar" Mode="In" />
+    <Parameter Name="ISSOLAR" Type="bit" Mode="In" />
+    <Parameter Name="GENDER" Type="bit" Mode="In" />
+    <Parameter Name="DUP_INFO" Type="varchar" Mode="In" />
+    <Parameter Name="CONN_INFO" Type="varchar" Mode="In" />
+    <Parameter Name="RETURN_NUMBER" Type="int" Mode="InOut" />
+    <Parameter Name="RETURN_MESSAGE" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="NUP_MEMBER_CREATE_SMS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="USERID" Type="varchar" Mode="In" />
+    <Parameter Name="NICKNAME" Type="varchar" Mode="In" />
+    <Parameter Name="PASSWORD" Type="varchar" Mode="In" />
+    <Parameter Name="NAME" Type="varchar" Mode="In" />
+    <Parameter Name="SSNO" Type="varchar" Mode="In" />
+    <Parameter Name="TEL" Type="varchar" Mode="In" />
+    <Parameter Name="MOBILE" Type="varchar" Mode="In" />
+    <Parameter Name="PASSWORDCONFIRMID" Type="tinyint" Mode="In" />
+    <Parameter Name="PASSWORDCONFIRMANSWER" Type="varchar" Mode="In" />
+    <Parameter Name="EMAIL" Type="varchar" Mode="In" />
+    <Parameter Name="ISSENDEMAIL" Type="bit" Mode="In" />
+    <Parameter Name="ISSENDSMS" Type="char" Mode="In" />
+    <Parameter Name="EMAILAD" Type="char" Mode="In" />
+    <Parameter Name="SMSAD" Type="char" Mode="In" />
+    <Parameter Name="OPTION1" Type="varchar" Mode="In" />
+    <Parameter Name="OPTION2" Type="varchar" Mode="In" />
+    <Parameter Name="ZIPCODE" Type="varchar" Mode="In" />
+    <Parameter Name="ADDRESS1" Type="varchar" Mode="In" />
+    <Parameter Name="ADDRESS2" Type="varchar" Mode="In" />
+    <Parameter Name="BIRTHDATE" Type="varchar" Mode="In" />
+    <Parameter Name="ISSOLAR" Type="bit" Mode="In" />
+    <Parameter Name="GENDER" Type="bit" Mode="In" />
+    <Parameter Name="DUP_INFO" Type="varchar" Mode="In" />
+    <Parameter Name="CONN_INFO" Type="varchar" Mode="In" />
+    <Parameter Name="RETURN_NUMBER" Type="int" Mode="InOut" />
+    <Parameter Name="RETURN_MESSAGE" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="NUP_MEMBER_INFO_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="USER_NUMBER" Type="int" Mode="In" />
+  </Function>
+  <Function Name="NUP_MEMBER_INFO_SELECT_COMPANY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="USER_NUMBER" Type="int" Mode="In" />
+  </Function>
+  <Function Name="NUP_MEMBER_INFO_SELECT_GENERAL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="USER_NUMBER" Type="int" Mode="In" />
+  </Function>
+  <Function Name="NUP_MEMBER_TV_VOD_CRM_LOG_INSERT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DEP" Type="varchar" Mode="In" />
+    <Parameter Name="VODNUM" Type="int" Mode="In" />
+    <Parameter Name="BROADDATE" Type="varchar" Mode="In" />
+    <Parameter Name="PROGRAMNAME" Type="varchar" Mode="In" />
+    <Parameter Name="USERNUMBER" Type="int" Mode="In" />
+    <Parameter Name="USERID" Type="varchar" Mode="In" />
+    <Parameter Name="ENTERROUTE" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="NUP_MEMBER_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="USERNUMBER" Type="int" Mode="In" />
+    <Parameter Name="USERNAME" Type="varchar" Mode="In" />
+    <Parameter Name="NICKNAME" Type="varchar" Mode="In" />
+    <Parameter Name="TEL" Type="varchar" Mode="In" />
+    <Parameter Name="MOBILE" Type="varchar" Mode="In" />
+    <Parameter Name="EMAIL" Type="varchar" Mode="In" />
+    <Parameter Name="ISSENDSMS" Type="char" Mode="In" />
+    <Parameter Name="ISSENDEMAIL" Type="bit" Mode="In" />
+    <Parameter Name="SIDO" Type="varchar" Mode="In" />
+    <Parameter Name="GUGUN" Type="varchar" Mode="In" />
+    <Parameter Name="ZIPCODE" Type="char" Mode="In" />
+    <Parameter Name="ADDRESS" Type="varchar" Mode="In" />
+    <Parameter Name="SALARY_ID" Type="tinyint" Mode="In" />
+    <Parameter Name="INVESTMENT_PERIOD_ID" Type="tinyint" Mode="In" />
+    <Parameter Name="INVESTMENT_SCALE_ID" Type="tinyint" Mode="In" />
+    <Parameter Name="INVESTMENT_PROPENSITY_ID" Type="tinyint" Mode="In" />
+    <Parameter Name="INVESTMENT_PREFERENCE_OBJECT_ID" Type="tinyint" Mode="In" />
+    <Parameter Name="STOCK_COMPANY_ID" Type="tinyint" Mode="In" />
+    <Parameter Name="INFO_ACQUIREMENT_ID" Type="tinyint" Mode="In" />
+    <Parameter Name="INTEREST_AREA" Type="varchar" Mode="In" />
+    <Parameter Name="JOB_ID" Type="tinyint" Mode="In" />
+    <Parameter Name="REGIST_ROUTE_ID" Type="tinyint" Mode="In" />
+    <Parameter Name="BUSINESS_CONDITION" Type="varchar" Mode="In" />
+    <Parameter Name="BUSINESS_ITEM" Type="varchar" Mode="In" />
+    <Parameter Name="COMPANY_NO" Type="varchar" Mode="In" />
+    <Parameter Name="CEO_NAME" Type="varchar" Mode="In" />
+    <Parameter Name="LISTED" Type="bit" Mode="In" />
+    <Parameter Name="RETURN_NUMBER" Type="int" Mode="InOut" />
+    <Parameter Name="RETURN_MESSAGE" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="NUP_RECRUIT_INSERT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TYPE" Type="varchar" Mode="In" />
+    <Parameter Name="NAME" Type="varchar" Mode="In" />
+    <Parameter Name="SSNO" Type="varchar" Mode="In" />
+    <Parameter Name="IMG" Type="varchar" Mode="In" />
+    <Parameter Name="JOB" Type="varchar" Mode="In" />
+    <Parameter Name="PASSWORD" Type="varchar" Mode="In" />
+    <Parameter Name="AGREEMENT" Type="char" Mode="In" />
+    <Parameter Name="MAXNO" Type="int" Mode="In" />
+  </Function>
+  <Function Name="NUP_RECRUIT_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NAME" Type="varchar" Mode="In" />
+    <Parameter Name="SSNO" Type="varchar" Mode="In" />
+    <Parameter Name="SEQ" Type="int" Mode="In" />
+    <Parameter Name="PAGE_SIZE" Type="int" Mode="In" />
+    <Parameter Name="PAGE" Type="int" Mode="In" />
+    <Parameter Name="PASSWORD" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="NUP_RecruitData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="varchar" Mode="In" />
+    <Parameter Name="ssno" Type="varchar" Mode="In" />
+    <Parameter Name="img" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USP_GetMYCancelPoint" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="usernumber" Type="varchar" Mode="In" />
+    <Parameter Name="registDt" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USP_GetMYCancelPointCash" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="usernumber" Type="varchar" Mode="In" />
+    <Parameter Name="registDt" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USP_GetMYCurrentCash" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="usernumber" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_MemberPasswordHistoryCheck" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userid" Type="varchar" Mode="In" />
+    <Parameter Name="setdate" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_MemberRestoreDormancy" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="usernumber" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_RecruitData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="varchar" Mode="In" />
+    <Parameter Name="ssno" Type="varchar" Mode="In" />
+    <Parameter Name="img" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="WowTvMiddleModelDb89wowbillStoreContainer">
+    <EntitySet Name="NTB_USER_LOGIN_LOG" EntityType="Self.NTB_USER_LOGIN_LOG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCodeHobby" EntityType="Self.tblCodeHobby" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCodeInfoAcquirement" EntityType="Self.tblCodeInfoAcquirement" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCodeInfoAcquirementDetail" EntityType="Self.tblCodeInfoAcquirementDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCodeInterest" EntityType="Self.tblCodeInterest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCodeInterestDetail" EntityType="Self.tblCodeInterestDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCodeInterestItem" EntityType="Self.tblCodeInterestItem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCodeInvestmentPeriod" EntityType="Self.tblCodeInvestmentPeriod" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCodeInvestmentPeriodDetail" EntityType="Self.tblCodeInvestmentPeriodDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCodeInvestmentPreferenceObject" EntityType="Self.tblCodeInvestmentPreferenceObject" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCodeInvestmentPreferenceObjectDetail" EntityType="Self.tblCodeInvestmentPreferenceObjectDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCodeInvestmentPropensity" EntityType="Self.tblCodeInvestmentPropensity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCodeInvestmentPropensityDetail" EntityType="Self.tblCodeInvestmentPropensityDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCodeInvestmentScale" EntityType="Self.tblCodeInvestmentScale" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCodeInvestmentScaleDetail" EntityType="Self.tblCodeInvestmentScaleDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCodeJob" EntityType="Self.tblCodeJob" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCodeRegistRoute" EntityType="Self.tblCodeRegistRoute" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCodeResidingStatus" EntityType="Self.tblCodeResidingStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCodeSalary" EntityType="Self.tblCodeSalary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCodeSalaryDetail" EntityType="Self.tblCodeSalaryDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCodeStockCompany" EntityType="Self.tblCodeStockCompany" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCodeStockCompanyDetail" EntityType="Self.tblCodeStockCompanyDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCodeTransactionType" EntityType="Self.tblCodeTransactionType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCompanyDetail" EntityType="Self.tblCompanyDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblContent" EntityType="Self.tblContent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblMemberBlackList" EntityType="Self.TblMemberBlackList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblMemberDIDenialList" EntityType="Self.TblMemberDIDenialList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblMemberEmailAuth" EntityType="Self.tblMemberEmailAuth" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblMemberIdSearchLog" EntityType="Self.TblMemberIdSearchLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblMemberPasswordHistory" EntityType="Self.TblMemberPasswordHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPost" EntityType="Self.tblPost" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblRecruit" EntityType="Self.tblRecruit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTransaction" EntityType="Self.tblTransaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUser" EntityType="Self.tblUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUser_approvalLog" EntityType="Self.tblUser_approvalLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUser_FailLog" EntityType="Self.tblUser_FailLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUser_Log" EntityType="Self.tblUser_Log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUserDetail" EntityType="Self.tblUserDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUserEmailSend" EntityType="Self.tblUserEmailSend" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUserPost" EntityType="Self.tblUserPost" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUserSMS" EntityType="Self.tblUserSMS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUserSNSFacebook" EntityType="Self.tblUserSNSFacebook" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUserSNSKakao" EntityType="Self.tblUserSNSKakao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUserSNSNaver" EntityType="Self.tblUserSNSNaver" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Nickname" EntityType="Self.tbl_Nickname" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tbl_Nickname].[nickname] AS [nickname]
+    FROM [dbo].[tbl_Nickname] AS [tbl_Nickname]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TBL_STOCKLOAN_CONSLT" EntityType="Self.TBL_STOCKLOAN_CONSLT" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TBL_STOCKLOAN_CONSLT].[seq] AS [seq], 
+    [TBL_STOCKLOAN_CONSLT].[userid] AS [userid], 
+    [TBL_STOCKLOAN_CONSLT].[reg_date] AS [reg_date], 
+    [TBL_STOCKLOAN_CONSLT].[state] AS [state]
+    FROM [dbo].[TBL_STOCKLOAN_CONSLT] AS [TBL_STOCKLOAN_CONSLT]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblcoupon_Daebak" EntityType="Self.tblcoupon_Daebak" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tblcoupon_Daebak].[idx_no] AS [idx_no], 
+    [tblcoupon_Daebak].[Gubun] AS [Gubun], 
+    [tblcoupon_Daebak].[userid] AS [userid], 
+    [tblcoupon_Daebak].[c_no] AS [c_no], 
+    [tblcoupon_Daebak].[c_regdate] AS [c_regdate]
+    FROM [dbo].[tblcoupon_Daebak] AS [tblcoupon_Daebak]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblUser_IPIN" EntityType="Self.tblUser_IPIN" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tblUser_IPIN].[usernumber] AS [usernumber], 
+    [tblUser_IPIN].[DupInfo] AS [DupInfo], 
+    [tblUser_IPIN].[ConnInfo] AS [ConnInfo], 
+    [tblUser_IPIN].[registdt] AS [registdt]
+    FROM [dbo].[tblUser_IPIN] AS [tblUser_IPIN]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblUserHistory" EntityType="Self.tblUserHistory" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tblUserHistory].[userNumber] AS [userNumber], 
+    [tblUserHistory].[userId] AS [userId], 
+    [tblUserHistory].[userTypeId] AS [userTypeId], 
+    [tblUserHistory].[userSectionId] AS [userSectionId], 
+    [tblUserHistory].[userGradeId] AS [userGradeId], 
+    [tblUserHistory].[companyDetailId] AS [companyDetailId], 
+    [tblUserHistory].[password] AS [password], 
+    [tblUserHistory].[name] AS [name], 
+    [tblUserHistory].[ssno] AS [ssno], 
+    [tblUserHistory].[tel] AS [tel], 
+    [tblUserHistory].[wowCashBalance] AS [wowCashBalance], 
+    [tblUserHistory].[pointToWowCashBalance] AS [pointToWowCashBalance], 
+    [tblUserHistory].[accumulatePointBalance] AS [accumulatePointBalance], 
+    [tblUserHistory].[fusiblePointBalance] AS [fusiblePointBalance], 
+    [tblUserHistory].[passwordConfirmId] AS [passwordConfirmId], 
+    [tblUserHistory].[passwordConfirmAnswer] AS [passwordConfirmAnswer], 
+    [tblUserHistory].[email] AS [email], 
+    [tblUserHistory].[isSendEmail] AS [isSendEmail], 
+    [tblUserHistory].[longTermUncollectedCount] AS [longTermUncollectedCount], 
+    [tblUserHistory].[isSendSMS] AS [isSendSMS], 
+    [tblUserHistory].[isEmailOk] AS [isEmailOk], 
+    [tblUserHistory].[option1] AS [option1], 
+    [tblUserHistory].[option2] AS [option2], 
+    [tblUserHistory].[registDt] AS [registDt], 
+    [tblUserHistory].[operationType] AS [operationType], 
+    [tblUserHistory].[adminId] AS [adminId], 
+    [tblUserHistory].[club] AS [club], 
+    [tblUserHistory].[NickName] AS [NickName], 
+    [tblUserHistory].[Mobile] AS [Mobile]
+    FROM [dbo].[tblUserHistory] AS [tblUserHistory]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_tblTransaction_tblCodeTransactionType" Association="Self.FK_tblTransaction_tblCodeTransactionType">
+      <End Role="tblCodeTransactionType" EntitySet="tblCodeTransactionType" />
+      <End Role="tblTransaction" EntitySet="tblTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblTransaction_tblUser" Association="Self.FK_tblTransaction_tblUser">
+      <End Role="tblUser" EntitySet="tblUser" />
+      <End Role="tblTransaction" EntitySet="tblTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblCodeHobby" Association="Self.FK_tblUserDetail_tblCodeHobby">
+      <End Role="tblCodeHobby" EntitySet="tblCodeHobby" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblCodeInfoAcquirement" Association="Self.FK_tblUserDetail_tblCodeInfoAcquirement">
+      <End Role="tblCodeInfoAcquirement" EntitySet="tblCodeInfoAcquirement" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblCodeInterestItem" Association="Self.FK_tblUserDetail_tblCodeInterestItem">
+      <End Role="tblCodeInterestItem" EntitySet="tblCodeInterestItem" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblCodeInterestItem1" Association="Self.FK_tblUserDetail_tblCodeInterestItem1">
+      <End Role="tblCodeInterestItem" EntitySet="tblCodeInterestItem" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblCodeInterestItem2" Association="Self.FK_tblUserDetail_tblCodeInterestItem2">
+      <End Role="tblCodeInterestItem" EntitySet="tblCodeInterestItem" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblCodeInvestmentPeriod" Association="Self.FK_tblUserDetail_tblCodeInvestmentPeriod">
+      <End Role="tblCodeInvestmentPeriod" EntitySet="tblCodeInvestmentPeriod" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblCodeInvestmentPreferenceObject" Association="Self.FK_tblUserDetail_tblCodeInvestmentPreferenceObject">
+      <End Role="tblCodeInvestmentPreferenceObject" EntitySet="tblCodeInvestmentPreferenceObject" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblCodeInvestmentPropensity" Association="Self.FK_tblUserDetail_tblCodeInvestmentPropensity">
+      <End Role="tblCodeInvestmentPropensity" EntitySet="tblCodeInvestmentPropensity" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblCodeInvestmentScale" Association="Self.FK_tblUserDetail_tblCodeInvestmentScale">
+      <End Role="tblCodeInvestmentScale" EntitySet="tblCodeInvestmentScale" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblCodeJob" Association="Self.FK_tblUserDetail_tblCodeJob">
+      <End Role="tblCodeJob" EntitySet="tblCodeJob" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblCodeRegistRoute" Association="Self.FK_tblUserDetail_tblCodeRegistRoute">
+      <End Role="tblCodeRegistRoute" EntitySet="tblCodeRegistRoute" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblCodeResidingStatus" Association="Self.FK_tblUserDetail_tblCodeResidingStatus">
+      <End Role="tblCodeResidingStatus" EntitySet="tblCodeResidingStatus" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblCodeSalary" Association="Self.FK_tblUserDetail_tblCodeSalary">
+      <End Role="tblCodeSalary" EntitySet="tblCodeSalary" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblCodeStockCompany" Association="Self.FK_tblUserDetail_tblCodeStockCompany">
+      <End Role="tblCodeStockCompany" EntitySet="tblCodeStockCompany" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUserDetail_tblUser" Association="Self.FK_tblUserDetail_tblUser">
+      <End Role="tblUser" EntitySet="tblUser" />
+      <End Role="tblUserDetail" EntitySet="tblUserDetail" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

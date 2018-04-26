@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WowTvMiddleModelDb51ARSConsultStoreContainer" CdmEntityContainer="Db51_ARSConsult">
+    <EntitySetMapping Name="tblCallback">
+      <EntityTypeMapping TypeName="Wow.Tv.Middle.Model.Db51.ARSConsult.tblCallback">
+        <MappingFragment StoreEntitySet="tblCallback">
+          <ScalarProperty Name="idx" ColumnName="idx" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="callback" ColumnName="callback" />
+          <ScalarProperty Name="authType" ColumnName="authType" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="attachFileName" ColumnName="attachFileName" />
+          <ScalarProperty Name="renameFileName" ColumnName="renameFileName" />
+          <ScalarProperty Name="delFlag" ColumnName="delFlag" />
+          <ScalarProperty Name="regDate" ColumnName="regDate" />
+          <ScalarProperty Name="applyDate" ColumnName="applyDate" />
+          <ScalarProperty Name="adminId" ColumnName="adminId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="NUP_SC_LOG_SELECT" FunctionName="Wow.Tv.Middle.Model.Db51.ARSConsult.Store.NUP_SC_LOG_SELECT">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Wow.Tv.Middle.Model.Db51.ARSConsult.NUP_SC_LOG_SELECT_Result">
+          <ScalarProperty Name="ROWNUM" ColumnName="ROWNUM" />
+          <ScalarProperty Name="TR_SENDDATE" ColumnName="TR_SENDDATE" />
+          <ScalarProperty Name="TR_ID" ColumnName="TR_ID" />
+          <ScalarProperty Name="TR_RSLTDATE" ColumnName="TR_RSLTDATE" />
+          <ScalarProperty Name="TR_CALLBACK" ColumnName="TR_CALLBACK" />
+          <ScalarProperty Name="TR_MSG" ColumnName="TR_MSG" />
+          <ScalarProperty Name="TR_ETC1" ColumnName="TR_ETC1" />
+          <ScalarProperty Name="TR_ETC3" ColumnName="TR_ETC3" />
+          <ScalarProperty Name="TR_ETC4" ColumnName="TR_ETC4" />
+          <ScalarProperty Name="ROWCNT" ColumnName="ROWCNT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

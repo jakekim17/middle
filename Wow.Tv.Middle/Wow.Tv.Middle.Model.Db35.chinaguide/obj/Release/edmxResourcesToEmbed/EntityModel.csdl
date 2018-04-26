@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Wow.Tb.Middle.Model.Db35.chinaguide" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="N_MAIN_MNG">
+    <Key>
+      <PropertyRef Name="IDX" />
+      <PropertyRef Name="UPDATE_U_ID" />
+      <PropertyRef Name="UPDATE_DATE" />
+    </Key>
+    <Property Name="IDX" Type="Int32" Nullable="false" />
+    <Property Name="VIDEO_TITLE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="VIDEO_CONTENT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="HOT_TICKER1" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="HOT_TICKER2" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="TOP_NEWS" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="UPDATE_U_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UPDATE_DATE" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityContainer Name="Db35_chinaguide" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="N_MAIN_MNG" EntityType="Self.N_MAIN_MNG" />
+    <FunctionImport Name="usp_getArticleList">
+      <Parameter Name="Type" Mode="In" Type="Int32" />
+      <Parameter Name="Market" Mode="In" Type="String" />
+      <Parameter Name="Searchkey" Mode="In" Type="String" />
+      <Parameter Name="StockCode" Mode="In" Type="String" />
+      <Parameter Name="StartDT" Mode="In" Type="String" />
+      <Parameter Name="EndDT" Mode="In" Type="String" />
+      <Parameter Name="Page" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="46a40476493749eea833bbb059fe5625" Name="Diagram1" ZoomLevel="89">
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.AAA" Width="1.5" PointX="5.75" PointY="16.5" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.CCC" Width="1.5" PointX="8" PointY="16.375" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.dtproperties" Width="1.5" PointX="14.75" PointY="9.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.NTB_ACTION_LOG" Width="1.5" PointX="14.75" PointY="17.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.NTB_BOARD" Width="1.5" PointX="10.75" PointY="2.625" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.NTB_BOARD_COMMENT" Width="1.5" PointX="15.25" PointY="3.875" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.NTB_BOARD_CONTENT" Width="1.5" PointX="13" PointY="2.625" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.NTB_COMMON_CODE" Width="1.5" PointX="2.75" PointY="18.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.NTB_CTGR" Width="1.5" PointX="16.75" PointY="8.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.NTB_FAMILY" Width="1.5" PointX="16.75" PointY="17.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.NTB_GROUP" Width="1.5" PointX="5.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.NTB_HIS_MNG" Width="1.5" PointX="17.75" PointY="2.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.NTB_MENU" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.NTB_MENU_GROUP" Width="1.5" PointX="8" PointY="4" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.sysdiagrams" Width="1.5" PointX="4.75" PointY="19.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_ANCHOR" Width="1.5" PointX="6.75" PointY="19.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_BANNER" Width="1.5" PointX="0.75" PointY="11.625" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_BANNER_EVENT_LOG" Width="1.5" PointX="3" PointY="11.625" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_BANNER_VIEWING_LOG" Width="1.5" PointX="3" PointY="14.5" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_BOARD" Width="1.5" PointX="8.75" PointY="19.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_BOARD_COMMENT" Width="1.5" PointX="17.75" PointY="12.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_BOARD_CONFIG" Width="1.5" PointX="18.75" PointY="16.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_BOARD_FILE" Width="1.5" PointX="18.75" PointY="6.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_BOARD_LOG" Width="1.5" PointX="19.75" PointY="9.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_BOARD_TOP" Width="1.5" PointX="10.75" PointY="21.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_BOARD_TOP_COMMENT" Width="1.5" PointX="19.75" PointY="2.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_BOARD_TOP_FILE" Width="1.5" PointX="20.75" PointY="6.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_BOARD_TOP_LOG" Width="1.5" PointX="12.75" PointY="22.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_CMS_ADMIN" Width="1.5" PointX="8" PointY="7.5" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_CMS_MENU" Width="1.5" PointX="10.25" PointY="9" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_CODE" Width="1.5" PointX="20.75" PointY="16.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_COMMON_FILE" Width="1.5" PointX="14.75" PointY="22.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_FAQ" Width="1.5" PointX="20.75" PointY="20.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_IR_CLUB" Width="1.5" PointX="12.75" PointY="9.875" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_JOB_COMMENT" Width="1.5" PointX="21.75" PointY="2.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_JOB_FILE" Width="1.5" PointX="0.75" PointY="23.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_JOBRESUME" Width="1.5" PointX="2.75" PointY="23.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_JOBUCC" Width="1.5" PointX="4.75" PointY="23.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_NOTICE_FILE" Width="1.5" PointX="22.75" PointY="6.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_PGM_ORDER" Width="1.5" PointX="22.75" PointY="16.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_POPUP" Width="1.5" PointX="0.75" PointY="2.625" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_POPUP_VIEWING_LOG" Width="1.5" PointX="3" PointY="5.5" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_PUBLIC" Width="1.5" PointX="22.75" PointY="24.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_PUBLIC_FILE" Width="1.5" PointX="23.75" PointY="2.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_PUBLIC_LOG" Width="1.5" PointX="23.75" PointY="9.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_QUEST_EMAIL" Width="1.5" PointX="16.75" PointY="25.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_QUEST_EMAIL_FILE" Width="1.5" PointX="18.75" PointY="25.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_TOUR" Width="1.5" PointX="24.75" PointY="5.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_TOUR_MEMBER" Width="1.5" PointX="24.75" PointY="15.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_VOTEAPT" Width="1.5" PointX="24.75" PointY="22.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_WOWEVENT" Width="1.5" PointX="24.75" PointY="25.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_WOWEVENT_SUB" Width="1.5" PointX="25.75" PointY="8.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TblArtVietnam" Width="1.5" PointX="25.75" PointY="2.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.tblBaseballRankUpdateDate" Width="1.5" PointX="6.75" PointY="27.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TBLBASEBALLSCH" Width="1.5" PointX="8.75" PointY="27.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.tblBaseBallustream" Width="1.5" PointX="26.75" PointY="12.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TBLBC" Width="1.5" PointX="26.75" PointY="5.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TBLBCBOARD" Width="1.5" PointX="26.75" PointY="16.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TBLBCCODE2" Width="1.5" PointX="18.75" PointY="28.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.tblBoard_tmpUrl" Width="1.5" PointX="26.75" PointY="21.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.tblDaeBakChunKuk" Width="1.5" PointX="26.75" PointY="25.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.tblDaeBakChunKukGibeob" Width="1.5" PointX="27.75" PointY="8.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.tblLoginConfirm" Width="1.5" PointX="10.75" PointY="29.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.tblmedia" Width="1.5" PointX="12.75" PointY="29.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.tblmediacnt" Width="1.5" PointX="28.75" PointY="2.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.tblMobileAppDown" Width="1.5" PointX="4.75" PointY="30.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.tblProjectEmergencyOpenYN" Width="1.5" PointX="28.75" PointY="12.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.tblStockWindow" Width="1.5" PointX="28.75" PointY="15.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.tblStockWindowApplyUser" Width="1.5" PointX="14.75" PointY="30.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.tblTextAndLinkBox" Width="1.5" PointX="28.75" PointY="20.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.tblTextAndLinkCategory" Width="1.5" PointX="20.75" PointY="30.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.tblTradingStarRanking" Width="1.5" PointX="28.75" PointY="23.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.tblTradingStarTrade" Width="1.5" PointX="22.75" PointY="30.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.tblTradingStarUser" Width="1.5" PointX="28.75" PointY="26.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.tblwownetinvest" Width="1.5" PointX="24.75" PointY="30.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.sf1_TAB_BOARD" Width="1.5" PointX="0.75" PointY="9.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.sf1_TAB_PUBLIC" Width="1.5" PointX="2.75" PointY="9.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_AREA_CHANNEL" Width="1.5" PointX="0.75" PointY="31.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_BANNER_VIEWING_LOG_Temp" Width="1.5" PointX="29.75" PointY="6.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_IR_CLUB_MANAGER" Width="1.5" PointX="15" PointY="13.625" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_MAIN_EVENT" Width="1.5" PointX="16.75" PointY="31.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_MAIN_EVENT_BACKUP" Width="1.5" PointX="26.75" PointY="31.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_MAIN_NEW" Width="1.5" PointX="29.75" PointY="9.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_MANAGER_REG" Width="1.5" PointX="28.75" PointY="31.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_PGM_ORDER_PROCESS" Width="1.5" PointX="30.75" PointY="2.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_POPUP_EVENT_LOG" Width="1.5" PointX="3" PointY="2.625" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.tblmedia_Code" Width="1.5" PointX="6.75" PointY="32.25" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.tblmedia_platform_code" Width="1.5" PointX="30.75" PointY="12.25" />
+        <AssociationConnector Association="Wow.Tv.Middle.Model.Db49.wowtv.FK_CCC_AAA" />
+        <AssociationConnector Association="Wow.Tv.Middle.Model.Db49.wowtv.R_7" />
+        <AssociationConnector Association="Wow.Tv.Middle.Model.Db49.wowtv.R_8" />
+        <AssociationConnector Association="Wow.Tv.Middle.Model.Db49.wowtv.FK_TAB_CMS_ADMIN_NTB_GROUP" />
+        <AssociationConnector Association="Wow.Tv.Middle.Model.Db49.wowtv.R_5" />
+        <AssociationConnector Association="Wow.Tv.Middle.Model.Db49.wowtv.R_6" />
+        <AssociationConnector Association="Wow.Tv.Middle.Model.Db49.wowtv.FK_TAB_BANNER_EVENT_LOG_TAB_BANNER" />
+        <AssociationConnector Association="Wow.Tv.Middle.Model.Db49.wowtv.FK_TAB_BANNER_VIEWING_LOG_TAB_BANNER" />
+        <AssociationConnector Association="Wow.Tv.Middle.Model.Db49.wowtv.FK_TAB_IR_CLUB_MANAGER_TAB_IR_CLUB" />
+        <AssociationConnector Association="Wow.Tv.Middle.Model.Db49.wowtv.FK_TAB_POPUP_EVENT_LOG_TAB_POPUP" />
+        <AssociationConnector Association="Wow.Tv.Middle.Model.Db49.wowtv.FK_TAB_POPUP_VIEWING_LOG_TAB_POPUP" />
+        <AssociationConnector Association="Wow.Tv.Middle.Model.Db49.wowtv.TAB_CMS_ADMIN_AUTH" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.NTB_BROAD_LIVE" Width="1.5" PointX="31.375" PointY="15.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.NTB_ATTACH_FILE" Width="1.5" PointX="31.375" PointY="23.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.NTB_PROGRAM_TEMPLATE" Width="1.5" PointX="31.375" PointY="31.625" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.NTB_PROGRAM_BANNER" Width="1.5" PointX="32.375" PointY="5.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.NTB_PROGRAM_INTRO" Width="1.5" PointX="9.375" PointY="32.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.tblTradingStarCategory" Width="1.5" PointX="33.375" PointY="0.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.NTB_PROGRAM_ADMIN" Width="1.5" PointX="3.375" PointY="33.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.NTB_PROGRAM_PARTNER" Width="1.5" PointX="33.375" PointY="10.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.NTB_PROGRAM_TEMPLATE_GROUP" Width="1.5" PointX="34.125" PointY="31.375" />
+        <AssociationConnector Association="Wow.Tv.Middle.Model.Db49.wowtv.R_12" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.NTB_PROGRAM_GROUP" Width="1.5" PointX="33.125" PointY="35.125" />
+        <AssociationConnector Association="Wow.Tv.Middle.Model.Db49.wowtv.R_13" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.NTB_STOCKHOLDER_BOARD" Width="1.5" PointX="11.375" PointY="32.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.NTB_MYPIN_ARTICLE" Width="1.5" PointX="31.375" PointY="27.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.NTB_MYPIN_PROGRAM" Width="1.5" PointX="33.375" PointY="17.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.NTB_MAIN_MANAGE" Width="1.5" PointX="33.375" PointY="20.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.NTB_MYPIN_PARTNER" Width="1.5" PointX="13.375" PointY="33.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.NTB_MYPIN_REPORTER" Width="1.5" PointX="33.375" PointY="14.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.NTB_ACCESS_LOG" Width="1.5" PointX="19.375" PointY="33.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_CMS_ADMIN_PwdHistory" Width="1.5" PointX="33.375" PointY="26.75" />
+        <EntityTypeShape EntityType="Wow.Tv.Middle.Model.Db49.wowtv.TAB_NOTICE" Width="1.5" PointX="10.25" PointY="13.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

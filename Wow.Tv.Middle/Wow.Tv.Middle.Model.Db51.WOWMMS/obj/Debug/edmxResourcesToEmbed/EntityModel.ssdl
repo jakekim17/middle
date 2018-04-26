@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Wow.Tv.Middle.Model.Db51.WOWMMS.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="mms_msg">
+    <Key>
+      <PropertyRef Name="MSGKEY" />
+    </Key>
+    <Property Name="MSGKEY" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SUBJECT" Type="varchar" MaxLength="120" />
+    <Property Name="PHONE" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="CALLBACK" Type="varchar" MaxLength="15" />
+    <Property Name="STATUS" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="REQDATE" Type="datetime" Nullable="false" />
+    <Property Name="MSG" Type="varchar" MaxLength="4000" />
+    <Property Name="FILE_CNT" Type="int" Nullable="false" />
+    <Property Name="FILE_CNT_REAL" Type="int" Nullable="false" />
+    <Property Name="FILE_PATH1" Type="varchar" MaxLength="512" />
+    <Property Name="FILE_PATH1_SIZ" Type="int" />
+    <Property Name="FILE_PATH2" Type="varchar" MaxLength="512" />
+    <Property Name="FILE_PATH2_SIZ" Type="int" />
+    <Property Name="FILE_PATH3" Type="varchar" MaxLength="512" />
+    <Property Name="FILE_PATH3_SIZ" Type="int" />
+    <Property Name="FILE_PATH4" Type="varchar" MaxLength="512" />
+    <Property Name="FILE_PATH4_SIZ" Type="int" />
+    <Property Name="FILE_PATH5" Type="varchar" MaxLength="512" />
+    <Property Name="FILE_PATH5_SIZ" Type="int" />
+    <Property Name="EXPIRETIME" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="SENTDATE" Type="datetime" />
+    <Property Name="RSLTDATE" Type="datetime" />
+    <Property Name="REPORTDATE" Type="datetime" />
+    <Property Name="TERMINATEDDATE" Type="datetime" />
+    <Property Name="RSLT" Type="varchar" MaxLength="4" />
+    <Property Name="REPCNT" Type="int" />
+    <Property Name="TYPE" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="TELCOINFO" Type="varchar" MaxLength="10" />
+    <Property Name="ID" Type="varchar" MaxLength="20" />
+    <Property Name="POST" Type="varchar" MaxLength="20" />
+    <Property Name="ETC1" Type="varchar" MaxLength="64" />
+    <Property Name="ETC2" Type="varchar" MaxLength="32" />
+    <Property Name="ETC3" Type="varchar" MaxLength="32" />
+    <Property Name="ETC4" Type="int" />
+  </EntityType>
+  <Function Name="NUP_MMS_LOG_SELECT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SEARCH_DATE" Type="datetime" Mode="In" />
+    <Parameter Name="TR_PHONE" Type="varchar" Mode="In" />
+    <Parameter Name="TR_MSG" Type="varchar" Mode="In" />
+    <Parameter Name="I_PAGE" Type="int" Mode="In" />
+    <Parameter Name="I_PAGESIZE" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="WowTvMiddleModelDb51WOWMMSStoreContainer">
+    <EntitySet Name="mms_msg" EntityType="Self.mms_msg" Schema="wowmms" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="WOw.Tv.Middle.Model.Db123.WOW4989.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="NUP_wowstar_unliststock" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="NOWDATE" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="wowstar_p2p_wowtv" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="wowstar_unliststock" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="NOWDATE" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="wowstar_video" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nums" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="WOwTvMiddleModelDb123WOW4989StoreContainer" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WOw.Tv.Middle.Model.Db123.WOW4989" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Db123_WOw4989" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="wowstar_unliststock" ReturnType="Collection(WOw.Tv.Middle.Model.Db123.WOW4989.wowstar_unliststock_Result)">
+          <Parameter Name="NOWDATE" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="wowstar_video" ReturnType="Collection(WOw.Tv.Middle.Model.Db123.WOW4989.wowstar_video_Result)">
+          <Parameter Name="nums" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="NUP_wowstar_unliststock" ReturnType="Collection(WOw.Tv.Middle.Model.Db123.WOW4989.NUP_wowstar_unliststock_Result)">
+          <Parameter Name="NOWDATE" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="wowstar_p2p_wowtv" ReturnType="Collection(WOw.Tv.Middle.Model.Db123.WOW4989.wowstar_p2p_wowtv_Result)" />
+        </EntityContainer>
+        <ComplexType Name="wowstar_unliststock_Result">
+          <Property Type="String" Name="sales_start_date" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="company_name" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="logo_img" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="oc_idx" Nullable="false" />
+          <Property Type="Int32" Name="stock_price" Nullable="false" />
+          <Property Type="Decimal" Name="stock_percent" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="Column1" Nullable="true" MaxLength="8000" />
+          <Property Type="String" Name="Column2" Nullable="false" MaxLength="1" />
+          <Property Type="Int32" Name="stock_rest" Nullable="false" />
+          <Property Type="String" Name="status" Nullable="false" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="wowstar_video_Result">
+          <Property Type="Int32" Name="vl_idx" Nullable="false" />
+          <Property Type="String" Name="img" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="title" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="company_name" Nullable="true" MaxLength="255" />
+        </ComplexType>
+        <ComplexType Name="NUP_wowstar_unliststock_Result">
+          <Property Type="String" Name="sales_start_date" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="company_name" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="logo_img" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="oc_idx" Nullable="false" />
+          <Property Type="Int32" Name="stock_price" Nullable="false" />
+          <Property Type="Decimal" Name="stock_percent" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="sales_start_time" Nullable="true" MaxLength="8000" />
+          <Property Type="String" Name="sales_end_date_Status" Nullable="false" MaxLength="1" />
+          <Property Type="Int32" Name="stock_rest" Nullable="false" />
+          <Property Type="String" Name="status" Nullable="false" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="wowstar_p2p_wowtv_Result">
+          <Property Type="String" Name="SEQ" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="PROVIDER" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="OPEN_TYPE" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Fund_no" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="item_name" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="loan_period" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="LOAN_INTE_RATE" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="COLL_INFO" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="LOAN_AMT_MAX" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FUND_JOIN_AMT" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FUND_JOIN_CNT" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FUND_PROG_RATE" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FUND_START_TM" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FUND_END_TM" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="THUMBNAIL_PATH" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="LOAN_PERIOD_UNIT" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="PC_LINK_VIEW" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="MO_LINK_VIEW" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="LOGO_IMG" Nullable="true" MaxLength="100" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WOwTvMiddleModelDb123WOW4989StoreContainer" CdmEntityContainer="Db123_WOw4989" >
+          <FunctionImportMapping FunctionImportName="wowstar_unliststock" FunctionName="WOw.Tv.Middle.Model.Db123.WOW4989.Store.wowstar_unliststock">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WOw.Tv.Middle.Model.Db123.WOW4989.wowstar_unliststock_Result">
+                <ScalarProperty Name="sales_start_date" ColumnName="sales_start_date" />
+                <ScalarProperty Name="company_name" ColumnName="company_name" />
+                <ScalarProperty Name="logo_img" ColumnName="logo_img" />
+                <ScalarProperty Name="oc_idx" ColumnName="oc_idx" />
+                <ScalarProperty Name="stock_price" ColumnName="stock_price" />
+                <ScalarProperty Name="stock_percent" ColumnName="stock_percent" />
+                <ScalarProperty Name="Column1" ColumnName="Column1" />
+                <ScalarProperty Name="Column2" ColumnName="Column2" />
+                <ScalarProperty Name="stock_rest" ColumnName="stock_rest" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="wowstar_video" FunctionName="WOw.Tv.Middle.Model.Db123.WOW4989.Store.wowstar_video">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WOw.Tv.Middle.Model.Db123.WOW4989.wowstar_video_Result">
+                <ScalarProperty Name="vl_idx" ColumnName="vl_idx" />
+                <ScalarProperty Name="img" ColumnName="img" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="company_name" ColumnName="company_name" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="NUP_wowstar_unliststock" FunctionName="WOw.Tv.Middle.Model.Db123.WOW4989.Store.NUP_wowstar_unliststock">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WOw.Tv.Middle.Model.Db123.WOW4989.NUP_wowstar_unliststock_Result">
+                <ScalarProperty Name="sales_start_date" ColumnName="sales_start_date" />
+                <ScalarProperty Name="company_name" ColumnName="company_name" />
+                <ScalarProperty Name="logo_img" ColumnName="logo_img" />
+                <ScalarProperty Name="oc_idx" ColumnName="oc_idx" />
+                <ScalarProperty Name="stock_price" ColumnName="stock_price" />
+                <ScalarProperty Name="stock_percent" ColumnName="stock_percent" />
+                <ScalarProperty Name="sales_start_time" ColumnName="sales_start_time" />
+                <ScalarProperty Name="sales_end_date_Status" ColumnName="sales_end_date_Status" />
+                <ScalarProperty Name="stock_rest" ColumnName="stock_rest" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="wowstar_p2p_wowtv" FunctionName="WOw.Tv.Middle.Model.Db123.WOW4989.Store.wowstar_p2p_wowtv">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WOw.Tv.Middle.Model.Db123.WOW4989.wowstar_p2p_wowtv_Result">
+                <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+                <ScalarProperty Name="PROVIDER" ColumnName="PROVIDER" />
+                <ScalarProperty Name="OPEN_TYPE" ColumnName="OPEN_TYPE" />
+                <ScalarProperty Name="Fund_no" ColumnName="Fund_no" />
+                <ScalarProperty Name="item_name" ColumnName="item_name" />
+                <ScalarProperty Name="loan_period" ColumnName="loan_period" />
+                <ScalarProperty Name="LOAN_INTE_RATE" ColumnName="LOAN_INTE_RATE" />
+                <ScalarProperty Name="COLL_INFO" ColumnName="COLL_INFO" />
+                <ScalarProperty Name="LOAN_AMT_MAX" ColumnName="LOAN_AMT_MAX" />
+                <ScalarProperty Name="FUND_JOIN_AMT" ColumnName="FUND_JOIN_AMT" />
+                <ScalarProperty Name="FUND_JOIN_CNT" ColumnName="FUND_JOIN_CNT" />
+                <ScalarProperty Name="FUND_PROG_RATE" ColumnName="FUND_PROG_RATE" />
+                <ScalarProperty Name="FUND_START_TM" ColumnName="FUND_START_TM" />
+                <ScalarProperty Name="FUND_END_TM" ColumnName="FUND_END_TM" />
+                <ScalarProperty Name="THUMBNAIL_PATH" ColumnName="THUMBNAIL_PATH" />
+                <ScalarProperty Name="LOAN_PERIOD_UNIT" ColumnName="LOAN_PERIOD_UNIT" />
+                <ScalarProperty Name="PC_LINK_VIEW" ColumnName="PC_LINK_VIEW" />
+                <ScalarProperty Name="MO_LINK_VIEW" ColumnName="MO_LINK_VIEW" />
+                <ScalarProperty Name="LOGO_IMG" ColumnName="LOGO_IMG" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="없음" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
