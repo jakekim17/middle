@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1AE95BD6-0028-4C77-9AE6-1AEF8C993EE2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wow.Tv.Middle.Biz</RootNamespace>
+    <AssemblyName>Wow.Tv.Middle.Biz</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.88.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.88.0\lib\net452\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FastMember.Signed, Version=1.0.0.9, Culture=neutral, PublicKeyToken=9e8f22703bef9a29, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastMember.Signed.1.1.0\lib\net40\FastMember.Signed.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.BOQv7BillLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Wow.Fx\lib\Interop.BOQv7BillLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.CB_NAMELib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Wow.Fx\lib\Interop.CB_NAMELib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.CPCLIENTLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Wow.Fx\lib\Interop.CPCLIENTLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.IPIN2CLIENTLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Wow.Fx\lib\Interop.IPIN2CLIENTLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionLog\AccessLogBiz.cs" />
+    <Compile Include="ActionLog\ActionLogBiz.cs" />
+    <Compile Include="Admin\AdminBiz.cs" />
+    <Compile Include="Admin\IntegratedBoardBiz.cs" />
+    <Compile Include="Admin\KvinaBiz.cs" />
+    <Compile Include="Admin\ServiceCenterBiz.cs" />
+    <Compile Include="Admin\TradingStarBiz.cs" />
+    <Compile Include="AttachFile\AttachFileBiz.cs" />
+    <Compile Include="BaseBiz.cs" />
+    <Compile Include="Board\BoardBiz.cs" />
+    <Compile Include="Board\BoardCommentBiz.cs" />
+    <Compile Include="Board\BoardContentBiz.cs" />
+    <Compile Include="Broad\BroadLiveBiz.cs" />
+    <Compile Include="Broad\NewsProgreamBiz.cs" />
+    <Compile Include="Broad\ProgramCmsAuthBiz.cs" />
+    <Compile Include="Broad\ProgramGroupBiz.cs" />
+    <Compile Include="Broad\ProgramTemplateBiz.cs" />
+    <Compile Include="Broad\TvPlayerBiz.cs" />
+    <Compile Include="BusinessManage\BusinessManageBiz.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="CommonCode\CommonCodeBiz.cs" />
+    <Compile Include="Component\EmailBiz.cs" />
+    <Compile Include="Component\SmsBiz.cs" />
+    <Compile Include="Family\FamilyBiz.cs" />
+    <Compile Include="Finance\CharacterStockBiz.cs" />
+    <Compile Include="Finance\ChinaBiz.cs" />
+    <Compile Include="Finance\FinanceBiz.cs" />
+    <Compile Include="Finance\TradingBiz.cs" />
+    <Compile Include="Group\GroupBiz.cs" />
+    <Compile Include="History\CTGRManageBiz.cs" />
+    <Compile Include="History\HistoryBiz.cs" />
+    <Compile Include="HolidayTimeMng\HolidayTimeMngBiz.cs" />
+    <Compile Include="IRCenter\BalanceBiz.cs" />
+    <Compile Include="IRCenter\IRClubBiz.cs" />
+    <Compile Include="MainManage\MainManageBiz.cs" />
+    <Compile Include="MemberManage\MemberMonitoringBiz.cs" />
+    <Compile Include="Member\MemberCommonBiz.cs" />
+    <Compile Include="Member\MemberCrmBiz.cs" />
+    <Compile Include="Member\MemberUtilBiz.cs" />
+    <Compile Include="NewsCenter\LandBiz.cs" />
+    <Compile Include="NewsCenter\NewsGFCBiz.cs" />
+    <Compile Include="NewsCenter\NewsMainBiz.cs" />
+    <Compile Include="NewsCenter\QuickMenuBiz.cs" />
+    <Compile Include="NewsCenter\TravelBiz.cs" />
+    <Compile Include="Opinion\OpinionBiz.cs" />
+    <Compile Include="PostManage\StockholderBoardBiz.cs" />
+    <Compile Include="IRCenter\StockResultBiz.cs" />
+    <Compile Include="IRCenter\StockSituationBiz.cs" />
+    <Compile Include="IR\IRBiz.cs" />
+    <Compile Include="MemberManage\MemberManageBiz.cs" />
+    <Compile Include="Member\AuthBiz.cs" />
+    <Compile Include="Member\JoinBiz.cs" />
+    <Compile Include="Member\LoginBiz.cs" />
+    <Compile Include="Member\MemberInfoBiz.cs" />
+    <Compile Include="Member\SmsSplit.cs" />
+    <Compile Include="Menu\MenuBiz.cs" />
+    <Compile Include="Menu\MenuGroupBiz.cs" />
+    <Compile Include="MyPage\MyPageBiz.cs" />
+    <Compile Include="MyProgram\BannerBiz.cs" />
+    <Compile Include="MyProgram\BroadWatchBiz.cs" />
+    <Compile Include="MyProgram\CastBiz.cs" />
+    <Compile Include="MyProgram\ExpertBiz.cs" />
+    <Compile Include="MyProgram\ProgramIntroBiz.cs" />
+    <Compile Include="NewsCenter\NewsAdBiz.cs" />
+    <Compile Include="NewsCenter\HubBusinessBiz.cs" />
+    <Compile Include="NewsCenter\NewsCenterBiz.cs" />
+    <Compile Include="NewsCenter\NewsCmtBiz.cs" />
+    <Compile Include="NewsCenter\NewsStandBiz.cs" />
+    <Compile Include="NewsCenter\TextAndLinkBiz.cs" />
+    <Compile Include="NewsCenter\StatsBiz.cs" />
+    <Compile Include="Pilot\PilotBiz.cs" />
+    <Compile Include="Pilot\Test.cs" />
+    <Compile Include="ProductManage\LectureBiz.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recruit\RecruitBiz.cs" />
+    <Compile Include="RegCateManage\FavorFieldBiz.cs" />
+    <Compile Include="RegCateManage\IvstScaleBiz.cs" />
+    <Compile Include="RegCateManage\MainStockTraderBiz.cs" />
+    <Compile Include="RegCateManage\InvstTendencyBiz.cs" />
+    <Compile Include="RegCateManage\IvstProdBiz.cs" />
+    <Compile Include="RegCateManage\OrgnInfoAcquirerBiz.cs" />
+    <Compile Include="RegCateManage\IvstFavorObjBiz.cs" />
+    <Compile Include="RegCateManage\YearIncomeBiz.cs" />
+    <Compile Include="Reporter\ReporterBiz.cs" />
+    <Compile Include="ServiceCenter\EventBiz.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Wow.Fx\Wow.Fx.csproj">
+      <Project>{233041b5-46c7-42a5-99e9-a367683b0f8b}</Project>
+      <Name>Wow.Fx</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wow.Tv.Middle.Model.Common\Wow.Tv.Middle.Model.Common.csproj">
+      <Project>{24d91979-0298-4a67-a1a0-d9a61b95033d}</Project>
+      <Name>Wow.Tv.Middle.Model.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wow.Tv.Middle.Model.Db123.WOW4989\Wow.Tv.Middle.Model.Db123.WOW4989.csproj">
+      <Project>{f5fef2bc-089e-4c85-a382-91daa6f2b67a}</Project>
+      <Name>Wow.Tv.Middle.Model.Db123.WOW4989</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wow.Tv.Middle.Model.Db16.wowfa\Wow.Tv.Middle.Model.Db16.wowfa.csproj">
+      <Project>{0aa04536-b3eb-426d-a9d2-c5dc885eeaf4}</Project>
+      <Name>Wow.Tv.Middle.Model.Db16.wowfa</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wow.Tv.Middle.Model.Db22.stock\Wow.Tv.Middle.Model.Db22.stock.csproj">
+      <Project>{cd9bbcb3-3264-4fee-9e28-186772e19ceb}</Project>
+      <Name>Wow.Tv.Middle.Model.Db22.stock</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wow.Tv.Middle.Model.Db35.chinaguide\Wow.Tv.Middle.Model.Db35.chinaguide.csproj">
+      <Project>{6f8e6d6f-f679-4e0b-a503-330ab0d3cab7}</Project>
+      <Name>Wow.Tv.Middle.Model.Db35.chinaguide</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wow.Tv.Middle.Model.Db49.Article\Wow.Tv.Middle.Model.Db49.Article.csproj">
+      <Project>{11efce12-b977-400f-a874-9479cedd31d2}</Project>
+      <Name>Wow.Tv.Middle.Model.Db49.Article</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wow.Tv.Middle.Model.Db49.broadcast\Wow.Tv.Middle.Model.Db49.broadcast.csproj">
+      <Project>{EAFB84B9-FB57-4678-A028-B0F1AE5B8E15}</Project>
+      <Name>Wow.Tv.Middle.Model.Db49.broadcast</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wow.Tv.Middle.Model.Db49.editVOD\Wow.Tv.Middle.Model.Db49.editVOD.csproj">
+      <Project>{a8415f2f-9bc4-4368-81bc-ddc237a3598b}</Project>
+      <Name>Wow.Tv.Middle.Model.Db49.editVOD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wow.Tv.Middle.Model.Db49.wowcafe\Wow.Tv.Middle.Model.Db49.wowcafe.csproj">
+      <Project>{e1448316-917f-4f69-9059-0cf91dcbe4dd}</Project>
+      <Name>Wow.Tv.Middle.Model.Db49.wowcafe</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wow.Tv.Middle.Model.Db49.wownet\Wow.Tv.Middle.Model.Db49.wownet.csproj">
+      <Project>{8620dbd8-4216-4e47-a23d-49f1e0b0ad0f}</Project>
+      <Name>Wow.Tv.Middle.Model.Db49.wownet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wow.Tv.Middle.Model.Db49.wowtv\Wow.Tv.Middle.Model.Db49.wowtv.csproj">
+      <Project>{5f0a7356-ae94-4000-8c6c-0984eae752ba}</Project>
+      <Name>Wow.Tv.Middle.Model.Db49.wowtv</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wow.Tv.Middle.Model.Db51.ARSConsult\Wow.Tv.Middle.Model.Db51.ARSConsult.csproj">
+      <Project>{1a9af975-69f5-44e2-b370-f41feb65f2be}</Project>
+      <Name>Wow.Tv.Middle.Model.Db51.ARSConsult</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wow.Tv.Middle.Model.Db51.ARSsms\Wow.Tv.Middle.Model.Db51.ARSsms.csproj">
+      <Project>{2269e5be-77e6-4be4-b7c3-0196532025f1}</Project>
+      <Name>Wow.Tv.Middle.Model.Db51.ARSsms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wow.Tv.Middle.Model.Db51.contents\Wow.Tv.Middle.Model.Db51.contents.csproj">
+      <Project>{CDD103E0-25DD-42A9-83B2-798FB7EF734C}</Project>
+      <Name>Wow.Tv.Middle.Model.Db51.contents</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wow.Tv.Middle.Model.Db51.ems50\Wow.Tv.Middle.Model.Db51.ems50.csproj">
+      <Project>{35d01149-bafa-4b99-a65f-80e476d8f2c6}</Project>
+      <Name>Wow.Tv.Middle.Model.Db51.ems50</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wow.Tv.Middle.Model.Db51.WOWMMS\Wow.Tv.Middle.Model.Db51.WOWMMS.csproj">
+      <Project>{c59e1f7f-307e-4c8d-99b7-5c0252d083ce}</Project>
+      <Name>Wow.Tv.Middle.Model.Db51.WOWMMS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wow.Tv.Middle.Model.Db89.Sleep_wowbill\Wow.Tv.Middle.Model.Db89.Sleep_wowbill.csproj">
+      <Project>{ed02f49c-598c-4082-b92e-4f6e3a814eb1}</Project>
+      <Name>Wow.Tv.Middle.Model.Db89.Sleep_wowbill</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wow.Tv.Middle.Model.Db89.wowbill\Wow.Tv.Middle.Model.Db89.wowbill.csproj">
+      <Project>{accb1be6-82a2-4942-a40e-c5108e11e1c0}</Project>
+      <Name>Wow.Tv.Middle.Model.Db89.wowbill</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB\Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.csproj">
+      <Project>{8d6d9172-4f25-48d5-8e2b-7c992a4cbf29}</Project>
+      <Name>Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wow.Tv.Middle.Model.Db90.DNRS\Wow.Tv.Middle.Model.Db90.DNRS.csproj">
+      <Project>{34c3a7b6-755e-4078-9a2b-e9f148670a64}</Project>
+      <Name>Wow.Tv.Middle.Model.Db90.DNRS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="hpFinder">
+      <Guid>{A092E36D-AA96-46F3-B1E1-93811CAD8B0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="hpFinder2">
+      <Guid>{6A3AAF9D-0B8F-4648-9A26-59E127B56F21}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
