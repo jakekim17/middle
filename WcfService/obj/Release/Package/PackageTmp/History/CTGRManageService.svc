@@ -1,1 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="Wow.Tv.Middle.WcfService.History.CTGRManageService" CodeBehind="CTGRManageService.svc.cs" %>

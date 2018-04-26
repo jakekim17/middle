@@ -1,1 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="Wow.Tv.Middle.WcfService.Pilot.PilotService" CodeBehind="PilotService.svc.cs" %>
