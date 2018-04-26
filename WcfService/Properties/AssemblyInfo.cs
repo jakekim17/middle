@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // 제어됩니다. 어셈블리와 관련된 정보를 수정하려면
 // 이러한 특성 값을 변경하세요.
 [assembly: AssemblyTitle("Wow.Tv.Middle.WcfService")]
-[assembly: AssemblyDescription("한국경제TV Middle")]
+[assembly: AssemblyDescription("회사명 Middle")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("(주)한국경제티브이")]
+[assembly: AssemblyCompany("회사명")]
 [assembly: AssemblyProduct("Wow.Tv.Middle.WcfService")]
-[assembly: AssemblyCopyright("Copyright © 한국경제TV. ALL RIGHTS RESERVED.")]
+[assembly: AssemblyCopyright("Copyright © 회사명. ALL RIGHTS RESERVED.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
