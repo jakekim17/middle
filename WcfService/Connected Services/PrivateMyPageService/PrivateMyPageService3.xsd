@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.MyPage" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.MyPage" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8088/Member/PrivateMyPageService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" />
+  <xs:complexType name="CouponResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplyDetail" type="xs:int" />
+      <xs:element minOccurs="0" name="CouponGroup" type="xs:int" />
+      <xs:element minOccurs="0" name="CouponId" type="xs:int" />
+      <xs:element minOccurs="0" name="CouponNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CouponType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpireDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Gubun" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResultMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CouponResult" nillable="true" type="tns:CouponResult" />
+  <xs:complexType name="MyOrderCondition">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" base="q1:BaseCondition">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="END_DATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="START_DATE" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MyOrderCondition" nillable="true" type="tns:MyOrderCondition" />
+  <xs:complexType name="ArrayOfMyOrderDelivery">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MyOrderDelivery" nillable="true" type="tns:MyOrderDelivery" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMyOrderDelivery" nillable="true" type="tns:ArrayOfMyOrderDelivery" />
+  <xs:complexType name="MyOrderDelivery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DelyCo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvoiceNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Itemcnt" type="xs:int" />
+      <xs:element minOccurs="0" name="Pkid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Unitprice" type="xs:int" />
+      <xs:element minOccurs="0" name="WinDate" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MyOrderDelivery" nillable="true" type="tns:MyOrderDelivery" />
+  <xs:complexType name="MyServiceCondition">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" base="q2:BaseCondition">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="END_DATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="START_DATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SearchText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServiceStatus" nillable="true" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" name="ServiceType" nillable="true" type="xs:unsignedByte" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MyServiceCondition" nillable="true" type="tns:MyServiceCondition" />
+  <xs:complexType name="MyClassResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NextAgainClassAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="NextClassAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="UsedPrice" type="xs:int" />
+      <xs:element minOccurs="0" name="UserClass" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MyClassResult" nillable="true" type="tns:MyClassResult" />
+</xs:schema>

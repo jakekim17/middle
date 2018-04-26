@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b994d7d6-b730-4ff1-96ab-e45a18afa6ff" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8088/Member/MemberInfoService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MemberInfoService7.xsd" MetadataType="Schema" ID="c8fb8c59-b093-4754-8766-6f227cdbc58c" SourceId="1" SourceUrl="http://localhost:8088/Member/MemberInfoService.svc?xsd=xsd4" />
+    <MetadataFile FileName="MemberInfoService2.wsdl" MetadataType="Wsdl" ID="e4cb18d0-aa75-4c6e-9557-bfbf74fb072f" SourceId="1" SourceUrl="http://localhost:8088/Member/MemberInfoService.svc?wsdl" />
+    <MetadataFile FileName="MemberInfoService8.xsd" MetadataType="Schema" ID="0e274385-f2d4-4c4e-b4e1-3196c4c00f69" SourceId="1" SourceUrl="http://localhost:8088/Member/MemberInfoService.svc?xsd=xsd6" />
+    <MetadataFile FileName="MemberInfoService9.xsd" MetadataType="Schema" ID="7ea5f1c2-dd88-4295-bcaa-2fc65a992f66" SourceId="1" SourceUrl="http://localhost:8088/Member/MemberInfoService.svc?xsd=xsd0" />
+    <MetadataFile FileName="MemberInfoService10.xsd" MetadataType="Schema" ID="5243b887-7627-4d55-bbd8-52c14f5fa608" SourceId="1" SourceUrl="http://localhost:8088/Member/MemberInfoService.svc?xsd=xsd3" />
+    <MetadataFile FileName="MemberInfoService11.xsd" MetadataType="Schema" ID="3cb94de8-5da5-430a-a0f5-a4955bd815df" SourceId="1" SourceUrl="http://localhost:8088/Member/MemberInfoService.svc?xsd=xsd2" />
+    <MetadataFile FileName="MemberInfoService12.xsd" MetadataType="Schema" ID="e872854a-5af0-4b52-a081-e4bc3f8d90f1" SourceId="1" SourceUrl="http://localhost:8088/Member/MemberInfoService.svc?xsd=xsd1" />
+    <MetadataFile FileName="MemberInfoService2.disco" MetadataType="Disco" ID="918f2038-3e54-443a-b9ab-daeed10d2b79" SourceId="1" SourceUrl="http://localhost:8088/Member/MemberInfoService.svc?disco" />
+    <MetadataFile FileName="MemberInfoService13.xsd" MetadataType="Schema" ID="ab932133-d404-4ac0-9ec4-04c635148668" SourceId="1" SourceUrl="http://localhost:8088/Member/MemberInfoService.svc?xsd=xsd5" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8088/Member/PrivateMyPageService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" />
+  <xs:import schemaLocation="http://localhost:8088/Member/PrivateMyPageService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Db89.wowbill.MyInfo" />
+  <xs:import schemaLocation="http://localhost:8088/Member/PrivateMyPageService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.MyPage" />
+  <xs:import schemaLocation="http://localhost:8088/Member/PrivateMyPageService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB" />
+  <xs:import schemaLocation="http://localhost:8088/Member/PrivateMyPageService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Db89.wowbill" />
+  <xs:element name="GetCashList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" minOccurs="0" name="loginUserInfo" nillable="true" type="q1:LoginUserInfo" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Db89.wowbill.MyInfo" minOccurs="0" name="condition" nillable="true" type="q2:CashCondition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCashListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" minOccurs="0" name="GetCashListResult" nillable="true" type="q3:ListModelOfUP_PORTAL_MYPAGE_PAYNCHARGE_UR_LST_Resultd_Pshzuji" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWowTvBalance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" minOccurs="0" name="loginUser" nillable="true" type="q4:LoginUserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWowTvBalanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Db89.wowbill.MyInfo" minOccurs="0" name="GetWowTvBalanceResult" nillable="true" type="q5:BillBalance" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBillBalance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" minOccurs="0" name="loginUser" nillable="true" type="q6:LoginUserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBillBalanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetBillBalanceResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRefundList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" minOccurs="0" name="loginUserInfo" nillable="true" type="q7:LoginUserInfo" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Db89.wowbill.MyInfo" minOccurs="0" name="condition" nillable="true" type="q8:CashCondition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRefundListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" minOccurs="0" name="GetRefundListResult" nillable="true" type="q9:ListModelOfUP_PORTAL_REFUND_LST_Resultd_Pshzuji" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCouponCount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" minOccurs="0" name="loginUserInfo" nillable="true" type="q10:LoginUserInfo" />
+        <xs:element minOccurs="0" name="useState" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCouponCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCouponCountResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCouponList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" minOccurs="0" name="loginUserInfo" nillable="true" type="q11:LoginUserInfo" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" minOccurs="0" name="condition" nillable="true" type="q12:BaseCondition" />
+        <xs:element minOccurs="0" name="useState" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCouponListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" minOccurs="0" name="GetCouponListResult" nillable="true" type="q13:ListModelOfUP_PORTAL_COUPON_LST_Resultd_Pshzuji" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CouponChceck">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="couponNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="chkmyinfo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CouponChceckResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.MyPage" minOccurs="0" name="CouponChceckResult" nillable="true" type="q14:CouponResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterCoupon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.MyPage" minOccurs="0" name="couponResult" nillable="true" type="q15:CouponResult" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" minOccurs="0" name="loginUserInfo" nillable="true" type="q16:LoginUserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterCouponResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegisterCouponResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" minOccurs="0" name="loginUserInfo" nillable="true" type="q17:LoginUserInfo" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.MyPage" minOccurs="0" name="condition" nillable="true" type="q18:MyOrderCondition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" minOccurs="0" name="GetOrderListResult" nillable="true" type="q19:ListModelOfMyOrderDeliveryAYyQgQLe" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMyCashAt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" minOccurs="0" name="loginUserInfo" nillable="true" type="q20:LoginUserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMyCashAtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB" minOccurs="0" name="GetMyCashAtResult" nillable="true" type="q21:WOWSP_GET_BALANCE_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMainServiceList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" minOccurs="0" name="loginUserInfo" nillable="true" type="q22:LoginUserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMainServiceListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB" minOccurs="0" name="GetMainServiceListResult" nillable="true" type="q23:ArrayOfUP_PORTAL_MYPAGE_SERVICE_UR_LST_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMyServiceList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" minOccurs="0" name="loginUserInfo" nillable="true" type="q24:LoginUserInfo" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.MyPage" minOccurs="0" name="condition" nillable="true" type="q25:MyServiceCondition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMyServiceListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" minOccurs="0" name="GetMyServiceListResult" nillable="true" type="q26:ListModelOfUP_PORTAL_MYPAGE_SERVICE_UR_LST_Resultd_Pshzuji" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelRollback">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="seqNo" type="xs:int" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" minOccurs="0" name="loginUserInfo" nillable="true" type="q27:LoginUserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelRollbackResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CancelRollbackResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVodDelivery">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" minOccurs="0" name="loginUserInfo" nillable="true" type="q28:LoginUserInfo" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.MyPage" minOccurs="0" name="condition" nillable="true" type="q29:MyOrderCondition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVodDeliveryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" minOccurs="0" name="GetVodDeliveryResult" nillable="true" type="q30:ListModelOfUP_PORTAL_MYPAGE_DELIVERY_UR_LST_Resultd_Pshzuji" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGiftDelivery">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" minOccurs="0" name="loginUserInfo" nillable="true" type="q31:LoginUserInfo" />
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.MyPage" minOccurs="0" name="condition" nillable="true" type="q32:MyOrderCondition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGiftDeliveryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" minOccurs="0" name="GetGiftDeliveryResult" nillable="true" type="q33:ListModelOfMyOrderDeliveryAYyQgQLe" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMyClass">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" minOccurs="0" name="loginUserInfo" nillable="true" type="q34:LoginUserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMyClassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.MyPage" minOccurs="0" name="GetMyClassResult" nillable="true" type="q35:MyClassResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMyCashInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" minOccurs="0" name="loginUser" nillable="true" type="q36:LoginUserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMyCashInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Db89.wowbill" minOccurs="0" name="GetMyCashInfoResult" nillable="true" type="q37:USP_GetMYCurrentCash_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsedServiceList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" minOccurs="0" name="loginUserInfo" nillable="true" type="q38:LoginUserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsedServiceListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB" minOccurs="0" name="GetUsedServiceListResult" nillable="true" type="q39:ArrayOfUP_PORTAL_MYPAGE_SERVICE_UR_LST_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCPNAME">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="priceid" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCPNAMEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCPNAMEResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

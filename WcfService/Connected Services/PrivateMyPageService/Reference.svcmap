@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e5028a17-6014-4bec-8089-1bd0d3090758" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8088/Member/PrivateMyPageService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PrivateMyPageService.xsd" MetadataType="Schema" ID="6efa09c3-9079-4c28-956f-2134d5c42acf" SourceId="1" SourceUrl="http://localhost:8088/Member/PrivateMyPageService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PrivateMyPageService.disco" MetadataType="Disco" ID="06b83608-7f55-4679-a624-02791adb485f" SourceId="1" SourceUrl="http://localhost:8088/Member/PrivateMyPageService.svc?disco" />
+    <MetadataFile FileName="PrivateMyPageService1.xsd" MetadataType="Schema" ID="303696d0-46cf-4eae-b4bf-743dbbfcd558" SourceId="1" SourceUrl="http://localhost:8088/Member/PrivateMyPageService.svc?xsd=xsd3" />
+    <MetadataFile FileName="PrivateMyPageService2.xsd" MetadataType="Schema" ID="4ee7fae2-071e-4aed-af98-89de1b02589c" SourceId="1" SourceUrl="http://localhost:8088/Member/PrivateMyPageService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PrivateMyPageService3.xsd" MetadataType="Schema" ID="2d9ce248-b0ad-4624-adaa-71ee25fe6782" SourceId="1" SourceUrl="http://localhost:8088/Member/PrivateMyPageService.svc?xsd=xsd5" />
+    <MetadataFile FileName="PrivateMyPageService4.xsd" MetadataType="Schema" ID="d3385c36-723b-4748-ae67-794853639100" SourceId="1" SourceUrl="http://localhost:8088/Member/PrivateMyPageService.svc?xsd=xsd4" />
+    <MetadataFile FileName="PrivateMyPageService5.xsd" MetadataType="Schema" ID="db23346d-8650-4161-863f-333bbd214100" SourceId="1" SourceUrl="http://localhost:8088/Member/PrivateMyPageService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PrivateMyPageService6.xsd" MetadataType="Schema" ID="c9b2abc6-25df-4831-ae91-81a751cd8dcf" SourceId="1" SourceUrl="http://localhost:8088/Member/PrivateMyPageService.svc?xsd=xsd6" />
+    <MetadataFile FileName="PrivateMyPageService.wsdl" MetadataType="Wsdl" ID="e9178322-2249-4ea3-a14c-b434075a036d" SourceId="1" SourceUrl="http://localhost:8088/Member/PrivateMyPageService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfUP_PORTAL_MYPAGE_PAYNCHARGE_UR_LST_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UP_PORTAL_MYPAGE_PAYNCHARGE_UR_LST_Result" nillable="true" type="tns:UP_PORTAL_MYPAGE_PAYNCHARGE_UR_LST_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUP_PORTAL_MYPAGE_PAYNCHARGE_UR_LST_Result" nillable="true" type="tns:ArrayOfUP_PORTAL_MYPAGE_PAYNCHARGE_UR_LST_Result" />
+  <xs:complexType name="UP_PORTAL_MYPAGE_PAYNCHARGE_UR_LST_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BUYIDX" type="xs:long" />
+      <xs:element minOccurs="0" name="BUYNAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BUYTYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CASHFLAG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CASHSTATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CASHTYPE" nillable="true" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="EYMD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PRICE" type="xs:decimal" />
+      <xs:element minOccurs="0" name="REGDATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ROWNUM" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="USESTATE" nillable="true" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="USESTATEM" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UP_PORTAL_MYPAGE_PAYNCHARGE_UR_LST_Result" nillable="true" type="tns:UP_PORTAL_MYPAGE_PAYNCHARGE_UR_LST_Result" />
+  <xs:complexType name="ArrayOfUP_PORTAL_REFUND_LST_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UP_PORTAL_REFUND_LST_Result" nillable="true" type="tns:UP_PORTAL_REFUND_LST_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUP_PORTAL_REFUND_LST_Result" nillable="true" type="tns:ArrayOfUP_PORTAL_REFUND_LST_Result" />
+  <xs:complexType name="UP_PORTAL_REFUND_LST_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ADMINID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="APPROVEDATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BANKACCOUNTNAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BANKACCOUNTNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BANKCODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BANKNAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REFUNDAMT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REFUNDDESC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REFUNDENDDATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="REFUNDFEE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REFUNDNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REGDATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="REQAMT" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="USERNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USESTATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USESTATEM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WAITCHARGENO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YMD" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UP_PORTAL_REFUND_LST_Result" nillable="true" type="tns:UP_PORTAL_REFUND_LST_Result" />
+  <xs:complexType name="ArrayOfUP_PORTAL_COUPON_LST_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UP_PORTAL_COUPON_LST_Result" nillable="true" type="tns:UP_PORTAL_COUPON_LST_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUP_PORTAL_COUPON_LST_Result" nillable="true" type="tns:ArrayOfUP_PORTAL_COUPON_LST_Result" />
+  <xs:complexType name="UP_PORTAL_COUPON_LST_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APPLYDETAIL" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="APPLYUNIT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CEXPDATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="COUPONITEMS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="COUPONNAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="COUPONNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="COUPONTYPE" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="REASON" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USEDDATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USEDTITLE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USESTATE" type="xs:unsignedByte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UP_PORTAL_COUPON_LST_Result" nillable="true" type="tns:UP_PORTAL_COUPON_LST_Result" />
+  <xs:complexType name="WOWSP_GET_BALANCE_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CASHBONUS" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CASHREAL" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CASHTOTAL" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WOWSP_GET_BALANCE_Result" nillable="true" type="tns:WOWSP_GET_BALANCE_Result" />
+  <xs:complexType name="ArrayOfUP_PORTAL_MYPAGE_SERVICE_UR_LST_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UP_PORTAL_MYPAGE_SERVICE_UR_LST_Result" nillable="true" type="tns:UP_PORTAL_MYPAGE_SERVICE_UR_LST_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUP_PORTAL_MYPAGE_SERVICE_UR_LST_Result" nillable="true" type="tns:ArrayOfUP_PORTAL_MYPAGE_SERVICE_UR_LST_Result" />
+  <xs:complexType name="UP_PORTAL_MYPAGE_SERVICE_UR_LST_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BONUSCASH" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CANCELFEE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CASHENDYMD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CASHNO" type="xs:long" />
+      <xs:element minOccurs="0" name="CASHYMD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CHARGENO" type="xs:long" />
+      <xs:element minOccurs="0" name="CNLYMD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CONSUMEDATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CPID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="EXPDATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EXTRAFEE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FREEFLAG" type="xs:int" />
+      <xs:element minOccurs="0" name="ITEMORPACKAGE" type="xs:int" />
+      <xs:element minOccurs="0" name="ITEMPACKPRICEID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PAYTOOLNAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PRODNAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REALCASH" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ROWNUM" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="SERVICESTATUS" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SERVICEYMD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STOPCNT" type="xs:int" />
+      <xs:element minOccurs="0" name="STOPENDYMD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STOPSTARTYMD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USEDAMT" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="USEDDAY" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="USERNO" type="xs:int" />
+      <xs:element minOccurs="0" name="USESTATE" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="YMD" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UP_PORTAL_MYPAGE_SERVICE_UR_LST_Result" nillable="true" type="tns:UP_PORTAL_MYPAGE_SERVICE_UR_LST_Result" />
+  <xs:complexType name="ArrayOfUP_PORTAL_MYPAGE_DELIVERY_UR_LST_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UP_PORTAL_MYPAGE_DELIVERY_UR_LST_Result" nillable="true" type="tns:UP_PORTAL_MYPAGE_DELIVERY_UR_LST_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUP_PORTAL_MYPAGE_DELIVERY_UR_LST_Result" nillable="true" type="tns:ArrayOfUP_PORTAL_MYPAGE_DELIVERY_UR_LST_Result" />
+  <xs:complexType name="UP_PORTAL_MYPAGE_DELIVERY_UR_LST_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CATEGORYNAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ORGPRICE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PRICE" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PRODCNT" type="xs:short" />
+      <xs:element minOccurs="0" name="PRODNAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ROWNUM" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="USESTATE" nillable="true" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="YMD" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UP_PORTAL_MYPAGE_DELIVERY_UR_LST_Result" nillable="true" type="tns:UP_PORTAL_MYPAGE_DELIVERY_UR_LST_Result" />
+</xs:schema>

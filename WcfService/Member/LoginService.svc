@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Wow.Tv.Middle.WcfService.Member.LoginService" CodeBehind="LoginService.svc.cs" %>

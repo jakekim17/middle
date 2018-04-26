@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PrivateMyPageService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8088/Member/PrivateMyPageService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8088/Member/PrivateMyPageService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8088/Member/PrivateMyPageService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Common" />
+      <xsd:import schemaLocation="http://localhost:8088/Member/PrivateMyPageService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Db89.wowbill.MyInfo" />
+      <xsd:import schemaLocation="http://localhost:8088/Member/PrivateMyPageService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB" />
+      <xsd:import schemaLocation="http://localhost:8088/Member/PrivateMyPageService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Db89.WOWTV_BILL_DB.MyPage" />
+      <xsd:import schemaLocation="http://localhost:8088/Member/PrivateMyPageService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Wow.Tv.Middle.Model.Db89.wowbill" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPrivateMyPageService_GetCashList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCashList" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetCashList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCashListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetWowTvBalance_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWowTvBalance" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetWowTvBalance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWowTvBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetBillBalance_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillBalance" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetBillBalance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetRefundList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefundList" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetRefundList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRefundListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetCouponCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCouponCount" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetCouponCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCouponCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetCouponList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCouponList" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetCouponList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCouponListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_CouponChceck_InputMessage">
+    <wsdl:part name="parameters" element="tns:CouponChceck" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_CouponChceck_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CouponChceckResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_RegisterCoupon_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterCoupon" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_RegisterCoupon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterCouponResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetOrderList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderList" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetOrderList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetMyCashAt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMyCashAt" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetMyCashAt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMyCashAtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetMainServiceList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMainServiceList" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetMainServiceList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMainServiceListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetMyServiceList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMyServiceList" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetMyServiceList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMyServiceListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_CancelRollback_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelRollback" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_CancelRollback_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelRollbackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetVodDelivery_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVodDelivery" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetVodDelivery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVodDeliveryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetGiftDelivery_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGiftDelivery" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetGiftDelivery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGiftDeliveryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetMyClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMyClass" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetMyClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMyClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetMyCashInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMyCashInfo" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetMyCashInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMyCashInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetUsedServiceList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsedServiceList" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetUsedServiceList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsedServiceListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetCPNAME_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCPNAME" />
+  </wsdl:message>
+  <wsdl:message name="IPrivateMyPageService_GetCPNAME_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCPNAMEResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPrivateMyPageService">
+    <wsdl:operation name="GetCashList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetCashList" message="tns:IPrivateMyPageService_GetCashList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetCashListResponse" message="tns:IPrivateMyPageService_GetCashList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWowTvBalance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetWowTvBalance" message="tns:IPrivateMyPageService_GetWowTvBalance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetWowTvBalanceResponse" message="tns:IPrivateMyPageService_GetWowTvBalance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBillBalance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetBillBalance" message="tns:IPrivateMyPageService_GetBillBalance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetBillBalanceResponse" message="tns:IPrivateMyPageService_GetBillBalance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRefundList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetRefundList" message="tns:IPrivateMyPageService_GetRefundList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetRefundListResponse" message="tns:IPrivateMyPageService_GetRefundList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCouponCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetCouponCount" message="tns:IPrivateMyPageService_GetCouponCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetCouponCountResponse" message="tns:IPrivateMyPageService_GetCouponCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCouponList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetCouponList" message="tns:IPrivateMyPageService_GetCouponList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetCouponListResponse" message="tns:IPrivateMyPageService_GetCouponList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CouponChceck">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrivateMyPageService/CouponChceck" message="tns:IPrivateMyPageService_CouponChceck_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrivateMyPageService/CouponChceckResponse" message="tns:IPrivateMyPageService_CouponChceck_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterCoupon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrivateMyPageService/RegisterCoupon" message="tns:IPrivateMyPageService_RegisterCoupon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrivateMyPageService/RegisterCouponResponse" message="tns:IPrivateMyPageService_RegisterCoupon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetOrderList" message="tns:IPrivateMyPageService_GetOrderList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetOrderListResponse" message="tns:IPrivateMyPageService_GetOrderList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMyCashAt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetMyCashAt" message="tns:IPrivateMyPageService_GetMyCashAt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetMyCashAtResponse" message="tns:IPrivateMyPageService_GetMyCashAt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMainServiceList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetMainServiceList" message="tns:IPrivateMyPageService_GetMainServiceList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetMainServiceListResponse" message="tns:IPrivateMyPageService_GetMainServiceList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMyServiceList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetMyServiceList" message="tns:IPrivateMyPageService_GetMyServiceList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetMyServiceListResponse" message="tns:IPrivateMyPageService_GetMyServiceList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelRollback">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrivateMyPageService/CancelRollback" message="tns:IPrivateMyPageService_CancelRollback_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrivateMyPageService/CancelRollbackResponse" message="tns:IPrivateMyPageService_CancelRollback_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVodDelivery">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetVodDelivery" message="tns:IPrivateMyPageService_GetVodDelivery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetVodDeliveryResponse" message="tns:IPrivateMyPageService_GetVodDelivery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGiftDelivery">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetGiftDelivery" message="tns:IPrivateMyPageService_GetGiftDelivery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetGiftDeliveryResponse" message="tns:IPrivateMyPageService_GetGiftDelivery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMyClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetMyClass" message="tns:IPrivateMyPageService_GetMyClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetMyClassResponse" message="tns:IPrivateMyPageService_GetMyClass_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMyCashInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetMyCashInfo" message="tns:IPrivateMyPageService_GetMyCashInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetMyCashInfoResponse" message="tns:IPrivateMyPageService_GetMyCashInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsedServiceList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetUsedServiceList" message="tns:IPrivateMyPageService_GetUsedServiceList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetUsedServiceListResponse" message="tns:IPrivateMyPageService_GetUsedServiceList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCPNAME">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetCPNAME" message="tns:IPrivateMyPageService_GetCPNAME_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrivateMyPageService/GetCPNAMEResponse" message="tns:IPrivateMyPageService_GetCPNAME_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPrivateMyPageService" type="tns:IPrivateMyPageService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCashList">
+      <soap:operation soapAction="http://tempuri.org/IPrivateMyPageService/GetCashList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWowTvBalance">
+      <soap:operation soapAction="http://tempuri.org/IPrivateMyPageService/GetWowTvBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBillBalance">
+      <soap:operation soapAction="http://tempuri.org/IPrivateMyPageService/GetBillBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRefundList">
+      <soap:operation soapAction="http://tempuri.org/IPrivateMyPageService/GetRefundList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCouponCount">
+      <soap:operation soapAction="http://tempuri.org/IPrivateMyPageService/GetCouponCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCouponList">
+      <soap:operation soapAction="http://tempuri.org/IPrivateMyPageService/GetCouponList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CouponChceck">
+      <soap:operation soapAction="http://tempuri.org/IPrivateMyPageService/CouponChceck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterCoupon">
+      <soap:operation soapAction="http://tempuri.org/IPrivateMyPageService/RegisterCoupon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderList">
+      <soap:operation soapAction="http://tempuri.org/IPrivateMyPageService/GetOrderList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyCashAt">
+      <soap:operation soapAction="http://tempuri.org/IPrivateMyPageService/GetMyCashAt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMainServiceList">
+      <soap:operation soapAction="http://tempuri.org/IPrivateMyPageService/GetMainServiceList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyServiceList">
+      <soap:operation soapAction="http://tempuri.org/IPrivateMyPageService/GetMyServiceList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelRollback">
+      <soap:operation soapAction="http://tempuri.org/IPrivateMyPageService/CancelRollback" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVodDelivery">
+      <soap:operation soapAction="http://tempuri.org/IPrivateMyPageService/GetVodDelivery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGiftDelivery">
+      <soap:operation soapAction="http://tempuri.org/IPrivateMyPageService/GetGiftDelivery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyClass">
+      <soap:operation soapAction="http://tempuri.org/IPrivateMyPageService/GetMyClass" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyCashInfo">
+      <soap:operation soapAction="http://tempuri.org/IPrivateMyPageService/GetMyCashInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsedServiceList">
+      <soap:operation soapAction="http://tempuri.org/IPrivateMyPageService/GetUsedServiceList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCPNAME">
+      <soap:operation soapAction="http://tempuri.org/IPrivateMyPageService/GetCPNAME" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PrivateMyPageService">
+    <wsdl:port name="BasicHttpBinding_IPrivateMyPageService" binding="tns:BasicHttpBinding_IPrivateMyPageService">
+      <soap:address location="http://localhost:8088/Member/PrivateMyPageService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
